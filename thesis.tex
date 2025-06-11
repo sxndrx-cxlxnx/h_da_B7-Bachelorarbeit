@@ -33,7 +33,7 @@
     %\WarningFilter{scrreprt}{Activating an ugly workaround}
     \WarningFilter{titlesec}{Non standard sectioning command detected}
 \documentclass[ openright,titlepage,numbers=noenddot,headinclude,%twoside, %1headlines,% letterpaper a4paper
-                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
+                footinclude=true,cleardoublepage=empty,
                 BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
                 ngerman,american,%lockflag%
                 ]{scrreprt}
@@ -43,13 +43,11 @@
 %*************************************************************************
 \input{hdathesis-config}
 \input{classicthesis-config}
-\newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1} \nameref*{#1}}} % one single link
 
 %*************************************************************************
 % Bibliographies
 %*************************************************************************
 \addbibresource{bibliography.bib}
-\addbibresource{zoterobib2.bib}
 
 %*************************************************************************
 % Hyphenation
@@ -63,10 +61,11 @@
 \frenchspacing
 \raggedbottom
 \selectlanguage{ngerman} % ngerman, american
-%\renewcommand*{\bibname}{frontbackmatter/Bib.bib}
+%\renewcommand*{\bibname}{new name}
 %\setbibpreamble{}
 \pagenumbering{roman}
 \pagestyle{plain}
+
 %*************************************************************************
 % Frontmatter
 %*************************************************************************
@@ -74,72 +73,64 @@
 %\include{frontbackmatter/Titleback}
 %\cleardoublepage\include{frontbackmatter/Dedication}
 %\cleardoublepage\include{frontbackmatter/Foreword}
-\cleardoublepage\include{frontbackmatter/Declaration}
-\condLOCK{\cleardoublepage\include{frontbackmatter/BlockingNotice}}
-\cleardoublepage\include{frontbackmatter/AbstractEN}
-\cleardoublepage\include{frontbackmatter/AbstractDE}
+%\cleardoublepage\include{frontbackmatter/Declaration}           % ???
+%\condLOCK{\cleardoublepage\include{frontbackmatter/BlockingNotice}}
+%\cleardoublepage\include{frontbackmatter/AbstractEN}
+%\cleardoublepage\include{frontbackmatter/AbstractDE}
 %\cleardoublepage\include{frontbackmatter/Publications}
 %\cleardoublepage\include{frontbackmatter/Acknowledgments}
-\cleardoublepage\include{frontbackmatter/Contents}
+%\cleardoublepage\include{frontbackmatter/Contents}
 %\cleardoublepage\include{frontbackmatter/Figures}
 %\cleardoublepage\include{frontbackmatter/Tables}
 %\cleardoublepage\include{frontbackmatter/Listings}
-\cleardoublepage\include{frontbackmatter/Acronyms}
+%\cleardoublepage\include{frontbackmatter/Acronyms}
+
 %*************************************************************************
 % Mainmatter
 %*************************************************************************
 \cleardoublepage
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
+
 % Alwas use \cleardoublepage before \part{...}.
-\cleardoublepage
-\part{Thesis}\label{pt:thesis}
-%-------------------------------
-% Einleitung -> 10%                      Maximalbegrenzung
-%-------------------------------
-\include{chapters/chaps/0_Einleitung.tex}
-\include{chapters/chaps/Gliederung}
+%\cleardoublepage
+%\part{Thesis}\label{pt:thesis}
 
-%-------------------------------
-% Grundlagen - Theorieteil
-% Top:  
-%-------------------------------
+%\include{chapters/00_Expose}
+\include*{chapters/01_Stand_der_Forschung}
+\include*{chapters/02_Erkenntnisinteresse}
+\include*{chapters/03_Forschungsstand}
+\include*{chapters/04_Ziel_der_Arbeit}
+\include*{chapters/05_Eingrenzung}
+\include*{chapters/06_Quellen_und_Materialien}
+\include*{chapters/07_Methodik}
+\include*{chapters/08_benötigte_Ressourcen}
+\include*{chapters/09_vorläufige_Gliederung}
+\include*{chapters/10_Zeitplan}
+\include*{chapters/11_vorläufige_Literatur}
 
-
-%-------------------------------
-% Hinfphrung zum Thema oder so - Hauptteil
-% Top:  
-%-------------------------------
-
-
-%-------------------------------
-% Diskussion & 
-%Fazit -> 5-10%
-%-------------------------------
-\include{chapters/chaps/9_Fazit}
 
 %*************************************************************************
 % Recommendations
 %*************************************************************************
 %\part{Empfehlungen zur Erstellung wissenschaftlicher Abschlussarbeiten}
 %\label{pt:recommendations}
+
 %*************************************************************************
 % Backmatter
 %*************************************************************************
-%\appendix
+\appendix
 %\renewcommand{\thechapter}{\alph{chapter}}
 %\cleardoublepage
-\part{Appendix}
+%\part{Appendix}
 %\include{chapters/examples/appendix01}
 %\include{chapters/examples/appendix02}
-%\include{chapters/chaps/Appendix.tex}
+
 %*************************************************************************
 % Other Stuff in the Back
 %*************************************************************************
-%\cleardoublepage\include{frontbackmatter/Bibliography}
-\cleardoublepage
-\include{frontbackmatter/Bibliography}
-\include{chapters/chaps/10_Mitschriften}
+\cleardoublepage\include{frontbackmatter/Bibliography}
+
 %*************************************************************************
 % Game Over: Restore, Restart, or Quit?
 %*************************************************************************
