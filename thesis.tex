@@ -70,20 +70,20 @@
 % Frontmatter
 %*************************************************************************
 \include{frontbackmatter/Titlepage}
-%\include{frontbackmatter/Titleback}
-%\cleardoublepage\include{frontbackmatter/Dedication}
-%\cleardoublepage\include{frontbackmatter/Foreword}
+\include{frontbackmatter/Titleback}
+\cleardoublepage\include{frontbackmatter/Dedication}
+\cleardoublepage\include{frontbackmatter/Foreword}
 %\cleardoublepage\include{frontbackmatter/Declaration}           % ???
 %\condLOCK{\cleardoublepage\include{frontbackmatter/BlockingNotice}}
-%\cleardoublepage\include{frontbackmatter/AbstractEN}
-%\cleardoublepage\include{frontbackmatter/AbstractDE}
+\cleardoublepage\include{frontbackmatter/AbstractEN}
+\cleardoublepage\include{frontbackmatter/AbstractDE}
 %\cleardoublepage\include{frontbackmatter/Publications}
-%\cleardoublepage\include{frontbackmatter/Acknowledgments}
-%\cleardoublepage\include{frontbackmatter/Contents}
-%\cleardoublepage\include{frontbackmatter/Figures}
-%\cleardoublepage\include{frontbackmatter/Tables}
+\cleardoublepage\include{frontbackmatter/Acknowledgments}
+\cleardoublepage\include{frontbackmatter/Contents}
+\cleardoublepage\include{frontbackmatter/Figures}
+\cleardoublepage\include{frontbackmatter/Tables}
 %\cleardoublepage\include{frontbackmatter/Listings}
-%\cleardoublepage\include{frontbackmatter/Acronyms}
+\cleardoublepage\include{frontbackmatter/Acronyms}
 
 %*************************************************************************
 % Mainmatter
@@ -93,21 +93,18 @@
 \pagenumbering{arabic}
 
 % Alwas use \cleardoublepage before \part{...}.
-%\cleardoublepage
-%\part{Thesis}\label{pt:thesis}
+\cleardoublepage
+\part{Thesis}
+\label{pt:thesis}
+%\include{chapters/09_vorläufige_Gliederung}
 
-%\include{chapters/00_Expose}
-\include*{chapters/01_Stand_der_Forschung}
-\include*{chapters/02_Erkenntnisinteresse}
-\include*{chapters/03_Forschungsstand}
-\include*{chapters/04_Ziel_der_Arbeit}
-\include*{chapters/05_Eingrenzung}
-\include*{chapters/06_Quellen_und_Materialien}
-\include*{chapters/07_Methodik}
-\include*{chapters/08_benötigte_Ressourcen}
-\include*{chapters/09_vorläufige_Gliederung}
-\include*{chapters/10_Zeitplan}
-\include*{chapters/11_vorläufige_Literatur}
+\include{chapters/00_Einleitung}
+\include{chapters/02_Stand_der_Forschung/00_Stand_der_Forschung}
+\include{chapters/03_Problemstellung/00_Problemstellung}
+\include{chapters/04_Dashboard/00_Erstellung_Dashboard}
+\include{chapters/05_Ergebnisse/00_Ergebnisse}
+\include{chapters/06_Diskussion/00_Diskussion}
+\include{chapters/07_Fazit/00_Fazit}
 
 
 %*************************************************************************
@@ -121,8 +118,8 @@
 %*************************************************************************
 \appendix
 %\renewcommand{\thechapter}{\alph{chapter}}
-%\cleardoublepage
-%\part{Appendix}
+\cleardoublepage
+\part{Appendix}
 %\include{chapters/examples/appendix01}
 %\include{chapters/examples/appendix02}
 
