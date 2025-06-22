@@ -146,7 +146,10 @@
 %\DeclareCaptionLabelFormat{smallcaps}{\bothIfFirst{#1}{~}\MakeTextLowercase{\textsc{#2}}}
 %\captionsetup{font=small,labelformat=smallcaps} % format=hang,
 \captionsetup{font=small} % format=hang,
-\usepackage{subfig}
+\usepackage{graphicx}
+%\usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{float} % Pro­vides the H float mod­i­fier op­tion
 % ****************************************************************************************************
 
 
@@ -189,8 +192,7 @@
 %\pdfadjustspacing=1
 %\fi
 %\PassOptionsToPackage{pdftex}{graphicx} %%%IVO: driver will be chosen automatically
-\usepackage{graphicx}
-\usepackage{subcaption}
+
 
 
 % ********************************************************************
