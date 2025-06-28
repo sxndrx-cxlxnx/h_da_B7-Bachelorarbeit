@@ -2,7 +2,7 @@
 \textcolor{blue}{\textit{einleitende Worte}}\\
 
 \subsection{Fehlerbetrachtung}
-- Fehlende Daten
+- Fehlende Daten aus Gründen xy
 
 \subsection{...}
 \begin{table}[H]
@@ -55,17 +55,29 @@ $\Tilde{x}$        & Median                   \\
 $\sigma$           & Standardabweichung       \\
 f                  & Fehlerquote
 \end{tabular}
-\caption{Zusammenfassung der Ergebnisse des Usability-Tests}
-\label{tab:usability_tabellen}
+\caption{Zusammenfassung der Ergebnisse des Usability-Tests (Weiterverarbeitung der Daten aus \autoref{fig:Usability_Test:rohe_Daten})}
+\label{tab:usability_test:mittelwerte}
 \end{table}
-% \autoref{tab:usability_tabellen}
 
 \subsection{Zeitvergleich}
 - t-Test Beispielrechnung (einseitig, gepaart)\\
+-> die Beispielrechnung gehört in den Text %(referenzieren, die Formel ist ne Standardformel, s. Mathebuch 1 o.ä.)
 - Tabelle mit t-Test-Ergebnissen\\
--> verweisen auf Ergebnisse aus Excel: $=TTEST(Matrix_{alt}, Matrix_{neu},1,1)$\\
+-> Rest: verweisen auf Ergebnisse aus Excel: $=TTEST(Matrix_{alt}, Matrix_{neu},1,1)$\\
+-> s. Anhang\\
 -> erster t-Test zum Verständnis\\
 -> erst Normalverteiltes Ergebnis\cite{normalverteilung_rechner}
+
+\begin{table}[H]
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+                                          & Frage 1 & Frage 2 & Frage 3.1 & Frage 3.2 & Frage 4.1 & Frage 4.2 \\ \hline
+$\varnothing t_{neu} - \varnothing t_{alt}$ & -6,55   & -7,14   & -4,46     & -3,64     & -6,18     & -3,81     \\ \hline
+T-Test                                    & 0,0231  & 0,0186  & 0,0579    & 0,0506    & 0,0554    & 0,0826    \\ \hline
+\end{tabular}
+\caption{Usability Test - Differenz der Zeitmittelwerte und T-Test-Ergebnisse (Weiterverarbeitung der Daten aus \autoref{fig:Usability_Test:rohe_Daten})}
+\label{tab:usability_test:Differenz+ttest}
+\end{table}
 
 \subsection{Genauigkeit-Zeit}
 \begin{figure}[H]
@@ -92,5 +104,6 @@ f                  & Fehlerquote
     \label{fig:usability_genauigkeit-zeit_mittel}
 \end{figure}
 - neu ist im Mittel schneller\\
-- aber auch Fehlerquote bei neu im MIttel höher
+- aber auch Fehlerquote bei neu im MIttel höher\\
+- schöne Zusammenfassung (man kann auch darauf vorspringen)
 
