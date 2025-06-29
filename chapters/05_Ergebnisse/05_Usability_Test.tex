@@ -8,45 +8,45 @@
 \begin{table}[H]
 \begin{tabular}{|l|c|c|c|c|}
 \hline
-Aufgabe 1   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
+Aufgabe 1\textcolor{white}{.0}   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
 alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
 neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-Differenz   &           &             & -     &  xxx   \\ \hline
+%Differenz   &           &             & -     &  xxx   \\ \hline
 \end{tabular}
 \begin{tabular}{|l|c|c|c|c|}
 \hline
-Aufgabe 2   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
+Aufgabe 2\textcolor{white}{.0}   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
 alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
 neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-Differenz   &           &             & -     &  xxx   \\ \hline
+%Differenz   &           &             & -     &  xxx   \\ \hline
 \end{tabular}
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 Aufgabe 3.1   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
 alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
 neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-Differenz   &           &             & -     &  xxx   \\ \hline
+%Differenz   &           &             & -     &  xxx   \\ \hline
 \end{tabular}
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 Aufgabe 3.2   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
 alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
 neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-Differenz   &           &             & -     &  xxx   \\ \hline
+%Differenz   &           &             & -     &  xxx   \\ \hline
 \end{tabular}
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 Aufgabe 4.1   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
 alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
 neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-Differenz   &           &             & -     &  xxx   \\ \hline
+%Differenz   &           &             & -     &  xxx   \\ \hline
 \end{tabular}
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 Aufgabe 4.2   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
 alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
 neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-Differenz   &           &             & -     &  xxx   \\ \hline
+%Differenz   &           &             & -     &  xxx   \\ \hline
 \end{tabular}
 \begin{tabular}{ll}
 \multicolumn{2}{l}{verwendete Formelzeichen:} \\ \hline
@@ -71,6 +71,8 @@ f                  & Fehlerquote
     \caption{Usability-Test: Vergleich Genauigkeit-Zeit im alten und neuen System}
     \label{fig:usability_test:genauigkeit-zeit_alt-neu}
 \end{figure}
+
+\noindent
 \underline{s. \autoref{fig:usability_test:genauigkeit-zeit_alt-neu}}\\
 - alt: Leute mit Fehlern waren langsamer\\
 - neu: Leute ohne Fehler waren minimal langsamer, kein signifikanter Unterschied\\
@@ -93,6 +95,7 @@ f                  & Fehlerquote
 
 \noindent
 \underline{Statistische Auswertung der Signifikanz}\\
+\label{Bsp:ttest}
 - t-Test Beispielrechnung (einseitig, gepaart)\\
 -> erster t-Test zum Verständnis\\
 -> erst Normalverteiltes Ergebnis\cite{normalverteilung_rechner}\\
@@ -107,7 +110,7 @@ f                  & Fehlerquote
 $\varnothing t_{neu} - \varnothing t_{alt}$ & -6,55   & -7,14   & -4,46     & -3,64     & -6,18     & -3,81     \\ \hline
 T-Test                                    & 0,0231  & 0,0186  & 0,0579    & 0,0506    & 0,0554    & 0,0826    \\ \hline
 \end{tabular}
-\caption{Usability Test - Differenz der Zeitmittelwerte und T-Test-Ergebnisse (Weiterverarbeitung der Daten aus \autoref{fig:Usability_Test:rohe_Daten})}
+\caption{Usability Test - Differenz der Zeitmittelwerte und T-Test-Ergebnisse (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte} und \autoref{fig:Usability_Test:rohe_Daten})}
 \label{tab:usability_test:Differenz+ttest}
 \end{table}
 
@@ -119,11 +122,12 @@ T-Test                                    & 0,0231  & 0,0186  & 0,0579    & 0,05
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_mittel.png}
-    \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer - im Verhältnis zur Fehlerquote}
+    \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer - im Verhältnis zur Fehlerquote \textcolor{red}{Wo kommen die Daten her?}}
     \label{fig:usability_test:genauigkeit-zeit_mittel}
 \end{figure}
 
 \noindent
+=> \ref{fig:usability_test:genauigkeit-zeit_mittel} erst in Diskussionskapitel(?)\\
 - neu ist im Mittel schneller\\
 - aber auch Fehlerquote bei neu im MIttel höher\\
 - schöne Zusammenfassung (man kann auch darauf vorspringen)
