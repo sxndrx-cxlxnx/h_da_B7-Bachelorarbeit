@@ -4,7 +4,7 @@
 \subsection{Fehlerbetrachtung}
 - Fehlende Daten aus Gründen xy
 
-\subsection{...}
+\subsection{Genauigkeit-Zeit-Vergleich}
 \begin{table}[H]
 \begin{tabular}{|l|c|c|c|c|}
 \hline
@@ -58,15 +58,47 @@ f                  & Fehlerquote
 \caption{Zusammenfassung der Ergebnisse des Usability-Tests (Weiterverarbeitung der Daten aus \autoref{fig:Usability_Test:rohe_Daten})}
 \label{tab:usability_test:mittelwerte}
 \end{table}
+\underline{s. \autoref{tab:usability_test:mittelwerte}}\\
+- Differenz berechnen, Fehlerquote als Wert\\
+-> Berechnung Fehlerquote in Tabelle im Anhang \autoref{fig:Usability-Test:Excel_Berechnungen}\\
+- grafisch dargestellt in \autoref{fig:usability_test:genauigkeit-zeit_alt-neu} \&\& \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige}
 
-\subsection{Zeitvergleich}
+%\subsection{Genauigkeit-Zeit}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alt.png}
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_neu.png}
+    \caption{Usability-Test: Vergleich Genauigkeit-Zeit im alten und neuen System}
+    \label{fig:usability_test:genauigkeit-zeit_alt-neu}
+\end{figure}
+\underline{s. \autoref{fig:usability_test:genauigkeit-zeit_alt-neu}}\\
+- alt: Leute mit Fehlern waren langsamer\\
+- neu: Leute ohne Fehler waren minimal langsamer, kein signifikanter Unterschied\\
+- neu: höhere Fehlerquote, dafür auch x\% schneller (Bsp. Frage 1: 15s auf 10s)\\
+-> bei Diskussion darauf eingehen, woher die höhere Fehlerquote kommt
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alle.png}
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_richtige.png}
+    \caption{Usability-Test: Zeitvergleich von allen Werten und nur richtigen Antworten - im Verhältnis zur Fehlerquote}
+    \label{fig:usability_test:genauigkeit-zeit_alle-richtige}
+\end{figure}
+
+\noindent
+\underline{s. \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige}}\\
+- neu ist in jeder Aufgabe ersichtlich schneller\\
+-> Frage nach signifikanz\\
+- Fehlerquote nicht überall eindeutig\\
+
+\noindent
+\underline{Statistische Auswertung der Signifikanz}\\
 - t-Test Beispielrechnung (einseitig, gepaart)\\
--> die Beispielrechnung gehört in den Text %(referenzieren, die Formel ist ne Standardformel, s. Mathebuch 1 o.ä.)
-- Tabelle mit t-Test-Ergebnissen\\
--> Rest: verweisen auf Ergebnisse aus Excel: $=TTEST(Matrix_{alt}, Matrix_{neu},1,1)$\\
--> s. Anhang\\
 -> erster t-Test zum Verständnis\\
--> erst Normalverteiltes Ergebnis\cite{normalverteilung_rechner}
+-> erst Normalverteiltes Ergebnis\cite{normalverteilung_rechner}\\
+-> die Beispielrechnung gehört in den Text %(referenzieren, die Formel ist ne Standardformel, s. Mathebuch 1 o.ä.)\\
+- Tabelle mit t-Test-Ergebnissen \autoref{tab:usability_test:Differenz+ttest}\\
+-> Rest: verweisen auf Ergebnisse aus Excel: $=TTEST(Matrix_{alt}, Matrix_{neu},1,1)$ (s. \autoref{fig:Usability-Test:Excel_Berechnungen})
 
 \begin{table}[H]
 \begin{tabular}{|l|c|c|c|c|c|c|}
@@ -79,30 +111,19 @@ T-Test                                    & 0,0231  & 0,0186  & 0,0579    & 0,05
 \label{tab:usability_test:Differenz+ttest}
 \end{table}
 
-\subsection{Genauigkeit-Zeit}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alt.png}
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_neu.png}
-    \caption{Usability-Test: Vergleich Genauigkeit-Zeit im alten und neuen System}
-    \label{fig:usability_genauigkeit-zeit_alt-neu}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alle.png}
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_richtige.png}
-    \caption{Usability-Test: Zeitvergleich von allen Werten und nur richtigen Antworten - im Verhältnis zur Fehlerquote}
-    \label{fig:usability_genauigkeit-zeit_alle-richtige}
-\end{figure}
-- neu ist in jeder Aufgabe schneller
-- Fehlerquote nicht überall eindeutig
+\noindent
+- Zeiten sind im neuen Systen in Aufgaben 1+2 signifikant besser als im alten System\\
+-> beim Rest nur besser, nicht signifikant\\
+- endgültiger Zeitvergleich, s. Zusammenfassung \autoref{fig:usability_test:genauigkeit-zeit_mittel}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_mittel.png}
     \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer - im Verhältnis zur Fehlerquote}
-    \label{fig:usability_genauigkeit-zeit_mittel}
+    \label{fig:usability_test:genauigkeit-zeit_mittel}
 \end{figure}
+
+\noindent
 - neu ist im Mittel schneller\\
 - aber auch Fehlerquote bei neu im MIttel höher\\
 - schöne Zusammenfassung (man kann auch darauf vorspringen)

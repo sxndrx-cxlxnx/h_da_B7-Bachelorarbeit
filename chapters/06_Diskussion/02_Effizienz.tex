@@ -5,13 +5,32 @@
 - Usability-Test -> Effizienz des Dashboards im Vergleich zum Legacy-System\\
 -> Bewertung der Effizienz des Dashboards durch Gegenüberstellung der Testergebnisse\\
 
+\begin{table}[H]
+\begin{tabular}{ll}
+$f_{alt} = \dfrac{n_{\text{\textit{gültige}}} - n_{richtige}}{n_{\text{\textit{gültige}}}}$ & // Fehlerquote \\
+$e_{alt} = \dfrac{\overline{t_{alt}} } { 1 - f_{alt} }$                   & // Effizienz$_{alt}$ \\
+%$e_{neu} = \dfrac{\overline{t_{neu}} } { 1 - f_{neu} }$                   & // Effizienz$_{neu}$ \\
+$e_{neu:alt} = -1 * (1 - \dfrac{e_{alt}} {e_{neu}})$                      & // Verhältnis: Effizizienz$_{neu}$ zu Effizienz$_{alt}$
+\end{tabular}
+\end{table}
+
+\noindent
+- mit dieser Formel wurden die Werte aus \autoref{fig:usability_effizienz} berechnet\\
+-> Verhältnis $e_{neu}:e_{alt}$\\
+$\implies$ Aufgabe 1: neues System ist zu 53,25\% effizienter als das alte System\\
+$\implies$ Aufgabe 3.1: neues System ist zu 11,95\% ineffizienter als das alte System\\
+$\implies$ $\varnothing$: neues System ist zu 48,46\% effizienter als das alte System\\
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/usability_effizienz.png}
     \caption{Usability-Test: Effizienzvergleich vom neuen mit dem alten System\newline
-    (Weiterverarbeitung der Daten aus \autoref{fig:usability_genauigkeit-zeit_alt-neu})}
+    (Weiterverarbeitung der Daten aus \autoref{fig:usability_test:genauigkeit-zeit_alt-neu})}
     \label{fig:usability_effizienz}
 \end{figure}
+
+\noindent
+-> bei Diskussion darauf eingehen, woher die höhere Fehlerquote kommt \autoref{fig:usability_test:genauigkeit-zeit_alt-neu}
 
 \input{chapters/06_Diskussion/ISO_Erlernbarkeit}
 \input{chapters/06_Diskussion/ISO_Selbstbeschreibungsfähigkeit}
