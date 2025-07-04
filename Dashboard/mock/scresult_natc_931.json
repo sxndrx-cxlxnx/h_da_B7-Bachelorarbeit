@@ -1,0 +1,25 @@
+{
+  "test_categories": [
+    {
+      "category": "BUILD",
+      "crashed": 0,
+      "errors": 0,
+      "pending": 0,
+      "ignored": 0
+    },
+    {
+      "category": "PROMO",
+      "crashed": 0,
+      "errors": 4,
+      "pending": 4,
+      "ignored": 2
+    },
+    {
+      "category": "qabat",
+      "crashed": 1,
+      "errors": 1,
+      "pending": 9,
+      "ignored": 0
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "test_categories": [
+    {
+      "category": "BUILD",
+      "crashed": 0,
+      "errors": 5,
+      "pending": 0,
+      "ignored": 0
+    },
+    {
+      "category": "PROMO",
+      "crashed": 0,
+      "errors": 0,
+      "pending": 4,
+      "ignored": 1
+    },
+    {
+      "category": "qabat",
+      "crashed": 0,
+      "errors": 4,
+      "pending": 4,
+      "ignored": 529
+    },
+    {
+      "category": "QAONL",
+      "crashed": 0,
+      "errors": 2,
+      "pending": 4,
+      "ignored": 0
+    },
+    {
+      "category": "QAPRD861",
+      "crashed": 0,
+      "errors": 3,
+      "pending": 0,
+      "ignored": 0
+    }
+  ]
+}
