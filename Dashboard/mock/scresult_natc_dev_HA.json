@@ -8,21 +8,21 @@
       "ignored": 0
     },
     {
-      "category": "PROMO",
+      "category": "[test_cat_2]",
       "crashed": 0,
       "errors": 0,
       "pending": 6,
       "ignored": 1
     },
     {
-      "category": "qabat",
+      "category": "[test_cat_3]",
       "crashed": 0,
       "errors": 6,
       "pending": 4,
       "ignored": 34
     },
     {
-      "category": "QAONL",
+      "category": "[test_cat_4]",
       "crashed": 0,
       "errors": 10,
       "pending": 12,

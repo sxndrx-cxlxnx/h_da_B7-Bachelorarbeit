@@ -5,61 +5,62 @@ import os
 
 # ******************************************************************************************************
 unwanted_tests = {
-    "natc_dev_nonHA": {
+    "[environment_dev_1]": {
         "BUILD": ["warn"],
-        "PROMO": [],
-        "qabat": [],
-        "QAONL": ["objhha", "parmha", "rpcha"],
-        "QAPRD852": [],
-        "QAPRD861": []
+        "[test_cat_1]": [],
+        "[test_cat_2]": [],
+        "[test_cat_3]": ["[test_name_1]", "[test_name_2]", "[test_name_3]"],
+        "[test_cat_4]": [],
+        "[test_cat_5]": []
     },
-    "natc_dev_HA": {
+    "[environment_dev_2]": {
         "BUILD": ["warn"],
-        "PROMO": [],
-        "qabat": [],
-        "QAONL": []
+        "[test_cat_1]": [],
+        "[test_cat_2]": [],
+        "[test_cat_3]": []
     },
-    "natc_931": {
+    "[environment_rel_3]": {
         "BUILD": ["warn"],
-        "PROMO": [],
-        "qabat": []
+        "[test_cat_1]": [],
+        "[test_cat_2]": []
     },
-    "natc_932": {
+    "[environment_rel_4]": {
         "BUILD": ["warn"],
-        "PROMO": [],
-        "qabat": []
+        "[test_cat_1]": [],
+        "[test_cat_2]": []
     }
 }
 ignored_tests = {
-    "natc_dev_nonHA": {
-        "qabat": ["dact"]
+    "[environment_dev_1]": {
+        "[test_cat_2]": ["[test_name_4]"]
     },
-    "natc_dev_HA": {
-        "qabat": ["dact"]
+    "[environment_dev_2]": {
+        "[test_cat_2]": ["[test_name_4]"]
     },
-    "natc_931": {
-        "qabat": []
+    "[environment_rel_3]": {
+        "[test_cat_2]": []
     },
-    "natc_932": {
-        "qabat": []
+    "[environment_rel_4]": {
+        "[test_cat_2]": []
     }
 }
 
-def get_list_from_scresult(natvers, node, key, date):                   # TODO: new name for function - curl is not what is done
-    url = "https://natosweb.eur.ad.sag:4433/nww3/mod/scres/scres?"
+def get_list_from_NameOfResultView(natvers, node, key, date):
+    url = "https://[url]:[port]/[path]?"
     
-    # curl the pythonic way
+    # GET-Request
     payload = {"natvers" : natvers, "node" : node, "key" : key, "DATE" : date}
     request = requests.get(url,
                            params = payload,
                            verify = False)
     output = request.text
 
-    # ******************************************************************************************************
+    # cut html output to wanted substring
+    
     # initializing substrings
     sub1 = "<pre class='result'>"
     sub2 = "</pre>"
-    curl_result = ""
+    req_result = ""
 
     while(output.find(sub1) >= 0):
         # getting index of substrings
@@ -69,13 +70,13 @@ def get_list_from_scresult(natvers, node, key, date):                   # TODO: 
         # length of substring 1 is added to
         # get string from next character
         res = output[idx1 + len(sub1) + 1: idx2]
-        curl_result = curl_result + res
+        req_result = req_result + res
 
         # reset string
         output = output[idx2 + len(sub2):]
 
-    #return curl_result
-    all_lines = curl_result.split('\n')
+    #return req_result
+    all_lines = req_result.split('\n')
     return all_lines
 
 def get_dict_of_lines(all_lines):
@@ -161,7 +162,7 @@ def remove_elements_from_dictlist(name_of_env, category, dict_list, unwanted_ele
 # main functionality
 def parse_to_json(name_of_env, natvers, node, key, date, path):
 
-    all_lines_without_n = get_list_from_scresult(natvers, node, key, date)
+    all_lines_without_n = get_list_from_NameOfResultView(natvers, node, key, date)
 
     # strip lines and store relevant ones
     all_lines = [x.strip() for x in all_lines_without_n]
@@ -191,7 +192,6 @@ def parse_to_json(name_of_env, natvers, node, key, date, path):
     for category_el in test_results_dict['test_categories']:
         current_category = {}
         this_category = category_el["category"]
-
 
         errors = 0
         pending = 0
@@ -224,7 +224,6 @@ def parse_to_json(name_of_env, natvers, node, key, date, path):
     # Convert and write JSON object to file
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as outfile: 
-        #json.dump(test_results_dict, outfile, indent=2)
         json.dump(stats_dict, outfile, indent=2)
 
     print("---   Parsing " + name_of_env + " done   ---")
@@ -234,31 +233,31 @@ def parse_to_json(name_of_env, natvers, node, key, date, path):
 # ******************************************************************************************************
 
 # develop
-parse_to_json(name_of_env   = "natc_dev_nonHA",
-              natvers       = "931",
-              node          = "daerednatqe8",
-              key           = "count",
+parse_to_json(name_of_env   = "[environment_dev_1]",
+              natvers       = "[345]",
+              node          = "[machine_name]",
+              key           = "[key]",
               date          = "",
-              path          = "../files/dev/scresult_natc_dev_nonHA.json")
-parse_to_json(name_of_env   = "natc_dev_HA",
-              natvers       = "931",
-              node          = "daerednatdev8",
-              key           = "count",
+              path          = "../files/dev/[name_of_result_view]_[environment_dev_1].json")
+parse_to_json(name_of_env   = "[environment_dev_2]",
+              natvers       = "[345]",
+              node          = "[machine_name]",
+              key           = "[key]",
               date          = "",
-              path          = "../files/dev/scresult_natc_dev_HA.json")
+              path          = "../files/dev/[name_of_result_view]_[environment_dev_2].json")
 
 # released
-parse_to_json(name_of_env   = "natc_931",
-              natvers       = "931D",
-              node          = "daerednatqe8",
-              key           = "count",
+parse_to_json(name_of_env   = "[environment_rel_3]",
+              natvers       = "[123]",
+              node          = "[machine_name]",
+              key           = "[key]",
               date          = "",
-              path          = "../files/rel/scresult_natc_931.json")
-parse_to_json(name_of_env   = "natc_932",
-              natvers       = "931G",
-              node          = "daerednatqe8",
-              key           = "count",
+              path          = "../files/rel/[name_of_result_view]_[environment_rel_3].json")
+parse_to_json(name_of_env   = "[environment_rel_4]",
+              natvers       = "[234]",
+              node          = "[machine_name]",
+              key           = "[key]",
               date          = "",
-              path          = "../files/rel/scresult_natc_932.json")
+              path          = "../files/rel/[name_of_result_view]_[environment_rel_4].json")
 
 print("---   Program done   ---")
