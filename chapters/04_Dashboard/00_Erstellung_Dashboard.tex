@@ -1,17 +1,28 @@
-\chapter{Entwicklung eines Dashboards als moderne Anzeige der Testpoolergebnisse anhand zuvor analysierter bestehender System- und Nutzeranforderungen}
+\chapter{Entwicklung eines Dashboards als moderne Anzeige der Testpoolergebnisse} % anhand zuvor analysierter bestehender System- und Nutzeranforderungen}
 \label{ch:Erstellung Dashboard}
-\textcolor{blue}{\textit{einleitende Worte}}\\
+\textcolor{blue}{\textit{einleitende Worte}}
 
 % *****************************************************************
 \section{Anforderungsanalyse anhand des bestehenden Legacy-Systems und den Nutzerbedürfnissen}
--> potenziell kein Extra Kapitel für IST-Zustand benötigt??
+\textcolor{red}{-> potenziell kein Extra Kapitel für IST-Zustand benötigt??}\\
+- die Tabellen aus der ISO nutzen / ausfüllen \cite{DIN_EN_ISO_9241-110} \autoref{fig:Anforderungskatalog_ISO_alt} \autoref{fig:Anforderungskatalog_ISO_neu}\\
+- 
 
 % *****************************************************************
 \section{Evaluation und Auswahl des Dashboard-Tools}
-\autoref{}
+\autoref{tab:Dashboard:Evalutaion_Tooling}\\
+- verschiedene Tools vergleichen, s. Tabelle\\
+- wichtige Kriterien: bezahlbar auf die Menge an Code-Lines (soll später auch für weitere Code-Analyse verwendet werden\\
+- ist Grafana geworden
 
 % *****************************************************************
-\section{Überblick über den strukturellen Aufbau und Inhalt des Dashboards}
+\section{technische Umsetzung des Datenflusses zur Dashboardanzeige}
+- Datenursprung: s. \autoref{ch:IST-Zustand}\\
+- JSON: s. \autoref{Add:Dashboard:JSON}\\
+\label{sec:Dashboard:JSON}\\
+- Verarbeitung der JSON-Datei, s. \autoref{sec:Dashboard:JSON}\\
+- zur Dashboardanzeige:
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Dashboard/20250704_DB_dev.png}
@@ -20,7 +31,15 @@
 \end{figure}
 
 % *****************************************************************
-\section{technische Umsetzung des Datenflusses zur Dashboardanzeige}
+\section{Überblick über den strukturellen Aufbau und Inhalt des Dashboards}
+
+\noindent
+\autoref{fig:aufbau_dashboard}\\
+- es gibt Reihen (Rows)\\
+- innerhalb davon sind Panel die die gewünschten Daten anzeigen\\
+- links in einer Row: Verlinkung auf altes Interface / weitere Infos\\
+- rechts einer Row: Verlinkung auf die einzelnen JenkinsJobs für noch detailliertere Ergebnisse\\
+- Grafana-Version:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{Dashboard/Grafana version.png}
