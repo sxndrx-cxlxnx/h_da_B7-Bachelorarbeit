@@ -1,63 +1,14 @@
 \subsection{\textcolor{Salmon}{Ergebnisse Usability Test}}
 \textcolor{blue}{\textit{einleitende Worte}}\\
 
+\noindent
 \underline{Fehlerbetrachtung}\\
 - Fehlende Daten aus Gründen xy\\
 
+\noindent
 \underline{Genauigkeit-Zeit-Vergleich}\\
-\begin{table}[H]
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-Aufgabe 1\textcolor{white}{.0}   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
-alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-%Differenz   &           &             & -     &  xxx   \\ \hline
-\end{tabular}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-Aufgabe 2\textcolor{white}{.0}   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
-alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-%Differenz   &           &             & -     &  xxx   \\ \hline
-\end{tabular}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-Aufgabe 3.1   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
-alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-%Differenz   &           &             & -     &  xxx   \\ \hline
-\end{tabular}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-Aufgabe 3.2   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
-alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-%Differenz   &           &             & -     &  xxx   \\ \hline
-\end{tabular}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-Aufgabe 4.1   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
-alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-%Differenz   &           &             & -     &  xxx   \\ \hline
-\end{tabular}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-Aufgabe 4.2   & $\Bar{x}$ & $\Tilde{x}$ & $\sigma$ & f \\ \hline
-alt         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-neu         & xxxx      &  xx         &  xxxx &  xxx   \\ \hline
-%Differenz   &           &             & -     &  xxx   \\ \hline
-\end{tabular}
-\begin{tabular}{ll}
-\multicolumn{2}{l}{verwendete Formelzeichen:} \\ \hline
-$\Bar{x}$          & Mittelwert               \\
-$\Tilde{x}$        & Median                   \\
-$\sigma$           & Standardabweichung       \\
-f                  & Fehlerquote
-\end{tabular}
-\caption{Zusammenfassung der Ergebnisse des Usability-Tests (Weiterverarbeitung der Daten aus \autoref{fig:Usability_Test:rohe_Daten})}
-\label{tab:usability_test:mittelwerte}
-\end{table}
+
+\noindent
 \underline{s. \autoref{tab:usability_test:mittelwerte}}\\
 - Differenz berechnen, Fehlerquote als Wert\\
 -> Berechnung Fehlerquote in Tabelle im Anhang \autoref{fig:Usability-Test:Excel_Berechnungen}\\
@@ -102,17 +53,6 @@ f                  & Fehlerquote
 -> die Beispielrechnung gehört in den Text \cite{Statistik:Boertz:2010} \cite{Statistik:Sedlmeier:2024}\\
 - Tabelle mit t-Test-Ergebnissen \autoref{tab:usability_test:Differenz+ttest}\\
 -> Rest: verweisen auf Ergebnisse aus Excel: $=TTEST(Matrix_{alt}, Matrix_{neu},1,1)$ (s. \autoref{fig:Usability-Test:Excel_Berechnungen})
-
-\begin{table}[H]
-\begin{tabular}{|l|c|c|c|c|c|c|}
-\hline
-                                          & Frage 1 & Frage 2 & Frage 3.1 & Frage 3.2 & Frage 4.1 & Frage 4.2 \\ \hline
-$\varnothing t_{neu} - \varnothing t_{alt}$ & -6,55   & -7,14   & -4,46     & -3,64     & -6,18     & -3,81     \\ \hline
-T-Test                                    & 0,0231  & 0,0186  & 0,0579    & 0,0506    & 0,0554    & 0,0826    \\ \hline
-\end{tabular}
-\caption{Usability Test - Differenz der Zeitmittelwerte und T-Test-Ergebnisse (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte} und \autoref{fig:Usability_Test:rohe_Daten})}
-\label{tab:usability_test:Differenz+ttest}
-\end{table}
 
 \noindent
 - Zeiten sind im neuen Systen in Aufgaben 1+2 signifikant besser als im alten System\\
