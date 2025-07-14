@@ -1,19 +1,34 @@
 \chapter{\textcolor{Salmon}{Entwicklung eines Dashboards als moderne Anzeige der Testpoolergebnisse}} % anhand zuvor analysierter bestehender System- und Nutzeranforderungen}
 \label{ch:Erstellung Dashboard}
-\textcolor{blue}{\textit{einleitende Worte}}
+\textcolor{red}{\textit{TODO: überarbeiten - nur erste Worte}}\\
+Um die Ergebnisse des Testpools moderner (austauschen durch effizient o.s.) zu gestalten wurde ein Dashboard erstellt. Nachfolgend werden zuerst die Anforderungen auf Grundlage des bestehenden Systems (s. \autoref{ch:IST-Zustand:sec:Zustandsanalyse}) analysiert. Nachfolgend wird der Prozess über die Auswahl eines geeigneten Tools sowie der Datenfluss zum Dashboard und der vollständige Aufbau dargestellt.
 
 % *****************************************************************
 \section{\textcolor{Salmon}{Anforderungsanalyse anhand des bestehenden Legacy-Systems und den Nutzerbedürfnissen}}
-\textcolor{red}{-> potenziell kein Extra Kapitel für IST-Zustand benötigt??}\\
-- die Tabellen aus der ISO nutzen / ausfüllen \cite{DIN_EN_ISO_9241-110} \autoref{fig:Anforderungskatalog_ISO_alt} \autoref{fig:Anforderungskatalog_ISO_neu}\\
-- 
+- die Tabellen aus der ISO nutzen / ausfüllen \cite{DIN_EN_ISO_9241-110} \autoref{fig:Anforderungskatalog_ISO_neu}\\
 
 % *****************************************************************
-\section{\textcolor{Salmon}{Evaluation und Auswahl des Dashboard-Tools}}
-\autoref{tab:Dashboard:Evalutaion_Tooling}\\
-- verschiedene Tools vergleichen, s. Tabelle\\
-- wichtige Kriterien: bezahlbar auf die Menge an Code-Lines (soll später auch für weitere Code-Analyse verwendet werden\\
-- ist Grafana geworden
+\section{\textcolor{Turquoise}{Evaluation und Auswahl des Dashboard-Tools}}
+ Das Dashboard-Projekt startete mit der Erwartung Sonar nutzen zu können, da es bereits im Kontext eines anderen Produktes genutzt wurde, entsprechendes Wissen vorhanden ist, der Server weiterverwendet werden kann, und Sonar viele nützliche Funktionalitäten anbietet. Da das Dashboard in der Zukunft um eine Code-Analyse-Sektion erweitert werden soll, scheint die integrierte Funktionalität von Sonar angemessen. Jedoch ist die Lizenz von Sonar auf die Anzahl der Codezeilen ausgelegt. Mit der Menge der Codezeilen im bestehenden System (s. \autoref{ch:IST-Zustand}) wurde entschieden dass diese finanzielle Belastung nicht realistisch tragbar ist. \textcolor{red}{\cite{TODO:Sonar}}
+
+ Es muss ein neues Tool gefunden werden. Für die Auswahl eines Tools wurden folgende Kategorien gewählt:
+\begin{itemize}
+    \item Welche Lizenz benötigt das Tool? \\
+    $\rightarrow$ Ist diese im gefragten Kontext umsetzbar (z.B. bezahlbar)?
+    \item Welche Dateiformate werden unterstützt, um Daten an das Dashboard zu übertragen?\\
+    $\rightarrow$ Sind diese Kompatibel zur Umgebung?
+    \item Ist das Tool CI/CD-kompatibel?
+    \item Wird das Tool immernoch aktiv gewartet?
+    \item Wie kann das Tool installiert werden? Zum Beispiel Docker/ händisch?
+    \item weitere Vorteile
+    \item weitere Nachteile
+\end{itemize}
+
+In \autoref{tab:Dashboard:Evalutaion_Tooling} ist die Auflistung zu finden, welche Tools verglichen und wie diese ausgewertet wurden.
+
+Verschieden Punkte haben zum Auschluss von Tools wie zum Beispiel Smashing, Dashbuider und Tipboard geführt. Sie waren zu alt, Open Source Projekte wurden nicht mehr aktiv gewartet, benötigte Software ist nicht die jeweils aktuellste Version, das Tool ist umständlich zu intallieren oder es gab versteckte Kosten, da zum Beispiel ein extra Server mit Lizenz benötigt wurde.
+
+Das neue Dashboard wurde mit Grafana erstellt. Zwar hat das Tool nicht die gleichen Code-spezifischen Funktionalitäten wie Sonar, ist jedoch ein modernes viel genutztes Tool (s. \autoref{ch:SdF:sec:moderne_DB_Tools_und_Empfehlungen}). Abgesehen davon, dass ein Grafanaserver bereits zur Verfügung stand, kann es kostenfrei selbst gehostet werden, ermöglich ein einfaches Drag-and-Drop zur Dashboard-Erstellung, unterstützt jegliche Dateiformate über einen API-Zugriff, ist leicht zu installieren und bietet viele Einstellungsmöglichkeiten zum Individualisieren. \textcolor{red}{\cite{TODO:Grafana}}
 
 % *****************************************************************
 \section{\textcolor{Salmon}{technische Umsetzung des Datenflusses zur Dashboardanzeige}}
@@ -25,7 +40,8 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Dashboard/20250704_DB_dev.png}
+    %\includegraphics[width=1\linewidth]{Dashboard/20250704_DB_dev.png}
+    \includegraphics[width=0.5\linewidth]{Anhänge/00_stockfoto.jpg}
     \caption{Aufbau des gebauten Dashboard \textcolor{red}{(Ersetzen durch zensiertes Bild)}}
     \label{fig:aufbau_dashboard}
 \end{figure}
