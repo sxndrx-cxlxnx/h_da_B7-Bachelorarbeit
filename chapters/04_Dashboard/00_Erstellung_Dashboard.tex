@@ -13,7 +13,7 @@ Um die Ergebnisse des Testpools moderner (austauschen durch effizient o.s.) zu g
 % *****************************************************************
 \section{\textcolor{Turquoise}{Evaluation und Auswahl des Dashboard-Tools}}
 \label{ch:Dashboard:sec:Tooling}
- Das Dashboard-Projekt startete mit der Erwartung, Sonar nutzen zu können, da es bereits im Kontext eines anderen Produktes genutzt wurde, entsprechendes Wissen vorhanden ist, der Server weiterverwendet werden kann, und Sonar viele nützliche Funktionalitäten anbietet. Da das Dashboard in der Zukunft um eine Code-Analyse-Sektion erweitert werden soll, scheint die integrierte Funktionalität von Sonar angemessen. Jedoch ist die Lizenz von Sonar auf die Anzahl der Codezeilen ausgelegt. Mit der Menge der Codezeilen im bestehenden System (s. \autoref{ch:IST-Zustand}) wurde entschieden, dass diese finanzielle Belastung nicht realistisch tragbar ist. \textcolor{red}{\cite{TODO:Sonar}}
+ Das Dashboard-Projekt startete mit der Erwartung, Sonar nutzen zu können, da es bereits im Kontext eines anderen Produktes genutzt wurde, entsprechendes Wissen vorhanden ist, der Server weiterverwendet werden kann und Sonar viele nützliche Funktionalitäten anbietet. Da das Dashboard in der Zukunft um eine Code-Analyse-Sektion erweitert werden soll, scheint die integrierte Funktionalität von Sonar angemessen. Jedoch ist die Lizenz von Sonar auf die Anzahl der Codezeilen ausgelegt. Mit der Menge der Codezeilen im bestehenden System (s. \autoref{ch:IST-Zustand}) wurde entschieden, dass diese finanzielle Belastung nicht realistisch tragbar ist. \textcolor{red}{\cite{TODO:Sonar}}
 
  Es muss ein neues Tool gefunden werden. Für die Auswahl eines Tools wurden folgende Kategorien gewählt:
 \begin{itemize}
@@ -23,16 +23,19 @@ Um die Ergebnisse des Testpools moderner (austauschen durch effizient o.s.) zu g
     $\rightarrow$ Sind diese kompatibel zur Umgebung?
     \item Ist das Tool CI/CD-kompatibel?
     \item Wird das Tool immer noch aktiv gewartet?
-    \item Wie kann das Tool installiert werden? Zum Beispiel Docker/ händisch?
+    \item Welche Infrastruktur / Welchen Aufwand benötigt die Installation?
+    %Wie kann das Tool installiert werden? Zum Beispiel Docker/ händisch?
+    % TODO: im Anhang auch so umformulieren
     \item weitere Vorteile
     \item weitere Nachteile
 \end{itemize}
 
 In \autoref{tab:Dashboard:Evalutaion_Tooling} ist die Auflistung zu finden, welche Tools verglichen und wie diese ausgewertet wurden.
+Verschiedene Punkte führten zum Ausschluss der meisten Tools, darunter zum Beispiel Smashing, Dashbuilder und Tipboard. Sie sind zu alt, Open Source Projekte werden nicht mehr aktiv gewartet, benötigte Software ist nicht die jeweils aktuellste Version, das Tool ist umständlich zu installieren oder es gibt versteckte Kosten, da zum Beispiel ein zusätzlicher lizenzierter Server benötigt wird.
 
-Verschiedene Punkte führten zum Ausschluss der meisten Tools, darunter zum Beispiel Smashing, Dashbuilder und Tipboard. Sie waren zu alt, Open Source Projekte wurden nicht mehr aktiv gewartet, benötigte Software ist nicht die jeweils aktuellste Version, das Tool ist umständlich zu installieren oder es gab versteckte Kosten, da zum Beispiel ein zusätzlicher lizenzierter Server benötigt wurde.
+%Das neue Dashboard wurde mit Grafana Version 11.6.1 erstellt. Zwar hat das Tool nicht die gleichen Code-spezifischen Funktionalitäten wie Sonar, ist jedoch ein modernes viel genutztes Tool (s. \autoref{ch:SdF:sec:moderne_DB_Tools_und_Empfehlungen}). Abgesehen davon, dass ein Grafanaserver bereits zur Verfügung stand, kann es kostenfrei selbst gehostet werden, ermöglicht ein einfaches Drag-and-Drop zur Dashboard-Erstellung, unterstützt jegliche Dateiformate über einen API-Zugriff, ist leicht zu installieren und bietet viele Einstellungsmöglichkeiten zum Individualisieren. \textcolor{red}{\cite{TODO:Grafana}}
+Das neue Dashboard wurde mit Grafana Version 11.6.1 erstellt. Zwar hat das Tool nicht die gleichen Code-spezifischen Funktionalitäten wie Sonar, ist jedoch ein modernes viel genutztes Tool (s. \autoref{ch:SdF:sec:moderne_DB_Tools_und_Empfehlungen}). Zur Dashboard-Erstellung ermöglicht Grafana ein einfaches Drag-and-Drop, unterstützt jegliche Dateiformate über einen API-Zugriff, ist leicht zu installieren und bietet viele Einstellungsmöglichkeiten zum Individualisieren. Zudem kann Grafana kostenfrei selbst gehostet werden. \textcolor{red}{\cite{TODO:Grafana}}
 
-Das neue Dashboard wurde mit Grafana Version 11.6.1 erstellt. Zwar hat das Tool nicht die gleichen Code-spezifischen Funktionalitäten wie Sonar, ist jedoch ein modernes viel genutztes Tool (s. \autoref{ch:SdF:sec:moderne_DB_Tools_und_Empfehlungen}). Abgesehen davon, dass ein Grafanaserver bereits zur Verfügung stand, kann es kostenfrei selbst gehostet werden, ermöglich ein einfaches Drag-and-Drop zur Dashboard-Erstellung, unterstützt jegliche Dateiformate über einen API-Zugriff, ist leicht zu installieren und bietet viele Einstellungsmöglichkeiten zum Individualisieren. \textcolor{red}{\cite{TODO:Grafana}}
 
 % *****************************************************************
 \section{\textcolor{Turquoise}{technische Umsetzung des Datenflusses zur Dashboardanzeige}}
@@ -50,9 +53,8 @@ Das Dashboard kann auf den Server zugreifen und mithilfe der API über den Adres
 
 \begin{figure}[]
     \centering
-    %\includegraphics[width=1\linewidth]{Dashboard/.png}
-    \includegraphics[width=0.5\linewidth]{Anhänge/00_stockfoto.jpg}
-    \caption{Datenfluss vom alten System zum Dashboard \textcolor{red}{(Bild einfügen)}}
+    \includegraphics[width=1\linewidth]{Dashboard/Daten_Kontrollsequenz_DB.png}
+    \caption{Kontrollsequenz des Datenflusses vom alten System zum Dashboard}
     \label{fig:DB_Datenfluss}
 \end{figure}
 
@@ -62,7 +64,7 @@ Das Dashboard kann auf den Server zugreifen und mithilfe der API über den Adres
 \section{\textcolor{Turquoise}{Überblick über den strukturellen Aufbau und Inhalt des Dashboards}}
 \label{ch:Dashboard:sec:Aufbau}
 \textcolor{blue}{einleitende Worte}\\
-Es gibt zwei Dashboards. Einmal für die Entwicklungsversion und eins für alle releasten und maintainten Versionen. Da die releasten Versionen bis auf kleine Fixes nicht weiter verändert werden \textcolor{red}{(ist das die richtige Begründung?)}, ist die Anzahl der benötigten Tests bedeutend geringer. Somit kann der Statusbericht mehrerer Versionen auf einem Dashboard angezeigt werden.
+Es gibt zwei Dashboards. Je eins für die Entwicklungsversion und eins für alle veröffentlichten und aktiv gewarteten Versionen. Da die releasten Versionen bis auf kleine Fixes nicht weiter verändert werden \textcolor{red}{(ist das die richtige Begründung?)}, ist die Anzahl der benötigten Tests bedeutend geringer. Somit kann der Statusbericht mehrerer Versionen auf einem Dashboard angezeigt werden.
 
 Grafana gibt eine Dashboard Struktur in Reihen vor. Jede Reihe stellt ein System da, welches im alten System jeweils eine eigene Seite benötigt. Die Panele einer Reihe sind in drei Spalten aufgeteilt (s. \autoref{fig:aufbau_dashboard}).
 
@@ -79,7 +81,7 @@ Grafana gibt eine Dashboard Struktur in Reihen vor. Jede Reihe stellt ein System
 \textcolor{red}{TODO: im nächsten Absatz mit 'Daten' statt 'Spalte' ansetzten}
 
 % mittlere Spalte
-In der mittleren Spalte sind Zahlen in verschiedenen Farben dargestellt, die den jeweiligen Zustand bzw. die Fehleranzahl der entsprechenden Testkategorie anzeigt. Im Falle eines Green Days stehen in allen Feldern dunkelgraue Nullen. Da stattdessen auffallen soll wenn Fehler vorhanden sind, werden diese farbig markiert. Die Fehlerfälle sind 'System abgestürzt', 'Anzahl der Fehler', 'Anzahl der ausstehenden Tests' und 'ignorierte Tests'\footnote{Die Kategorie 'Ignorierte Tests' umfässt zum Beispiel Testfälle mit langzeit bekannten Fehlern, die für die Einschätzung des Green Days ignoriert werden dürfen.}.
+In der mittleren Spalte sind Zahlen in verschiedenen Farben dargestellt, die den jeweiligen Zustand bzw. die Fehleranzahl der entsprechenden Testkategorie anzeigt. Im Falle eines Green Days, ein Tag an dem keine Fehler auftreten, stehen in allen Feldern dunkelgraue Nullen. Da stattdessen auffallen soll wenn Fehler vorhanden sind, werden diese farbig markiert. Die Fehlerfälle sind 'System abgestürzt', 'Anzahl der Fehler', 'Anzahl der ausstehenden Tests' und 'ignorierte Tests'\footnote{Die Kategorie 'Ignorierte Tests' umfässt zum Beispiel Testfälle mit langzeit bekannten Fehlern, die für die Einschätzung des Green Days ignoriert werden dürfen.}.
 Aufgrund der Menge an Testfällen und der Anforderung alle zusammengehörigen Daten auf einen Blick erfassen zu können (s. \autoref{ch:Dashboard:sec:Anforderungen}), sind die Test-Kategorien in Spalten und deren Ergebnisse in den Reihen darunter dargestellt. Im Vergleich zum alten System wurden die Reihen/Spalten vertauscht (s. \autoref{fig:aufbau_altes_System}).
 
 % Informationen: linke + rechte Spalte
