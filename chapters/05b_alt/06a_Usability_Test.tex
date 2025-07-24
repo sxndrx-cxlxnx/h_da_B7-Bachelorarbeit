@@ -116,24 +116,39 @@ Mittelwert:
 \newpage
 \noindent
 Standardabweichung:
+%\newcommand{\thatsum}{ \Xsum\limits_{i=0}^n (i_n - \Bar{x})^2 }
+%$$\thatsum$$
 \begin{flalign*}
 \indent
 \displaystyle
-    s &=
+    s %&= \sqrt{ \frac{ \Xsum\limits_{i=0}^n (i_n - \Bar{x})^2  }{ n-1 } } &\\
+    &= 
     \sqrt
     {
         \frac
         {
-            (x_1 - \Bar{x})^2 +
-            (x_2 - \Bar{x})^2 +
-            (x_3 - \Bar{x})^2 +
-            ... +
-            (x_n - \Bar{x})^2
+            \Xsum\limits_{i=0}^n (i_n - \Bar{x})^2
+            % \Xsum_{i=0}^n (i_n - \Bar{x})^2
         }
         {
             n-1
         }
-    } &\\
+    }&\\
+%    =%&=
+%    \sqrt
+%    {
+%        \frac
+%        {
+%            (x_1 - \Bar{x})^2 +
+%            (x_2 - \Bar{x})^2 +
+%            (x_3 - \Bar{x})^2 +
+%            ... +
+%            (x_n - \Bar{x})^2
+%        }
+%        {
+%            n-1
+%        }
+%    } &\\
     &=
     \sqrt
     {

@@ -103,7 +103,25 @@
 \PassOptionsToPackage{fleqn}{amsmath}       % math environments and more by the AMS
   \usepackage{amsmath}
 
-\usepackage{mathtools}
+\usepackage{mathptmx,mathtools}
+% =============================================
+% Import symbols from font cmex without importing the whole package
+% =============================================
+\DeclareFontFamily{U} {cmex}{}
+
+\DeclareFontShape{U}{cmex}{m}{n}{
+  <-6> cmex5
+  <6-7> cmex6
+  <7-8> cmex7
+  <8-9> cmex8
+  <9-10> cmex9
+  <10-12> cmex10
+  <12-> cmex12}{}
+
+\DeclareSymbolFont{Xcmex} {U} {cmex}{m}{n}
+
+%\DeclareMathSymbol{\Xdsum}{\mathop}{Xcmex}{88}% LaTeX can find displaystyle
+\DeclareMathSymbol{\Xsum}{\mathop}{Xcmex}{80}
 
 \PassOptionsToPackage{doublespacing}{hdathesis}  % options: abbrev exam big wiwi english master
   \usepackage{hdathesis}
