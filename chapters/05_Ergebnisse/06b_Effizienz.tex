@@ -1,7 +1,104 @@
-\subsection{\textcolor{Plum}{Auswertung der Effizienz (H$_{2}$)}}
+\subsection{\textcolor{Salmon}{Auswertung der Effizienz (H$_{2}$)}}
 \label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Effizienz}
+% Usability = 
+% - Efficiency: How quickly and with how much effort can users achieve their goals? This includes factors like time taken, number of steps, and cognitive load.
+% Einfluss von Erlernbarkeit, Selbstbeschreibungsfähigkeit, Aufgabenangemessenheit
+\textcolor{blue}{\textit{einleitende Worte}}\\
 Folgende Hypothese ist zu bestätigen:
 \begin{quote}
     H$_{2}$ = Die Nutzung des neuen Systems ($\mu2$) beeinflusst die Effizienz ($e$) der gestellten Aufgaben positiv im Vergleich zur Nutzung des alten Systems ($\mu1$); \textcolor{red}{TODO: $e(\mu1) > e(\mu2)$}.
 \end{quote}
 ...
+
+\noindent
+\underline{Genauigkeit-Zeit-Vergleich}\\
+
+\noindent
+\underline{s. \autoref{tab:usability_test:mittelwerte}}\\
+- Differenz berechnen, Fehlerquote als Wert\\
+-> Berechnung Fehlerquote in Tabelle im Anhang \autoref{fig:Usability-Test:Excel_Berechnungen}\\
+- grafisch dargestellt in \autoref{fig:usability_test:genauigkeit-zeit_alt-neu} \&\& \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige}
+
+%\subsection{Genauigkeit-Zeit}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alt.png}
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_neu.png}
+    \caption{Usability-Test: Vergleich Genauigkeit-Zeit im alten und neuen System (Daten aus \autoref{tab:usability_test:mittelwerte})}
+    \label{fig:usability_test:genauigkeit-zeit_alt-neu}
+\end{figure}
+
+\noindent
+\underline{s. \autoref{fig:usability_test:genauigkeit-zeit_alt-neu}}\\
+- alt: Leute mit Fehlern waren langsamer\\
+- neu: Leute ohne Fehler waren minimal langsamer, kein signifikanter Unterschied\\
+- neu: höhere Fehlerquote, dafür auch x\% schneller (Bsp. Frage 1: 15s auf 10s)\\
+-> bei Diskussion darauf eingehen, woher die höhere Fehlerquote kommt
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alle.png}
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_richtige.png}
+    \caption{Usability-Test: Zeitvergleich von allen Werten und nur richtigen Antworten - im Verhältnis zur Fehlerquote (Daten aus \autoref{tab:usability_test:mittelwerte})}
+    \label{fig:usability_test:genauigkeit-zeit_alle-richtige}
+\end{figure}
+
+\noindent
+\underline{s. \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige}}\\
+- neu ist in jeder Aufgabe ersichtlich schneller\\
+-> Frage nach signifikanz\\
+- Fehlerquote nicht überall eindeutig\\
+
+\newpage
+% ****************************************************************************************
+
+\noindent
+- Zeiten sind im neuen System in Aufgaben 1+2 signifikant besser als im alten System\\
+-> beim Rest nur besser, nicht signifikant\\
+- endgültiger Zeitvergleich, s. Zusammenfassung \autoref{fig:usability_test:genauigkeit-zeit_mittel}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_mittel.png}
+    \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer - im Verhältnis zur Fehlerquote (Weiterverarbeitung der Daten aus \autoref{fig:usability_test:genauigkeit-zeit_alt-neu} und \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige})}
+    \label{fig:usability_test:genauigkeit-zeit_mittel}
+\end{figure}
+
+\noindent
+=> \autoref{fig:usability_test:genauigkeit-zeit_mittel} erst in Diskussionskapitel(?)\\
+- neu ist im Mittel schneller\\
+- aber auch Fehlerquote bei neu im MIttel höher\\
+- schöne Zusammenfassung (man kann auch darauf vorspringen)
+
+% ************************************************************
+\begin{table}[H]
+\begin{tabular}{ll}
+$f_{alt} = \dfrac{n_{\text{\textit{gültige}}} - n_{richtige}}{n_{\text{\textit{gültige}}}}$ & // Fehlerquote \\
+$e_{alt} = \dfrac{\overline{t_{alt}} } { 1 - f_{alt} }$                   & // Effizienz$_{alt}$ \\
+%$e_{neu} = \dfrac{\overline{t_{neu}} } { 1 - f_{neu} }$                   & // Effizienz$_{neu}$ \\
+$e_{neu:alt} = -1 * (1 - \dfrac{e_{alt}} {e_{neu}})$                      & // Verhältnis: Effizienz$_{neu}$ zu Effizienz$_{alt}$
+\end{tabular}
+\end{table}
+
+\noindent
+- mit dieser Formel wurden die Werte aus \autoref{fig:usability_effizienz} berechnet\\
+-> Verhältnis $e_{neu}:e_{alt}$\\
+$\implies$ Aufgabe 1: neues System ist zu 53,25\% effizienter als das alte System\\
+$\implies$ Aufgabe 3.1: neues System ist zu 11,95\% ineffizienter als das alte System\\
+$\implies$ $\varnothing$: neues System ist zu 48,46\% effizienter als das alte System\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_effizienz.png}
+    \caption{Usability-Test: Effizienzvergleich vom neuen mit dem alten System\newline
+    (Weiterverarbeitung der Daten aus \autoref{fig:usability_test:genauigkeit-zeit_alt-neu})}
+    \label{fig:usability_effizienz}
+\end{figure}
+
+% ************************************************************
+\textcolor{red}{TODO: ISO-Grafiken}
+%\input{chapters/06_Diskussion/ISO_Erlernbarkeit}
+%\input{chapters/06_Diskussion/ISO_Selbstbeschreibungsfähigkeit}
+%\subsection*{ISO-Kriterium Aufgabenangemessenheit}
+%\autoref{fig:pruemper_Aufgabenangemessenheit}
+%\subsection*{weitere: Steuerbarkeit, Erwartungskonformität, Robustheit gegen Benutzungsfehler}

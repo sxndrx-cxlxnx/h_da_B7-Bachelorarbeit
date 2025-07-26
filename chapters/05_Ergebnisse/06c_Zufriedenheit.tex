@@ -1,7 +1,56 @@
-\subsection{\textcolor{Plum}{Auswertung der Zufriedenheit (H$_{3}$)}}
+\subsection{\textcolor{Salmon}{Auswertung der Zufriedenheit (H$_{3}$)}}
 \label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Zufriedenheit}
+% Usability = 
+% - Satisfaction: Do users find the system enjoyable and pleasant to use? Are they satisfied with the overall experience?
+
+% Einfluss von Erwartungskonformität, Benutzerbindung, Steuerbarkeit
+\textcolor{blue}{\textit{einleitende Worte}}\\
 Folgende Hypothese ist zu bestätigen:
 \begin{quote}
     H$_{3}$ = Die Nutzung des neuen Systems ($\mu2$) beeinflusst die Bewertung ($b$) der Software positiv im Vergleich zur Nutzung des alten Systems ($\mu1$); $b(\mu1) < b(\mu2)$.
 \end{quote}
 ...
+
+% Boxplots
+\noindent
+\underline{s. \autoref{fig:pruemper_all}}\\
+- zeigt alle Antworten der Fragen in einem Diagramm\\
+- Tendenz zu neu besser Erkennbar (erst in Diskussion?)\\
+\textcolor{red}{- Kurzbeschreibung: Erklärung, wie Boxplots aufgebaut sind und funktionieren\\
+-> 2 Sätze} % hatten wir potenziell in Mathe 2 (beschreibende Statistik)
+
+\noindent
+\underline{s. \autoref{tab:Nutzerbefragung:mittelwerte}}\\
+- Mittelwerte, Median, Standardabweichung\\
+- Differenzen
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+Frage                                   & 1      & 2      & 3      & 4      & 5      \\ \hline
+$\varnothing_{neu} - \varnothing_{alt}$ & 1,73   & 1,18   & 0,91   & 1,73   & 1,55   \\ \hline
+T-Test                                  & 0,0195 & 0,0949 & 0,1387 & 0,0487 & 0,0231 \\ \hline
+\hline
+Frage                                   & 6      & 7      & 8      & 9      & 10     \\ \hline
+$\varnothing_{neu} - \varnothing_{alt}$ & 2,27   & 2,55   & 1,07   & 2,29   & 2,1   \\ \hline
+T-Test                                  & 0,0087 & 0,0021 & 0,0286 & 0,021 & 0,02 \\ \hline
+\end{tabular}
+\caption{Nutzerbefragung - Differenz der Antwortmittelwerte und T-Test-Ergebnisse (Ergebnisse von Weiterverarbeitung der Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten})}
+\label{tab:Nutzerbefragung:Differenz+ttest}
+\end{center}
+\end{table}
+
+\noindent
+\underline{s. \autoref{tab:Nutzerbefragung:Differenz+ttest}}\\
+- Excel-Formel gleiche wie in \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}\\
+- volle Excel-Daten in \autoref{fig:Usability_Test:rohe_Daten}
+
+% *******************************************************************
+\textcolor{red}{TODO: ISO-Grafiken}
+%\input{chapters/06_Diskussion/ISO_Erwartungskonformität}
+%\input{chapters/06_Diskussion/ISO_Benutzerbindung}
+%\subsection*{Einfluss von ISO-Steuerbarkeit}
+%\autoref{fig:pruemper_Steuerbarkeit}
+
+%\subsection*{weitere: Erlernbarkeit}

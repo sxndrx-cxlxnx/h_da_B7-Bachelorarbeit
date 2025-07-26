@@ -4,7 +4,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{}
-    \caption{\textcolor{red}{TODO: snippet von der Excel-Tabelle + Formel}}
+    \caption{\textcolor{red}{TODO: snippet von der Excel-Tabelle + Formel (Zeit + Fehler}}
     \label{fig:Usability_Test:rohe_Daten}
 \end{figure}
 
@@ -69,17 +69,23 @@ f                  & Fehlerquote
 % *********************************************************************************
 
 \begin{table}[H]
-\begin{tabular}{|l|c|c|c|c|c|c|}
-\hline
-                                          & Frage 1 & Frage 2 & Frage 3.1 & Frage 3.2 & Frage 4.1 & Frage 4.2 \\ \hline
-$\varnothing t_{neu} - \varnothing t_{alt}$ & -6,55   & -7,14   & -4,46     & -3,64     & -6,18     & -3,81     \\ \hline
-T-Test                                    & 0,0231  & 0,0186  & 0,0579    & 0,0506    & 0,0554    & 0,0826    \\ \hline
-\end{tabular}
-\textcolor{red}{TODO}
-\includegraphics[width=1\linewidth]{Anhänge/Usability-Test/Tabelle_Fehlerquote_TTEST.PNG}
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+    \hline
+    Aufgabe                                     & 1     & 2     & 3.1   & 3.2     & 4.1   & 4.2 \\ \hline
+    $\varnothing t_{neu} - \varnothing t_{alt}$ & -6,55 & -7,14 & -4,46 & -3,64 & -6,18 & -3,81 \\ \hline
+    T-Test                                      & 0,0231& 0,0186& 0,0579& 0,0506& 0,0554& 0,0826\\ \hline
+    \end{tabular}
+    
+    \caption{Usability Test - Differenz der Zeitmittelwerte und t-Test-Ergebnisse (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte} und \autoref{fig:Usability_Test:rohe_Daten})}
+    \label{tab:usability_test:Differenz+ttest_Zeit}
+\end{table}
 
-\caption{Usability Test - Differenz der Zeitmittelwerte und T-Test-Ergebnisse (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte} und \autoref{fig:Usability_Test:rohe_Daten})}
-\label{tab:usability_test:Differenz+ttest}
+\begin{table}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Anhänge/Usability-Test/Tabelle_Fehlerquote_TTEST.PNG}
+    \caption{Usability Test - Fehlerquoten, -mittelwerte und t-Test-Ergebnisse (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte} und \autoref{fig:Usability_Test:rohe_Daten}) \textcolor{red}{ - TODO: austauschen durch Tabelle}}
+\label{tab:usability_test:Differenz+ttest_Fehler}
 \end{table}
 
 \textcolor{red}{TODO: weitere T-Tests von Aufgaben 2+3}\\
