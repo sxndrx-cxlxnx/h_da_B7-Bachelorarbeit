@@ -1,0 +1,208 @@
+\subsection{\textcolor{Turquoise}{Beispielrechnung zur Hypothesen-Auswertung anhand von t-Tests}}
+\label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}
+\textcolor{blue}{\textit{einleitende Worte}}
+% Wikipedia:
+%Der t-Test ist ein Begriff aus der mathematischen Statistik, er bezeichnet eine Gruppe von Hypothesentests mit t-verteilter Testprüfgröße. Oft ist jedoch mit dem t-Test der Einstichproben- bzw. Zweistichproben-t-Test auf einen Mittelwertunterschied gemeint. 
+
+\noindent
+\textcolor{cyan}{Was macht der T-Test?}\\
+- Differenzen bilden\\
+- davon Mittelwert und Standardfehler berechnen\\
+- Aussage treffen, wie wahrscheinlich es ist, dass dieses Ergebnis zufällig entstanden ist\\
+\textcolor{red}{- TODO: einseitig / zweiseitig definieren}
+
+\begin{quote}
+    t-Test. Verfahren zur Überprüfung des Unterschiedes zweier Stichprobenmittelwerte. Man unterscheidet den \\
+    -> t-Test für unabhängige Stichproben (Vergleich der Mittelwerte von Stichproben aus zwei verschiedenen Populationen) und den\\
+    -> t-Test für abhängige Stichproben (Vergleich zweier Mittelwerte einer Variablen, die an derselben Stichprobe zu zwei verschiedenen Zeitpunkten oder an »Matched Samples« erhoben wurden).
+    - \cite{Statistik:Boertz:2006}
+\end{quote}
+
+\noindent
+\textcolor{cyan}{- weitere Quellen: \cite{Statistik:Boertz:2010} \cite{Statistik:Sedlmeier:2024}}\\
+
+\noindent
+\begin{table}[H]
+Das nachfolgende Beispiel nutzt die Daten von Frage 1 der Nutzerbefragung (s. \autoref{fig:pruemper_all}). \\
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    System      & \multicolumn{11}{l|}{Antworten der Nutzer} \\ \hline
+    alt         &  2 & 2 & 1 & -1 & 1 & -2 & 2 & -3 & -2 & -1 & -1 \\ \hline
+    neu         &  0 & 3 & 1 &  2 & 2 &  1 & 3 &  3 &  3 &  1 & -2 \\ \hline
+    \hline
+    Differenz x  & -2 & 1 & 0 &  3 & 1 &  3 & 1 &  6 &  5 &  2 & -1 \\
+    \hline
+\end{tabular}
+\end{table}
+
+\noindent
+Differenzen mit Ergebnis = 0 werden nicht betrachtet \textcolor{red}{TODO: Quelle!}\\
+Hypothesen:\\
+\textcolor{red}{
+$H0:= alt \geq neu$\\
+$H1:= alt < neu$\\
+}
+
+\noindent
+Es wird ein einseitiger, gepaarter t-Test durchgeführt. Die Vorraussetzungen dafür sind folgende:
+\begin{itemize}
+    \item es liegen zwei abhängige Stichproben vor $\rightarrow$ jede Person beantwortet alle Fragen für zwei unterschiedliche Systeme
+    \item die Daten sind metrisch
+    \item Differenzen sind normalverteilt $\rightarrow$ wurde überprüft mithilfe des Online-Rechners von StatistikGuru \cite{normalverteilung_rechner}
+\end{itemize}
+
+\noindent
+Anzahl der Fälle:
+
+$\displaystyle n = 10$ \\
+
+\noindent
+Freiheitsgrade:
+
+$\displaystyle d_f = n-1 = 9$  \\
+
+\noindent
+Mittelwert:
+\begin{flalign*}
+\indent
+\displaystyle
+\Bar{x}   &= \frac{\sum{x_{diff}}}{n} &\\
+          &= \underline{\underline{1,9}}
+\end{flalign*}
+
+%\newpage
+\noindent
+Standardabweichung:
+\begin{flalign*}
+\indent
+\displaystyle
+    s %&= \sqrt{ \frac{ \Xsum\limits_{i=0}^n (x_n - \Bar{x})^2  }{ n-1 } } &\\
+    &= 
+    \sqrt
+    {
+        \frac
+        {
+            \Xsum\limits_{x=0}^n (x_n - \Bar{x})^2
+            % \Xsum_{x=0}^n (x_n - \Bar{x})^2
+        }
+        {
+            n-1
+        }
+    }&\\
+%    =%&=
+%    \sqrt
+%    {
+%        \frac
+%        {
+%            (x_1 - \Bar{x})^2 +
+%            (x_2 - \Bar{x})^2 +
+%            (x_3 - \Bar{x})^2 +
+%            ... +
+%            (x_n - \Bar{x})^2
+%        }
+%        {
+%            n-1
+%        }
+%    } &\\
+    &=
+    \sqrt
+    {
+        \dfrac
+        {
+            \splitdfrac{
+                (-2 - 1,9)^2
+                + ( 1 - 1,9)^2
+                + ( 3 - 1,9)^2
+                + ( 1 - 1,9)^2
+                + ( 3 - 1,9)^2
+            }{
+                + ( 1 - 1,9)^2
+                + ( 6 - 1,9)^2
+                + ( 5 - 1,9)^2
+                + ( 2 - 1,9)^2
+                + (-1 - 1,9)^2
+            }
+        }
+        {
+            10 - 1
+        }
+    } &\\
+    &=
+    \sqrt
+    {
+        \dfrac
+        {
+            \splitdfrac{
+                (-3,9)^2
+                + (-0,9)^2
+                + 1,1^2
+                + (-0,9)^2
+                + 1,1^2
+            }{
+                + (-0,9)^2
+                + 4,1^2
+                + 3,1^2
+                + 0,1^2
+                + (-2,9)^2
+            }
+        }
+        {
+            10 - 1
+        }
+    } &\\
+    &=
+    \sqrt
+    {
+        \dfrac
+        {
+            \splitdfrac{
+                15,21
+                + 0,81
+                + 1,21
+                + 0,81
+                + 1,21
+            }{
+                + 0,81
+                + 16,81
+                + 9,61
+                + 0,01
+                + 8,41
+            }
+        }
+        {
+            9
+        }
+    } &\\
+    &= \sqrt{\frac{54,9}{3}} = \sqrt{6,1} \approx \underline{\underline{2,4698}}
+\end{flalign*}
+
+\noindent
+Standardfehler des Mittelwerts:\\
+
+$ \displaystyle
+s_e = \frac{s}{\sqrt{n}}
+    = \frac{2,4698}{\sqrt{10}}
+    \approx \underline{\underline{0,7810}}
+$\\
+
+\noindent
+Teststatistik:\\
+
+$ \displaystyle
+t  = \frac{\Bar{x} - 0}{s_e}
+   = \frac{\Bar{x}}{s_e}
+   = \frac{1,9}{0,781}
+   \approx \underline{\underline{2,432778}}
+$\\
+
+\noindent
+Wahrscheinlichkeit: \textcolor{red}{TODO: Verweis auf die Statistik-Tabelle}\\
+
+$ \displaystyle
+p \approx \underline{\underline{0,019471718}}
+$ (aus Excel)\\
+
+\noindent
+Der t-Test kann mithilfe von Microsoft Excel durchgeführt werden. Die Formel für einen einseitigen, gepaarten t-Test ist:
+$$=TTEST(Matrix_{alt}, Matrix_{neu},1,1)$$
+Alle weiteren t-Test Ergebnisse wurden über diesen Weg erreicht und sind in \autoref{tab:usability_test:Differenz+ttest} für den Usability-Test und in \autoref{tab:Nutzerbefragung:Differenz+ttest}) für die Nutzerbefragung aufgeführt.
