@@ -3,72 +3,49 @@
 % Usability = 
 % - Efficiency: How quickly and with how much effort can users achieve their goals? This includes factors like time taken, number of steps, and cognitive load.
 % Einfluss von Erlernbarkeit, Selbstbeschreibungsfähigkeit, Aufgabenangemessenheit
-\textcolor{blue}{\textit{einleitende Worte}}\\
+Ein System ist effizient, wenn ein Nutzer dieses schnell und ohne großen Aufwand bedienen kann. Die Bewertung umfasst die nötige Zeit, die Anzahl der Schritte und die benötigte kognitive Belastung zum Erreichen eines Ziels (s. \autoref{ch:SdF:UI:ISO})
+
 Folgende Hypothese ist zu bestätigen:
 \begin{quote}
     H$_{2}$ = Die Nutzung des neuen Systems ($\mu2$) beeinflusst die Effizienz ($e$) der gestellten Aufgaben positiv im Vergleich zur Nutzung des alten Systems ($\mu1$); \textcolor{red}{TODO: $e(\mu1) > e(\mu2)$}.
 \end{quote}
-...
 
 \noindent
-\underline{Genauigkeit-Zeit-Vergleich}\\
+\begin{minipage}[!t]{0.45\linewidth}
+    Während der Bearbeitung der Aufgaben des Usability-Tests wurde die verwendete Zeit bis zur Beantwortung aufgezeichnet. Deren Mittelwerte sind vergleichend in \autoref{fig:usability_test:zeit} dargestellt. Es ist erkennbar, dass die Bearbeitung der Aufgaben mit dem Dashboard schneller erfolgte. Die Nutzer benötigten rund 64\% der Zeit die sie mit dem alten System benötigten.
+\end{minipage}
+\begin{minipage}[!t]{0.45\linewidth}%\vspace{0pt}
+    \RaggedLeft
+    \includegraphics[width=0.95\linewidth]{Diagramme/usability_mittlere_zeit_3.png}
+    \captionof{figure}{Usability-Test: Vergleich der mittleren Bearbeitungsdauer (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte})}
+    \label{fig:usability_test:zeit}
+\end{minipage}
 
-\noindent
-\underline{s. \autoref{tab:usability_test:mittelwerte}}\\
-- Differenz berechnen, Fehlerquote als Wert\\
--> Berechnung Fehlerquote in Tabelle im Anhang \autoref{fig:Usability-Test:Excel_Berechnungen}\\
-- grafisch dargestellt in \autoref{fig:usability_test:genauigkeit-zeit_alt-neu} \&\& \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige}
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width=1\linewidth]{Diagramme/usability_mittlere_zeit_2.png}
+%   \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte})}
+%    \label{fig:usability_test:zeit}
+%end{figure}
 
-%\subsection{Genauigkeit-Zeit}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alt.png}
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_neu.png}
-    \caption{Usability-Test: Vergleich Genauigkeit-Zeit im alten und neuen System (Daten aus \autoref{tab:usability_test:mittelwerte})}
-    \label{fig:usability_test:genauigkeit-zeit_alt-neu}
-\end{figure}
+-> signifikant: 0,0001747 \textcolor{red}{TODO: \autoref{TODO}}
 
-\noindent
-\underline{s. \autoref{fig:usability_test:genauigkeit-zeit_alt-neu}}\\
-- alt: Leute mit Fehlern waren langsamer\\
-- neu: Leute ohne Fehler waren minimal langsamer, kein signifikanter Unterschied\\
-- neu: höhere Fehlerquote, dafür auch x\% schneller (Bsp. Frage 1: 15s auf 10s)\\
--> bei Diskussion darauf eingehen, woher die höhere Fehlerquote kommt
+Fehlerquote s. \autoref{fig:usability_test:fehlerquote}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alle.png}
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_richtige.png}
-    \caption{Usability-Test: Zeitvergleich von allen Werten und nur richtigen Antworten - im Verhältnis zur Fehlerquote (Daten aus \autoref{tab:usability_test:mittelwerte})}
-    \label{fig:usability_test:genauigkeit-zeit_alle-richtige}
-\end{figure}
 
-\noindent
-\underline{s. \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige}}\\
-- neu ist in jeder Aufgabe ersichtlich schneller\\
--> Frage nach signifikanz\\
-- Fehlerquote nicht überall eindeutig\\
-
-\newpage
 % ****************************************************************************************
-
-\noindent
-- Zeiten sind im neuen System in Aufgaben 1+2 signifikant besser als im alten System\\
--> beim Rest nur besser, nicht signifikant\\
-- endgültiger Zeitvergleich, s. Zusammenfassung \autoref{fig:usability_test:genauigkeit-zeit_mittel}
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_mittel.png}
-    \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer - im Verhältnis zur Fehlerquote (Weiterverarbeitung der Daten aus \autoref{fig:usability_test:genauigkeit-zeit_alt-neu} und \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige})}
+    \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer - im Verhältnis zur Fehlerquote (Daten aus \autoref{fig:usability_test:fehlerquote} und \autoref{fig:usability_test:zeit})}
     \label{fig:usability_test:genauigkeit-zeit_mittel}
 \end{figure}
 
 \noindent
-=> \autoref{fig:usability_test:genauigkeit-zeit_mittel} erst in Diskussionskapitel(?)\\
+=> \autoref{fig:usability_test:genauigkeit-zeit_mittel}\\
 - neu ist im Mittel schneller\\
-- aber auch Fehlerquote bei neu im MIttel höher\\
-- schöne Zusammenfassung (man kann auch darauf vorspringen)
+- aber auch Fehlerquote bei neu im Mittel höher\\
+%- schöne Zusammenfassung (man kann auch darauf vorspringen)
 
 % ************************************************************
 \begin{table}[H]
@@ -96,6 +73,7 @@ $\implies$ $\varnothing$: neues System ist zu 48,46\% effizienter als das alte S
 \end{figure}
 
 % ************************************************************
+\noindent
 \textcolor{red}{TODO: ISO-Grafiken}
 %\input{chapters/06_Diskussion/ISO_Erlernbarkeit}
 %\input{chapters/06_Diskussion/ISO_Selbstbeschreibungsfähigkeit}
