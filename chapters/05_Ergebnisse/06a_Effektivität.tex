@@ -4,32 +4,54 @@
 % - Effectiveness: Can users actually achieve their goals with the system?
 % Einfluss von Aufgabenangemessenheit, Steuerbarkeit, Robustheit
 Ist ein System effektiv, ermöglicht es dem Nutzer, seine Ziele vollständig und fehlerfrei zu erreichen (s. \autoref{ch:SdF:UI:ISO}). Neben der Vollständigkeit der funktionellen Anforderungen (s. \autoref{ch:Dashboard:sec:Anforderungen_Auswertung}), gilt es zu bestimmen, ob die Nutzung des neuen Systems weniger fehleranfällig ist als die Nutzung des alten Systems.
-
-\noindent
 Folgende Hypothese ist zu bestätigen:
-\begin{quote}[H]
+
+\begin{quote}
     H$_{1}$ = Die Nutzung des neuen Systems ($\mu2$) beeinflusst die Fehlerquote ($f$) der Anworten der gestellten Aufgaben positiv im Vergleich zur Nutzung des alten Systems ($\mu1$); \\ $f(\mu1) > f(\mu2)$.
 \end{quote}
-Mithilfe des Usability-Tests wurde die Fehlerquote der Nutzer aufgezeichnet.    \textcolor{red}{// TODO: ich mag die Formulierung nicht}\\
-\underline{s. \autoref{tab:usability_test:mittelwerte}}\\
-- Differenz berechnen, Fehlerquote als Wert\\
--> Berechnung Fehlerquote in Tabelle im Anhang \autoref{tab:usability_test:Differenz+ttest_Fehler}\\
+
+Anhand des durchgeführten Usability-Tests wurden die Antworten der Nutzer ausgewertet. In \autoref{fig:usability_test:fehlerquote} sind die Fehlerquoten pro Aufgabe dargestellt. Zu erkennen ist, dass das alte System bei $\sfrac{2}{3}$ der Aufgaben keine Fehler verursachte. Auch der Durchschnitt beträgt ungefähr die Hälfte der durchschnittlichen Fehlerquote des neuen Systems. Das Dashboard hat bei jeder Aufgabe Fehler vorzuweisen, kann jedoch $\sfrac{1}{3}$ der Aufgaben eine geringere Fehlerquote vorzeigen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{Diagramme/usability_fehlerquote.png}
-    \includegraphics[width=0.23\linewidth]{Diagramme/Fehlerquote_Minitabelle.PNG}
+    %\includegraphics[width=0.23\linewidth]{Diagramme/Fehlerquote_Minitabelle.PNG}
     \caption{Usability-Test: Fehlerquoten der Nutzer (Daten aus \autoref{tab:usability_test:mittelwerte})}
     \label{fig:usability_test:fehlerquote}
 \end{figure}
 
-In \autoref{fig:usability_test:fehlerquote} sind die Fehlerquoten pro Aufgabe dargestellt. Zu erkennen ist, dass das alte System bei $\sfrac{2}{3}$ der Aufgaben keine Fehler verursachte. Auch der Durchschnitt ist halb so groß, wie beim neuen System. Das Dashboard hat bei jeder Aufgabe Fehler vorzuweisen, kann jedoch $\sfrac{1}{3}$ der Augaben eine geringere Fehlerquote vorzeigen.
+Der t-Test (s. \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}) unterschreitet das Niveau von 0,05 nicht (s. \autoref{tab:usability_test:Differenz+ttest_Fehler}, \autoref{Signifikanzniveau}), somit ist das Ergebnis nicht signifikant. Da zudem die Fehlerquote unter Nutzung des neuen Systems höher ist als die unter Nutzung des alten Systems, kann die Hypothese $H_1$ anhand der Fehlerquote nicht bestätigt werden.\\
 
-Anhand des t-Tests (s. \autoref{tab:usability_test:Differenz+ttest_Fehler}) ist keine Signifikanz erkennbar. Da die Fehlerquote unter Nutzung des neuen Systems höher ist als die unter Nutzung des alten Systems, kann die Hypothese $H_1$ anhand der Fehlerquote nicht bestätigt werden.\\
+\textcolor{blue}{TODO: einleitende Worte für den ISO-Teil}\\
+-> effektiv\\
+-> Bewertung durchsubjektive Einschätzung der Nutzer\\
+\textcolor{red}{TODO: Ref auf die Aufsplittung der ISO-Teile in Usability:} s. \autoref{ch:Validierung:sec:Material:Nutzerbefragung}
 
-\noindent
-\textcolor{red}{TODO: ISO-Grafiken}
-%\input{chapters/06_Diskussion/ISO_Aufgabenangemessenheit}
-%\input{chapters/06_Diskussion/ISO_Steuerbarkeit}
-%\input{chapters/06_Diskussion/ISO_Benutzungsfehler}
-%\subsection*{weitere: Erwartungskonformität, Erlernbarkeit, Selbstbeschreibungsfähigkeit}
+% Aufgabenangemessenheit
+In Bezug auf die Aufgabenangemessenheit bewerteten die Nutzer das neue System im Schnitt besser als das alte System (s. \autoref{fig:pruemper_Aufgabenangemessenheit}). Dabei zeigt der t-Test eine Signifikanz bei den Fragen 1 und 8 (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Diagramme/pruemper_aa.png}
+    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Aufgabenangemessenheit nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all})}
+    \label{fig:pruemper_Aufgabenangemessenheit}
+\end{figure}
+
+% Steuerbarkeit
+... Text ...
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Diagramme/pruemper_sk.png}
+    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Steuerbarkeit nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all})}
+    \label{fig:pruemper_Steuerbarkeit}
+\end{figure}
+
+% ISO_Benutzungsfehler
+- in diesem Use-case nicht benötigt (es gibt keine Fehler-Anzeigen, s. \autoref{Add:Nutzerbefragung_Prümper:Begründung_Filterung})\\
+- wird durch Usability-Test überprüft -> Fehlerquote\\
+-> ABER: auf Fehlergründe eingehen
+
+% weitere: Erwartungskonformität, Erlernbarkeit, Selbstbeschreibungsfähigkeit
+
+Hypothese $H_1$ kann aufgrundlage Kriterien Aufgabenangemesseheit, Steuerbarkeit und \textcolor{red}{Benutzungsfehler} aus der Nutzerumfrage bestätigt werden.
