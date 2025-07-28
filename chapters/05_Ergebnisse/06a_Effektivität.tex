@@ -1,4 +1,4 @@
-\subsection{\textcolor{Turquoise}{Auswertung der Effektivität (H$_{1}$)}}
+\subsection{\textcolor{MidnightBlue}{Auswertung der Effektivität (H$_{1}$)}}
 \label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Effektivität}
 % Usability = 
 % - Effectiveness: Can users actually achieve their goals with the system?
@@ -10,6 +10,7 @@ Folgende Hypothese ist zu bestätigen:
     H$_{1}$ = Die Nutzung des neuen Systems ($\mu2$) beeinflusst die Fehlerquote ($f$) der Anworten der gestellten Aufgaben positiv im Vergleich zur Nutzung des alten Systems ($\mu1$); \\ $f(\mu1) > f(\mu2)$.
 \end{quote}
 
+\noindent
 Anhand des durchgeführten Usability-Tests wurden die Antworten der Nutzer ausgewertet. In \autoref{fig:usability_test:fehlerquote} sind die Fehlerquoten pro Aufgabe dargestellt. Zu erkennen ist, dass das alte System bei $\sfrac{2}{3}$ der Aufgaben keine Fehler verursachte. Auch der Durchschnitt beträgt ungefähr die Hälfte der durchschnittlichen Fehlerquote des neuen Systems. Das Dashboard hat bei jeder Aufgabe Fehler vorzuweisen, kann jedoch $\sfrac{1}{3}$ der Aufgaben eine geringere Fehlerquote vorzeigen.
 
 \begin{figure}[H]
@@ -20,15 +21,14 @@ Anhand des durchgeführten Usability-Tests wurden die Antworten der Nutzer ausge
     \label{fig:usability_test:fehlerquote}
 \end{figure}
 
-Der t-Test (s. \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}) unterschreitet das Niveau von 0,05 nicht (s. \autoref{tab:usability_test:Differenz+ttest_Fehler}, \autoref{Signifikanzniveau}), somit ist das Ergebnis nicht signifikant. Da zudem die Fehlerquote unter Nutzung des neuen Systems höher ist als die unter Nutzung des alten Systems, kann die Hypothese $H_1$ anhand der Fehlerquote nicht bestätigt werden.\\
+\noindent
+Da die mittlere Fehlerquote unter Nutzung des neuen Systems höher ist als die unter Nutzung des alten Systems, kann die Hypothese $H_1$ anhand der Fehlerquote nicht bestätigt werden.
+%Der t-Test (s. \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}) unterschreitet das dabei Niveau von 0,05 nicht (s. \autoref{tab:usability_test:Differenz+ttest_Fehler}, \autoref{Signifikanzniveau}), somit ist das Ergebnis nicht statistisch signifikant. \\
 
-\textcolor{blue}{TODO: einleitende Worte für den ISO-Teil}\\
--> effektiv\\
--> Bewertung durchsubjektive Einschätzung der Nutzer\\
-\textcolor{red}{TODO: Ref auf die Aufsplittung der ISO-Teile in Usability:} s. \autoref{ch:Validierung:sec:Material:Nutzerbefragung}
+Zusätzlich zu den objektiven Daten, haben die Nutzer die Effektivität der Systeme in Form der ISO-Prinzipien, Aufgabenangemessenheit und Steuerbarkeit (s. \autoref{ch:Validierung:sec:Material:Nutzerbefragung}), durch ihre subjektive Einschätzung bewertet.
 
 % Aufgabenangemessenheit
-In Bezug auf die Aufgabenangemessenheit bewerteten die Nutzer das neue System im Schnitt besser als das alte System (s. \autoref{fig:pruemper_Aufgabenangemessenheit}). Dabei zeigt der t-Test eine Signifikanz bei den Fragen 1 und 8 (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}).
+In Bezug auf die Aufgabenangemessenheit bewerteten die Nutzer das neue System im Schnitt besser als das alte System (s. \autoref{fig:pruemper_Aufgabenangemessenheit}). Dabei zeigt der t-Test ein signifikantes Ergebnis bei den Fragen 1 und 8 (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}).
 
 \begin{figure}[H]
     \centering
@@ -38,7 +38,7 @@ In Bezug auf die Aufgabenangemessenheit bewerteten die Nutzer das neue System im
 \end{figure}
 
 % Steuerbarkeit
-... Text ...
+Auch die Steuerbarkeit wurde beim neuen System im Schnitt besser bewertet (s. \autoref{fig:pruemper_Steuerbarkeit}). Das Ergebnis ist jedoch statistisch nicht signifikant (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}).
 
 \begin{figure}[H]
     \centering
@@ -47,11 +47,4 @@ In Bezug auf die Aufgabenangemessenheit bewerteten die Nutzer das neue System im
     \label{fig:pruemper_Steuerbarkeit}
 \end{figure}
 
-% ISO_Benutzungsfehler
-- in diesem Use-case nicht benötigt (es gibt keine Fehler-Anzeigen, s. \autoref{Add:Nutzerbefragung_Prümper:Begründung_Filterung})\\
-- wird durch Usability-Test überprüft -> Fehlerquote\\
--> ABER: auf Fehlergründe eingehen
-
-% weitere: Erwartungskonformität, Erlernbarkeit, Selbstbeschreibungsfähigkeit
-
-Hypothese $H_1$ kann aufgrundlage Kriterien Aufgabenangemesseheit, Steuerbarkeit und \textcolor{red}{Benutzungsfehler} aus der Nutzerumfrage bestätigt werden.
+Hypothese $H_0$ kann auf Grundlage ISO-Kriterien Aufgabenangemessenheit und Steuerbarkeit aus der Nutzerumfrage ebenfalls nicht bestätigt werden.

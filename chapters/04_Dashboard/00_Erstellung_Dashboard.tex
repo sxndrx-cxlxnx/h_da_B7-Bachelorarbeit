@@ -21,19 +21,17 @@ Um die Ergebnisse des Testpools moderner (austauschen durch effizient o.s.) zu g
 
  Es muss ein neues Tool gefunden werden. Für die Auswahl eines Tools wurden folgende Kategorien gewählt:
 \begin{itemize}
-    \item Welche Lizenz benötigt das Tool? \\
-    $\rightarrow$ Ist diese im gefragten Kontext umsetzbar (z.B. bezahlbar)?
-    \item Welche Dateiformate werden unterstützt, um Daten an das Dashboard zu übertragen?\\
-    $\rightarrow$ Sind diese kompatibel zur Umgebung?
+    \item Welche Lizenz benötigt das Tool? Ist diese im gefragten Kontext umsetzbar (z.B. bezahlbar)?
+    \item Welche Dateiformate werden unterstützt, um Daten an das Dashboard zu übertragen? Sind diese kompatibel zur Umgebung?
     \item Ist das Tool CI/CD-kompatibel?
     \item Wird das Tool immer noch aktiv gewartet?
     \item Welche Infrastruktur / Welchen Aufwand benötigt die Installation?
     %Wie kann das Tool installiert werden? Zum Beispiel Docker/ händisch?
     % TODO: im Anhang auch so umformulieren
-    \item weitere Vorteile
-    \item weitere Nachteile
+    \item weitere Vor- und Nachteile
 \end{itemize}
 
+\noindent
 In \autoref{tab:Dashboard:Evalutaion_Tooling} ist die Auflistung zu finden, welche Tools verglichen und wie diese ausgewertet wurden.
 Verschiedene Punkte führten zum Ausschluss der meisten Tools, darunter zum Beispiel Smashing, Dashbuilder und Tipboard. Sie sind zu alt, Open Source Projekte werden nicht mehr aktiv gewartet, benötigte Software ist nicht die jeweils aktuellste Version, das Tool ist umständlich zu installieren oder es gibt versteckte Kosten, da zum Beispiel ein zusätzlicher lizenzierter Server benötigt wird.
 
@@ -42,7 +40,7 @@ Das neue Dashboard wurde mit Grafana Version 11.6.1 erstellt. Zwar hat das Tool 
 
 
 % *****************************************************************
-\section{\textcolor{Turquoise}{technische Umsetzung des Datenflusses zur Dashboardanzeige}}
+\section{\textcolor{MidnightBlue}{technische Umsetzung des Datenflusses zur Dashboardanzeige}}
 \label{ch:Dashboard:sec:Datenfluss}
 Die Dashboard-Anzeige sitzt symbolisch gesprochen auf dem alten System (s. \autoref{ch:IST-Zustand:sec:Beschreibung_altes_System}) auf. Das bedeutet, dass es die bestehenden Daten auswertet und neu darstellt (s. \autoref{fig:DB_Datenfluss}).
 
@@ -55,7 +53,7 @@ Das Dashboard kann auf den Server zugreifen und mithilfe der API über den Adres
 %- Verarbeitung der JSON-Datei
 %- zur Dashboardanzeige
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Dashboard/Daten_Kontrollsequenz_DB.png}
     \caption{Kontrollsequenz des Datenflusses vom alten System zum Dashboard}
