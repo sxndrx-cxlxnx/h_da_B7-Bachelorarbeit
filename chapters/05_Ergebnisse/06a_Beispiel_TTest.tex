@@ -1,74 +1,100 @@
-\subsection{\textcolor{Salmon}{Beispielrechnung zur Hypothesen-Auswertung anhand von t-Tests}}
+%\subsection{\textcolor{Salmon}{Beispielrechnung zur Hypothesen-Auswertung anhand von t-Tests}}
+\subsection{\textcolor{MidnightBlue}{Bestimmung der Signifikanz der Ergebnisse zur Hypothesenauswertung anhand von t-Tests}}
 \label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}
-\textcolor{blue}{\textit{einleitende Worte}}
-% Wikipedia:
-%Der t-Test ist ein Begriff aus der mathematischen Statistik, er bezeichnet eine Gruppe von Hypothesentests mit t-verteilter Testprüfgröße. Oft ist jedoch mit dem t-Test der Einstichproben- bzw. Zweistichproben-t-Test auf einen Mittelwertunterschied gemeint. 
+Mithilfe der Ergebnisse aus dem Usability-Test und der Befragung kann auf verschiedenen Ebenen dargestellt werden, welches System besser ist. Dieses ist jedoch nicht ausreichend, um die Nullhypothese eindeutig zu widerlegen. Mithilfe von Signifikanztests, wie dem t-Test, lässt sich eine Aussage treffen, wie wahrscheinlich es ist, dass das Ergebnis zufällig entstanden ist. \cite{Statistik:Sedlmeier:2018}
 
+Der t-Test überprüft den Mittelwertunterschied zwischen 2 Stichproben. Dabei wird zwischen dem t-Test für unabhängige Stichproben, wie beispielsweise der Vergleich von zwei Stichproben aus verschiedenen Populationen, sowie dem t-Test für abhängige Stichproben, wie beispielsweise der Vergleich der selben Nutzergruppe zu zwei verschiedenen Zeitpunkten, unterschieden. \cite{Statistik:Boertz:2006}
+Beim abhängigen t-Test werden die Differenzen der Wertepaare gebildet. Der Rest entspricht einem t-Test mit nur einer Stichprobe. \cite{Statistik:Sedlmeier:2018}
+
+Die erhaltenen p-Werte sind dabei keine Indikatoren für die Größe des Effekts. Auch erlauben sie keine Abschätzung der Wahrscheinlichkeit, dass die Null- bzw. Alternativhypothese zutrifft. \glqq Ein p-Wert ist die bedingte Wahrscheinlichkeit für ein Ergebnis (und alle noch extremeren Ergebnisse), unter der Bedingung, dass die Nullhypothese zutrifft.\grqq{} \cite{Statistik:Sedlmeier:2018} Das Signifikanzniveau $\alpha$ für den p-Wert ist eine vorgegebene kleine Irrtumswahrscheinlichkeit und beträgt in der Literatur gängigerweise 5\%. Liegt das Ergebnis des t-Tests darunter, so lässt sich schlussfolgern, dass die beobachtete Abweichung von der Nullhypothese kein Zufall mehr sein kann. Die Gültigkeit der Nullhypothese ist sehr unwahrscheinlich, wodurch das Ergebnis statistisch signifikant wird. Damit kann sich gegen die Nullhypothese und für die Alternativhypothese entschieden werden. \cite{Statistik:Sedlmeier:2018}
+
+Nachfolgend wird mit dem Unterschreiten des Signifikanzniveaus $\alpha$ die Ablehnung der Nullhypothese sowie die Akzeptanz der Alternativhypothese impliziert.
+
+Das Ergebnis kann dabei positiv und negativ von der Nullhypothese abweichen. Bei begründeter Annahme einer Abweichung in eine Richtung kann einseitig getestet werden. Liegt diese nicht vor, muss zweiseitig getestet werden. Bei dem zweiseitigen Vorgehen wird $\alpha$ gleichermaßen auf beide Seiten aufgeteilt. Da das Signifikanzniveau bei beiden Verfahren 5\% beträgt, halbiert es sich dadurch je Richtung (s. \autoref{fig:Signifikanzniveau_TTest}), wodurch es schwieriger ist, ein signifikantes Ergebnis zu erlangen. \cite{Statistik:Sedlmeier:2018}
+
+\begin{figure}[H]
+    \centering
+    %\includegraphics[width=0.5\linewidth]{...}
+    \includegraphics[width=0.7\linewidth]{Anhänge/00_stockfoto.jpg}
+    \caption{Einseitiger und Zweiseitiger t-Test \cite{Statistik:Sedlmeier:2018} - \textcolor{red}{TODO: Abbildung aus Buch scannen}}
+    \label{fig:Signifikanzniveau_TTest}
+\end{figure}
+\newpage
+
+% ************************************************************
 \noindent
-\textcolor{cyan}{Was macht der T-Test?}\\
-- Differenzen bilden\\
-- davon Mittelwert und Standardfehler berechnen\\
-- Aussage treffen, wie wahrscheinlich es ist, dass dieses Ergebnis zufällig entstanden ist\\
-\textcolor{red}{- TODO: einseitig / zweiseitig definieren}
+Das nachfolgende Beispiel nutzt die Daten der ersten Frage der Nutzerbefragung (s. \autoref{fig:pruemper_all}). Je höher die Antwort ausfällt, desto besser wurde das System bewertet.
 
-\begin{quote}
-    t-Test. Verfahren zur Überprüfung des Unterschiedes zweier Stichprobenmittelwerte. Man unterscheidet den \\
-    -> t-Test für unabhängige Stichproben (Vergleich der Mittelwerte von Stichproben aus zwei verschiedenen Populationen) und den\\
-    -> t-Test für abhängige Stichproben (Vergleich zweier Mittelwerte einer Variablen, die an derselben Stichprobe zu zwei verschiedenen Zeitpunkten oder an »Matched Samples« erhoben wurden).
-    - \cite{Statistik:Boertz:2006}
-\end{quote}
-
-\noindent
-\textcolor{cyan}{- weitere Quellen: \cite{Statistik:Boertz:2010} \cite{Statistik:Sedlmeier:2024}}\\
-
-\noindent
 \begin{table}[H]
-Das nachfolgende Beispiel nutzt die Daten von Frage 1 der Nutzerbefragung (s. \autoref{fig:pruemper_all}). \\
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
-    \hline
-    System      & \multicolumn{11}{l|}{Antworten der Nutzer} \\ \hline
-    alt         &  2 & 2 & 1 & -1 & 1 & -2 & 2 & -3 & -2 & -1 & -1 \\ \hline
-    neu         &  0 & 3 & 1 &  2 & 2 &  1 & 3 &  3 &  3 &  1 & -2 \\ \hline
-    \hline
-    Differenz x  & -2 & 1 & 0 &  3 & 1 &  3 & 1 &  6 &  5 &  2 & -1 \\
-    \hline
-\end{tabular}
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        System      & \multicolumn{11}{l|}{Antworten der Nutzer (Frage 1)} \\ \hline
+        alt         &  2 & 2 & 1 & -1 & 1 & -2 & 2 & -3 & -2 & -1 & -1 \\ \hline
+        neu         &  0 & 3 & 1 &  2 & 2 &  1 & 3 &  3 &  3 &  1 & -2 \\ \hline
+        \hline
+        Differenz x  & -2 & 1 & 0 &  3 & 1 &  3 & 1 &  6 &  5 &  2 & -1 \\
+        \hline
+    \end{tabular}
 \end{table}
 
 \noindent
-Differenzen mit Ergebnis = 0 werden nicht betrachtet \textcolor{red}{TODO: Quelle!}\\
-Hypothesen:\\
-\textcolor{red}{
-$H0:= alt \geq neu$\\
-$H1:= alt < neu$\\
-}
+Da die Signifikanz der Abweichung ermittelt werden soll, werden die Datensätze mit einer Differenz von Null rausgefiltert. Es wurden folgende Hypothesen in Bezug auf die Bewertung ($b$) der beiden Systeme ($\mu$) aufgestellt:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ll}
+        $H_0:=$ & Das neue System wird nicht besser bewertet als das alte System;\\
+                & $b(\mu_{alt}) \geq b(\mu_{neu}) \\
+        $H_1:=$ & Das neue System wird besser bewertet als das alte System;\\
+                & $b(\mu_{alt}) < b(\mu_{neu})$
+    \end{tabular}
+\end{table}
 
 \noindent
-Es wird ein einseitiger, gepaarter t-Test durchgeführt. Die Vorraussetzungen dafür sind folgende:
-\begin{itemize}
-    \item es liegen zwei abhängige Stichproben vor $\rightarrow$ jede Person beantwortet alle Fragen für zwei unterschiedliche Systeme
-    \item die Daten sind metrisch
-    \item Differenzen sind normalverteilt $\rightarrow$ wurde überprüft mithilfe des Online-Rechners von StatistikGuru \cite{normalverteilung_rechner}
-\end{itemize}
+Hierfür wird ein einseitiger, gepaarter t-Test durchgeführt. Die Voraussetzungen dafür sind zwei abhängige Stichproben in Form von Wertepaaren, metrische Daten und eine Normalverteilung der Differenzen. Diese wurde mithilfe des Online-Rechners von StatistikGuru \cite{normalverteilung_rechner} überprüft.\\
 
 \noindent
-Anzahl der Fälle:
+\begin{minipage}[t]{0.3\linewidth}
+    \raggedright
+    \noindent
+    Anzahl der Fälle:
 
-$\displaystyle n = 10$ \\
+    $\displaystyle n = 10$
+\end{minipage}
+\begin{minipage}[t]{0.3\linewidth}
+    \raggedright   
+    \noindent
+    Freiheitsgrade:
 
-\noindent
-Freiheitsgrade:
+    \indent
+    $\displaystyle d_f = n-1 = \underline{\underline{9}}$
+\end{minipage}
+\begin{minipage}[t]{0.3\linewidth}
+    \raggedright
+    \noindent
+    Mittelwert:\\
+    \vspace{1.5mm}
+    $\displaystyle \Bar{x}   = \frac{\sum{x_{diff}}}{n} = \underline{\underline{1,9}}
+\end{minipage}
 
-$\displaystyle d_f = n-1 = 9$  \\
+%\noindent
+%Anzahl der Fälle:
 
-\noindent
-Mittelwert:
-\begin{flalign*}
-\indent
-\displaystyle
-\Bar{x}   &= \frac{\sum{x_{diff}}}{n} &\\
-          &= \underline{\underline{1,9}}
-\end{flalign*}
+%$\displaystyle n = 10$ \\
+
+%\noindent
+%Freiheitsgrade:
+
+%$\displaystyle d_f = n-1 = 9$  \\
+
+%\noindent
+%Mittelwert:
+%\begin{flalign*}
+%\indent
+%displaystyle
+%\Bar{x}   &= \frac{\sum{x_{diff}}}{n} &\\
+%          &= \underline{\underline{1,9}}
+%\end{flalign*}
 
 %\newpage
 \noindent
@@ -177,32 +203,36 @@ Standardabweichung:
 \end{flalign*}
 
 \noindent
-Standardfehler des Mittelwerts:\\
-
-$ \displaystyle
+Standardfehler des Mittelwerts:
+$$ \displaystyle
 s_e = \frac{s}{\sqrt{n}}
     = \frac{2,4698}{\sqrt{10}}
     \approx \underline{\underline{0,7810}}
-$\\
-
-\noindent
-Teststatistik:\\
-
-$ \displaystyle
+$$
+Teststatistik:
+$$ \displaystyle
 t  = \frac{\Bar{x} - 0}{s_e}
    = \frac{\Bar{x}}{s_e}
    = \frac{1,9}{0,781}
    \approx \underline{\underline{2,432778}}
-$\\
+$$\\
 
 \noindent
-Wahrscheinlichkeit: \textcolor{red}{TODO: Verweis auf die Statistik-Tabelle}\\
-
-$ \displaystyle
-p \approx \underline{\underline{0,019471718}}
-$ (aus Excel)\\
+Je größer der absolute t-Wert ist, umso kleiner ist der p-Wert und umso stärker ist der Beleg gegen die Nullhypothese. Mit einem Freiheitsgrad von 9 und dem einseitigen Signifikanzniveau $\alpha$ von 0,05, welches einem Flächenanteil von $1-\alpha = 95\%$ oder 0,95 entspricht, kann aus der Tabelle der t-Verteilung der kritische t-Wert 1,833 abgelesen werden. \cite{Statistik:Sedlmeier:2018} \cite{Statistik:Boertz:2010}
+$$t > t_{krit.}$$
+$$2,4327 > 1,833$$
+Mit dem t-Wert von 2,4327 liegt der Alpha-Wert zwischen 0,025 und 0,01.
+$$ \displaystyle 0,01 < p < 0,025$$
+Damit ist dieser geringer als das Signifikanzniveau, wodurch die Nullhypothese eindeutig verworfen werden kann.
+$$ \displaystyle p < 0,05$$
 
 \noindent
-Der t-Test kann mithilfe von Microsoft Excel durchgeführt werden. Die Formel für einen einseitigen, gepaarten t-Test ist:
+Der t-Test kann ebenso mithilfe von Microsoft Excel durchgeführt werden. Mit der Formel 
 $$=TTEST(Matrix_{alt}, Matrix_{neu},1,1)$$
-Alle weiteren t-Test Ergebnisse wurden über diesen Weg erreicht und sind in \autoref{tab:usability_test:Differenz+ttest_Fehler} für die Fehlerquotenvergleich des Usability-Tests, in \autoref{tab:usability_test:Differenz+ttest_Zeit} für den Zeitvergleich des Usability-Tests und in \autoref{tab:Nutzerbefragung:Differenz+ttest} für den Vergleich der Ergebnisse der Nutzerbefragung aufgeführt.
+für einen einseitigen, gepaarten t-Test, wurde folgendes Ergebnis erzielt:
+$$ \displaystyle p \approx 0,019471718 \approx \underline{\underline{0,0195}} $$
+Dieses fügt sich in das vorherige Ergebnis ein.
+$$0,01 < 0,0195 < 0,025$$
+
+\noindent
+Alle weiteren t-Test Ergebnisse wurden über diesen Weg erreicht und sind in \autoref{tab:usability_test:Differenz+ttest_Zeit} für den Zeitvergleich des Usability-Tests, in \autoref{tab:usability_test:Differenz+ttest_Fehler} für die Fehlerquotenvergleich des Usability-Tests und in \autoref{tab:Nutzerbefragung:Differenz+ttest} für den Vergleich der Ergebnisse der Nutzerbefragung aufgeführt.
