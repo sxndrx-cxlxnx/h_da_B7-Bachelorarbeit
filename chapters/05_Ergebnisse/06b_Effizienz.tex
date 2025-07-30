@@ -1,73 +1,111 @@
-\subsection{\textcolor{Turquoise}{Auswertung der Effizienz (H$_{2}$)}}
+\subsection{\textcolor{MidnightBlue}{Auswertung der Effizienz (H$_{2}$)}}
 \label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Effizienz}
 % Usability = 
 % - Efficiency: How quickly and with how much effort can users achieve their goals? This includes factors like time taken, number of steps, and cognitive load.
 % Einfluss von Erlernbarkeit, Selbstbeschreibungsfähigkeit, Aufgabenangemessenheit
-Ein System ist effizient, wenn ein Nutzer dieses schnell und ohne großen Aufwand bedienen kann. Die Bewertung umfasst die nötige Zeit, die Anzahl der Schritte und die benötigte kognitive Belastung zum Erreichen eines Ziels (s. \autoref{ch:SdF:UI:ISO}).
+Ein System ist effizient, wenn ein Nutzer dieses schnell und ohne großen Aufwand bedienen kann. Die Bewertung dessen umfasst die nötige Zeit, die Anzahl der Schritte und die benötigte kognitive Belastung zum Erreichen eines Ziels (s. \autoref{ch:SdF:UI:ISO}).
 Folgende Hypothese ist zu bestätigen:
 \begin{quote}
     H$_{2}$ = Die Nutzung des neuen Systems ($\mu2$) beeinflusst die Effizienz ($e$) der gestellten Aufgaben positiv im Vergleich zur Nutzung des alten Systems ($\mu1$); \textcolor{red}{TODO: $e(\mu1) > e(\mu2)$}.
 \end{quote}
 
-\textcolor{red}{TODO: Übergang von Hypothese zu Text smoothen.}\\
-Während der Bearbeitung der Aufgaben des Usability-Tests wurde die verwendete Zeit bis zur Beantwortung aufgezeichnet. Deren Mittelwerte sind vergleichend in \autoref{fig:usability_test:zeit} dargestellt. Es ist erkennbar, dass die Bearbeitung der Aufgaben mit dem Dashboard schneller erfolgte. Die Nutzer benötigten rund 64\% der Zeit die sie mit dem alten System benötigten.
+\noindent
+Neben der der Verringerung der Arbeitsschritte (s. \autoref{ch:Dashboard:sec:Anforderungen_Auswertung}) und der Fehlerquote (s. \autoref{fig:usability_test:fehlerquote}) wird zur Effizienzbewertung die Bearbeitungszeit zur Beantwortung der Fragen benötigt.
+
+Deren Zeitmittelwerte sind vergleichend in \autoref{fig:usability_test:zeit} dargestellt. Es ist erkennbar, dass die Bearbeitung der Aufgaben mit dem Dashboard schneller erfolgte. Die Nutzer benötigten rund 64\% der Zeit die sie mit dem alten System benötigten. Der t-Test bestätigt einen statistisch signifikanten Unterschied (s. \autoref{tab:usability_test:zeit}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c||c|c|}
+        \hline
+    	System                          & alt   & neu   & Unterschied $\displaystyle \frac{alt}{neu}$   & t-Test \\ \hline
+        $\varnothing$ Bearbeitungsdauer	& 14,74	& 9,45	& 0,640735793 & 0,000174702\\ \hline
+    \end{tabular}
+    \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte})}
+    \label{tab:usability_test:zeit}
+\end{table}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Diagramme/usability_mittlere_zeit_2.png}
-    \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte}) \textcolor{red}{ - TODO: alt/neu tauschen}}
+    \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer (Daten aus \autoref{tab:usability_test:zeit}) \textcolor{red}{ - TODO: alt/neu tauschen}}
     \label{fig:usability_test:zeit}
 \end{figure}
 
--> signifikant: 0,0001747 \textcolor{red}{TODO: \autoref{TODO}}
+\noindent
+In \autoref{fig:usability_test:genauigkeit-zeit_mittel} sind die Vergleiche der Zeit und der Fehlerquote beider Systeme dargstellt. Während das neue System eine schnellere Bearbeitung der Aufgaben ermöglicht, wurden mit dem alten System weniger Fehler bei der Bearbeitung gemacht.
 
-Fehlerquote s. \autoref{fig:usability_test:fehlerquote}
-
-
-% ****************************************************************************************
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_mittel.png}
+    \centering  % TODO width=0.8\linewidth bevorzugt
+    \includegraphics[width=0.7\linewidth]{Diagramme/usability_genauigkeit-zeit_mittel.png}
     \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer - im Verhältnis zur Fehlerquote (Daten aus \autoref{fig:usability_test:fehlerquote} und \autoref{fig:usability_test:zeit}) \textcolor{red}{- TODO: Legende anpassen: 'fehlerfrei' statt 'richtig'}}
     \label{fig:usability_test:genauigkeit-zeit_mittel}
 \end{figure}
 
 \noindent
-=> \autoref{fig:usability_test:genauigkeit-zeit_mittel}\\
-- neu ist im Mittel schneller\\
-- aber auch Fehlerquote bei neu im Mittel höher\\
-%- schöne Zusammenfassung (man kann auch darauf vorspringen)
+Um trotz der gegensätzlichen Ausprägungen eine eindeutige Aussage treffen zu können, werden diese beiden Variablen zur Effizienz verrechnet.
 
 % ************************************************************
 \begin{table}[H]
 \begin{tabular}{ll}
 $f_{alt} = \dfrac{n_{\text{\textit{gültige}}} - n_{richtige}}{n_{\text{\textit{gültige}}}}$ & // Fehlerquote \\
-$e_{alt} = \dfrac{\overline{t_{alt}} } { 1 - f_{alt} }$                   & // Effizienz$_{alt}$ \\
+$e_{alt} = \dfrac{\overline{t_{alt}} } { 1 - f_{alt} }$                   & // Effizienz$_{alt}$ = mittlere Zeit / Richtigquote\\
 %$e_{neu} = \dfrac{\overline{t_{neu}} } { 1 - f_{neu} }$                   & // Effizienz$_{neu}$ \\
 $e_{neu:alt} = -1 * (1 - \dfrac{e_{alt}} {e_{neu}})$                      & // Verhältnis: Effizienz$_{neu}$ zu Effizienz$_{alt}$
 \end{tabular}
+\caption{Formel zur Effizienzberechnung}
+\label{Formel_zur_Effizienzberechnung}
 \end{table}
 
 \noindent
-- mit dieser Formel wurden die Werte aus \autoref{fig:usability_effizienz} berechnet\\
--> Verhältnis $e_{neu}:e_{alt}$\\
-$\implies$ Aufgabe 1: neues System ist zu 53,25\% effizienter als das alte System\\
-$\implies$ Aufgabe 3.1: neues System ist zu 11,95\% ineffizienter als das alte System\\
-$\implies$ $\varnothing$: neues System ist zu 48,46\% effizienter als das alte System\\
+Mithilfe der \nameref{Formel_zur_Effizienzberechnung} wurden Die Ergebnisse in \autoref{fig:usability_effizienz} berechnet. Es zeigt das Verhältnis der Effizienz des neuen Systems zum alten System dargstellt ($e_{neu}:e_{alt}$) und ist wie folgt zu interpretieren: \\%Das bedeutet u.a.:\\
+    $\implies$ Aufgabe 1: neues System ist zu 53,25\% effizienter als das alte System.\\
+    $\implies$ Aufgabe 3.1: neues System ist zu 11,95\% ineffizienter als das alte System.\\
+    $\implies$ $\varnothing$: neues System ist zu 48,46\% effizienter als das alte System.\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/usability_effizienz.png}
     \caption{Usability-Test: Effizienzvergleich vom neuen mit dem alten System\newline
-    (Weiterverarbeitung der Daten aus \autoref{fig:usability_test:genauigkeit-zeit_alt-neu})}
+    (Daten aus \autoref{tab:usability_test:effizienz})}
     \label{fig:usability_effizienz}
 \end{figure}
 
-% ************************************************************
 \noindent
-\textcolor{red}{TODO: ISO-Grafiken}
+Da die mittlere Effizienz des neuen Systems 48,48\% besser ist als die des alten Systems, kann die Hypothese $H_2$ anhand der Effizienz akzeptiert werden.
+
+% ************************************************************
+Zusätzlich zu den objektiven Daten, haben die Nutzer die Effizienz der Systeme in Form der ISO-Prinzipien Erlernbarkeit, Selbstbeschreibungsfähigkeit und Aufgabenangemessenheit (s. \autoref{ch:Validierung:sec:Material:Nutzerbefragung}) durch ihre subjektive Einschätzung bewertet.
+
+% Aufgabenangemessenheit
+Die Auswertung des ISO-Prinzips der Aufgabenangemessenheit ist in \autoref{fig:pruemper_Aufgabenangemessenheit} dargestellt, wobei zwei der drei Fragen einen statistisch signifikanten Unterschied aufweisen.
+
+% Erlernbarkeit
+In Bezug auf die Erlernbarkeit bewerteten die Nutzer das neue System im Schnitt besser als das alte System (s. \autoref{fig:pruemper_Erlernbarkeit}). Dabei zeigt der t-Test einen statistisch signifikanten Unterschied bei allen drei Fragen an (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Diagramme/pruemper_if.png}
+    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Erlernbarkeit nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all})}
+    \label{fig:pruemper_Erlernbarkeit}
+\end{figure}
+
+% Selbstbeschreibungsfähigkeit
+\noindent
+Das Prinzipp der Selbstbeschreibungsfähigkeit wurde ebenfalls zu Gunsten des neuen Systems bewertet (s. \autoref{fig:pruemper_Selbstbeschreibungsfähigkeit}). Der t-Test stellt auch bei Frage 10 einen statistisch signifikanten Unterschied fest (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Diagramme/pruemper_sb.png}
+    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Selbstbeschreibungsfähigkeit nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all})}
+    \label{fig:pruemper_Selbstbeschreibungsfähigkeit}
+\end{figure}
+
 %\input{chapters/06_Diskussion/ISO_Erlernbarkeit}
 %\input{chapters/06_Diskussion/ISO_Selbstbeschreibungsfähigkeit}
 %\subsection*{ISO-Kriterium Aufgabenangemessenheit}
 %\autoref{fig:pruemper_Aufgabenangemessenheit}
 %\subsection*{weitere: Steuerbarkeit, Erwartungskonformität, Robustheit gegen Benutzungsfehler}
+
+\noindent
+Die Hypothese $H_{2}$ kann auf Grundlage ISO-Kriterien Aufgabenangemessenheit, Erlernbarkeit und Selbstbeschreibungsfähigkeit aus der Nutzerumfrage ebenfalls akzeptiert werden.
