@@ -1,28 +1,67 @@
-\subsection{\textcolor{Turquoise}{Auswertung der Zufriedenheit (H$_{3}$)}}
+\subsection{\textcolor{MidnightBlue}{Auswertung der Zufriedenheit (H$_{3}$)}}
 \label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Zufriedenheit}
 % Usability = 
 % - Satisfaction: Do users find the system enjoyable and pleasant to use? Are they satisfied with the overall experience?
 % Einfluss von Erwartungskonformität, Benutzerbindung, Steuerbarkeit
 
-Nutzer sind mit einem System zufrieden oder davon befriedigt, wenn sie die Nutzung angenehm und erfreulich finden. Dafür sollte es den Erwartungen der Nutzer entsprechen, leicht steuer- und navigierbar sein und eine Bindung zum Nutzer aufbauen. Die Zufriedenheit lässt sich dabei nicht in metrischen Kenngrößen erfassen, stattdessen aber in Form eines Spektrums anhand von Fragebögen (s. \autoref{ch:SdF:UI:ISO}).
+Nutzer sind mit einem System zufrieden oder davon befriedigt, wenn sie die Nutzung angenehm und erfreulich finden. Dafür muss es den Erwartungen der Nutzer entsprechen, leicht steuer- und navigierbar sein und eine Bindung zum Nutzer aufbauen. Die Zufriedenheit lässt sich dabei nicht in metrischen Kenngrößen erfassen, stattdessen aber beispielsweise in Form eines Spektrums anhand von Fragebögen (s. \autoref{ch:SdF:UI:ISO}).
 Folgende Hypothese ist zu bestätigen:
 \begin{quote}
     H$_{3}$ = Die Nutzung des neuen Systems ($\mu2$) beeinflusst die Bewertung ($b$) der Software positiv im Vergleich zur Nutzung des alten Systems ($\mu1$); $b(\mu1) < b(\mu2)$.
 \end{quote}
-...
+
+\noindent
+Das Spektrum der Antworten der Nutzerumfrage sind in \autoref{fig:pruemper_all} in Form eines Box-Plot zusammengefasst. Es ist eine Tendenz erkennbar, dass das neue System besser bewertet wurde. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Diagramme/pruemper_all.png}
+    \caption{Auswertung der Nutzerbefragung (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}) \textcolor{red}{Titel ändern! y-Achsenbeschriftungen - gut(3) schlecht(-3)!}}
+    \label{fig:pruemper_all}
+\end{figure}
 
 % Boxplots
-\noindent
-\underline{s. \autoref{fig:pruemper_all}}\\
-- zeigt alle Antworten der Fragen in einem Diagramm\\
-- Tendenz zu neu besser Erkennbar (erst in Diskussion?)\\
-\textcolor{red}{- Kurzbeschreibung: Erklärung, wie Boxplots aufgebaut sind und funktionieren\\
--> 2 Sätze} % hatten wir potenziell in Mathe 2 (beschreibende Statistik)
+\definecolor{graublau}{rgb}{0.74, 0.83, 0.9}
+\noindent\fcolorbox{gray}{graublau}{
+\begin{minipage}[margin=1.5cm]
+{\dimexpr1\textwidth-2\fboxrule-3\fboxsep\relax}
+Ein \textbf{Box-Plot} ist ein Diagramm welches Lage- und Streuungsmaße abbildet. Die Daten werden von von einem Querstrich innerhalb der Box halbiert, welcher den \textit{Median} darstellt. Die \textit{Box} umfasst die mittleren 50\% der nach Rangfolge geordneten Daten. Das bedeutet, dass die Daten von der 25. bis 75. Perzentile oder auch vom 1. bis 3. \textit{Quartil} (Q1, Q3) dargestellt sind. Der Bereich dazwischen wird auch \textit{Interquartilsabstand} (en. interquartile range - IQR) genannt.
+%  Der Querstrich innerhalb der Box markiert den Median.
+
+\hspace{1.5mm}
+Außerhalb der Box stehen die \textit{Whiskers} (dt. Schnurrhaare). Die Länge der Whiskers ist durch den \textit{Zaun}, der Querstrich am Ende der Whiskers, begrenzt. Dieser befindet sich maximal 1,5 Interquartilsabstände von der Box entfernt. Liegt der äußerste Wert des Bereichs innerhalb des Zaun, wird der Whisker kürzer bis zu diesem äußersten Wert dargestellt.
+
+\hspace{1.5mm}
+Die Punkte außerhalb der Whiskers sind die \textit{Ausreißer} und werden hier als Punkte dargestellt. Ausreißer die außerhalb von drei IQR von der Box liegen werden als extreme Ausreißer bezeichnet. Liegen sie zwischen den dem Zaun und 3 IQR, sind es normale Ausreißer.\\
+
+\newenvironment{nospaceflalign*}
+ {\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{0pt}%
+  \csname flalign*\endcsname}
+ {\csname endflalign*\endcsname\ignorespacesafterend}
+
+\underline{Beispiel Frage 4 - neues System (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}):}
+\begin{nospaceflalign*}
+    \displaystyle
+        \text{Q1} &= \textbf{1}\\
+        \text{Q3} &= \textbf{2}\\
+        \text{IQR} &= Q3 - Q1 = 2 - 1 = \textbf{1}\\
+        \text{Whisker unten} &= Q1 - 1,5 * IQR = 1 - 1.5*1 = \textbf{-0.5} \Rightarrow 0\\
+        \text{Whisker oben} &= Q3 + 1,5 * IQR = 2 + 1.5*1 = \textbf{3.5} \Rightarrow 3\\
+        \text{Ausreißer} &: ~~\textbf{-2}
+\end{nospaceflalign*}
+\textcolor{graublau}{.}\hfill $\sim$ Zusammenfassung nach \cite{Statistik:Sedlmeier:2018}
+%Q1 $= \textbf{1}$\\
+%Q3 $= \textbf{2}$\\
+%IQR $= Q3 - Q1 = 2 - 1 = \textbf{1}$\\
+%hisker unten $= Q1 - 1,5 * IQR = 1 - 1.5*1 = \textbf{-0.5}$\\
+%hisker oben $= Q3 + 1,5 * IQR = 2 + 1.5*1 = \textbf{3.5}$\\
+%Ausreißer: $\textbf{-2}$
+\label{Definition_Boxplot}
+\end{minipage}}\\
 
 \noindent
-\underline{s. \autoref{tab:Nutzerbefragung:mittelwerte}}\\
-- Mittelwerte, Median, Standardabweichung\\
-- Differenzen
+Diese grafische Tendenz bestätigt sich durch die Differenzen der Mittelwerte (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}). Der Ergebnis des alten Systems wurde von dem des neues Systems abgezogen. Da die Differenz bei jeder Frage positiv ist, wurde das neue System insgesamt besser bewertet als das alte.
+
 
 \begin{table}[H]
 \begin{center}
@@ -41,24 +80,31 @@ T-Test                                  & 0,0087 & 0,0021 & 0,0286 & 0,021 & 0,0
 \end{center}
 \end{table}
 
+\noindent
+Weiterhin weisen 80\% der Fragen anhand der t-Test-Ergebnisse einen statistisch signifikanten Unterschied auf (s. \autoref{fig:Nutzerbefragung:ttest+Signifikanzniveau}).
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/pruemper_ttest.png}
-    \caption{Nutzerbefragung - T-Test-Ergebnisse (Daten aus \autoref{tab:Nutzerbefragung:Differenz+ttest})}
+    \caption{Nutzerbefragung - t-Test-Ergebnisse (Daten aus \autoref{tab:Nutzerbefragung:Differenz+ttest})}
     \label{fig:Nutzerbefragung:ttest+Signifikanzniveau}
 \end{figure}
 
-\noindent
-\underline{s. \autoref{tab:Nutzerbefragung:Differenz+ttest}}\\
-- Excel-Formel gleiche wie in \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}\\
-- volle Excel-Daten in \autoref{fig:Usability_Test:rohe_Daten}\\
-
 % *******************************************************************
-\noindent
-\textcolor{red}{TODO: ISO-Grafiken}
 %\input{chapters/06_Diskussion/ISO_Erwartungskonformität}
 %\input{chapters/06_Diskussion/ISO_Benutzerbindung}
 %\subsection*{Einfluss von ISO-Steuerbarkeit}
 %\autoref{fig:pruemper_Steuerbarkeit}
-
 %\subsection*{weitere: Erlernbarkeit}
+
+\noindent
+Die ISO-Prinzipien die sich auf das Kriterium der Zufriedenheit beziehen, sind die Erwartungskonformität (s. \autoref{fig:pruemper_Erwartungskonformität}), die Steuerbarkeit (s. \autoref{fig:pruemper_Steuerbarkeit}) und die Benutzerbindung welche nicht durch den Fragebogen repräsentiert wurde (s. \autoref{Add:Nutzerbefragung_Prümper:Begründung_Filterung}).
+
+Aufgrundlage der vorliegenden Ergebnisse kann die Hypothese $H_3$ akzeptiert werden.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Diagramme/pruemper_ek.png}
+    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Erwartungskonformität nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all})}
+    \label{fig:pruemper_Erwartungskonformität}
+\end{figure}
