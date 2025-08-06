@@ -1,0 +1,31 @@
+\newpage
+\section{\textcolor{Turquoise}{Überblick über den strukturellen Aufbau und Inhalt des Dashboards}}
+\label{ch:Dashboard:sec:Aufbau}
+\textcolor{blue}{einleitende Worte}\\
+Es gibt zwei Dashboards. Je eins für die Entwicklungsversion und eins für alle veröffentlichten und aktiv gewarteten Versionen. Da die releasten Versionen bis auf kleine Fixes nicht weiter verändert werden \textcolor{red}{(ist das die richtige Begründung?)}, ist die Anzahl der benötigten Tests bedeutend geringer. Somit kann der Statusbericht mehrerer Versionen auf einem Dashboard angezeigt werden.
+
+Grafana gibt eine Dashboard Struktur in Reihen vor. Jede Reihe stellt ein System da, welches im alten System jeweils eine eigene Seite benötigt. Die Panele einer Reihe sind in drei Spalten aufgeteilt (s. \autoref{fig:aufbau_dashboard}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Dashboard/Dashboard_zensiert.jpg}
+    \caption{Aufbau des gebauten Dashboard [zensiert]}
+    \label{fig:aufbau_dashboard}
+\end{figure}
+
+\noindent
+\autoref{fig:aufbau_dashboard}:\\
+\textcolor{red}{Begründung Zensur}
+
+% mittlere Spalte
+\noindent
+\textcolor{red}{TODO: im nächsten Absatz mit 'Daten' statt 'Spalte' ansetzten}
+
+% mittlere Spalte
+In der mittleren Spalte sind Zahlen in verschiedenen Farben dargestellt, die den jeweiligen Zustand bzw. die Fehleranzahl der entsprechenden Testkategorie anzeigt. Im Falle eines Green Days, ein Tag an dem keine Fehler auftreten, stehen in allen Feldern dunkelgraue Nullen. Da stattdessen auffallen soll wenn Fehler vorhanden sind, werden diese farbig markiert. Die Fehlerfälle sind 'System abgestürzt', 'Anzahl der Fehler', 'Anzahl der ausstehenden Tests' und 'ignorierte Tests'\footnote{Die Kategorie 'Ignorierte Tests' umfässt zum Beispiel Testfälle mit langzeit bekannten Fehlern, die für die Einschätzung des Green Days ignoriert werden dürfen.}.
+Aufgrund der Menge an Testfällen und der Anforderung alle zusammengehörigen Daten auf einen Blick erfassen zu können (s. \autoref{ch:Dashboard:sec:Anforderungen}), sind die Test-Kategorien in Spalten und deren Ergebnisse in den Reihen darunter dargestellt. Im Vergleich zum alten System wurden die Reihen/Spalten vertauscht (s. \autoref{fig:aufbau_altes_System}).
+
+% Informationen: linke + rechte Spalte
+Neben den System-Zustandsinformationen, die auch das alte System anzeigt, bietet das Dashboard die Gelegenheit, weitere Informationen zu sammeln und zur Verfügung zu stellen.
+Links ist unter dem Reihentitel die Verlinkung auf die Oberfläche des alten Systems zu finden. Dieses bietet genauere Informationen im Fehlerfall (s. \autoref{ch:IST-Zustand:sec:Beschreibung_altes_System}). % **knuddel** <3
+Sollten noch detailliertere Informationen zu Fehlern benötigt werden, sind die Jenkins-Jobs der einzelnen Testkategorien in der Spalte auf der rechten Seite aufgelistet.

@@ -3,94 +3,12 @@
 \textcolor{red}{\textit{TODO: überarbeiten - nur erste Worte}}\\
 Um die Ergebnisse des Testpools moderner (austauschen durch effizient o.s.) zu gestalten wurde ein Dashboard erstellt. Nachfolgend werden zuerst die Anforderungen auf Grundlage des bestehenden Systems (s. \autoref{ch:IST-Zustand:sec:Zustandsanalyse}) analysiert. Nachfolgend wird der Prozess über die Auswahl eines geeigneten Tools sowie der Datenfluss zum Dashboard und der vollständige Aufbau dargestellt.
 
-\noindent
-\textcolor{red}{TODO: Anforderungsanalyse + Bestätigung der Umsetzung dessen}
-\label{ch:Dashboard:sec:Anforderungen_Auswertung}
-
-% *****************************************************************
-\section{\textcolor{Salmon}{Anforderungsanalyse anhand des bestehenden Legacy-Systems und den Nutzerbedürfnissen}}
-\label{ch:Dashboard:sec:Anforderungen}
-- die Tabellen aus der ISO nutzen / ausfüllen \cite{DIN_EN_ISO_9241-110} \autoref{fig:Anforderungskatalog_ISO_neu}\\
-
-% Aufgrund der Menge an Testfällen und der Anforderung alle zusammengehörigen Daten auf einen Blick erfassen zu können (s. \autoref{ch:Dashboard:sec:Anforderungen}), sind die Test-Kategorien in Spalten und deren Ergebnisse in den Reihen darunter dargestellt.
-
-% *****************************************************************
-\section{\textcolor{Turquoise}{Evaluation und Auswahl des Dashboard-Tools}}
-\label{ch:Dashboard:sec:Tooling}
- Das Dashboard-Projekt startete mit der Erwartung, Sonar nutzen zu können, da es bereits im Kontext eines anderen Produktes genutzt wurde, entsprechendes Wissen vorhanden ist, der Server weiterverwendet werden kann und Sonar viele nützliche Funktionalitäten anbietet. Da das Dashboard in der Zukunft um eine Code-Analyse-Sektion erweitert werden soll, scheint die integrierte Funktionalität von Sonar angemessen. Jedoch ist die Lizenz von Sonar auf die Anzahl der Codezeilen ausgelegt. Mit der Menge der Codezeilen im bestehenden System (s. \autoref{ch:IST-Zustand}) wurde entschieden, dass diese finanzielle Belastung nicht realistisch tragbar ist. \textcolor{red}{\cite{TODO:Sonar}}
-
- Es muss ein neues Tool gefunden werden. Für die Auswahl eines Tools wurden folgende Kategorien gewählt:
-\begin{itemize}
-    \item Welche Lizenz benötigt das Tool? Ist diese im gefragten Kontext umsetzbar (z.B. bezahlbar)?
-    \item Welche Dateiformate werden unterstützt, um Daten an das Dashboard zu übertragen? Sind diese kompatibel zur Umgebung?
-    \item Ist das Tool CI/CD-kompatibel?
-    \item Wird das Tool immer noch aktiv gewartet?
-    \item Welche Infrastruktur / Welchen Aufwand benötigt die Installation?
-    %Wie kann das Tool installiert werden? Zum Beispiel Docker/ händisch?
-    % TODO: im Anhang auch so umformulieren
-    \item weitere Vor- und Nachteile
-\end{itemize}
-
-\noindent
-In \autoref{tab:Dashboard:Evalutaion_Tooling} ist die Auflistung zu finden, welche Tools verglichen und wie diese ausgewertet wurden.
-Verschiedene Punkte führten zum Ausschluss der meisten Tools, darunter zum Beispiel Smashing, Dashbuilder und Tipboard (s. \autoref{ch:SdF:sec:moderne_DB_Tools_und_Empfehlungen}. Diese sind zu alt, Open Source Projekte werden nicht mehr aktiv gewartet, benötigte Software ist nicht die jeweils aktuellste Version, das Tool ist umständlich zu installieren oder es gibt versteckte Kosten, da zum Beispiel ein zusätzlicher lizenzierter Server benötigt wird.
-
-%Das neue Dashboard wurde mit Grafana Version 11.6.1 erstellt. Zwar hat das Tool nicht die gleichen Code-spezifischen Funktionalitäten wie Sonar, ist jedoch ein modernes viel genutztes Tool (s. \autoref{ch:SdF:sec:moderne_DB_Tools_und_Empfehlungen}). Abgesehen davon, dass ein Grafanaserver bereits zur Verfügung stand, kann es kostenfrei selbst gehostet werden, ermöglicht ein einfaches Drag-and-Drop zur Dashboard-Erstellung, unterstützt jegliche Dateiformate über einen API-Zugriff, ist leicht zu installieren und bietet viele Einstellungsmöglichkeiten zum Individualisieren. \textcolor{red}{\cite{TODO:Grafana}}
-Das neue Dashboard wurde mit Grafana Version 11.6.1 erstellt. Zwar hat das Tool nicht die gleichen Code-spezifischen Funktionalitäten wie Sonar, ist jedoch ein modernes viel genutztes Tool (s. \autoref{ch:SdF:sec:moderne_DB_Tools_und_Empfehlungen}). Zur Dashboard-Erstellung ermöglicht Grafana ein einfaches Drag-and-Drop, unterstützt jegliche Dateiformate über einen API-Zugriff, ist leicht zu installieren und bietet viele Einstellungsmöglichkeiten zum Individualisieren. Zudem kann Grafana kostenfrei selbst gehostet werden. \textcolor{red}{\cite{TODO:Grafana}}
-
-
-% *****************************************************************
-\section{\textcolor{MidnightBlue}{technische Umsetzung des Datenflusses zur Dashboardanzeige}}
-\label{ch:Dashboard:sec:Datenfluss}
-Die Dashboard-Anzeige sitzt symbolisch gesprochen auf dem alten System (s. \autoref{ch:IST-Zustand:sec:Beschreibung_altes_System}) auf. Das bedeutet, dass es die bestehenden Daten auswertet und neu darstellt (s. \autoref{fig:DB_Datenfluss}).
-
-Die Daten werden von einem Parser eingelesen (s. \autoref{Add:Dashboard:Parser_Code}), welcher diese in Fehlerkategorien zusammenfasst (s. \autoref{ch:Dashboard:sec:Aufbau}) und im JSON-Format abspeichert (s. \autoref{Add:Dashboard:JSON}). Der Parser-Code wird regelmäßig durch einen Jenkins-Job aufgerufen und dessen Ausgabe auf einen Dateiserver gespeichert und die vorherige Datei überschrieben.
-
-Das Dashboard kann auf den Server zugreifen und mithilfe der API über den Adress-Pfad die kategorisierten Daten aus der JSON-Datei auslesen. Diese werden regelmäßig neu abgefragt und angezeigt.
-
-%- Datenursprung: s. \autoref{ch:IST-Zustand}\\
-%- JSON: s. \autoref{Add:Dashboard:JSON}\\
-%- Verarbeitung der JSON-Datei
-%- zur Dashboardanzeige
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Dashboard/Daten_Kontrollsequenz_DB.png}
-    \caption{Kontrollsequenz des Datenflusses vom alten System zum Dashboard}
-    \label{fig:DB_Datenfluss}
-\end{figure}
-
-
-% *****************************************************************
-\newpage
-\section{\textcolor{Turquoise}{Überblick über den strukturellen Aufbau und Inhalt des Dashboards}}
-\label{ch:Dashboard:sec:Aufbau}
-\textcolor{blue}{einleitende Worte}\\
-Es gibt zwei Dashboards. Je eins für die Entwicklungsversion und eins für alle veröffentlichten und aktiv gewarteten Versionen. Da die releasten Versionen bis auf kleine Fixes nicht weiter verändert werden \textcolor{red}{(ist das die richtige Begründung?)}, ist die Anzahl der benötigten Tests bedeutend geringer. Somit kann der Statusbericht mehrerer Versionen auf einem Dashboard angezeigt werden.
-
-Grafana gibt eine Dashboard Struktur in Reihen vor. Jede Reihe stellt ein System da, welches im alten System jeweils eine eigene Seite benötigt. Die Panele einer Reihe sind in drei Spalten aufgeteilt (s. \autoref{fig:aufbau_dashboard}).
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Dashboard/Dashboard_zensiert.jpg}
-    \caption{Aufbau des gebauten Dashboard [zensiert]}
-    \label{fig:aufbau_dashboard}
-\end{figure}
-
-\noindent
-\autoref{fig:aufbau_dashboard}:\\
-\textcolor{red}{Begründung Zensur}
-
-% mittlere Spalte
-\noindent
-\textcolor{red}{TODO: im nächsten Absatz mit 'Daten' statt 'Spalte' ansetzten}
-
-% mittlere Spalte
-In der mittleren Spalte sind Zahlen in verschiedenen Farben dargestellt, die den jeweiligen Zustand bzw. die Fehleranzahl der entsprechenden Testkategorie anzeigt. Im Falle eines Green Days, ein Tag an dem keine Fehler auftreten, stehen in allen Feldern dunkelgraue Nullen. Da stattdessen auffallen soll wenn Fehler vorhanden sind, werden diese farbig markiert. Die Fehlerfälle sind 'System abgestürzt', 'Anzahl der Fehler', 'Anzahl der ausstehenden Tests' und 'ignorierte Tests'\footnote{Die Kategorie 'Ignorierte Tests' umfässt zum Beispiel Testfälle mit langzeit bekannten Fehlern, die für die Einschätzung des Green Days ignoriert werden dürfen.}.
-Aufgrund der Menge an Testfällen und der Anforderung alle zusammengehörigen Daten auf einen Blick erfassen zu können (s. \autoref{ch:Dashboard:sec:Anforderungen}), sind die Test-Kategorien in Spalten und deren Ergebnisse in den Reihen darunter dargestellt. Im Vergleich zum alten System wurden die Reihen/Spalten vertauscht (s. \autoref{fig:aufbau_altes_System}).
-
-% Informationen: linke + rechte Spalte
-Neben den System-Zustandsinformationen, die auch das alte System anzeigt, bietet das Dashboard die Gelegenheit, weitere Informationen zu sammeln und zur Verfügung zu stellen.
-Links ist unter dem Reihentitel die Verlinkung auf die Oberfläche des alten Systems zu finden. Dieses bietet genauere Informationen im Fehlerfall (s. \autoref{ch:IST-Zustand:sec:Beschreibung_altes_System}). % **knuddel** <3
-Sollten noch detailliertere Informationen zu Fehlern benötigt werden, sind die Jenkins-Jobs der einzelnen Testkategorien in der Spalte auf der rechten Seite aufgelistet.
-
+% *****************************************************************************
+%           Struktur
+% *****************************************************************************
+\input{chapters/04_Dashboard/01_Anforderungen}
+\input{chapters/04_Dashboard/02_Workflow}
+\input{chapters/04_Dashboard/03_Tool}
+\input{chapters/04_Dashboard/04_Datenfluss}
+\input{chapters/04_Dashboard/05_Systemaufbau}
+\input{chapters/04_Dashboard/06_Zustand}
