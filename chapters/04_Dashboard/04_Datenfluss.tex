@@ -1,6 +1,6 @@
 \section{\textcolor{MidnightBlue}{technische Umsetzung des Datenflusses zur Dashboardanzeige}}
 \label{ch:Dashboard:sec:Datenfluss}
-Die Dashboard-Anzeige sitzt symbolisch gesprochen auf dem alten System (s. \autoref{ch:IST-Zustand:sec:Beschreibung_altes_System}) auf. Das bedeutet, dass es die bestehenden Daten auswertet und neu darstellt (s. \autoref{fig:DB_Datenfluss}).
+Die Dashboard-Anzeige sitzt symbolisch gesprochen auf dem alten System (s. \autoref{ch:IST-Zustand:sec:Aufbau_altes_System}) auf. Das bedeutet, dass es die bestehenden Daten auswertet und neu darstellt (s. \autoref{fig:DB_Datenfluss}).
 
 Die Daten werden von einem Parser eingelesen (s. \autoref{Add:Dashboard:Parser_Code}), welcher diese in Fehlerkategorien zusammenfasst (s. \autoref{ch:Dashboard:sec:Aufbau}) und im JSON-Format abspeichert (s. \autoref{Add:Dashboard:JSON}). Der Parser-Code wird regelmäßig durch einen Jenkins-Job aufgerufen und dessen Ausgabe auf einen Dateiserver gespeichert und die vorherige Datei überschrieben.
 
