@@ -19,7 +19,7 @@ Deren Zeitmittelwerte sind vergleichend in \autoref{fig:usability_test:zeit} dar
     \begin{tabular}{|l|c|c||c|c|}
         \hline
     	System                          & alt   & neu   & Unterschied $\displaystyle \frac{alt}{neu}$   & t-Test \\ \hline
-        $\varnothing$ Bearbeitungsdauer	& 14,74	& 9,45	& 0,640735793 & 0,000174702\\ \hline
+        $\varnothing$ Bearbeitungsdauer	in s & 14,74	& 9,45	& 0,640735793 & 0,000174702\\ \hline
     \end{tabular}
     \caption{Usability-Test: Vergleich der mittleren Bearbeitungsdauer (Weiterverarbeitung der Daten aus \autoref{tab:usability_test:mittelwerte})}
     \label{tab:usability_test:zeit}
@@ -58,10 +58,17 @@ $e_{neu:alt} = -1 * (1 - \dfrac{e_{alt}} {e_{neu}})$                      & // V
 \end{table}
 
 \noindent
-Mithilfe der \nameref{Formel_zur_Effizienzberechnung} wurden die Ergebnisse in \autoref{fig:usability_effizienz} erschlossen. Es zeigt das Verhältnis der Effizienz des neuen Systems zum alten System ($e_{neu}:e_{alt}$) und ist wie folgt zu interpretieren: \\%Das bedeutet u.a.:\\
-    $\implies$ Aufgabe 1: Das neue System ist anhand von Aufgabe 1 zu 53,25\% effizienter als das alte System.\\
-    $\implies$ Aufgabe 3.1: Das neue System ist anhand von Aufgabe 3.1 zu 11,95\% ineffizienter als das alte System.\\
-    $\implies$ $\varnothing$: Das neue System ist im Mittel zu 48,46\% effizienter als das alte System.\\
+Mithilfe der \nameref{Formel_zur_Effizienzberechnung} wurden die Ergebnisse in \autoref{fig:usability_effizienz} erschlossen. Es zeigt das Verhältnis der Effizienz des neuen Systems zum alten System ($e_{neu}:e_{alt}$) und ist wie folgt zu interpretieren: %Das bedeutet u.a.:\\
+\begin{table}[H]
+    \begin{tabular}{ll}
+        $\Rightarrow$ Aufgabe 1: & Das neue System ist anhand von Aufgabe 1 zu 53,25\% \\
+                                 & effizienter als das alte System. \\
+        $\Rightarrow$ Aufgabe 3.1: & Das neue System ist anhand von Aufgabe 3.1 zu 11,95\% \\
+                                   & ineffizienter als das alte System. \\
+        $\Rightarrow$ $\varnothing$: & Das neue System ist im Mittel zu 48,46\% effizienter als \\
+                                     & das alte System.\\
+    \end{tabular}
+\end{table}
 
 \begin{figure}[H]
     \centering
@@ -72,7 +79,7 @@ Mithilfe der \nameref{Formel_zur_Effizienzberechnung} wurden die Ergebnisse in \
 \end{figure}
 
 \noindent
-Da die mittlere Effizienz des neuen Systems 48,48\% besser ist als die des alten Systems, kann die Hypothese $H_2$ anhand der Effizienz akzeptiert werden.
+Die mittlere Effizienz des neuen Systems ist 48,48\% besser als die des alten Systems. Da der Unterschied jedoch nicht signifikant ist, kann die Hypothese $H_{02}$ anhand der Effizienz nicht abgelehnt werden.
 
 % ************************************************************
 Zusätzlich zu den objektiven Daten haben die Nutzer die Effizienz der Systeme in Form der ISO-Prinzipien Erlernbarkeit, Selbstbeschreibungsfähigkeit und Aufgabenangemessenheit (s. \autoref{ch:Validierung:sec:Material:Nutzerbefragung}) durch ihre subjektive Einschätzung bewertet.
@@ -81,7 +88,7 @@ Zusätzlich zu den objektiven Daten haben die Nutzer die Effizienz der Systeme i
 Die Auswertung des ISO-Prinzips der Aufgabenangemessenheit ist in \autoref{fig:pruemper_Aufgabenangemessenheit} dargestellt, wobei zwei der drei Fragen einen statistisch signifikanten Unterschied aufweisen.
 
 % Erlernbarkeit
-In Bezug auf die Erlernbarkeit bewerteten die Nutzer das neue System im Schnitt besser als das alte System (s. \autoref{fig:pruemper_Erlernbarkeit}). Dabei zeigt der t-Test einen statistisch signifikanten Unterschied bei allen drei Fragen an (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}).
+In Bezug auf die Erlernbarkeit bewerteten die Nutzer das neue System im Schnitt besser als das alte System (s. \autoref{fig:pruemper_Erlernbarkeit}). Dabei zeigt der t-Test einen statistisch signifikanten Unterschied bei allen drei Fragen an (s. \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Zufriedenheit}).
 
 \begin{figure}[H]
     \centering
@@ -92,7 +99,7 @@ In Bezug auf die Erlernbarkeit bewerteten die Nutzer das neue System im Schnitt 
 
 % Selbstbeschreibungsfähigkeit
 \noindent
-Das Prinzip der Selbstbeschreibungsfähigkeit wurde ebenfalls zu Gunsten des neuen Systems bewertet (s. \autoref{fig:pruemper_Selbstbeschreibungsfähigkeit}). Der t-Test stellt auch bei Frage 10 einen statistisch signifikanten Unterschied fest (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}).
+Das Prinzip der Selbstbeschreibungsfähigkeit wurde ebenfalls zu Gunsten des neuen Systems bewertet (s. \autoref{fig:pruemper_Selbstbeschreibungsfähigkeit}). Der t-Test stellt auch bei Frage 10 einen statistisch signifikanten Unterschied fest (s. \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Zufriedenheit}).
 
 \begin{figure}[H]
     \centering
