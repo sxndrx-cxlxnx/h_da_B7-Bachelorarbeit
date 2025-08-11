@@ -20,47 +20,8 @@ Das Spektrum der Antworten der Nutzerumfrage sind in \autoref{fig:pruemper_all} 
     \label{fig:pruemper_all}
 \end{figure}
 
-% Boxplots
-\definecolor{graublau}{rgb}{0.74, 0.83, 0.9}
-\noindent\fcolorbox{gray}{graublau}{
-\begin{minipage}[margin=1.5cm]
-{\dimexpr1\textwidth-2\fboxrule-3\fboxsep\relax}
-Ein \textbf{Box-Plot} ist ein Diagramm welches Lage- und Streuungsmaße abbildet. Die Daten werden von von einem Querstrich innerhalb der Box halbiert, welcher den \textit{Median} darstellt. Die \textit{Box} umfasst die mittleren 50\% der nach Rangfolge geordneten Daten. Das bedeutet, dass die Daten von der 25. bis 75. Perzentile oder auch vom 1. bis 3. \textit{Quartil} (Q1, Q3) dargestellt sind. Der Bereich dazwischen wird auch \textit{Interquartilsabstand} (en. interquartile range - IQR) genannt.
-%  Der Querstrich innerhalb der Box markiert den Median.
-
-\hspace{1.5mm}
-Außerhalb der Box stehen die \textit{Whiskers} (dt. Schnurrhaare). Die Länge der Whiskers ist durch den \textit{Zaun}, der Querstrich am Ende der Whiskers, begrenzt. Dieser befindet sich maximal 1,5 Interquartilsabstände von der Box entfernt. Liegt der äußerste Wert des Bereichs innerhalb des Zaun, wird der Whisker kürzer bis zu diesem äußersten Wert dargestellt.
-
-\hspace{1.5mm}
-Die Punkte außerhalb der Whiskers sind die \textit{Ausreißer} und werden hier als Punkte dargestellt. Ausreißer die außerhalb von drei IQR von der Box liegen werden als extreme Ausreißer bezeichnet. Liegen sie zwischen den dem Zaun und 3 IQR, sind es normale Ausreißer.\\
-
-\newenvironment{nospaceflalign*}
- {\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{0pt}%
-  \csname flalign*\endcsname}
- {\csname endflalign*\endcsname\ignorespacesafterend}
-
-\underline{Beispiel Frage 4 - neues System (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}):}
-\begin{nospaceflalign*}
-    \displaystyle
-        \text{Q1} &= \textbf{1}\\
-        \text{Q3} &= \textbf{2}\\
-        \text{IQR} &= Q3 - Q1 = 2 - 1 = \textbf{1}\\
-        \text{Whisker unten} &= Q1 - 1,5 * IQR = 1 - 1.5*1 = \textbf{-0.5} \Rightarrow 0\\
-        \text{Whisker oben} &= Q3 + 1,5 * IQR = 2 + 1.5*1 = \textbf{3.5} \Rightarrow 3\\
-        \text{Ausreißer} &: ~~\textbf{-2}
-\end{nospaceflalign*}
-\textcolor{graublau}{.}\hfill $\sim$ Zusammenfassung nach \cite{Statistik:Sedlmeier:2018}
-%Q1 $= \textbf{1}$\\
-%Q3 $= \textbf{2}$\\
-%IQR $= Q3 - Q1 = 2 - 1 = \textbf{1}$\\
-%hisker unten $= Q1 - 1,5 * IQR = 1 - 1.5*1 = \textbf{-0.5}$\\
-%hisker oben $= Q3 + 1,5 * IQR = 2 + 1.5*1 = \textbf{3.5}$\\
-%Ausreißer: $\textbf{-2}$
-\label{Definition_Boxplot}
-\end{minipage}}\\
-
 \noindent
-Diese grafische Tendenz bestätigt sich durch die Differenzen der Mittelwerte (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}). Der Ergebnis des alten Systems wurde von dem des neues Systems abgezogen. Da die Differenz bei jeder Frage positiv ist, wurde das neue System insgesamt besser bewertet als das alte.
+Diese grafische Tendenz bestätigt sich durch die Differenzen der Mittelwerte (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}). Das Ergebnis des alten Systems wurde von dem des neues Systems abgezogen. Da die Differenz bei jeder Frage positiv ist, wurde das neue System insgesamt besser bewertet als das alte.
 
 
 \begin{table}[H]
@@ -98,9 +59,9 @@ Weiterhin weisen 80\% der Fragen anhand der t-Test-Ergebnisse einen statistisch 
 %\subsection*{weitere: Erlernbarkeit}
 
 \noindent
-Die ISO-Prinzipien die sich auf das Kriterium der Zufriedenheit beziehen, sind die Erwartungskonformität (s. \autoref{fig:pruemper_Erwartungskonformität}), die Steuerbarkeit (s. \autoref{fig:pruemper_Steuerbarkeit}) und die Benutzerbindung welche nicht durch den Fragebogen repräsentiert wurde (s. \autoref{Add:Nutzerbefragung_Prümper:Begründung_Filterung}).
+Die ISO-Prinzipien, die sich auf das Kriterium der Zufriedenheit beziehen, sind die Erwartungskonformität (s. \autoref{fig:pruemper_Erwartungskonformität}), die Steuerbarkeit (s. \autoref{fig:pruemper_Steuerbarkeit}) und die Benutzerbindung, welche nicht durch den Fragebogen repräsentiert wurde (s. \autoref{Add:Nutzerbefragung_Prümper:Begründung_Filterung}).
 
-Aufgrundlage der vorliegenden Ergebnisse kann die Hypothese $H_3$ akzeptiert werden.
+Auf Grundlage der vorliegenden Ergebnisse kann die Hypothese $H_3$ akzeptiert werden.
 
 \begin{figure}[H]
     \centering

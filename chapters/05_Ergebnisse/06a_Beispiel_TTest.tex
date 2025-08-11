@@ -1,5 +1,5 @@
 %\subsection{\textcolor{Salmon}{Beispielrechnung zur Hypothesen-Auswertung anhand von t-Tests}}
-\subsection{\textcolor{MidnightBlue}{Bestimmung der Signifikanz der Ergebnisse zur Hypothesenauswertung anhand von t-Tests}}
+\subsection{\textcolor{MidnightBlue}{Vorgehen zur Bestimmung der Signifikanz der Ergebnisse zur Hypothesenauswertung anhand von t-Tests}}
 \label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}
 Mithilfe der Ergebnisse aus dem Usability-Test und der Befragung kann auf verschiedenen Ebenen dargestellt werden, welches System besser ist. Dieses ist jedoch nicht ausreichend, um die Nullhypothese eindeutig zu widerlegen. Mithilfe von Signifikanztests, wie dem t-Test, lässt sich eine Aussage treffen, wie wahrscheinlich es ist, dass das Ergebnis zufällig entstanden ist. \cite{Statistik:Sedlmeier:2018}
 
@@ -20,7 +20,7 @@ Das Ergebnis kann dabei positiv und negativ von der Nullhypothese abweichen. Bei
 
 % ************************************************************
 \noindent
-Das nachfolgende Beispiel nutzt die Daten der ersten Frage der Nutzerbefragung (s. \autoref{fig:pruemper_all}). Je höher die Antwort ausfällt, desto besser wurde das System bewertet.
+Das nachfolgende Beispiel nutzt die Daten der ersten Frage der Nutzerbefragung (s. \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Zufriedenheit}). Je höher die Antwort ausfällt, desto besser wurde das System bewertet.%fig:pruemper_all}
 
 \begin{table}[H]
     \centering
@@ -33,10 +33,12 @@ Das nachfolgende Beispiel nutzt die Daten der ersten Frage der Nutzerbefragung (
         Differenz x  & -2 & 1 & 0 &  3 & 1 &  3 & 1 &  6 &  5 &  2 & -1 \\
         \hline
     \end{tabular}
+    \caption{Antworten aus Frage 1 der Nutzerbefragung (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten})}
+    \label{t-Test:Beispiel-Daten}
 \end{table}
 
 \noindent
-Da die Signifikanz der Abweichung ermittelt werden soll, werden die Datensätze mit einer Differenz von Null rausgefiltert. Es wurden folgende Hypothesen in Bezug auf die Bewertung ($b$) der beiden Systeme ($\mu$) aufgestellt:
+Da die Signifikanz der Abweichung ermittelt werden soll, werden die Datensätze  (s. \autoref{t-Test:Beispiel-Daten}) mit einer Differenz von Null rausgefiltert. Es wurden folgende Hypothesen in Bezug auf die Bewertung ($b$) der beiden Systeme ($\mu$) aufgestellt:
 \begin{table}[H]
     \centering
     \begin{tabular}{ll}
@@ -233,3 +235,79 @@ $$0,01 < 0,0195 < 0,025$$
 
 \noindent
 Alle weiteren t-Test Ergebnisse wurden über diesen Weg erreicht und sind in \autoref{tab:usability_test:Differenz+ttest_Zeit} für den Zeitvergleich des Usability-Tests, in \autoref{tab:usability_test:Differenz+ttest_Fehler} für die Fehlerquotenvergleich des Usability-Tests und in \autoref{tab:Nutzerbefragung:Differenz+ttest} für den Vergleich der Ergebnisse der Nutzerbefragung aufgeführt.
+
+% ***********************************************************************
+%       Boxplots
+% ***********************************************************************
+Die aufgeführten Daten, wie beispielweise in \autoref{t-Test:Beispiel-Daten}, werden nachfolgend in Box-Plots dargestellt. 
+Ein \textit{Box-Plot} ist ein Diagramm welches Lage- und Streuungsmaße abbildet (s. \autoref{t-Test:Beispiel-Daten}) und ist wie folgt zu interpretieren (Zusammenfassung nach \cite{Statistik:Sedlmeier:2018}). Die Daten werden von von einem Querstrich innerhalb der Box halbiert, welcher den \textit{Median} darstellt. Die \textit{Box} umfasst die mittleren 50\% der nach Rangfolge geordneten Daten. Das bedeutet, dass die Daten von der 25. bis 75. Perzentile oder auch vom 1. bis 3. \textit{Quartil} (Q1, Q3) dargestellt sind. Der Bereich dazwischen wird auch \textit{Interquartilsabstand} (en. interquartile range - IQR) genannt.
+%  Der Querstrich innerhalb der Box markiert den Median.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Anhänge/00_stockfoto.jpg}
+    \caption{Beipiel Box-Plot: Vergleich der Ergebnisse aus der Nutzerbefragung Frage 1 und 4 (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}) \textcolor{red}{(TODO: Diagramm erstellen + einfügen)}}
+    \label{fig:placeholder}
+\end{figure}
+
+%\hspace{1.5mm}
+\noindent
+Außerhalb der Box stehen die \textit{Whiskers} (dt. Schnurrhaare). Die Länge der Whiskers ist durch den \textit{Zaun}, der Querstrich am Ende der Whiskers, begrenzt. Dieser befindet sich maximal 1,5 Interquartilsabstände von der Box entfernt. Liegt der äußerste Wert des Bereichs innerhalb des Zaun, wird der Whisker kürzer bis zu diesem äußersten Wert dargestellt.
+
+%\hspace{1.5mm}
+Die Punkte außerhalb der Whiskers sind die \textit{Ausreißer} und werden hier als Punkte dargestellt. Ausreißer die außerhalb von drei IQR von der Box liegen werden als extreme Ausreißer bezeichnet. Liegen sie zwischen den dem Zaun und 3 IQR, sind es normale Ausreißer.\\
+
+\newenvironment{nospaceflalign*}
+ {\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{0pt}%
+  \csname flalign*\endcsname}
+ {\csname endflalign*\endcsname\ignorespacesafterend}
+
+\noindent
+\begin{minipage}[H]{0.48\linewidth}
+\noindent
+\underline{Beispiele mit Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}:}\\\\
+    \underline{\textcolor{red}{TODO: Frage 1 auch}}
+    \begin{nospaceflalign*}
+        \displaystyle
+            \text{Q1} &= \textbf{1}\\
+            \text{Q3} &= \textbf{2}\\
+            \text{IQR} &= Q3 - Q1 \\
+                       &= 2 - 1 = \textbf{1}\\
+            \text{Whisker unten} &= Q1 - 1,5 * IQR \\
+                &= 1 - 1.5*1 \\
+                &= \textbf{-0.5} \Rightarrow 0\\
+            \text{Whisker oben} &= Q3 + 1,5 * IQR \\
+                &= 2 + 1.5*1 \\
+                &= \textbf{3.5} \Rightarrow 3\\
+            \text{Ausreißer} &: ~~\textbf{-2}
+    \end{nospaceflalign*}
+\end{minipage}
+\begin{minipage}[H]{0.48\linewidth}
+\noindent
+\textcolor{white}{Platzhalter für Überschrift}\\\\
+    \underline{Frage 4 - neues System}
+    \begin{nospaceflalign*}
+        \displaystyle
+            \text{Q1} &= \textbf{1}\\
+            \text{Q3} &= \textbf{2}\\
+            \text{IQR} &= Q3 - Q1 \\
+                       &= 2 - 1 = \textbf{1}\\
+            \text{Whisker unten} &= Q1 - 1,5 * IQR \\
+                &= 1 - 1.5*1 \\
+                &= \textbf{-0.5} \Rightarrow 0\\
+            \text{Whisker oben} &= Q3 + 1,5 * IQR \\
+                &= 2 + 1.5*1 \\
+                &= \textbf{3.5} \Rightarrow 3\\
+            \text{Ausreißer} &: ~~\textbf{-2}
+    \end{nospaceflalign*}
+\end{minipage}
+
+
+%\textcolor{graublau}{.}\hfill 
+%$\sim$ Zusammenfassung nach \cite{Statistik:Sedlmeier:2018}
+%Q1 $= \textbf{1}$\\
+%Q3 $= \textbf{2}$\\
+%IQR $= Q3 - Q1 = 2 - 1 = \textbf{1}$\\
+%hisker unten $= Q1 - 1,5 * IQR = 1 - 1.5*1 = \textbf{-0.5}$\\
+%hisker oben $= Q3 + 1,5 * IQR = 2 + 1.5*1 = \textbf{3.5}$\\
+%Ausreißer: $\textbf{-2}$
