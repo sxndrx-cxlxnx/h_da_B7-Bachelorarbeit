@@ -1,8 +1,50 @@
-\section{\textcolor{Plum}{Beschreibung des verwendeten Tools}}
+\section{\textcolor{Salmon}{Beschreibung des verwendeten Tools}}
 \label{ch:IST-Zustand:sec:Tool}
 
 nur für die UI\\
 Funktionalitäten, Architektur
 
-\noindent
-\textcolor{red}{TODO: Marcus}
+Environment:
+============
+- 
+
+Tool:
+=====
+- pro Version eine Übersichtsseite
+- zur Anzeige der Nachtresultate
+- verschiedene Testtools schreiben ihre Daten in das Textfile
+- Hintergrund: Textfile - wo die Ergebnisse reingeschrieben werden
+- scresult holt sich das Textfile ab \& und schreibt das formatiert / Überarbeitet auf die Oberfläche
+- "Kategorien" - Batch QA; cui QA, Addons, QFT
+-> verschiedene Test Tools / selbstgebaute Frameworks
+Build: ist der Build+Compile überhaupt gelaufen
+Batch: UI-einfach gehalten - Screeninhalt wird abgelegt und mit erwarteten Screen verglichen (für Programme mit einfachem Output (cmd - characteroberfläche, textorientiert))
+CUI: Bildschirminhalte vom Terminal abgespeichert - Verarbeitung von Eingbaben möglich, Maskenweise (reine Oberflächenchecks(cmd), aber mit Eingaben)
+AddOns: auch CUI-Tests, aber mit anderem Produkt/Anwendung in Kombi - Testen vom Verhalten des Natural, unabhängig der konkreten Funktionen - oder Anwendungsfehler
+
+QFT: kann Java SWT Dialoge \& Swing-Dialoge testen (auch Oberflächenchecks, aber Java-Dialoge)
+
+CI/CD: nur Build, ob der Compile durchgeht, wenig Unit/Intergrationstests (C-Code-Basis)
+
+- das scresult.exe überprüft, ob das Gesamtergebnis ok/not ok ist
+--> daraufhin Entscheidung für weitere Tests oder nicht
+
+Oberflächentests
+-> kann für Rückschlüsse auf die Funktion verwendet werden
+-> über die Oberfläche
+-> ob das gleiche wie am Vortag rauskommt
+
+Mischung aus UI \& System/Integrationtests
+-> prüfen Client, Server, ob alle Produkte in Kombination funktionieren
+-> läuft nachts
+
+Datenfluss:
+===========
+- File mit Ergebnissen (Tools schreiben ihre Ergebnisse da rein)
+- Scresult: zieht sich die Daten aus dem File und bereitet die aus
+
+
+Zensiert:
+=========
+- Damit keine Rückschlüsse auf die Internas ziehen kann.
+- Inhalt ist nicht relevant für die Arbeit
