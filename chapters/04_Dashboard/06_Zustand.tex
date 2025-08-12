@@ -1,23 +1,47 @@
-\section{\textcolor{Salmon}{Zustandsanalyse auf Grundlage der identifizierten Anforderungen}}
+\section{\textcolor{MidnightBlue}{Zustandsanalyse auf Grundlage der identifizierten Anforderungen}}
 \label{ch:Dashboard:sec:Anforderungen_Auswertung}
 
-Worflow:
-- mehr als ein Dashboard-
-- immer noch viele Systeme
--> Zum Beginn des Arbeitstages öffnet die zuständige Person alle Dashboards, die auf der Übersichtsseite aufgelistet sind. Wenn alle Werte "graue 0" entsprechen = GreenDay
+Das Dashboard ermöglicht es dem Nutzer die Ergebnisse des Testpools übersichtlich, vollständig und tagseaktuell anzuzeigen. Dabei wurden zwei Dashboards implementiert, welche die tägliche Nutzung der Entwicklungsumgebung von der veröffentlichten Umgebung unterscheidet. Beide Dashboards ermöglichen einen vollständigen Zugriff auf alle Systeme, welche an der Erzeugung der Ergebnisse des Testpools beteiligt sind.
 
-ISO-Tabelle:
-- nach Prinzips aufgesplittet (mit je der autoref)
-- Statististische Auswertung (einfach zahlen: x von y wurden umgesetzt)
+Das neue System kann die Anzahl der Anwendungsfälle, welche im alten System mit je einer Oberfläche abgedeckt wurden, nicht reduzieren. Stattdessen trägt die Farbgestaltung, welche den Fehlerfall hervorhebt, zur Übersichtlichkeit bei. Zeigen alle Werte eine graue Null an, so ist der Green Day erreicht und die genauen Ergebnisse der einzelnen Anwendungsfälle müssen nicht weiter betrachtet werden.
 
-   alt neu Verschlechterung
-6   2   5   0   Aufgabenangemessenheit
-6   3   5   1   Selbstbeschreibungsfähigkeit
--> Informationen so darstellen, dass eindeutig ersichtlich ist, welche Benutzungsschnittstellen-Elemente interaktiv und welche nicht interaktiv sind - / - teilweise - Links / Buttons im Darkmode unscheinbar
-8   5   6   1   Erwartungskonformität
--> Informationen auf unterschiedlichen Gerätearten und Anzeigegrößen angemessen darstellen - immer gleich, aber angemessen genug - das Grid ließ sich nicht fix einstellen
-6   1   5   0   Erlernbarkeit
-6   4   5   0   Steuerbarkeit
-1   0   1   0   Robustheit gegen Benutzungsfehler
-4   3  3+1  1   Benutzerbindung
--> Vertrauen schaffen hinsichtlich seiner Verwendung - zeigt Firmen Farben und Symbole - Firmenunabhängig
+Die übernommene Kategorisierung der Ergebnisse gibt dem Nutzer die gleiche gewohnte Struktur vor, wodurch er im Fehlerfall die Stelle im alten System eindeutig identifizieren kann. Anhand der Verlinkung zur entsprechenden Oberfläche des alten Systems kann schließlich auf die Detailausgabe zugegriffen werden.
+
+% **************************************************************************
+%           ISO-Tabellen
+% **************************************************************************
+Das neue System bietet eine Vielzahl neuer Funktionen und Möglichkeiten. Anhand der \glqq Tabelle zur Unterstützung der Anwendung [der ISO 9241-110]\grqq{} \cite{DIN_EN_ISO_9241-110} ist erkennbar, dass innerhalb jeden Prinzips die Umsetzung der Empfehlungen gesteigert wurde (s. \autoref{tab:Zusammenfassung:ISO-Tabellen:neu_Zustand}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{Prinzip Nr.} & \multirow{2}{*}{Anzahl} & \multirow{2}{*}{\makecell{davon\\umsetzbar}} & altes System & neues System \\ \cline{3-5}
+          & & & \makecell{davon\\umgesetzt} & \makecell{davon\\umgesetzt} \\ \hline
+        1 & 6  & 6 & 2 & 5 \\ \hline
+        2 & 8  & 6 & 3 & 5 \\ \hline
+        3 & 11 & 8 & 5 & 6 \\ \hline
+        4 & 6  & 6 & 1 & 6 \\ \hline
+        5 & 10 & 6 & 4 & 6 \\ \hline
+        6 & 12 & 1 & 0 & 1 \\ \hline
+        7 & 12 & 4 & 3 & 3 \\ \hline
+    \end{tabular}
+    \caption{Zusammenfassung der Umsetzung der Empfehlungen aus \autoref{Add:ISO-Tabellen} anhand des neuen Systems im Vergleich zum alten System}
+    \label{tab:Zusammenfassung:ISO-Tabellen:neu_Zustand}
+\end{table}
+
+\noindent
+Hierbei ist darauf hinzuweisen, dass nicht ausschlißlich weitere Empfehlungen umgesetzt wurden. Es ist nicht gelungen, im Rahmen des Prinzips der Selbstbeschreibungsfähigkeit, die \glqq Informationen so darstellen, dass eindeutig ersichtlich ist, welche Benutzungsschnittstellen-Elemente interaktiv und welche nicht interaktiv sind\grqq{} \cite{DIN_EN_ISO_9241-110}. Während das alte System dies teilweise ermöglicht, wirken die Verlinkungen durch den Darkmode unscheinbar.
+
+Im Rahmen des Prinzips der Erwartungskonformität konnten \glqq Informationen auf unterschiedlichen Gerätearten und Anzeigegrößen [nicht] angemessen [dargestellt]\grqq{} \cite{DIN_EN_ISO_9241-110} werden. Das Layout der Oberflächen des alten Systems sehen auf jeder Bilschirmgröße gleich aus, dadurch entsprechend angemessen, um sich im System zurechtzufinden. Das neue System ist anhand eines Rasters aufgebaut, welches sich beim Verändern der Bildschirmgröße oder der Seitenverhältnisse verschieben kann. 
+
+Stattdessen kann das neue System sich jedoch im Bereich der Benutzerbindung beweisen, da es \glqq [so] ausgelegt [ist], dass es Benutzererfordernisse antizipiert, deren sich der Benutzer möglicherweise gar nicht bewusst ist\grqq{} \cite{DIN_EN_ISO_9241-110}. Es liefert zusätzliche Informationen, welche zum Monitoring selbst nicht benötigt werden, jedoch beim Nutzer ein fundiertes Hintergundwissen über das System aufbauen können.
+
+% **************************************************************************
+% **************************************************************************
+% **************************************************************************
+
+%Worflow:
+%- mehr als ein Dashboard-
+%- immer noch viele Systeme
+%-> Zum Beginn des Arbeitstages öffnet die zuständige Person alle Dashboards, die auf der Übersichtsseite aufgelistet sind. Wenn alle Werte "graue 0" entsprechen = GreenDay

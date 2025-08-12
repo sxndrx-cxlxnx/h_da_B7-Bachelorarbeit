@@ -1,36 +1,33 @@
-\section{\textcolor{Salmon}{Anforderungsanalyse anhand des Zustands des bestehenden Legacy-\-Systems und den Nutzerbedürfnissen} \textcolor{red}{Nutzerbedürfnisse? sicher?}}
+\section{\textcolor{MidnightBlue}{Anforderungsanalyse anhand des Zustands des bestehenden Legacy-\-Systems}}
 \label{ch:Dashboard:sec:Anforderungen}
-Überblick über Anforderungen an das bestehende System / das neue System
 
-\noindent
-Ableitung funktionaler und nicht-funktionaler Anforderungen\\
-- Was muss das neue System mindestens können?\\
-- was soll es besser oder zusätzlich leisten?\\
+% **************************************************************************
+%           funktionale Merkmale + Einleitung + Schwächen / Probleme ausgleichen
+% **************************************************************************
 
-\noindent
-- die Tabellen aus der ISO nutzen / ausfüllen \cite{DIN_EN_ISO_9241-110} \autoref{Add:ISO-Tabellen}\\
-Erste Spalte: was ist auf so ein System anwendbar?\\
-Zweite Spalte: was wurde auf das alte System angewendet?\\
-Dritte Spalte: was wird sich vom neuen System erhofft?\\
-Vierte Spalte: Was wurde im neuen System tatsächlich umgesetzt?
+Die neue Oberfläche soll die Ergebnisse des Testpools ebenso wie das alte System vollständig und tagesaktuell wiedergeben sowie nach den Kriterien der Maschinenname, Versionsnummer und Art des Tests unterscheiden werden können. 
+Hierbei kann das neue System die verteilten Daten des alten Systems zusammenfassend darstellen und lediglich im Fehlerfall maximal einen Klick mehr benötigen, um an wichtige Detailinformationen zu gelangen. Dies soll ermöglichen, den Zustand des gesamten Testpools auf wenigen Blicken zu erfassen.
 
-funktionale Anforderungen:
-- Testergebnisse anzeigen
-- Sammelpunkt für alle detailierteren Übersichtsseiten sein
-- alle Ergebnisse auf einer Seite
-- 
+Neben der Weiterleitung zu den Details der Testdurchführung, soll das neue System dazu anregen alle Quellen im Zusammenhang mit dem Testpool zu sammeln, um einen Überblick in Form er Dokumentation zu erstellen.
 
-ISO-Tabellen:
-- Anzahl mehr als altes System erfüllt
+% **************************************************************************
+%           ISO-Tabellen
+% **************************************************************************
+Ziel ist es, ein System zu erschaffen, welches sowohl funktional als auch in Anbetracht der Usability eine Verbesserung zum alten System darstellt. Dafür kann die \glqq Tabelle zur Unterstützung der Anwendung [der ISO 9241-110]\grqq{} \cite{DIN_EN_ISO_9241-110} verwendet werden, an welcher bereits der Zustand des alten Systems bewertet wurde. Zur Verbesserung der Usability wird eine Steigerung der umgesetzten Empfehlungen erwartet.
 
-   alt neu Verschlechterung
-6   2   5   0   Aufgabenangemessenheit
-6   3   5   1   Selbstbeschreibungsfähigkeit
--> Informationen so darstellen, dass eindeutig ersichtlich ist, welche Benutzungsschnittstellen-Elemente interaktiv und welche nicht interaktiv sind - / - teilweise - Links / Buttons im Darkmode unscheinbar
-8   5   6   1   Erwartungskonformität
--> Informationen auf unterschiedlichen Gerätearten und Anzeigegrößen angemessen darstellen - immer gleich, aber angemessen genug - das Grid ließ sich nicht fix einstellen
-6   1   5   0   Erlernbarkeit
-6   4   5   0   Steuerbarkeit
-1   0   1   0   Robustheit gegen Benutzungsfehler
-4   3  3+1  1   Benutzerbindung
--> Vertrauen schaffen hinsichtlich seiner Verwendung - zeigt Firmen Farben und Symbole - Firmenunabhängig
+% **************************************************************************
+% **************************************************************************
+% **************************************************************************
+%\noindent
+%Ableitung funktionaler und nicht-funktionaler Anforderungen\\
+%- Was muss das neue System mindestens können?\\
+%- was soll es besser oder zusätzlich leisten?\\
+
+%funktionale Anforderungen:
+%- Testergebnisse anzeigen
+%- Sammelpunkt für alle detailierteren Übersichtsseiten sein
+%- alle Ergebnisse auf einer Seite
+%- 
+
+%Quellen der Anforderungen:\\
+%-> Nutzerfeedback, bestehende Dokumentation, eigene Analyse\\

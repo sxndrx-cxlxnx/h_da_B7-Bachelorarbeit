@@ -1,37 +1,45 @@
-\section{\textcolor{Salmon}{Zustandsanalyse des alten Systems als Vorlage zur Anforderungsanalyse für das neue System}}
+\section{\textcolor{MidnightBlue}{Zustandsanalyse des alten Systems als Vorlage zur Anforderungsanalyse für das neue System}}
 \label{ch:IST-Zustand:sec:Zustandsanalyse}
-s. \autoref{Add:ISO-Tabellen}\\
-Ableitung funktionaler und nicht-funktionaler Anforderungen\\
 
-Quellen der Anforderungen:\\
--> Nutzerfeedback, bestehende Dokumentation, eigene Analyse\\
+Die bestehende Oberfläche zur Anzeige der Testpool-Ergebnisse ist über die Jahre gewachsen und nicht mehr die optimale Lösung. Zur Vorbereitung der Anforderungsanalyse für das neue System werden nachfolgend Merkmale aufgelistet, welche beibehalten werden sollen, sowie Schwächen und Probleme identifiziert, welche durch das neue System zu beheben sind.
 
-- die Tabellen aus der ISO nutzen / ausfüllen \cite{DIN_EN_ISO_9241-110} \autoref{Add:ISO-Tabellen}\\
-Erste Spalte: was ist auf so ein System anwendbar?\\
-Zweite Spalte: was wurde auf das alte System angewendet?\\
-Dritte Spalte: was wird sich vom neuen System erhofft?\\
-Vierte Spalte: Was wurde im neuen System tatsächlich umgesetzt?
+% **************************************************************************
+%           funktionale Merkmale
+% **************************************************************************
+Das System zeigt alle Ergebnisse des Testpools vollständig und tagesaktuell an. Dabei können die Ergebnisse nach genutzer Maschine und Versionsnummer sowie nach Art des Tests unterschieden werden. Das System ermöglicht es, Details der Testdurchführung anhand von Logeinträgen einzusehen.
 
-- Identifizierte Schwächen / Probleme\\
-z.B. Usability-Probleme, technische Einschränkungen, fehlende Features
+% **************************************************************************
+%           Schwächen / Probleme
+% **************************************************************************
+Die Menge der Daten ermöglicht es dem alten System nicht, eine Übersichtlichkeit herzustellen. Das bedeutet, dass der Überblick über viele einzelne Oberflächen behalten werden muss und das System es nicht eindeutig ermöglicht, zwischen den Anwendungsfällen zu wechseln. Weiterhin sind die verfügbaren Oberflächen nicht ausreichend dokumentiert.
 
-% Überblick über Anforderungen an das bestehende System / das neue System
-% -> erst im nächsten Abschnitt
+%- Identifizierte Schwächen / Probleme\\
+%z.B. Usability-Probleme, technische Einschränkungen, fehlende Features
+%Seiten / Oberflächen nicht gesammelt verfügbar
 
-Seiten / Oberflächen nicht gesammelt verfügbar
+% **************************************************************************
+%           ISO-Tabellen
+% **************************************************************************
+Die Umsetzung der Usability dieses Systems wurde anhand der \glqq Tabelle zur Unterstützung der Anwendung [der ISO 9241-110]\grqq{} \cite{DIN_EN_ISO_9241-110} bewertet. 
+Darin wird erfasst, welche Empfehlungen für diesen Anwendungsfall umsetzbar sind und ob diese umgesetzt wurden. Nachfolgend ist eine Zusammenfassung der Tabellen in \autoref{tab:Zusammenfassung:ISO-Tabellen:alt_Zustand} anhand der Interaktionsprinzipien aufgelistet.
 
-ISO-Tabelle:
-- nach Prinzips aufgesplittet (mit je der autoref)
-- Statististische Auswertung (einfach zahlen: a von b sind umsetzbar \& x von y wurden umgesetzt)
+%ISO-Tabelle:
+%- nach Prinzips aufgesplittet (mit je der autoref)
+%- Statististische Auswertung (einfach zahlen: a von b sind umsetzbar \& x von y wurden umgesetzt)
 
-   alt neu Verschlechterung
-6   2   5   0   Aufgabenangemessenheit
-6   3   5   1   Selbstbeschreibungsfähigkeit
--> Informationen so darstellen, dass eindeutig ersichtlich ist, welche Benutzungsschnittstellen-Elemente interaktiv und welche nicht interaktiv sind - / - teilweise - Links / Buttons im Darkmode unscheinbar
-8   5   6   1   Erwartungskonformität
--> Informationen auf unterschiedlichen Gerätearten und Anzeigegrößen angemessen darstellen - immer gleich, aber angemessen genug - das Grid ließ sich nicht fix einstellen
-6   1   5   0   Erlernbarkeit
-6   4   5   0   Steuerbarkeit
-1   0   1   0   Robustheit gegen Benutzungsfehler
-4   3  3+1  1   Benutzerbindung
--> Vertrauen schaffen hinsichtlich seiner Verwendung - zeigt Firmen Farben und Symbole - Firmenunabhängig
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        Prinzip Nr. & Anzahl & \makecell{davon\\umsetzbar} & \makecell{davon\\umgesetzt} \\ \hline
+        1) Aufgabenangemessenheit              & 6  & 6 & 2 \\ \hline
+        2) Selbstbeschreibungsfähigkeit        & 8  & 6 & 3 \\ \hline
+        3) Erwartungskonformität               & 11 & 8 & 5 \\ \hline
+        4) Erlernbarkeit                       & 6  & 6 & 1 \\ \hline
+        5) Steuerbarkeit                       & 10 & 6 & 4 \\ \hline
+        6) Robustheit gegen Benutzungsfehler   & 12 & 1 & 0 \\ \hline
+        7) Benutzerbindung                     & 12 & 4 & 3 \\ \hline
+    \end{tabular}
+    \caption{Zusammenfassung der Umsetzung der Empfehlungen aus \autoref{Add:ISO-Tabellen} anhand des alten Systems}
+    \label{tab:Zusammenfassung:ISO-Tabellen:alt_Zustand}
+\end{table}
