@@ -1,4 +1,4 @@
-\chapter{\textcolor{Plum}{Stand der Technik des bestehenden \textcolor{red}{Legacy"=}Testpoolmonitoring"=Prozesses}}
+\chapter{\textcolor{MidnightBlue}{Stand der Technik des bestehenden Legacy"=Testpoolmonitoring"=Prozesses}}
 \label{ch:IST-Zustand}
 
 % aufpassen, dass die logische Reihenfolge eingehalten wird
@@ -9,41 +9,62 @@
 %Wie ist der typische Workflow aktuell`? - hier
 %Wie soll es nachher aussehen? - Anforederungen Dashboard
 
-\textcolor{cyan}{
-    Welche Grundlagen müssen vorher geklärt werden?\\
-    - Tests\\
-    -> wofür benötigt?\\
-    -> was hat das hiermit zutun?\\
-    - Testsysteme\\
-    -> Funktion + Nutzen\\
-    -> wie kommt man von den Tests auf dieses System (von Unit, Integration und ... Tests)\\
-    - 
-}
+%Beschreibung der Umgebung mit welcher das bestehende System interagiert
 
-\noindent
-\textcolor{blue}{einleitende Worte}\\   % OK von der Firma einholen
-Firmenhintergrund - kurz und bündig\\
-„das Experiment wurde bei der Firma xy gemacht“\\
-„habe die Mitarbeiter von denen genommen“\\
-könnte auch in die Einleitung und danach gar nicht mehr erwähnen\\
-„wurde durchgeführt bei der Firma x, die sich mit [Kategorien der Informatik] beschäftigt\\
-% „Aufbau des Grundsystems der Firma xy“
-\noindent
-\textcolor{red}{TODO: Marcus}
+%Legacy Code -> C, Umfang
+Es besteht ein über viele Dekaden gewachsenes Legacy-System, welches mehrere Millionen Zeilen C- und Java-Code umfasst. Es wird anhand dessen Testpools regelmäßig auf Funktion und Verhalten getestet.
 
-\noindent
-\underline{Environment}\\
-Legacy-Code base -> auf Grundlagen für Definition verweisen(?)\\
-- über 1 Mio Zeilen Code zu verwalten
-Test-System\\
--> größere Tests\\
-laufen regelmäßig / täglich\\
-muss jeden tag überwacht werden, um potenziell Änderungen am Code vorzunehmen\\
-u.a. für den Bauprozess benötigt
+%Legacy-Code base -> auf Grundlagen für Definition verweisen(?)\\
+%- über 1 Mio Zeilen Code zu verwalten
+%Test-System\\
+%-> größere Tests\\
+%laufen regelmäßig / täglich\\
+%muss jeden tag überwacht werden, um potenziell Änderungen am Code vorzunehmen\\
+%u.a. für den Bauprozess benötigt
 
-% *****************************************************************************
+% ******************************************************
+%       welche Daten / Tests
+% ******************************************************
+Der Testpool enthält hauptsächlich große und umfangreiche Tests. Diese umfassen zum Beispiel, ob das System erfolgreich gebaut und kompiliert hat. Es werden weiterhin die Ausgaben und Reaktionen von einfachen Character Oberflächen bis zu
+%mit und ohne Eingabemöglichkeiten getestet sowie Oberflächetests anhand von 
+Java-Dialogen überprüft. Das Systemverhalten kann über die Oberfläche, durch diese Tests indirekt mitgetestet werden. Anhand des Verhaltens auf der Oberfläche wird überprüft, ob alle Client, Server und weiteren Produkte in Kombination funktionieren.
+
+Die Tests werden täglich anhand verschiedener Versionen der Software ausgeführt und müssen auf Fehler überwacht werden, damit diese zeitnah behoben werden können.
+In diesem Anwendungsfall wird der tägliche Umgang mit der Ergbnisanzeige dieser Tests untersucht. Zur Eingrenzung des Umfangs wird sich dabei auf die C-Seite konzentriert.
+
+%Anhand der Ausgaben und Reaktionen auf der Oberfläche können Rückschlüsse gezogen werden, ob alle Client, Server und Produkte in Kombination funktionieren.
+
+%- zur Anzeige der Nachtresultate
+%dargstellte Tests
+%- "Kategorien" - Batch QA; cui QA, Addons, QFT
+%-> verschiedene Test Tools / selbstgebaute Frameworks
+%Build: ist der Build+Compile überhaupt gelaufen
+%Batch: UI-einfach gehalten - Screeninhalt wird abgelegt und mit erwarteten Screen verglichen (für Programme mit einfachem Output (cmd - characteroberfläche, textorientiert))
+%CUI: Bildschirminhalte vom Terminal abgespeichert - Verarbeitung von Eingbaben möglich, Maskenweise (reine Oberflächenchecks(cmd), aber mit Eingaben)
+%AddOns: auch CUI-Tests, aber mit anderem Produkt/Anwendung in Kombi - Testen vom Verhalten des Natural, unabhängig der konkreten Funktionen - oder Anwendungsfehler
+
+%QFT: kann Java SWT Dialoge \& Swing-Dialoge testen (auch Oberflächenchecks, aber Java-Dialoge)
+
+%CI/CD: nur Build, ob der Compile durchgeht, wenig Unit/Intergrationstests (C-Code-Basis)
+
+%Oberflächentests
+%-> kann für Rückschlüsse auf die Funktion verwendet werden
+%-> über die Oberfläche
+%-> ob das gleiche wie am Vortag rauskommt
+
+%Mischung aus UI \& System/Integrationtests
+%-> prüfen Client, Server, ob alle Produkte in Kombination funktionieren
+
+% Kapitelüberblick
+Im nachfolgenden Kapitel wird das Tool der Ergbnisanzeige beschrieben, wie dieses aufgebaut ist und woher die angezeigten Daten stammen. Daraufhin wird ein Überblick über die bisherige Oberfläche sowie den Workflow damit gegeben. Zum Schluss wird eine Zustandsanalyse durchgeführt, an welcher die Stärken und Schwächen des System herausgestellt werden, um im nachfolgenden \autoref{ch:Erstellung Dashboard} auf dessen Grundlage Anforderungen für ein neues, verbessertes System aufzustellen.
+
+% Alternative
+%um im nachfolgenden \autoref{ch:Erstellung Dashboard} auf dessen Grundlage ein neues, verbessertes System aufzubauen.
+
+
+% *********************************************************
 %           Struktur
-% *****************************************************************************
+% *********************************************************
 %Entwicklung eines Dashboards als moderne Anzeige der Testpoolergebnisse
 %5.2 Evaluation und Auswahl des Dashboard-Tools
 %5.3 technische Umsetzung des Datenflusses zur Dashboardanzeige

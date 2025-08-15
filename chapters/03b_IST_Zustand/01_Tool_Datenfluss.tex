@@ -1,36 +1,6 @@
-\section{\textcolor{Turquoise}{technische Umsetzung des Datenflusses zur Anzeige} \textcolor{red}{Beschreibungd des Tools}}
+\section{\textcolor{Turquoise}{technische Umsetzung des Datenflusses zur Anzeige}}
+%\textcolor{red}{Beschreibungd des Tools}}
 \label{ch:IST-Zustand:sec:Datenfluss}
-
-% ******************************************************
-%       welche Daten / Tests
-% ******************************************************
-Das System auf welches sich in dieser Untersuchung konzentriert wird, zeigt die Ergebnisse des Testpools an, welcher täglich Oberflächentests an verschiedenen Versionen der Software ausführt.
-Diese umfassen Tests, ob das System erfolgreich gebaut und kompiliert hat. Es werden die Ausgaben und Reaktionen von einfachen Character Oberflächen mit und ohne Eingabemöglichkeiten getestet sowie Oberflächetests anhand von Java-Dialogen durchgeführt. Das Systemverhalten kann über die Oberfläche, durch diese Tests indirekt mitgetestet werden. Anhand der Ausgaben und Reaktionen auf der Oberfläche wird überprüft, ob alle Client, Server und Produkte in Kombination funktionieren.
-
-%Anhand der Ausgaben und Reaktionen auf der Oberfläche können Rückschlüsse gezogen werden, ob alle Client, Server und Produkte in Kombination funktionieren.
-
-%- zur Anzeige der Nachtresultate
-%dargstellte Tests
-%- "Kategorien" - Batch QA; cui QA, Addons, QFT
-%-> verschiedene Test Tools / selbstgebaute Frameworks
-%Build: ist der Build+Compile überhaupt gelaufen
-%Batch: UI-einfach gehalten - Screeninhalt wird abgelegt und mit erwarteten Screen verglichen (für Programme mit einfachem Output (cmd - characteroberfläche, textorientiert))
-%CUI: Bildschirminhalte vom Terminal abgespeichert - Verarbeitung von Eingbaben möglich, Maskenweise (reine Oberflächenchecks(cmd), aber mit Eingaben)
-%AddOns: auch CUI-Tests, aber mit anderem Produkt/Anwendung in Kombi - Testen vom Verhalten des Natural, unabhängig der konkreten Funktionen - oder Anwendungsfehler
-
-%QFT: kann Java SWT Dialoge \& Swing-Dialoge testen (auch Oberflächenchecks, aber Java-Dialoge)
-
-%CI/CD: nur Build, ob der Compile durchgeht, wenig Unit/Intergrationstests (C-Code-Basis)
-
-%Oberflächentests
-%-> kann für Rückschlüsse auf die Funktion verwendet werden
-%-> über die Oberfläche
-%-> ob das gleiche wie am Vortag rauskommt
-
-%Mischung aus UI \& System/Integrationtests
-%-> prüfen Client, Server, ob alle Produkte in Kombination funktionieren
-%-> läuft nachts
-
 
 % ******************************************************
 %       Tool
@@ -60,4 +30,4 @@ Das Tool liest die Textdatei mit den Ergebnissen aus, bereitet die Daten auf und
     \label{fig:alt_Datenfluss}
 \end{figure}
 
-JenkinsJob > schreibt Ergebnis auf Oberfläche > cmd-Output auch abrufbar
+\textcolor{red}{JenkinsJob > schreibt Ergebnis auf Oberfläche > cmd-Output auch abrufbar}
