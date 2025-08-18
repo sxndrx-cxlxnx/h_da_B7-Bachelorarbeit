@@ -2,47 +2,51 @@
 %\label{sec:SdF:UI:ISO}
 \label{ch:SdF:UI:ISO}
 
-Die DIN-Normen der Nummer 9241 geben Vorgaben und Empfehlungen zur Gestaltung interaktiver Systeme. Im Folgenden werden die Inhalte der DIN EN ISO 9241-110 Interaktionsprinzipien (ISO 9241-110:2020) \cite{DIN_EN_ISO_9241-110} mit Fokus zur Anwendung auf Dashboards zusammengefasst. Die DIN-Normen sind in diesem Fall die nationale Umsetzung der internationalen ISO-Normen und werden nachfolgend synonym mit ‚ISO‘ referenziert.
+Die DIN-Normen der Nummer 9241 geben Vorgaben und Empfehlungen zur Gestaltung interaktiver Systeme.
+\autoref{fig:iso-uebersicht} stellt den Zusammenhang der Hauptquellen für Empfehlungen zur Benutzer-System-Interaktion dar. Es sind die Parts 11, 110, 112 und weitere zu erkennen. Die ISO 9241-11 definiert den Begriff Usability, %(dt. Gebrauchstauglichkeit)
+währenddessen Part 110 und 112 Prinzipien und Grundsätze mitgeben, um die Usability eines Systems gewährleisten zu können.
 
-\autoref{fig:iso-uebersicht} stellt den Zusammenhang der Hauptquellen für Empfehlungen zur Benutzer-System-Interaktion dar. Es sind die Parts 11, 110, 112 und weitere zu erkennen. Die ISO 9241-11 definiert den Begriff Usability (dt. Gebrauchstauglichkeit), währenddessen Part 110 und 112 Prinzipien und Grundsätze mitgeben, um die Usability eines Systems gewährleisten zu können.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{chapters/02_Stand_der_Forschung/ISO-Normen_Uebersicht.PNG}
-    %\caption{Überblick und Zusammenspiel der ISO-Normen mit Fokus auf die Usability von interaktiven Systemen \cite{DIN_EN_ISO_9241-110}}
-    \caption{\glqq Beziehung zwischen den Hauptquellen für Empfehlungen zur Benutzer-System-Interaktion\grqq{} \cite{DIN_EN_ISO_9241-110} mit Fokus auf die Usability}
-    \label{fig:iso-uebersicht}
-\end{figure}
-
-Neben der Usability steht die User-Experience (UX, dt. Nutzererfahrung oder -erlebnis). Diese wird in Part 210 beschrieben. Da das Nutzererlebnis eine Übermenge der Gebrauchstauglichkeit (UE) ist ($UX \varsubsetneq UE$), ist sie nicht in der Abbildung aufgelistet. Der Part 112 mit den Grundsätzen zur Informationsdarstellung ist vor allem auf Benutzeroberflächen oder Dashboards anwendbar. Da sich dieser Part auf UX fokussiert, finden dessen Prinzipien hier aus Umfangsgründen keine Anwendung.
+%Im Folgenden werden die Inhalte der DIN EN ISO 9241-110 Interaktionsprinzipien (ISO 9241-110:2020) \cite{DIN_EN_ISO_9241-110} mit Fokus zur Anwendung auf Dashboards zusammengefasst. Die DIN-Normen sind in diesem Fall die nationale Umsetzung der internationalen ISO-Normen und werden nachfolgend synonym mit ‚ISO‘ referenziert.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{chapters/06_Diskussion/Usability-ISO-Prinzipien_KI.PNG}
-    \caption{Zusammengehörigkeit/Überschneidungen der ISO-Prinzipien und der Usability-Dimensionen \textcolor{red}{noch austauschen(!)}} % KI-Bild
-    \label{fig:usability<->ISO-Prinzipien}
+    \includegraphics[width=1\linewidth]{chapters/02_Stand_der_Forschung/ISO-Normen_Uebersicht.PNG}
+    %\caption{Überblick und Zusammenspiel der ISO-Normen mit Fokus auf die Usability von interaktiven Systemen \cite{DIN_EN_ISO_9241-110}}
+    \caption{\glqq Beziehung zwischen den Hauptquellen für Empfehlungen zur Benutzer-System-Interaktion\grqq{} \cite[S. 16]{DIN_EN_ISO_9241-110} mit Fokus auf die Usability}
+    \label{fig:iso-uebersicht}
 \end{figure}
 
+\noindent
+Im Folgenden werden die Inhalte der DIN EN ISO 9241-110 Interaktionsprinzipien (ISO 9241-110:2020) \cite{DIN_EN_ISO_9241-110} mit Fokus zur Anwendung auf Dashboards zusammengefasst. Die DIN-Normen sind in diesem Fall die nationale Umsetzung der internationalen ISO-Normen und werden nachfolgend synonym mit ‚ISO‘ referenziert.
+
 % ******************************************************************
-\subsection{\textcolor{Turquoise}{Definition Usability nach ISO 9241-11}}
+\subsection{\textcolor{MidnightBlue}{Definition Usability nach ISO 9241-11}}
 \label{ch:SdF:sec:Usability}
-Der Begriff der Usability (dt. Gebrauchstauglichkeit) beschreibt im Gegensatz zur User-Experience (UX) die Qualität eines Systems oder einer Oberfläche in Bezug auf dessen Einfachheit und Nutzbarkeit. Sie wird gemessen in den Dimensionen der Effektivität, Effizienz und der Zufriedenheit.
+Der Begriff der Usability (dt. Gebrauchstauglichkeit) beschreibt die Qualität eines Systems oder einer Oberfläche in Bezug auf dessen Einfachheit und Nutzbarkeit. Sie wird gemessen in den Dimensionen der Effektivität, Effizienz und der Zufriedenheit der Nutzer.
 
 Die Effektivität beschreibt die funktionelle Eignung eines Systems. Das heißt, dass der Nutzer seine Aufgaben vollständig und korrekt mithilfe dieses Systems durchführen kann. Die Effizienz misst sich in Form von Zeit, um eine Aufgabe vollständig und richtig zu erfüllen, und der Rate wie viele Fehler auf dem Weg dorthin gemacht werden. Die Zufriedenheit \textcolor{red}{(TODO: Satisfaction - Zufriedenheit, Befriedigung)} der Nutzer ist nicht in metrischen Kenngrößen zu erfassen. Es kann ein Zufriedenheitsspektrum auf Grundlage von zum Beispiel Fragebögen (s. \autoref{ch:SdF:sec:Fragebogen}) oder der Verhaltensanalyse während eines Testszenarios festgestellt werden.
 
 % ******************************************************************
-\subsection{\textcolor{Plum}{Differenzierung Usability und User-Experience}}
+\subsection{\textcolor{Turquoise}{Definition User-Experience und Differenzierung von Usability}}
 \label{ch:SdF:sec:Usability_vs_User_Experience}
-alles von oben einfügen
-\cite{usability_vs_experience:2018}
+Neben der Usability steht die User-Experience (UX, dt. Nutzererfahrung oder -erlebnis). Diese wird in Part 210 beschrieben. Da das Nutzererlebnis eine Übermenge der Gebrauchstauglichkeit (UE) ist ($UX \varsubsetneq UE$), ist sie nicht in der Abbildung aufgelistet. Der Part 112 mit den Grundsätzen zur Informationsdarstellung ist vor allem auf Benutzeroberflächen oder Dashboards anwendbar. Da sich dieser Part auf UX fokussiert, finden dessen Prinzipien hier aus Umfangsgründen keine Anwendung.
+
+\textcolor{red}{\cite[TODO]{usability_vs_experience:2018}}
 
 % ******************************************************************
-\subsection{\textcolor{Salmon}{Interaktionsprinzipien nach ISO 9241-110}}   % zur Gebrauchstauglichkeit und Ergonomie interaktiver Systeme
+\subsection{\textcolor{MidnightBlue}{Interaktionsprinzipien nach ISO 9241-110}}   % zur Gebrauchstauglichkeit und Ergonomie interaktiver Systeme
 \label{ch:SdF:sec:Interaktionsprinzipien}
 
 Der Text der ISO 9241 Part 110 kombiniert die Ausprägungen der Usability mit Gestaltungsempfehlungen in Form von 7 Interaktionsprinzipien (ehem. Grundsätze der Dialoggestaltung). Indem Systeme und Schnittstellen gebrauchstauglicher, zugänglicher und konsistenter gestaltet werden, erleichtern und verbessern diese die kognitive Ergonomie der Mensch-System-Interaktion.
 
-Die 7 Interaktionsprinzipien sind die Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Erwartungskonformität, Erlernbarkeit, Steuerbarkeit, Robustheit gegen Benutzungsfehler und die Benutzerbindung. Die Gewichtung der Grundsätze kann unterschiedlich ausfallen, da sie von dem System, den Nutzern und deren Aufgaben abhängig sind.
+Die 7 Interaktionsprinzipien sind die Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Erwartungskonformität, Erlernbarkeit, Steuerbarkeit, Robustheit gegen Benutzungsfehler und die Benutzerbindung. Die Gewichtung der Grundsätze kann unterschiedlich ausfallen, da sie von dem System, den Nutzern und deren Aufgaben abhängig sind. Diese können, wie in \autoref{tab:usability<->ISO-Prinzipien} zu sehen, den drei Usability-Dimensionen zugeordnet werden.
+
+\begin{table}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/06_Diskussion/Usability-ISO-Prinzipien_KI.PNG}
+    \caption{Zuordnung der ISO-Prinzipien zur den drei Dimensionen der Usability \textcolor{red}{noch austauschen(!)}} % KI-Bild
+    \label{tab:usability<->ISO-Prinzipien}
+\end{table}
 
 % Aufgabenangemessenheit
 Ist ein System \textbf{aufgabenangemessen}, bedeutet dies, dass es den Nutzer bei seinen Aufgaben unterstützt. Hierbei ist das System primär auf diese Aufgabe ausgerichtet, anstatt auf der dafür benötigten Technik dahinter zu basieren. Um den Aufwand einer Aufgabe zu optimieren, sollen beispielweise unnötige Schritte sowie ablenkende Informationen oder Interaktionsmöglichkeiten auf der Oberfläche gemieden werden. Dies äußert sich, indem zum Beispiel nur die Informationen auf der Oberfläche angezeigt werden, die für den aktuellen Schritt benötigt werden.
@@ -96,10 +100,10 @@ und weitere Tools nennen -> und wo diese Auflistung herkommt
 // TODO: Titel ändern! \\
 -> Subsection evtl. hochschieben vor ISO\\
 ...\\
---> zusammengehörige Informationen zusammen darstellen und so \cite{wickens} \\ % Engineering psychology and human performance
+--> zusammengehörige Informationen zusammen darstellen und so \cite{Wickens:2013} \\ % Engineering psychology and human performance
 
 ---\\
 
 % *****         ISO-Quelle nochmal erwähnen!!!
-Im Folgenden wir die ISO-Norm 9241-110 \cite{DIN_EN_ISO_9241-110} zusammengefasst.
-o	und am Ende auch nochmal darauf referenzieren
+%Im Folgenden wir die ISO-Norm 9241-110 \cite{DIN_EN_ISO_9241-110} zusammengefasst.
+%o	und am Ende auch nochmal darauf referenzieren

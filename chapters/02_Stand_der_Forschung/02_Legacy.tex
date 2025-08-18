@@ -1,35 +1,93 @@
-\section{\textcolor{Plum}{Ansätze zur Modernisierung von Legacy-Systemen}}
-...\\
+%\section{\textcolor{Plum}{Ansätze zur Modernisierung von Legacy-Systemen}}
+\section{\textcolor{Salmon}{Modernisierung von Legacy-Systemen} \textcolor{red}{+ Testsysteme}}
 
+\textcolor{blue}{
+einleitende Worte\\
+Legacy sind alte gewachsene Umgebungen \cite{Quelle}\\
+was sind deren Probleme\\
+Dringlichkeit zur Modernisierung anhand von Studien / Artikeln darstellen\\
+Wie kann Modernisierung fixen\\
+%In diesem kapitel werden verschiedene Ansätze zur Modernisierung aufgezeigt\\
+}
 
 \textcolor{cyan}{
-    Welche Grundlagen müssen vorher geklärt werden?\\
-    - Tests\\
-    -> wofür benötigt?\\
-    -> was hat das hiermit zutun?\\
-    - Testsysteme\\
-    -> Funktion + Nutzen\\
-    -> wie kommt man von den Tests auf dieses System (von Unit, Integration und ... Tests)\\
-    - 
+    %Welche Grundlagen müssen vorher geklärt werden?\\
+    %- Tests\\
+    %-> wofür benötigt?\\
+    %-> was hat das hiermit zutun?\\
+    
+    %- Testsysteme\\
+    %-> Funktion + Nutzen\\
+    %-> wie kommt man von den Tests auf dieses System (von Unit, Integration und ... Tests)\\
+    
+    %- was sind gängige Probleme?
 }
+
+\textcolor{red}{TODO: 3-4 Studien / Artikel}
+
+% Vorsicht KI
+Probleme
+Sicherheitsrisiken:
+Inflexibilität und mangelnde Skalierbarkeit:
+Hohe Wartungskosten:
+Verlust von Wettbewerbsvorteilen:
+Innovationshemmnis:
+
+Vorteile der Modernisierung:
+Erhöhte Sicherheit:
+Verbesserte Effizienz:
+Kosteneinsparungen:
+Bessere Wettbewerbsfähigkeit:
+Innovation und Wachstum:
+% Vorsicht KI - Ende
+
 \noindent
-- Legacy\\
+- Legacy \cite{Feathers:2013}\\
 -> was ist Legacy Code\\
 -> warum ist es ein Problem\\
 -> wie kann man es lösen - verschiedene Ansätze\\
 Aufbau und Eigenschaften von Testsystemen mit Fokus auf gewachsene Legacy-Umgebungen\\
 
-\noindent
-in Problemstellung:\\
-- Übergang auf: was hat das mit meinem Thema zu tun\\
-- wie lassen sich die Ansätze neu interpretieren auf das gegebene Problem
-
+% **************************************************************************
+%           Eingriffstiefe
+% **************************************************************************
 \subsection{\textcolor{Plum}{Methoden zur Modernisierung anhand unterschiedlicher Eingriffstiefe in das Legacy-System}}
 ...
+Dashboards und so
 
-- Stand Buch: Refactoring
+Darstellen
+Umstrukturieren (Refactoring - definieren!)
+improving design without changing its behaviour is called refactoring \cite[S. 7]{Feathers:2013}
+Umbauen
+neu hosten
+neu bauen
 
-\subsection{\textcolor{Plum}{Methoden und Strategien zur Migration von Legacy-Systemen}}
-...
-\subsection{\textcolor{Plum}{Technische Schulden und Strategien zur Tilgung}}
-...
+low-risk - reformatting source code
+invasive / risky things - rewriting chunks of it
+\cite[S. 5]{Feathers:2013}
+
+- manche Änderungen erfolgen auf Grundlage von "mache es besser" statt "am Besten"
+-> manchmal muss der Code hässlicher werden, damit er besser wird (Feathers 2013, xvi ff.)
+=> bzgl. Refactoring und z.B. Dependencies und Funktionen breaken
+
+
+% **************************************************************************
+%           Testsysteme
+% **************************************************************************
+\subsection{\textcolor{MidnightBlue}{Legacy-Code ist Code ohne Tests}}
+% Gründe zum Ändern von Software > Testsystemen
+
+Soll Software verändert werden, gibt es vier mögliche Gründe dafür. Entwickler können ein Feature hinzufügen, einen Fehler beheben, ein Refactoring oder eine Optimierung vornehmen. % oder das Verhalten in Form von Speicher oder Ressourcen optimieren.
+Dies zu erreichen impliziert, mindestens eine der folgenden Änderungen, die Veränderung der Code-Struktur, den Einbau von neuer Funktionalität, die Veränderung bestehender Funktionalität oder die Anpassung des Ressourcen-Verbrauchs, durchzuführen. Dabei soll das bestehende Verhalten bewahrt werden. Das bedeutet, dass die Änderung den Code so wenig wie möglich aber so viel wie nötig verändert werden soll. \cite[S. 7]{Feathers:2013}
+
+% Legacy > ohne Tests -> Verhalten bewahren = Testen
+Während eine aufgeräumte und gepflegte Umgebung dem Entwickler helfen, Überblick über den Code zu behalten, reicht dies in wachsenden und vor allem Legacy-Systemen nicht dafür aus, alle Einzelheiten zu kennen. Wird an dem Code eine Änderung vorgenommen, ist es kaum möglich zu erkennen, ob der Code dadurch verbessert oder verschlechtert wurde. Zudem ist es ineffizient für den Entwickler, jede Einzelheit per Hand zu testen, ob sich das Verhalten exakt so verändert hat, wie es vorgesehen war. Um zu garantieren dass sich an dem Verhalten des bestehenden Codes nichts verändert, werden Tests benötigt. \glqq Code ohne Tests ist schlechter Code\grqq{} \cite[S. XVI]{Feathers:2013}.
+Wird die Software asreichend getestet sieht der Entwickler sofort wenn sich das Verhalten ungewollt verändert hat. Dafür wird der Aufbau und die Pflege eines umfangreichen Test-Frameworks zur regelmäßigen und häufigen Überprüfung von der einzelnen Funktionseinheit bis zum komplexen Zusammenspiel verschiedener Services benötigt.
+Mithilfe einer solchen Testbasis lässt sich Code schnell modifizieren, ohne dass der Entwickler den vollständigen Überblick benötigt. %\cite[S. XVI, 45]{Feathers:2013}
+Zudem werden auch strukturelle Veränderungen, welche keine welche kein Verhalten verändern, durch die Testunterstützung vereinfacht. \cite[S. XVI, 5, 45]{Feathers:2013}
+
+% **************************************************************************
+%           irrelevant
+% **************************************************************************
+% Methoden und Strategien zur Migration von Legacy-Systemen
+% Technische Schulden und Strategien zur Tilgung
