@@ -1,0 +1,47 @@
+% **************************************************************************
+%           Methoden zur Modernisierung
+% **************************************************************************
+\subsection{\textcolor{Turquoise}{Methoden zur Modernisierung anhand unterschiedlicher Eingriffstiefe in das Legacy-System}}
+\label{ch:SdF:Legacy:sec:Methoden}
+
+Wie soeben dargestellt, sollten Modernisierungsmaßnahmen nicht ohne weiteren Grund, als als die Maßnahme selbst umgesetzt werden. Ziel ist, dass System zu verbessern. Ein System kann auf neue Technologie übertragen genauso unübersichtlich und gewachsen sein, wie zuvor \cite{FlorianStocker:2024}.
+
+% Replattforming
+Nach einer Umfrage / Studie von Kannenberg setzen 72\% auf \textbf{Replattforming}, also die Umstellung des eigenen Systems auf eine neue Anwendung. Damit ist häufig die Migration in die Cloud gemeint.
+Ingesamt 72\% der Unternehmen wechseln auf On-Premise oder private Cloudlösungen, um nicht von anderen Konzernen abhängig zu sein \cite{AxelKannenberg:2025}.
+Da moderne Cloudlösungen durch den Umfang an Servern und Komponenten eher mehr Komplexität mit sich bringen als zuvor, empfiehlt Stocker, Fachkräfte mit Erfahrung im Cloudbetrieb bereitzustellen \cite{FlorianStocker:2024}. 
+
+% Modularisieren
+Knapp 80\% der Unternehmen setzen auf modulare Architekturen \cite{AxelKannenberg:2025}. Die \textbf{Modularisierung} beschreibt die Auslagerung von Codesegmenten in Helferfunktionen. Diese ist eine wichtige Methode zur Simplifizierug, große, umfangreiche Methoden zu zerteilen. Ziel ist es, die Kernelemente überschaubarer zu gestalten und vor allem Code Dopplungen in Module auszulagern, die mit der Zentralfunktion interagieren. Einen weiteren Aspekt der Zerteilung stellt die Aufteilung eines Systems in seine Komponenten dar, welche über feste Schnittstellen miteinander interagieren.
+Diese Aufteilung ermöglicht es dem System, flexibel Funktionalitäten anzupassen, ohne das Verhalten anderer Komponenten zu beeinflussen.
+\cite{AxelKannenberg:2025, ElMorabea:2021, Stantchev:2010}
+
+Um eine Anwendung zu modularisieren gibt die Möglichkeit, das System neuzuschreiben (\textit{rewrite}) oder zu überarbeiten und umzustrukturieren (\textit{refactor}) \cite{ElMorabea:2021}.
+
+% Rewrite
+47\% der Unternehmen nutzen die Strategie des \textbf{rewrite} oder auch \textbf{rebuild} genannt \cite{AxelKannenberg:2025}. Sie bauen ihr System von Grund neu auf und strukturieren es anhand der Erkenntnisse aus dem alten System. Ziel ist es, das alte System vollständig zu ersetzen.
+Allerdings ist dieser Ansatz sehr invasiv und benötigt ein hohes Investment und ist mit einem entsprechend hohen Risiko verbunden. Entweder muss die Bearbeitung des alten Systems pausiert werden, bis das neue System vollständig einsatzfähig ist, oder der Arbeitsaufwand verdoppelt sich, indem beide System parallel betrieben werden.
+Quaisser sagt, dass große ‘Big-Bang-Projekte’ nie wirklich erfolgreich gewesen seien [zitiert nach \cite{FlorianStocker:2024}]. Dieser Ansatz hat große Nachteile, wodurch er zumeist nicht umsetzbar ist. Es werde ein Parallelbetrieb (Koexistenzphase) benötigt, bis alles migriert, modernisiert und abgelöst ist \cite{FlorianStocker:2024}.
+\cite{AxelKannenberg:2025, Feathers:2013, ElMorabea:2021, Stantchev:2010}
+
+\textcolor{red}{TODO}
+
+% Refactor
+Das \textbf{Refactoring} (dt. Umgestaltung) ist ein sukzessiver Prozess zur Code-Optimierung. 64\% der Unternehemen nutzen diesen Ansatz als Modernisierungsstragtegie \cite{AxelKannenberg:2025}. 
+
+\cite{ElMorabea:2021, Feathers:2013}
+
+low-risk - reformatting source code
+\cite[S. 5]{Feathers:2013}
+
+improving design without changing its behaviour is called refactoring \cite[S. 7]{Feathers:2013}
+
+% allgemein / besser machen
+o	Kleine Schritte gehen. 
+o	Fokus auf Komponenten legen. 
+o	Routinen schaffen. 
+o	An die Zukunft denken.  \cite{NadineRiederer:2022}
+
+- manche Änderungen erfolgen auf Grundlage von "mache es besser" statt "am Besten"
+-> manchmal muss der Code hässlicher werden, damit er besser wird (Feathers 2013, xvi ff.)
+=> bzgl. Refactoring und z.B. Dependencies und Funktionen breaken

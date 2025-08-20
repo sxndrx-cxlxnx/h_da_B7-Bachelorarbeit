@@ -1,5 +1,6 @@
-%\section{\textcolor{Plum}{Ansätze zur Modernisierung von Legacy-Systemen}}
-\section{\textcolor{Salmon}{Modernisierung von Legacy-Systemen} \textcolor{red}{+ Testsysteme}}
+\section{\textcolor{Turquoise}{Ansätze zur Modernisierung von Legacy-Systemen}}
+%\section{\textcolor{Turquoise}{Modernisierung von Legacy-Systemen} \textcolor{red}{+ Testsysteme}}
+\label{ch:SdF:Legacy}
 
 Modernisierung. Es wird geschrieben, es gibt eine \glqq Notwendigkeit zur Veränderung\grqq{} \cite{FlorianStocker:2024}. Vor allem in gewachsenen Systemen, im allgemeinen Sprachgebrauch auch Legacy-Systeme (dt. Altsysteme) genannt, ist dies jedoch mit sehr hohem Aufwand verbunden.
 
@@ -10,6 +11,7 @@ Eine Studie der Beratungsgesellschaft Lünendonk hat ergeben, dass die geschäft
 
 \textcolor{red}{
 \noindent
+TODO
 Weitere Probleme sind ...
 
 Durch die Moderniserung der Technologien ergeben sich somit die Vorteile einer erhöhten effizienz, Qualität und Zuverlässigkeit. Durch die Einführung von Automatisierungen einiger Prozesse, kann der manuelle Arbeitsaufwand reduziert werden, welcher zu Kosteneinsparungen führt \cite{Oppel:2025}.
@@ -17,7 +19,7 @@ Durch die Moderniserung der Technologien ergeben sich somit die Vorteile einer e
 
 % **************************************************************************
 
-% Vorsicht KI
+% Vorsicht KI    - TODO
 \textcolor{cyan}{
 weitere Probleme:\\
 Sicherheitsrisiken\\
@@ -36,43 +38,11 @@ Innovation und Wachstum\\
 
 Aus diesen Gründen werden in diesem Kapitel verschiedene Möglichkeiten vorgestellt und eingeordnet, wie diser umfangreiche Schritt begonnen werden kann. Weiterhin wird die Relevanz von der kontinuierlichen Überprüfung der Code-Basis in Form von Tests, sowohl im Tagesbetrieb aber vor allem im Modernisierungsprozess, aufgezeigt.
 
-% **************************************************************************
-%           Methoden zur Modernisierung
-% **************************************************************************
-\subsection{\textcolor{Plum}{Methoden zur Modernisierung anhand unterschiedlicher Eingriffstiefe in das Legacy-System}}
-...
-Dashboards und so
+\input{chapters/02_Stand_der_Forschung/02a_Methoden}
+\input{chapters/02_Stand_der_Forschung/02b_ungetestet}
+\input{chapters/02_Stand_der_Forschung/02c_Test-Pyramide}
+\input{chapters/02_Stand_der_Forschung/02d_Dashboards}
 
-Darstellen
-Umstrukturieren (Refactoring - definieren!)
-improving design without changing its behaviour is called refactoring \cite[S. 7]{Feathers:2013}
-Umbauen
-neu hosten
-neu bauen
-
-low-risk - reformatting source code
-invasive / risky things - rewriting chunks of it
-\cite[S. 5]{Feathers:2013}
-
-- manche Änderungen erfolgen auf Grundlage von "mache es besser" statt "am Besten"
--> manchmal muss der Code hässlicher werden, damit er besser wird (Feathers 2013, xvi ff.)
-=> bzgl. Refactoring und z.B. Dependencies und Funktionen breaken
-
-
-% **************************************************************************
-%           Testsysteme
-% **************************************************************************
-\subsection{\textcolor{MidnightBlue}{Legacy-Code ist Code ohne Tests}}
-% Gründe zum Ändern von Software > Testsystemen
-
-Soll Software verändert werden, gibt es vier mögliche Gründe dafür. Entwickler können ein Feature hinzufügen, einen Fehler beheben, ein Refactoring oder eine Optimierung vornehmen. % oder das Verhalten in Form von Speicher oder Ressourcen optimieren.
-Dies zu erreichen impliziert, mindestens eine der folgenden Änderungen, die Veränderung der Code-Struktur, den Einbau von neuer Funktionalität, die Veränderung bestehender Funktionalität oder die Anpassung des Ressourcen-Verbrauchs, durchzuführen. Dabei soll das bestehende Verhalten bewahrt werden. Das bedeutet, dass die Änderung den Code so wenig wie möglich aber so viel wie nötig verändert werden soll. \cite[S. 7]{Feathers:2013}
-
-% Legacy > ohne Tests -> Verhalten bewahren = Testen
-Während eine aufgeräumte und gepflegte Umgebung dem Entwickler hilft, Überblick über den Code zu behalten, reicht dies in wachsenden und vor allem Legacy-Systemen nicht dafür aus, alle Einzelheiten zu kennen. Wird an dem Code eine Änderung vorgenommen, ist es kaum möglich zu erkennen, ob der Code dadurch verbessert oder verschlechtert wurde. Zudem ist es ineffizient für den Entwickler, jede Einzelheit per Hand zu testen, ob sich das Verhalten exakt so verändert hat, wie es vorgesehen war. Um zu garantieren dass sich an dem Verhalten des bestehenden Codes nichts verändert, werden Tests benötigt. \glqq Code ohne Tests ist schlechter Code\grqq{} \cite[S. XVI]{Feathers:2013}.
-Wird die Software ausreichend getestet sieht der Entwickler sofort wenn sich das Verhalten ungewollt verändert hat. Dafür wird der Aufbau und die Pflege eines umfangreichen Test-Frameworks zur regelmäßigen und häufigen Überprüfung von der einzelnen Funktionseinheit bis zum komplexen Zusammenspiel verschiedener Services benötigt.
-Mithilfe einer solchen Testbasis lässt sich Code schnell modifizieren, ohne dass der Entwickler den vollständigen Überblick benötigt. %\cite[S. XVI, 45]{Feathers:2013}
-Zudem werden auch strukturelle Veränderungen, welche keine welche kein Verhalten verändern, durch die Testunterstützung vereinfacht. \cite[S. XVI, 5, 45]{Feathers:2013}
 
 % **************************************************************************
 %           irrelevant

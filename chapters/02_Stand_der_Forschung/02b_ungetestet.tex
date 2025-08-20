@@ -1,0 +1,15 @@
+% **************************************************************************
+%           Testsysteme
+% **************************************************************************
+\subsection{\textcolor{MidnightBlue}{Legacy-Code ist Code ohne Tests}}
+\label{ch:SdF:Legacy:sec:Legacy_ungetestet}
+% Gründe zum Ändern von Software > Testsystemen
+
+Soll Software verändert werden, gibt es vier mögliche Gründe dafür. Entwickler können ein Feature hinzufügen, einen Fehler beheben, ein Refactoring oder eine Optimierung vornehmen. % oder das Verhalten in Form von Speicher oder Ressourcen optimieren.
+Dies zu erreichen impliziert, mindestens eine der folgenden Änderungen, die Veränderung der Code-Struktur, den Einbau von neuer Funktionalität, die Veränderung bestehender Funktionalität oder die Anpassung des Ressourcen-Verbrauchs, durchzuführen. Dabei soll das bestehende Verhalten bewahrt werden. Das bedeutet, dass die Änderung den Code so wenig wie möglich aber so viel wie nötig verändert werden soll. \cite[S. 7]{Feathers:2013}
+
+% Legacy > ohne Tests -> Verhalten bewahren = Testen
+Während eine aufgeräumte und gepflegte Umgebung dem Entwickler hilft, Überblick über den Code zu behalten, reicht dies in wachsenden und vor allem Legacy-Systemen nicht dafür aus, alle Einzelheiten zu kennen. Wird an dem Code eine Änderung vorgenommen, ist es kaum möglich zu erkennen, ob der Code dadurch verbessert oder verschlechtert wurde. Zudem ist es ineffizient für den Entwickler, jede Einzelheit per Hand zu testen, ob sich das Verhalten exakt so verändert hat, wie es vorgesehen war. Um zu garantieren dass sich an dem Verhalten des bestehenden Codes nichts verändert, werden Tests benötigt. \glqq Code ohne Tests ist schlechter Code\grqq{} \cite[S. XVI]{Feathers:2013}.
+Wird die Software ausreichend getestet sieht der Entwickler sofort wenn sich das Verhalten ungewollt verändert hat. Dafür wird der Aufbau und die Pflege eines umfangreichen Test-Frameworks zur regelmäßigen und häufigen Überprüfung von der einzelnen Funktionseinheit bis zum komplexen Zusammenspiel verschiedener Services benötigt.
+Mithilfe einer solchen Testbasis lässt sich Code schnell modifizieren, ohne dass der Entwickler den vollständigen Überblick benötigt. %\cite[S. XVI, 45]{Feathers:2013}
+Zudem werden auch strukturelle Veränderungen, welche keine welche kein Verhalten verändern, durch die Testunterstützung vereinfacht. \cite[S. XVI, 5, 45]{Feathers:2013}

@@ -1,28 +1,14 @@
 \section{\textcolor{Salmon}{Herausforderungen in der Erstellung von Dashboards und der Arbeit mit Legacy- und Code-Testing-Systemen}}
-Problemstellung: typische Probleme in der Erstellung\\
-=> Kenntnisse über das Gesamtbild\\
--> von Dashboards\\
--> für Testsysteme\\
+\label{ch:Problem:Gesamt}
 
-%=> in Kapitel 2 State of the Art dafür erklären
+Veraltete Systeme stellen Unternehmen zunehmend vor Herausforderungen. Die Systeme sind groß, umfrangreich, gewachsen und wenig getestet. Sie bestehen aus vielen verschiedenen Technologien und sind schwierig zu warten. Die Fachkräfte, welche die Systeme aufgebaut und Jahrelang betreut habe stehen kurz vor der Rente und der Erhalt der Altsysteme ist langfristig nicht der beste Weg.
 
-\begin{itemize}
-    \item typische Probleme in der Erstellung => Kenntnisse über das Gesamtbild
-    \begin{itemize}
-        \item große, umfangreiche Systeme
-        \item gewachsen, wenig getestet
-        \item schwierig zu warten
-    \end{itemize}
-    
-    \item von Dashboards
-    \begin{itemize}
-        \item Vollständigkeit ist kaum zu garantieren
-        \item gewachsene Systeme sind wenig kompatibel mit modernen Standards
-    \end{itemize}
-    
-    \item für Testsysteme
-    \begin{itemize}
-        \item den Überblick behalten
-        \item viele Tests, viele verschiedene Testarten
-    \end{itemize}
-\end{itemize}
+Zuvor wurde in \autoref{ch:SdF:Legacy:sec:Methoden} primär darauf eingegangen, wie Legacy-Code zu modernisieren ist. Dabei resultiert der scheinabr beste Ansatz, die Systeme möglichst frühzeitig, Stückweise mit dem Technikastand mitzuführen bzw. die Systeme sukzessiv nachzurüsten. Vor allem umfangreiche und gepflegte Testumgebungen vereinfachen die Modernisierung, indem das gewollte Systemverhalten dauerhaft nachgeprüft werden kann.
+
+Dabei ist dieser Testansatz nicht neu. Unternehmen, die sich über die jahre Testsysteme und Strukturen aufgebaut haben, können auch hier vor dem Problem stehen, dass diese Systeme sehr umfangreich gewachsen sind (s. \autoref{ch:SdF:Legacy:sec:Legacy_ungetestet}). Mit zunehmenden Maschinen, Versionen, Komponenten und Testfällen, vermehren sich die zu überwachenden Ergebnisse rasant.
+
+Trotz zusammenfassender Ergebnisübersichten ist es schwierig, den Überblick zu behalten und garantieren zu können, alle Werte überprüft zu haben. Zudem wird zunehmend mehr Zeit zu diesem manuellen Monitoring benötigt. Durch fehlende Motivation, abnehmende Aufmerksamkeitsspanne sowie Routine, sind Fehler im Prozess, wie übersehende Testergebnisse oder eine fehlerhafte Interpretation dieser möglich. Diese Arbeit ist ohne Automation somit höchst ineffizient.
+
+Werden neue Systeme zur Ergebnisanzeige, vor allem Dashboards, umgesetzt, muss das System zuerst analysiert werden, um den gesamten Umfang zu erfassen. Damit ein solches neues System auch genutzt wird, muss eine Vollständigkeit garantiert werden können, um nicht zwischen den Systemen im Prozess wechseln zu müssen.
+
+Eine weitere Schwierigkeit besteht darin, dass gewachsene und selbstgebaute Systeme häufig nicht kompatibel mit modernen Standards sind. Hierfür muss das System entweder von Grund auf neu geschrieben werden oder entsprechende Adapter implementiert werden.
