@@ -1,55 +1,43 @@
 %\section{\textcolor{Plum}{Ansätze zur Modernisierung von Legacy-Systemen}}
 \section{\textcolor{Salmon}{Modernisierung von Legacy-Systemen} \textcolor{red}{+ Testsysteme}}
 
-\textcolor{blue}{
-einleitende Worte\\
-Legacy sind alte gewachsene Umgebungen \cite{Quelle}\\
-was sind deren Probleme\\
-Dringlichkeit zur Modernisierung anhand von Studien / Artikeln darstellen\\
-Wie kann Modernisierung fixen\\
-%In diesem kapitel werden verschiedene Ansätze zur Modernisierung aufgezeigt\\
-}
+Modernisierung. Es wird geschrieben, es gibt eine \glqq Notwendigkeit zur Veränderung\grqq{} \cite{FlorianStocker:2024}. Vor allem in gewachsenen Systemen, im allgemeinen Sprachgebrauch auch Legacy-Systeme (dt. Altsysteme) genannt, ist dies jedoch mit sehr hohem Aufwand verbunden.
 
-\textcolor{cyan}{
-    %Welche Grundlagen müssen vorher geklärt werden?\\
-    %- Tests\\
-    %-> wofür benötigt?\\
-    %-> was hat das hiermit zutun?\\
-    
-    %- Testsysteme\\
-    %-> Funktion + Nutzen\\
-    %-> wie kommt man von den Tests auf dieses System (von Unit, Integration und ... Tests)\\
-    
-    %- was sind gängige Probleme?
-}
+Um diese Systeme zu Modernisieren wird ein konkreter Anreizt gebraucht. Schon 2010 beschrieb Stantchev, dass das Wachstum der Anwendung in viele Fällen zu einer schwer beherrschbaren Komplexität geführt habe und zum Beispiel dessen Erweiterungsmöglichkeiten beeinträchtige \cite{Stantchev:2010, FlorianStocker:2024}. Es gibt viele Gründe, die Unternehmen dazu führen, ihre Systeme auf den aktuellen Stand zu heben. 
 
-\textcolor{red}{TODO: 3-4 Studien / Artikel}
+Aufgrund von Personalmangel, fehlt es den Firmen an Fachkräften mit dem benötigten Wissen. Die neue Generation wird anhand von modernen Technologien gelehrt und das Personal mit dem geeigneten Fachwissen wird aufgrund ihres Alters nicht mehr lange arbeiten können. Vor allem die Instandhaltung bestehender Code-Strukturen sowie der Wissentransfer gestalten sich somit mangels Interesse jüngerer Kollegen als schwierig. Dies erzeugt hohe Wartungskosten. \textcolor{red}{[Quelle]}
+Eine Studie der Beratungsgesellschaft Lünendonk hat ergeben, dass die geschäftskritischen Anwendungen von 62\% der befragten Unternehmen stark veraltet sind und eine Modernisierung verlangen \cite{AxelKannenberg:2025}. Wobei mehr als die Hälfte der Unternehmen keine konkreten Maßnahmen ergreifen, die dem entgegen wirken \cite{Stantchev:2010}. \cite{AxelKannenberg:2025, FlorianStocker:2024, Stantchev:2010}.
 
-% Vorsicht KI
-Probleme
-Sicherheitsrisiken:
-Inflexibilität und mangelnde Skalierbarkeit:
-Hohe Wartungskosten:
-Verlust von Wettbewerbsvorteilen:
-Innovationshemmnis:
-
-Vorteile der Modernisierung:
-Erhöhte Sicherheit:
-Verbesserte Effizienz:
-Kosteneinsparungen:
-Bessere Wettbewerbsfähigkeit:
-Innovation und Wachstum:
-% Vorsicht KI - Ende
-
+\textcolor{red}{
 \noindent
-- Legacy \cite{Feathers:2013}\\
--> was ist Legacy Code\\
--> warum ist es ein Problem\\
--> wie kann man es lösen - verschiedene Ansätze\\
-Aufbau und Eigenschaften von Testsystemen mit Fokus auf gewachsene Legacy-Umgebungen\\
+Weitere Probleme sind ...
+
+Durch die Moderniserung der Technologien ergeben sich somit die Vorteile einer erhöhten effizienz, Qualität und Zuverlässigkeit. Durch die Einführung von Automatisierungen einiger Prozesse, kann der manuelle Arbeitsaufwand reduziert werden, welcher zu Kosteneinsparungen führt \cite{Oppel:2025}.
+}
 
 % **************************************************************************
-%           Eingriffstiefe
+
+% Vorsicht KI
+\textcolor{cyan}{
+weitere Probleme:\\
+Sicherheitsrisiken\\
+%Inflexibilität und mangelnde Skalierbarkeit\\
+%Hohe Wartungskosten\\
+Verlust von Wettbewerbsvorteilen\\
+Innovationshemmnis\\
+
+weitere Vorteile der Modernisierung:\\
+Erhöhte Sicherheit\\
+%Verbesserte Effizienz\\
+%Kosteneinsparungen\\
+Bessere Wettbewerbsfähigkeit\\
+Innovation und Wachstum\\
+} % Vorsicht KI - Ende
+
+Aus diesen Gründen werden in diesem Kapitel verschiedene Möglichkeiten vorgestellt und eingeordnet, wie diser umfangreiche Schritt begonnen werden kann. Weiterhin wird die Relevanz von der kontinuierlichen Überprüfung der Code-Basis in Form von Tests, sowohl im Tagesbetrieb aber vor allem im Modernisierungsprozess, aufgezeigt.
+
+% **************************************************************************
+%           Methoden zur Modernisierung
 % **************************************************************************
 \subsection{\textcolor{Plum}{Methoden zur Modernisierung anhand unterschiedlicher Eingriffstiefe in das Legacy-System}}
 ...
@@ -81,8 +69,8 @@ Soll Software verändert werden, gibt es vier mögliche Gründe dafür. Entwickl
 Dies zu erreichen impliziert, mindestens eine der folgenden Änderungen, die Veränderung der Code-Struktur, den Einbau von neuer Funktionalität, die Veränderung bestehender Funktionalität oder die Anpassung des Ressourcen-Verbrauchs, durchzuführen. Dabei soll das bestehende Verhalten bewahrt werden. Das bedeutet, dass die Änderung den Code so wenig wie möglich aber so viel wie nötig verändert werden soll. \cite[S. 7]{Feathers:2013}
 
 % Legacy > ohne Tests -> Verhalten bewahren = Testen
-Während eine aufgeräumte und gepflegte Umgebung dem Entwickler helfen, Überblick über den Code zu behalten, reicht dies in wachsenden und vor allem Legacy-Systemen nicht dafür aus, alle Einzelheiten zu kennen. Wird an dem Code eine Änderung vorgenommen, ist es kaum möglich zu erkennen, ob der Code dadurch verbessert oder verschlechtert wurde. Zudem ist es ineffizient für den Entwickler, jede Einzelheit per Hand zu testen, ob sich das Verhalten exakt so verändert hat, wie es vorgesehen war. Um zu garantieren dass sich an dem Verhalten des bestehenden Codes nichts verändert, werden Tests benötigt. \glqq Code ohne Tests ist schlechter Code\grqq{} \cite[S. XVI]{Feathers:2013}.
-Wird die Software asreichend getestet sieht der Entwickler sofort wenn sich das Verhalten ungewollt verändert hat. Dafür wird der Aufbau und die Pflege eines umfangreichen Test-Frameworks zur regelmäßigen und häufigen Überprüfung von der einzelnen Funktionseinheit bis zum komplexen Zusammenspiel verschiedener Services benötigt.
+Während eine aufgeräumte und gepflegte Umgebung dem Entwickler hilft, Überblick über den Code zu behalten, reicht dies in wachsenden und vor allem Legacy-Systemen nicht dafür aus, alle Einzelheiten zu kennen. Wird an dem Code eine Änderung vorgenommen, ist es kaum möglich zu erkennen, ob der Code dadurch verbessert oder verschlechtert wurde. Zudem ist es ineffizient für den Entwickler, jede Einzelheit per Hand zu testen, ob sich das Verhalten exakt so verändert hat, wie es vorgesehen war. Um zu garantieren dass sich an dem Verhalten des bestehenden Codes nichts verändert, werden Tests benötigt. \glqq Code ohne Tests ist schlechter Code\grqq{} \cite[S. XVI]{Feathers:2013}.
+Wird die Software ausreichend getestet sieht der Entwickler sofort wenn sich das Verhalten ungewollt verändert hat. Dafür wird der Aufbau und die Pflege eines umfangreichen Test-Frameworks zur regelmäßigen und häufigen Überprüfung von der einzelnen Funktionseinheit bis zum komplexen Zusammenspiel verschiedener Services benötigt.
 Mithilfe einer solchen Testbasis lässt sich Code schnell modifizieren, ohne dass der Entwickler den vollständigen Überblick benötigt. %\cite[S. XVI, 45]{Feathers:2013}
 Zudem werden auch strukturelle Veränderungen, welche keine welche kein Verhalten verändern, durch die Testunterstützung vereinfacht. \cite[S. XVI, 5, 45]{Feathers:2013}
 
