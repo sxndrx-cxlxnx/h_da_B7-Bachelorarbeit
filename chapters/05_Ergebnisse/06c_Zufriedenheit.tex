@@ -61,7 +61,7 @@ Weiterhin weisen 80\% der Fragen anhand der t-Test-Ergebnisse (s. \autoref{fig:N
 %\subsection*{weitere: Erlernbarkeit}
 
 \noindent
-Die ISO-Prinzipien, die sich auf das Kriterium der Zufriedenheit beziehen, sind die Erwartungskonformität (s. \autoref{fig:pruemper_Erwartungskonformität}), die Steuerbarkeit (s. \autoref{fig:pruemper_Steuerbarkeit}) und die Benutzerbindung, welche nicht durch den Fragebogen repräsentiert wurde (s. \autoref{Add:Nutzerbefragung_Prümper:Begründung_Filterung}).
+Die ISO-Prinzipien, die sich spezieller auf das Kriterium der Zufriedenheit beziehen, sind die Erwartungskonformität (s. \autoref{fig:pruemper_Erwartungskonformität}), die Steuerbarkeit (s. \autoref{fig:pruemper_Steuerbarkeit}) und die Benutzerbindung, welche nicht durch den Fragebogen repräsentiert wurde (s. \autoref{Add:Nutzerbefragung_Prümper:Begründung_Filterung}).
 
 Auf Grundlage der vorliegenden Ergebnisse kann die Hypothese $H_3$ akzeptiert werden.
 
@@ -70,4 +70,27 @@ Auf Grundlage der vorliegenden Ergebnisse kann die Hypothese $H_3$ akzeptiert we
     \includegraphics[width=1\linewidth]{Diagramme/pruemper_ek.png}
     \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Erwartungskonformität nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all})}
     \label{fig:pruemper_Erwartungskonformität}
+\end{figure}
+
+\noindent
+Zusätzlich zu der detaillierten Bewertung der Systeme wurde auch abgefragt, für wie wahrscheinlich es die Teilnehmer halten, das Dashboard in Zukunft zu nutzen (s. \autoref{fig:DB_Nutzung:boxplot}). Da im Vergleich zu den anderen t-Tests nur eine Datenreihe vorliegt, wurde das Ergebnis mit Null paarweise, einseitig verglichen, also mit der neutralen Einstellung gegenüber beider Systeme. Auch dieses Ergebnis ist mit einem positiven Durchschnitt signifikant.
+Daher kann auch von diesem Ergebnis ausgehend die Hypothese $H_3$ akzeptiert werden.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c||c|c|c|}
+        \hline
+        \multicolumn{11}{|l||}{Antworten der Nutzer} & $\varnothing$ & $\Bar{x} $ & t-Test \\ \hline
+        -2 & 2 & 1 & 2 & 2 & 1 & 2 & 2 & 2 & 1 & -2 & 1 & 2 & 0,028974853 \\ \hline
+    \end{tabular}
+    \caption{Ergebnisse der Umfrage zur Wahrscheinlichkeit der eigenen zukünftigen Dashboard-Nutzung}
+    \label{tab:DB_Nutzung:rohe_Daten}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Diagramme/dashboard_use.png}
+    \caption{Antwortverteilung %der Frage 
+    bzgl. der Wahrscheinlichkeit zur zukünftigen Dashboard-Nutzung (Daten aus \autoref{tab:DB_Nutzung:rohe_Daten})}
+    \label{fig:DB_Nutzung:boxplot}
 \end{figure}
