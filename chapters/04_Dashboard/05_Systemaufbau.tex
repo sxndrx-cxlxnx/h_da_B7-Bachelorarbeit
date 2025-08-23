@@ -3,7 +3,7 @@
 \label{ch:Dashboard:sec:Aufbau}
 
 \textcolor{blue}{einleitende Worte}\\
-Es gibt zwei Dashboards. Je eins für die Entwicklungsversion und eins für alle veröffentlichten und aktiv gewarteten Versionen. Da die Release-Versionen bis auf kleinere Fixes kein Bestand des Tagesgeschäfts  mehr sind, ist die Anzahl der benötigten Tests bedeutend geringer. Somit kann der Statusbericht mehrerer Versionen auf einem Dashboard angezeigt werden.
+Es gibt zwei Dashboards. Je eins für die Entwicklungsversion und eins für alle veröffentlichten und aktiv gewarteten Versionen (Release-Versionen). Da die Release-Versionen bis auf kleinere Fixes kein Bestand des Tagesgeschäfts mehr sind, ist die Anzahl der benötigten Tests bedeutend geringer. Somit kann der Statusbericht mehrerer Versionen gesammelt auf einem seperaten Dashboard angezeigt werden.
 
 Grafana gibt eine Dashboard"=Struktur in Reihen vor. Jede Reihe stellt ein System da, welches im alten System jeweils eine eigene Seite benötigt. Diese Reihen sind für die Übersichtlichkeit zusätzlich einklappbar. Die Panele einer Reihe sind in drei Spalten aufgeteilt (s. \autoref{fig:aufbau_dashboard}).
 
@@ -16,7 +16,9 @@ Grafana gibt eine Dashboard"=Struktur in Reihen vor. Jede Reihe stellt ein Syste
 
 % mittlere Spalte
 \noindent
-In der mittleren Spalte sind Zahlen in verschiedenen Farben dargestellt, die den jeweiligen Zustand bzw. die Fehleranzahl der entsprechenden Testkategorie anzeigt. Im Falle eines Green Days, ein Tag an dem keine Fehler auftreten, stehen in allen Feldern dunkelgraue Nullen. Da stattdessen auffallen soll, wenn Fehler vorhanden sind, werden diese farbig markiert. Die Fehlerkategorien sind 'System abgestürzt', 'Anzahl der Fehler', 'Anzahl der ausstehenden Tests' und 'ignorierte Tests'\footnote{Die Kategorie 'Ignorierte Tests' umfässt zum Beispiel Testfälle mit langzeit bekannten Fehlern, die für die Einschätzung des Green Days ignoriert werden dürfen.}.
+%In der mittleren Spalte sind Zahlen in verschiedenen Farben dargestellt, die den jeweiligen Zustand bzw. die Fehleranzahl der entsprechenden Testkategorie anzeigt.
+Die jeweilige Fehlerzahl bzw. der Zustand der entsprechenden Testkategorie wird in der mittleren Spalte in verschiedenen Farben dargstellt.
+Im Falle eines Green Days, ein Tag an dem keine Fehler auftreten, steht in allen Feldern die dunkelgraue Null. Da stattdessen auffallen soll, wenn Fehler vorhanden sind, werden diese farbig hervorgehoben. Die Fehlerkategorien sind 'System abgestürzt', 'Anzahl der Fehler', 'Anzahl der ausstehenden Tests' und 'ignorierte Tests'\footnote{Die Kategorie 'Ignorierte Tests' umfässt zum Beispiel Testfälle mit länger bekannten Fehlern, die für die Einschätzung des Green Days ignoriert werden dürfen.}.
 Aufgrund der Menge an Testfällen und der Anforderung, alle zusammengehörigen Daten auf einen Blick erfassen zu können (s. \autoref{ch:Dashboard:sec:Anforderungen}), sind die Test-Kategorien in Spalten und deren Ergebnisse in den Reihen darunter dargestellt. Im Vergleich zum alten System wurden die Reihen/Spalten vertauscht (s. \autoref{fig:aufbau_altes_System}).
 
 % Informationen: linke + rechte Spalte

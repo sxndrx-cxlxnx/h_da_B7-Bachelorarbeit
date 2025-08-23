@@ -242,88 +242,91 @@ Alle weiteren t-Test Ergebnisse wurden über diesen Weg erreicht und sind in \au
 % *****************************************************************
 Die aufgeführten Daten, wie beispielweise in \autoref{t-Test:Beispiel-Daten}, werden nachfolgend in Box-Plots dargestellt. 
 Ein \textit{Box-Plot} ist ein Diagramm welches Lage- und Streuungsmaße abgebildet (s. \autoref{fig:Box-Plot:Beispiel}) und ist wie folgt zu interpretieren (Zusammenfassung nach \cite{Statistik:Sedlmeier:2018}). Die Daten werden von einem Querstrich innerhalb der Box halbiert, welcher den \textit{Median} darstellt, sowie einem gleichfarbigen Diamanten, welcher den \textit{Mittelwert} darstellt. Die \textit{Box} umfasst die mittleren 50\% der nach Rangfolge geordneten Daten. Das bedeutet, dass die Daten von der 25. bis 75. Perzentile oder auch vom 1. bis 3. \textit{Quartil} (Q1, Q3) dargestellt sind. Der Bereich dazwischen wird auch \textit{Interquartilsabstand} (en. interquartile range - IQR) genannt.
-%  Der Querstrich innerhalb der Box markiert den Median.
 
-%\hspace{1.5mm}
-%\noindent
 Außerhalb der Box stehen die \textit{Whiskers} (dt. Schnurrhaare). Die Länge der Whiskers ist durch den \textit{Zaun}, der Querstrich am Ende der Whiskers, begrenzt. Dieser befindet sich maximal 1,5 Interquartilsabstände von der Box entfernt. Liegt der äußerste Wert des Bereichs innerhalb des Zaun, wird der Whisker kürzer bis zu diesem äußersten Wert dargestellt.
 
-%\hspace{1.5mm}
-Die Punkte außerhalb der Whiskers sind die \textit{Ausreißer} und werden hier als Punkte dargestellt. Ausreißer die außerhalb von drei IQR von der Box liegen werden als extreme Ausreißer bezeichnet. Liegen sie zwischen den dem Zaun und 3 IQR, sind es normale Ausreißer.\\
+Die Punkte außerhalb der Whiskers sind die \textit{Ausreißer} und werden hier als Punkte dargestellt. Ausreißer die außerhalb von drei IQR von der Box liegen werden als extreme Ausreißer bezeichnet. Liegen sie zwischen den dem Zaun und 3 IQR, sind es normale Ausreißer.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=1\linewidth]{Diagramme/pruemper_test.png}
-    \caption{Beipiel Box-Plot: Vergleich der Ergebnisse aus der Nutzerbefragung Frage 1 und 4 (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}) \textcolor{red}{(TODO: Diagramm erstellen + einfügen)}}
-    \label{fig:Box-Plot:Beispiel}
-\end{figure}
-
-\newenvironment{nospaceflalign*}
- {\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{0pt}%
-  \csname flalign*\endcsname}
- {\csname endflalign*\endcsname\ignorespacesafterend}
+Nachfolgend ist ein Beipiel zur Erstellung von Box-Plot-Diagrammen gezeigt (s. \autoref{tab:Beispiel_Berechnung_Box-Plot}, \autoref{fig:Box-Plot:Beispiel}). \textit{Frage 1} dient als Weiterverarbeitung des Datensatzes, der zuvor für die t-Test-Berechnung genutzte wurde. \textit{Frage 4} veranschaulicht zusätzlich die Darstellung von Ausreißern.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{|c|c|}
+    \begin{tabular}{|c|c|c|}
         \hline
-         &  \\ \hline
-         &  \\ \hline
+                         & \makecell{\textbf{Frage 1}\\- neues System -}
+                         & \makecell{\textbf{Frage 4}\\- neues System -} \\ \hline
+        Q1               & 1 & 1 \\ \hline
+        Q3               & 3 & 2 \\ \hline
+        Median $\Bar{x}$ & 2 & 2 \\ \hline
+        $\varnothing$    & 1,545455 & 1,454545 \\ \hline
+        \makecell{IQR\\= Q3 - Q1}
+                         & = 3 - 1 = \underline{\underline{\textbf{2}}}
+                         & = 2 - 1 = \underline{\underline{\textbf{1}}} \\ \hline
+        \makecell{Whisker unten\\= Q1 - 1,5 * IQR}
+                         & = 1 - 1.5*2 = \underline{\underline{\textbf{-2}}} 
+                         & = 1 - 1.5*1 = \textbf{-0.5} \Rightarrow \underline{\underline{0}} \\ \hline
+        \makecell{Whisker oben\\= Q3 + 1,5 * IQR}
+                         & = 3 + 1,5*2 = \textbf{6} \Rightarrow \underline{\underline{3}}
+                         & = 2 + 1.5*1 = \textbf{3.5} \Rightarrow \underline{\underline{3}} \\ \hline
+        Ausreißer        & ~~\textbf{[$\varnothing$]}
+                         & ~~\textbf{[-2]} \\ \hline
     \end{tabular}
-    \caption{Beispiele zur Erstellung von Box-Plots (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}) \textcolor{red}{TODO: Daten umfüllen}}
+    \caption{Beispiele zur Erstellung von Box-Plots (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten})}
     \label{tab:Beispiel_Berechnung_Box-Plot}
 \end{table}
 
-\noindent
-\begin{minipage}[H]{0.48\linewidth}
-\noindent
-\underline{Beispiele mit Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}:}\\\\
-    \underline{Frage 1 - neues System}
-    \begin{nospaceflalign*}
-        \displaystyle
-            \text{Q1} &= \textbf{1}\\
-            \text{Q3} &= \textbf{3}\\
-            \text{Median} &= \textbf{2}\\
-            \varnothing &= \textbf{1.545455}\\
-            \text{IQR} &= Q3 - Q1 \\
-                       &= 3 - 1 = \textbf{2}\\
-            \text{Whisker unten} &= Q1 - 1,5 * IQR \\
-                &= 1 - 1.5*2 \\
-                &= \textbf{-2}\\
-            \text{Whisker oben} &= Q3 + 1,5 * IQR \\
-                &= 3 + 1,5*2 \\
-                &= \textbf{6} \Rightarrow 3\\
-            \text{Ausreißer} &: ~~\textbf{[$\varnothing$]}
-    \end{nospaceflalign*}
-\end{minipage}
-\begin{minipage}[H]{0.48\linewidth}
-\noindent
-\textcolor{white}{Platzhalter für Überschrift}\\\\
-    \underline{Frage 4 - neues System}
-    \begin{nospaceflalign*}
-        \displaystyle
-            \text{Q1} &= \textbf{1}\\
-            \text{Q3} &= \textbf{2}\\
-            \text{Median} &= \textbf{2}\\
-            \varnothing &= \textbf{1.454545}\\
-            \text{IQR} &= Q3 - Q1 \\
-                       &= 2 - 1 = \textbf{1}\\
-            \text{Whisker unten} &= Q1 - 1,5 * IQR \\
-                &= 1 - 1.5*1 \\
-                &= \textbf{-0.5} \Rightarrow 0\\
-            \text{Whisker oben} &= Q3 + 1,5 * IQR \\
-                &= 2 + 1.5*1 \\
-                &= \textbf{3.5} \Rightarrow 3\\
-            \text{Ausreißer} &: ~~\textbf{[-2]}
-    \end{nospaceflalign*}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Diagramme/pruemper_test.png}
+    \caption{Beipiel Box-Plot: Vergleich der Ergebnisse aus der Nutzerbefragung Frage 1 und 4 (Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten})}
+    \label{fig:Box-Plot:Beispiel}
+\end{figure}
 
-
-%\textcolor{graublau}{.}\hfill 
-%$\sim$ Zusammenfassung nach \cite{Statistik:Sedlmeier:2018}
-%Q1 $= \textbf{1}$\\
-%Q3 $= \textbf{2}$\\
-%IQR $= Q3 - Q1 = 2 - 1 = \textbf{1}$\\
-%hisker unten $= Q1 - 1,5 * IQR = 1 - 1.5*1 = \textbf{-0.5}$\\
-%hisker oben $= Q3 + 1,5 * IQR = 2 + 1.5*1 = \textbf{3.5}$\\
-%Ausreißer: $\textbf{-2}$
+%\newenvironment{nospaceflalign*}
+% {\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{0pt}%
+%  \csname flalign*\endcsname}
+% {\csname endflalign*\endcsname\ignorespacesafterend}
+ 
+%\noindent
+%\begin{minipage}[H]{0.48\linewidth}
+%\noindent
+%\underline{Beispiele mit Daten aus \autoref{tab:Nutzerbefragung:rohe_Daten}:}\\\\
+%    \underline{Frage 1 - neues System}
+%    \begin{nospaceflalign*}
+%        \displaystyle
+%            \text{Q1} &= \textbf{1}\\
+%            \text{Q3} &= \textbf{3}\\
+%            \text{Median} &= \textbf{2}\\
+%            \varnothing &= \textbf{1.545455}\\
+%            \text{IQR} &= Q3 - Q1 \\
+%                       &= 3 - 1 = \textbf{2}\\
+%            \text{Whisker unten} &= Q1 - 1,5 * IQR \\
+%                &= 1 - 1.5*2 \\
+%                &= \textbf{-2}\\
+%            \text{Whisker oben} &= Q3 + 1,5 * IQR \\
+%                &= 3 + 1,5*2 \\
+%                &= \textbf{6} \Rightarrow 3\\
+%            \text{Ausreißer} &: ~~\textbf{[$\varnothing$]}
+%    \end{nospaceflalign*}
+%\end{minipage}
+%\begin{minipage}[H]{0.48\linewidth}
+%\noindent
+%\textcolor{white}{Platzhalter für Überschrift}\\\\
+%    \underline{Frage 4 - neues System}
+%    \begin{nospaceflalign*}
+%        \displaystyle
+%            \text{Q1} &= \textbf{1}\\
+%            \text{Q3} &= \textbf{2}\\
+%            \text{Median} &= \textbf{2}\\
+%            \varnothing &= \textbf{1.454545}\\
+%            \text{IQR} &= Q3 - Q1 \\
+%                       &= 2 - 1 = \textbf{1}\\
+%            \text{Whisker unten} &= Q1 - 1,5 * IQR \\
+%                &= 1 - 1.5*1 \\
+%                &= \textbf{-0.5} \Rightarrow 0\\
+%            \text{Whisker oben} &= Q3 + 1,5 * IQR \\
+%                &= 2 + 1.5*1 \\
+%                &= \textbf{3.5} \Rightarrow 3\\
+%            \text{Ausreißer} &: ~~\textbf{[-2]}
+%    \end{nospaceflalign*}
+%\end{minipage}
