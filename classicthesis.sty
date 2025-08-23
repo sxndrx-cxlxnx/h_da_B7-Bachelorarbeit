@@ -381,7 +381,7 @@
     \lehead{\mbox{\llap{\small\pagemark\kern2em}\protect\parbox{1\linewidth}{\headmark}\hfil}}      % mehrzeilige Headers
     \rohead{\mbox{\hfil{\protect\parbox{1\linewidth}{\headmark}}\rlap{\small\kern2em\pagemark}}}    % \protect\parbox{0.9\linewidth}{..headmark..}
     \renewcommand{\headfont}{\small}
-%    \DeclareRobustCommand{\fixBothHeadlines}[2]{} % <--- ToDo
+%    \DeclareRobustCommand{\fixBothHeadlines}[2]{}
     % hack to get the content headlines right (thanks, Lorenzo!)
         \def\toc@heading{%
             \ifthenelse{\boolean{ct@nochapters}}%
