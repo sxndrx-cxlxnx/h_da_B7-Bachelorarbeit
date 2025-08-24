@@ -24,25 +24,18 @@ Allerdings ist dieser Ansatz sehr invasiv und benötigt ein hohes Investment und
 Quaisser sagt, dass große ‘Big-Bang-Projekte’ nie wirklich erfolgreich gewesen seien [zitiert nach \cite{FlorianStocker:2024}]. Dieser Ansatz hat große Nachteile, wodurch er zumeist nicht umsetzbar ist. Es werde ein Parallelbetrieb (Koexistenzphase) benötigt, bis alles migriert, modernisiert und abgelöst ist \cite{FlorianStocker:2024}.
 \cite{AxelKannenberg:2025, Feathers:2013, ElMorabea:2021, Stantchev:2010}
 
-\textcolor{red}{TODO: Kapitel noch nicht fertig}
-
 % Refactor
-Das \textbf{Refactoring} (dt. Umgestaltung) ist ein sukzessiver Prozess zur Code-Optimierung. 64\% der Unternehemen nutzen diesen Ansatz als Modernisierungsstrategie \cite{AxelKannenberg:2025}. 
-
-\cite{ElMorabea:2021, Feathers:2013}
-
-low-risk - reformatting source code
-\cite{Feathers:2013}  % S. 5
-
-Refactoring + Tests: „hat Feathers 2005 schon gesagt“
-improving design without changing its behaviour is called refactoring \cite{Feathers:2013} % S. 7
+Das \textbf{Refactoring} (dt. Umgestaltung) ist ein sukzessiver Prozess zur Code-Optimierung, den 64\% der Unternhemen als Modernisierungsstrategie nutzen \cite{AxelKannenberg:2025}. 
+% Draw Backs
+Es ist ein langsamer Prozess und benötigt ein gewisses Fähigkeitslevel der Entwickler, einem systematischen Plan zu folgen, da dieser andernfalls zu neuen Fehlern führen kann.
+% erlaubt Code zu verbessern/verändern, ohne Verhalten zu ändern
+Jedoch erlaubt das Refactoring, Code zu verbessern und umzustrukturieren, ohne das Verhalten zu beeinflussen. Dadurch kann eine Modularisierung im eigenen Rhythmus gewährleistet werden, ohne die Einführung neuer Features währenddessen zu verhindern. Dabei ist es wichtig, sich beizubehalten, dass nicht immer die perfekte Lösung gesucht wird. Die subjektive Code-Qualität darf sich verschlechtern, wenn dadurch eine Verbesserung des Code-Zustand erreicht werden kann.
+% low alles
+Das Refactoring ist somit eine Modernisierungsstrategie, welche wenig Investment benötigt, kaum Risiko birgt und somit einen Ansatz mit kaum Auswirkungen darstellt.
+% needs Tests
+Um sicherzustellen, dass durch diesen Prozess kein Code-Verhalten ungewollt verändert wird, werden Tests benötigt, welche das gewünschte Verhalten durchgehend bestätigen
+\cite{ElMorabea:2021, Feathers:2013}.
 
 % allgemein / besser machen
-o	Kleine Schritte gehen. 
-o	Fokus auf Komponenten legen. 
-o	Routinen schaffen. 
-o	An die Zukunft denken.  \cite{NadineRiederer:2022}
-
-- manche Änderungen erfolgen auf Grundlage von "mache es besser" statt "am Besten"
--> manchmal muss der Code hässlicher werden, damit er besser wird (Feathers 2013, xvi ff.)
-=> bzgl. Refactoring und z.B. Dependencies und Funktionen breaken
+Insgesamt wird empfohlen, Systeme in kleinen Schritten zu modernisieren. Dabei sollte der Fokus auf der Funktion der Komponenten und deren Interaktion liegen. In Form von Routinen, kann eine kontinuierliche und zukunftsorientierte Verbesserung stattfinden, welche den Zustand schrittweise verbessern. Ein Anfang stellt das Umstrukturieren für den Überblick sowie das Aufbrechen von Funktionen und Abhängigkeiten dar, welche langfristig dabei unterstützen, die Code-Komplexität zu verringern. Weiterhin kann dies dabei helfen, den Code umfangreich testen zu können (s. \autoref{ch:SdF:Legacy:sec:TestPyramide})
+\cite{Feathers:2013, NadineRiederer:2022}.
