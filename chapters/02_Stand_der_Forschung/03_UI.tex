@@ -1,108 +1,27 @@
-\section{\textcolor{MidnightBlue}{Grundlagen zur Gestaltung nutzerfreundlicher und moderner Oberflächen in Bezug zur Erstellung von Dashboards}}
-%\label{sec:SdF:UI:ISO}
-\label{ch:SdF:UI:ISO}
+%\section{\textcolor{MidnightBlue}{Grundlagen und psychologische Ansätze zur Gestaltung nutzerfreundlicher und moderner Oberflächen in Bezug zur Erstellung von Dashboards}}
+\section{\textcolor{Salmon}{Grundlagen und psychologische Ansätze zur Gestaltung nutzerfreundlicher und moderner Dashboards}}
+\label{ch:SdF:UI}
 
-Die DIN-Normen der Nummer 9241 geben Vorgaben und Empfehlungen zur Gestaltung interaktiver Systeme.
-\autoref{fig:iso-uebersicht} stellt den Zusammenhang der Hauptquellen für Empfehlungen zur Benutzer-System-Interaktion dar. Es sind die Parts 11, 110, 112 und weitere zu erkennen. Die ISO 9241-11 definiert den Begriff Usability, %(dt. Gebrauchstauglichkeit)
-währenddessen Part 110 und 112 Prinzipien und Grundsätze mitgeben, um die Usability eines Systems gewährleisten zu können.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{chapters/02_Stand_der_Forschung/ISO-Normen_Uebersicht.PNG}
-    %\caption{Überblick und Zusammenspiel der ISO-Normen mit Fokus auf die Usability von interaktiven Systemen \cite{DIN_EN_ISO_9241-110}}
-    \caption{\glqq Beziehung zwischen den Hauptquellen für Empfehlungen zur Benutzer-System-Interaktion\grqq{} \cite{DIN_EN_ISO_9241-110} mit Fokus auf die Usability}   % S. 16
-    \label{fig:iso-uebersicht}
-\end{figure}
+Human Machine Interface\\
+--> Teil der Maschine, mit dem Informationen an den Menschen übermittelt werden\\
+--> womit der Mensch diese bedienen kann\\
 
 \noindent
-Im Folgenden werden die Inhalte der DIN EN ISO 9241-110 Interaktionsprinzipien (ISO 9241-110:2020) \cite{DIN_EN_ISO_9241-110} mit Fokus zur Anwendung auf Dashboards zusammengefasst. Die DIN-Normen sind in diesem Fall die nationale Umsetzung der internationalen ISO-Normen und werden nachfolgend synonym mit ‚ISO‘ referenziert.
+Ergonomie
+--> ist ein Fachgebiet, dass sich in besonderer Weise mit der Interaktion von Mensch und Maschine befassen sollte
+--> Ergonomie: das gute Produkt steht im Vordergrund
+--> Ingenieurspsychologie: stärker konzentriert auf den Menschen und das Verstehen der Prozesse
 
-% ******************************************************************
-\subsection{\textcolor{MidnightBlue}{Definition Usability nach ISO 9241-11}}
-\label{ch:SdF:UI:sec:Usability}
-Der Begriff der Usability (dt. Gebrauchstauglichkeit) beschreibt die Qualität eines Systems oder einer Oberfläche in Bezug auf dessen Einfachheit und Nutzbarkeit. Sie wird gemessen in den Dimensionen der Effektivität, Effizienz und der Zufriedenheit der Nutzer.
+\cite{Vollrath:2015:Taschenbuch}
 
-Die Effektivität beschreibt die funktionelle Eignung eines Systems. Das heißt, dass der Nutzer seine Aufgaben vollständig und korrekt mithilfe dieses Systems durchführen kann. Die Effizienz misst sich in Form von Zeit, um eine Aufgabe vollständig und richtig zu erfüllen, und der Rate wie viele Fehler auf dem Weg dorthin gemacht werden. Die Zufriedenheit \textcolor{red}{(TODO: Satisfaction - Zufriedenheit, Befriedigung)} der Nutzer ist nicht in metrischen Kenngrößen zu erfassen. Es kann ein Zufriedenheitsspektrum auf Grundlage von zum Beispiel Fragebögen (s. \autoref{ch:SdF:UI:sec:ISO-Fragebogen}) oder der Verhaltensanalyse während eines Testszenarios festgestellt werden.
+% ******* ISO *********************
+\input{chapters/02_Stand_der_Forschung/03a_ISO}
+\input{chapters/02_Stand_der_Forschung/03b_US_UX}
+\input{chapters/02_Stand_der_Forschung/03c_ISO_Interaktionsprinzipien}
+\input{chapters/02_Stand_der_Forschung/03d_Pruemper}
 
-% ******************************************************************
-\subsection{\textcolor{Turquoise}{Definition User-Experience und Abgrenzung von Usability}}
-\label{ch:SdF:UI:sec:Usability_vs_User_Experience}
-Neben der Usability steht die User-Experience (UX, dt. Nutzererfahrung oder -erlebnis). Diese wird in Part 210 beschrieben. Da das Nutzererlebnis eine Übermenge der Gebrauchstauglichkeit (UE) ist ($UX \varsubsetneq UE$), ist sie nicht in der Abbildung aufgelistet. Der Part 112 mit den Grundsätzen zur Informationsdarstellung ist vor allem auf Benutzeroberflächen oder Dashboards anwendbar. Da sich dieser Part auf UX fokussiert, finden dessen Prinzipien hier aus Umfangsgründen keine Anwendung.
+% Psych
+\input{chapters/02_Stand_der_Forschung/03e_menschenzentriertes_Design}
 
-\textcolor{red}{\cite{usability_vs_experience:2018}}
-
-% ******************************************************************
-\subsection{\textcolor{MidnightBlue}{Interaktionsprinzipien nach ISO 9241-110}}   % zur Gebrauchstauglichkeit und Ergonomie interaktiver Systeme
-\label{ch:SdF:UI:sec:ISO-Interaktionsprinzipien}
-
-Der Text der ISO 9241 Part 110 kombiniert die Ausprägungen der Usability mit Gestaltungsempfehlungen in Form von 7 Interaktionsprinzipien (ehem. Grundsätze der Dialoggestaltung). Indem Systeme und Schnittstellen gebrauchstauglicher, zugänglicher und konsistenter gestaltet werden, erleichtern und verbessern diese die kognitive Ergonomie der Mensch-System-Interaktion.
-
-Die 7 Interaktionsprinzipien sind die Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Erwartungskonformität, Erlernbarkeit, Steuerbarkeit, Robustheit gegen Benutzungsfehler und die Benutzerbindung. Die Gewichtung der Grundsätze kann unterschiedlich ausfallen, da sie von dem System, den Nutzern und deren Aufgaben abhängig sind. Diese können, wie in \autoref{tab:usability<->ISO-Prinzipien} zu sehen, den drei Usability-Dimensionen zugeordnet werden.
-
-\begin{table}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{chapters/06_Diskussion/Usability-ISO-Prinzipien_KI.PNG}
-    \caption{Zuordnung der ISO-Prinzipien zur den drei Dimensionen der Usability \textcolor{red}{noch austauschen(!)}} % KI-Bild
-    \label{tab:usability<->ISO-Prinzipien}
-\end{table}
-
-% Aufgabenangemessenheit
-\noindent
-Ist ein System \textbf{aufgabenangemessen}, bedeutet dies, dass es den Nutzer bei seinen Aufgaben unterstützt. Hierbei ist das System primär auf diese Aufgabe ausgerichtet, anstatt auf der dafür benötigten Technik dahinter zu basieren. Um den Aufwand einer Aufgabe zu optimieren, sollen beispielweise unnötige Schritte sowie ablenkende Informationen oder Interaktionsmöglichkeiten auf der Oberfläche gemieden werden. Dies äußert sich, indem zum Beispiel nur die Informationen auf der Oberfläche angezeigt werden, die für den aktuellen Schritt benötigt werden.
-
-% Selbstbeschreibungsfähigkeit
-Die \textbf{Selbstbeschreibungsfähigkeit} hilft dem Nutzer, ein System intuitiv bedienen zu können. Es soll angemessene Informationen und offensichtliche Fähigkeiten des Systems mitteilen, ohne unnötige Interaktionen zu erfordern. Beispiele hierfür sind die Platzierung von Steuerelementen, deren eindeutige Unterscheidung von nicht interaktiven Schnittstellen und dem offensichtlichen Aufzeigen des aktuellen Navigationsverlaufs in Form von etwa breadcrumb trails (dt. Brotkrumenpfade). Diese Maßnahmen können die Notwendigkeit externer Hilfe, wie beispielsweise aus Handbüchern oder von Beratungsstellen, stark reduzieren.
-
-% Erwartungskonformität
-Die \textbf{Erwartungskonformität} beschreibt, dass das Verhalten des interaktiven Systems vorhersehbar und somit basierend auf dem aktuellen Kontext mit den Nutzererwartungen konform sein soll.
-Es wird erwartet, dass sich das System angemessen verhält und entsprechend reagiert. Dies wird durch Arbeitsschritte gestützt, die mit dem Aufgabenverständnis des Nutzers sowie den Erfordernissen des breitesten Benutzerspektrums übereinstimmen. Dafür ist eine dem Nutzer vertraute Darstellung, Eingabe und Steuerung erforderlich, welche innerhalb des Systems und darüber hinaus konsistent ist.
-Das System sollte mit Änderungen im Nutzungskontext zurechtkommen. Dafür soll es in der Lage sein, auf unterschiedliche Erfordernisse einzelner Nutzer sowie auf angeschlossene Ressourcen angemessen zu reagieren. Informationen sind auf verschiedenen Gerätearten und Anzeigegrößen angemessen darzustellen und die Änderungen hinsichtlich der physischen Umgebung des Benutzers anzupassen, wie beispielsweise das Übernehmen der Light- und Darkmode Einstellung.
-
-% Erlernbarkeit
-Damit ein System \textbf{erlernbar} ist, hat es das Explorieren und die Entdeckung seiner Fähigkeiten und deren Verwendung zu ermöglichen, um die vom Nutzer angestrebten Ergebnisse zu erreichen und ihm den Zugang zu weiteren Informationen zu ermöglichen. Es hat den Lernaufwand zu minimieren und Unterstützung beim Erlernen anzubieten. Dafür sollte es durch das Ausprobieren keine negativen Konsequenzen für den Nutzer geben. Zudem wird die Implementierung geeigneter Alternativen zur Suche nach und für das Navigieren zu Informationen und Funktionen empfohlen.
-Weiterhin soll das System Rückmeldung geben, um dem Nutzer zu helfen, die Folgen seiner Aktionen zu erlernen, und in dem Zuge die Entwicklung seiner Fertigkeiten im Zusammenhang mit den unterstützten Aufgaben fördern.
-
-% Steuerbarkeit
-Die \textbf{Steuerbarkeit} erlaubt es dem Benutzer, die Kontrolle über die Geschwindigkeit, Abfolge und Individualisierung der Nutzung eines Systems zu behalten. Das beinhaltet die Möglichkeit zur Flexibilität des Nutzers, Aufgaben in einer beliebigen Reihenfolge durchzuführen, diese zu jeder Zeit zu unterbrechen und zu einem späteren Zeitpunkt an derselben Stelle wieder aufnehmen zu können.
-
-% Robustehit gegen Benuzungsfehler
-Das System hat eine \textbf{Robustheit gegen Benutzungsfehler} aufzuweisen, indem sie dem Nutzer bei der Vermeidung dieser hilft, eine Toleranz und Hilfestellung im Fehlerfall aufweist sowie den Nutzer dabei unterstützt diesen Fehler zu beheben.
-
-% Benutzerbindung (en: user engagement)
-Das letzte der Prinzipien ist die \textbf{Benutzerbindung}. Sie besagt, dass das System Funktionen und Informationen auf einladende und motivierende Weise darzustellen hat, um eine kontinuierliche Interaktion mit dem System zu fördern und eine positive User-Experience herbeizuführen. Die Benutzerbindung ist aus dem englischen \textit{user engagement} übersetzt und kann ebenfalls als \textit{Benutzer-Engagement} verstanden werden. In der deutschen Sprache ist das Wort \textit{Engagement} im  Vergleich zum Wort \textit{Bindung} oft positiv besetzt, daher kann der englische Begriff \textit{engagement} durch eine Kombination der beiden Bedeutungen beschrieben werden, ist jedoch noch umfassender zu verstehen.
-Das System soll den Nutzer motivieren, mit diesem zu interagieren. Dabei werden seine unterbewussten Bedürfnisse antizipiert. Es soll ein Vertrauensverhältnis aufgebaut werden, indem ein konsistentes Design und ein hochwertiges Erscheinungsbild gewahrt wird. Weiterhin soll der Nutzer zunehmend einbezogen werden, indem ihm die Gelegenheit geboten wird, Vorschläge zu Änderungen, Systemerweiterungen und -verbesserungen einzureichen. 
-
-% Allgemein
-Die Reihenfolge der Prinzipien stellt keine Rangfolge dar. Die Prinzipien und Empfehlungen sind generischer Natur und damit nicht an ein bestimmtes System oder Kontext gebunden. Der Inhalt der Prinzipien überschneidet sich teilweise, wobei die Bedeutung und Möglichkeit zur Anwendung des jeweiligen Prinzips vom Nutzungskontext, den Benutzergruppen und der gewählten Technik abhängt. 
-[Zusammenfassung nach \cite{DIN_EN_ISO_9241-110}]
-
-% ******************************************************************
-\subsection{\textcolor{Plum}{Standardisierter Fragebogen von J. Prümper nach ISO 9241-110}}
-\label{ch:SdF:UI:sec:ISO-Fragebogen}
-...
-Will ich den überhaupt hier aufzählen? wird in \autoref{ch:Validierung:sec:Material:Nutzerbefragung} genannt.
-
-überarbeitete Kurzversion des Fragebogens von Jochen Prümper \cite{Pruemper:Fragebogen-S:2006}.
-Prümpers Fragebogen wurde auf Basis der ISO 9241-110 (s. \autoref{ch:SdF:UI:ISO}) erstellt, indem jeder der sieben Skalen drei Fragen zugeordnet wurden. \cite{Pruemper:Fragebogen-S:2006:Paper}
-
-% ******************************************************************
-\subsection{\textcolor{Plum}{moderne Tools und Empfehlungen zur Erstellung von Dashboards}}
-\label{ch:SdF:UI:sec:moderne_DB_Tools_und_Empfehlungen}
-...
-Sonar\\
-Grafana\\
-und weitere Tools nennen -> und wo diese Auflistung herkommt
-=> siehe 02d\_Dashboards - überschneiden sich die Inhalte?
-
-% ******************************************************************
-\subsection{\textcolor{Plum}{psychologische Ansätze zur Gestaltung von Oberflächen} \textcolor{red}{TODO: Titel}}
-\label{ch:SdF:UI:sec:psychologisch}
--> TODO: Subsection evtl. hochschieben vor ISO\\
-...\\
---> zusammengehörige Informationen zusammen darstellen und so \cite{Wickens:2013} \\ % Engineering psychology and human performance
-
----\\
-
-% *****         ISO-Quelle nochmal erwähnen!!!
-%Im Folgenden wir die ISO-Norm 9241-110 \cite{DIN_EN_ISO_9241-110} zusammengefasst.
-%o	und am Ende auch nochmal darauf referenzieren
+% Tools
+\input{chapters/02_Stand_der_Forschung/03f_Tools}
