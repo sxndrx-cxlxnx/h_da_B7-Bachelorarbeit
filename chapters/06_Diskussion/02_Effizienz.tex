@@ -1,103 +1,72 @@
-\section{\textcolor{Salmon}{Effizienz + Übersichtlichkeit} \textcolor{red}{TODO: Titel}}
+\section{Bewertung der Effizienz und Übersichtlichkeit}
 \label{ch:Diskussion:Effizienz}
 
-\textcolor{blue}{einleitende Worte}\\
+Die Effizienzbewertung erfolgt anhand der Fehlerquote und der benötigten Zeit zur erfüllung der Aufgaben.
 
-% **********************************************
-%**********************************************
-           Zeit\\
-**********************************************\\
-Effizienzauswertung\\
---> Datenauffälligkeiten(?)\\
+% Zeit
+Die Zeiten der Aufgaben aus dem Usability-Test sind signifikant geringer als die des alten Systems (s. \autoref{fig:usability_test:zeit}). Auch die Einzelbewertung der Aufgaben 1 und 2 liefert dieses Ergebnis (s. \autoref{fig:Usability_Test:rohe_Daten}).
+Da die Aufgaben 3 und 4 wie im vorherigen Kapitel bereits erwähnt wenig Relevanz haben, werden diese auch hier aus der Betrachtung ausgenommen. \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige} zeigt, dass die Bearbeitungsdauer mit dem Dashboard in jeder Aufgabe wie erwartet ersichtlich schneller war.
+Dennoch zeigt sich anhand der Aufgaben 3 und 4, dass der Wechsel zwischen mehreren Oberflächen mit dem Dashboard besser gelingt. Obwohl das Dashbaord eine höhere Fehlerquote aufweist, kann es in einem unbekannten Gebiet überzeugen.
 
-\noindent
-- Zeiten sind im neuen System in Aufgaben 1+2 signifikant besser als im alten System\\
-  --> beim Rest nur besser, nicht signifikant\\
-  --> 1+2 sind die relevantesten der Aufgaben\\
-  --> was ist mit den anderen 4 Aufgaben (3.1, 3.2, 4.1, 4.2?\\
-- endgültiger Zeitvergleich, s. Zusammenfassung \autoref{fig:usability_test:genauigkeit-zeit_mittel}\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alle.png}
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_richtige.png}
+    \caption{Usability-Test: Zeitvergleich von allen Werten und nur richtigen Antworten - im Verhältnis zur Fehlerquote (Daten aus \autoref{tab:usability_test:mittelwerte})}
+    \label{fig:usability_test:genauigkeit-zeit_alle-richtige}
+\end{figure}
 
-\noindent
-Aufgaben (3.1 + 3.2?) können aus der endgültigen Bewertung rausgenommen, weil zu konfus formuliert\\
+% Gesetz der Nähe
+Das Dashboard orientiert sich an dem proximity compatibility principle (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}), welches besagt, dass zusammengehörige Informationen beisammen dazustellen sind. Die Anzahl der benötigten Schritte wurde mithilfe des Dashboard minimiert, da die Anzeige von vielen Ergebnissen auf eine Oberfläche reduziert wurde (s. \autoref{ch:Dashboard:sec:Anforderungen_Auswertung}). % TODO: steht das wirklich in der Auswertung der Anforderungen drin? - wenn nein, reinschreiben!!!
+Mit der kürzeren Bearbeitungsdauer zeigt sich, dass sich das zurechtfinden auf einer Oberfläche wie dem Dashbaord leichter scheint, als auf mehreren wie beim alten System, die zudem verschieden aufgebaut sein können.
 
-% **********************************************
-% **********************************************
-           zusammengehörige Infos\\
-**********************************************\\
-Effizienz Definition aus Ergebniskapitel - cognitive Load - auf das Grundlagen Kapitel rück referenzieren - "zusammengehörige Informationen sollen zusammengehörig dargesellt werden\\
+% Übersichtlichkeit
+Es konnten alle Ergebnisse auf einer Oberfläche dargestellt werden und durch die Farbgestaltung ist eine parallele Suche möglich, ob Fehler vorhanden sind (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design})
 
-% **********************************************
-% **********************************************
-           alles auf einer Seite / übersichtlich\\
-**********************************************\\
-Bietet das Dashboard eine verbesserte Eindeutigkeit (Intuition) / Übersichtlichkeit?\\
-Pro\\
-===\\
-- Alles auf einer Seite\\
-  --> Durch Farbgestaltung: Ergebnis (Fehler/nicht Fehler) ohne Fokus auf einzelne Werte erkennbar\\
+% Zusammenhang Fehler::Zeit
+In Abbildung \autoref{fig:usability_test:genauigkeit-zeit_alt-neu} ist zu erkennen, dass im alten System die Personen mit Fehlern langsamer waren als die ohne. Im neuen System ist dies umgedreht. Dies lässt sich daran erklären, dass die Personen die das alte System nicht so gut kannten, länger für die Aufgaben benötigten und tendenziell auch mehr Fehler verursachten.
+Obwohl jahrelange Erfahrung vorliegt, ist es potenziell trotzdem schwierig, sich zu merekn, welche Information wo zu finden ist, zumal das alte System aus vielen Abkürzungen besteht.
+Da das jedoch niemand das neue Dashboard kannte, lässt sich reininterpretieren, dass die Anzeige etwas genauer untersucht wurde, bevor die Person zum Ergebnis gelang. Die Monotonie des Monitorings scheint noch nicht eingetreten zu sein (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}).
 
-\noindent
-Die Anzahl der benötigten Schritte wurde mithilfe des Dashboard minimiert, da die Anzeige von vielen Ergebnissen auf eine Oberfläche reduziert wurde (s. \autoref{ch:Dashboard:sec:Anforderungen_Auswertung})\\
-% TODO: steht das wirklich in der Auswertung der Anforderungen drin? - wenn nein, reinschreiben!!!
-
-% **********************************************
-% **********************************************
-           \textcolor{red}{TODO: Zusammenhang Fehler:Zeit}\\
-\textcolor{red}{**********************************************}\\
-\input{chapters/06_Diskussion/02b_Fehlerquote}
-
-% **********************************************
-% **********************************************
-           Fehlerquote - Dashboard unbekannt\\ % + Lernen
-**********************************************\\
-Dashboard war den Nutzern zuvor unbekannt (s. Versuchsdesign o.s.) // \textcolor{red}{nachsehen, wohin referenzieren}\\
-  --> hat sich kaum jemand richtig angesehen (Fehlerquote)\\
-
-% **********************************************
-% **********************************************
-           Lernen\\
-**********************************************\\
--	nach Wickens konnte man jetzt auch an den Ergebnisse jetzt erkennen - das mit dem Dashboard\\
--	wenn Leute was 30 Jahre machen\\
---> Theorieteil „Lernen“\\
---> funktioniert durch z.B. Wiederholung\\
---> zeigt, dass war zu erwarten :: DB schneller/effizienter\\
---> Abweichung erklärt sich so und so :: Grund: Routine/Lernfaktor\\
+% Genauigkeit-Zeit
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alt.png}
+    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_neu.png}
+    \caption{Usability-Test: Vergleich Genauigkeit-Zeit im alten und neuen System (Daten aus \autoref{tab:usability_test:mittelwerte})}
+    \label{fig:usability_test:genauigkeit-zeit_alt-neu}
+\end{figure}
 
 \noindent
-Verdrehung der ersten Ergebnisse:\\
-- DB ist für alle unbekannt\\
-- Hat gezeigt, dass sich die Nutzer im alten System doch nicht so gut zurechtfinden\\
-  --> alles unterschiedliches Layout\\
-  --> welche Info steht wo\\
-  --> was sagen die Abkürzungen alles\\
-  --> ...\\
-\textcolor{red}{TODO: die Aussage nochmal überprüfen (just in case)}
+Die Daten zur Fehlerquote und Bearbeitungsdauer wurden zu einem Effizienzwert verrechnet (s. \autoref{fig:usability_effizienz}). % TODO: in ergebnisse schreiben, dass das kein festes Maß ist, sondern nur im jeweiligen Kontext verglichen werden kann
+Obwohl das Dashboard im Mittel kanpp 50\% effizienter ist, konnte anhand der einzelnen Effizienzwerte kein signifikanter Unterschied festgestellt werden (s. \autoref{tab:usability_test:effizienz}), wodurch die Hypothese $H_{12}$ initial verworfen wurden. Allerdings fällt auf, dass die Effizienzwerte stark schwanken.
+Aufgabe 3.1 hat im alten System zware eine Durchschnittliche Zeit und keine Fehler, allerdings sind es im neuen System die zweithöchsten Werte beider Maße (s. \autoref{fig:usability_test:genauigkeit-zeit_alt-neu}). Aufgabe 3.2 zeigt lediglich einen leicht besseren Wert an, da die Zeitdifferenz kleiner ist als bei Aufgabe 3.1.
+Aufgabe 4.1 überzeugt mit einem stark positiven Wert. Durch die Umkehrung der Fehlerquote sowie der geringeren Bearbeitungsdauer kann das Dashboard anhand der Zählaufgabe überzeugen. Der Wert von Aufgabe 4.2 ist etwas geringer, da eine geringere Zeit- und Fehlerdifferenz vorliegt, jedoch das grobe Verhältnis zu Aufgabe 4.1 übereinstimmt.
+Die Aufgaben 1 und 2 spiegeln auch die Ergebnisse von zuvor wieder. Da das Dashboard mit starken Zeitwerten und einer leichten Fehlerquote überzeugen kann. Diese beiden relevanten der Aufgaben können darüber hinaus einen Signifikanten Unterschied der Zeitmittelwerte und der Effizienz feststellen (s. \autoref{tab:Usability-Test:ttest_1+2}).
 
+Auf dessen Grundlage der objektiven Werte kann die Hypothese $H_{02}$ nun verworfen werden.
 
+%           Effizienzdiagramm 6.8
 % **********************************************
-% **********************************************
-           Effizienzdiagramm 6.8\\
-**********************************************\\
-TODO ...\\
-\autoref{fig:usability_effizienz}\\
-Notizen aus dem Text\\
-3 Punkte: Mittelwert, Spitzen in beide Richtungen\\
-Diskussion: referenzieren, dass zeigt folgende Aufälligkeiten bestehen\\
---> Ergebnisse anhand der Fragestellungen diskutieren\\
---> teilweise positiv, teilweise negativ, warum kommt das zustande\\
+%A1 und A2 - relevant und spigeln die Ergebnisse von vorher wieder --> mit neuem Durschnitt und ttest weiterhin signifikant
+%A3 ist negativ, da:
+%  --> alt: vegleichbare zeit, gleiche Fehlerquote (zu 1/2)
+%  --> neu: zweithöchster Wert in Zeit und Fehler, die anderen haben entweder oder
+%A3.2 ist nicht viel besser in ...
+%A4.1 drastischer Fehleranstieg in alt --> reduktion in neu
+%A4.2 ähnliche zeit, weiterhin niedrigere Fehlerquote
 
-% **********************************************
-% **********************************************
-           subj. / obj. - passen die Daten zusammen?\\
-**********************************************\\
-- $\varnothing$ Zeit (obj.) und Befragung (subj.) - signifikante Ergebnisse\\
-- Zeit der letzten beiden / vier Aufgaben nicht signifikant (Gründe von oben kurz zusammenfassen)\\
-- Effizienz (obj.) - nicht signifikant\\
---> liegt Vermutlich an der Fehlerquote des Dashboards (wie in diesem und letztem Kapitel beschrieben)\\
-- subj./obj. passen aber sonst gut überein
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|c|c||c|}
+    \hline
+        Aufgabe 1 + 2 & $\varnothing_{t\_alt}$ & $\varnothing_{t\_neu}$ & t-Test über $\varnothing_t$ & t-Test über Effizienzwerte \\ \hline
+        Werte & 14,86 & 8,02 & 0,0137 & 0,0395 \\ \hline
+        %Werte & 14,86 & 8,02 & 0,013739065 & 0,039506655 \\ \hline
+    \end{tabular}
+    \caption{Usability-Test: Zeitmittelwerte und Signifikanzauswertung der Aufgaben 1 und 2 (Weiterverarbeitung der Daten aus \autoref{fig:Usability_Test:rohe_Daten}, \autoref{tab:usability_test:effizienz})}
+    \label{tab:Usability-Test:ttest_1+2}
+\end{table}
 
-% **********************************************
-% **********************************************
-% **********************************************
-% **********************************************
+\noindent
+Da die Hypothese $H_{12}$ aus subjektiver Sicht bereits zuvor und aus objektiver Sicht nachträglich bestätigt werden konnte, können auch hier die objektiven Daten die Einschätzung und Empfindungen der Nutzer stützen.

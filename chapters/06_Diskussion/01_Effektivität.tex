@@ -1,57 +1,27 @@
-\section{\textcolor{Salmon}{Effektivität} \textcolor{red}{TODO: Titel}}
+\section{Bewertung der Effektivität}
 \label{ch:Diskussion:Effektivität}
 
-Grund für die Fehlerquote / Wie viel sagen die Fehlerquoten tatsächlich aus?\\
-hier schon drauf eingehen, dass Fragestellungen ungünstig waren (s. \autoref{ch:Diskussion:Methodenkritik})\\
-- Wie die neue Darstellung Verwirrung verursacht\\
-  --> teilweise keine Fehlerquote im Alten System\\
-  --> Fakten: Zeile / Spalte Vertauscht\\
-  %--> Fehlerraten spiegeln sich aber nicht in Erwartungskonformität wieder (s. \autoref{fig:pruemper_Erwartungskonformität})
+In \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Effektivität} wurde aufgezeigt, dass die Fehlerquote des Dashboards im Schnitt höher also schlechter ist als die des alten Systems, dies jedoch keinen signifikanten Unterschied darstellt (s. \autoref{fig:usability_test:fehlerquote}).
 
-\noindent
-\textbf{Aufgabenstellungen waren nicht so relevant, deshalb schlechte Ergebnisse}\\
-Fehlerquote: \autoref{fig:usability_test:fehlerquote}\\
-- warum spiken sie bei 4.1 / 4.2\\
-- mehrfache Aussage „damit arbeite ich nicht“\\
-----> \underline{wird in \autoref{ch:Diskussion:Effizienz} genauer Untersucht}\\
-- Gewohnheit: geringe Fehlerquote\\
-- neu: hohe Fehlerquote (s. Lernen)\\
-- neu, aber unbekanntes Gebiet: niedriger als alte Fehlerquote
+Eine Ungenauigkeit in den Aufgaben 3.1, 3.2, 4.1 und 4.2 hat dazu geführt, dass jeweils zwei Antworten im alten System akzeptiert werden mussten. Während das Ziel auf dem Dashboard eindeutig identifizierbar abgelesen werden kann, ist in Aufgabe 4.1 und 4.2 der Begriff 'noch nicht gelaufen' im alten System verwechselt worden mit der Fehleranzeige, dass der Test 'schief gelaufen ist'. In den Aufgaben 3.1 und 3.2 wurde eine Testkategorie gemeint zum Zusammenzählen, jedoch hat einer der Testfälle den gleichen Namen. Beide Fälle haben jedoch keine Auswirkung auf das Ergebnis.
 
+Ein Grund wie die Quote enstanden ist, welcher auch von den Testpersonen genannt wurde, ist dass das Dashboard anders aufgebaut ist, als das alte system. Wie in \autoref{ch:Dashboard:sec:Aufbau} erwähnt, wurden die Zeilen und Spalten der Kategorien und Inhalte getauscht, was zu Verwirrung in dem Finden der richtigen Daten führte.
 
-% **********************************************
-------\\
-% **********************************************
-\textbf{Ausreißer machen das Ergebnis unschaf - mäh}\\
-s. \autoref{fig:hist_prümper_all}\\
-\textcolor{red}{TODO: weitere t-Tests von Frage 2+3}\\
-  --> \autoref{Add:Pruemper:neuer_ttest:frage_2_und_3}\\
+Dass das alte System in vier von sechs Fragen keine Fehler erzeugt hat, lässt sich damit erklären, dass die meisten Nutzer dieses System seit über 30 Jahren nutzen. Aufbauend auf dem Lernkonzept (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}) kann bei dem neuen System keine Vorerfahrung verzeichent werden. Das System war für alle Beteiligten neu, zumal sich nur eine Person die neue Umgebung angesehen hat, bevor dei Aufgaben begonnen wurden (s. \autoref{ch:Validierung:sec:Stichprobe}).
 
-% *********************
-%   Prümper
-% *********************
-\noindent
-\noindent
-Fehler 2. Art: Nullhypothese beibehalten, obwohl falsch\\
--> Frage 2 und 3\\
+Der Anstieg der Fehlerquote im alten system bei Aufgabe 4 zeigt auf, dass dort Werte für das Ergebnis zusammengezählt werden mussten, während die geforderte Antwort vom Dashboard lediglich abgelesen werden musste. Es wurde sich häufiger verzählt oder verrechnet. Zusätzlich wurden Aussagen getroffen, dass einzelne Personen nicht mit dem System im Konkreten arbeiten wodurch das Wissen darüber eingeschränkt ist.
 
-\noindent
-Aufgabenangemessenheit\\
-----------------------\\
-wenn bei 2 die beiden Ausreißer weggenommen werden, die andersrum bewertet haben, dann wird der Unterschied auch signifikant (s. \autoref{fig:hist_prümper_all})\\
-Boxplot: \autoref{fig:pruemper_Aufgabenangemessenheit}\\
+Die trägt auch zur nachträglichen Einschätzung bei, dass die Aufgaben 3 und 4 wenig Relevanz für den Alltag haben. Die Aufgaben 3.1 und 3.2 befassen sich mit der Release-Version, welche kein Teil des Alltagsgeschäft sind. Die Aufgaben 4.1 und 4.2 handeln von einer Zählaufgabe im alten System, wobei im Alltag eher wichtig ist, ob es noch Tests gibt, die nicht gelaufen sind und nicht wie viele davon. Daher werden diese Aufgaben aus der Auswertung rausgenommen.
 
-\noindent
-Steuerbarkeit\\
--------------\\
-wenn bei 3 alt die beiden Ausreißer weggenommen werden, die andersrum bewertet haben, dann wird der Unterschied auch signifikant (s. \autoref{fig:hist_prümper_all})\\
-Boxplot: \autoref{fig:pruemper_Steuerbarkeit}\\
+Mit den objektiven Ergebnissen der Aufgaben 1 und 2 kann die Hypothese $H_{1}$ nun doch bestätigt werden.
 
-\noindent
-Betrachtung der Hypothesen\\
-==========================\\
-- Befragung: mit 2 + 3 neu -> lässt Hypothese $H_{11}$ doch noch bestätigen / $H_{01}$ verwerfen\\
-- Unterschied subjektiv / objektiv wird auch im nächsten Kapitel aufgegriffen\\
-  --> \textcolor{red}{TODO: schauen dass es wirklich aufgegriffen wird}\\
-  --> die User hatten das Gefühl, das Dashboard gut nutzen zu können, die eigenen Fehler sind dabei nicht aufgefallen
-  --> eine Frage des Lernens / Unwissens (s. nachfolgendes Kapitel)
+In Bezug auf die Auswertung der Nutzerbefragung mit den Fragen zu den Prinzipien Aufgabenangemessenheit und Steuerbarkeit, sind in den Daten jeweils zwei Ausreißer aufgefallen (s. \autoref{tab:Nutzerbefragung:rohe_Daten}).
+Bei den Fragen 2 und 3 haben zwei Personen entgegen allen weiteren Teilnehmern mit verdrehten Werten geantwortet. Siei sind die einzigen beiden, die das Dashboard negativ und das alte System positiv bewerten. Die beiden Testpersonen fallen zusätzlich auch in anderen Bereichen noch auf.
+
+Da der Verdacht auf einen Fehler zweiter Art, dem Beibehalten der Nullhypothese trotz Widersprüchen, besteht, wurden aus diesem Grund die beiden Signifikanztests noch einmal ohne diese Werte vorgenommen (s. \autoref{Add:Pruemper:neuer_ttest:frage_2_und_3}). Dadurch ist auch bei diesen Fragen ein signifikanter Unterschied zugunsten des Dashboards festzustellen.
+
+Die Hypothese $H_{1}$ kann somit in Kombination mit den anderen Fragen der beiden Prinzipien auch auf Grundlage der subjektiven Ergebnisse bestätigt werden.
+
+Diese Auffälligkeit ist auch in weiteren Datensätzen teilweise mit extremeren Differenzen zu beobachten (s. \autoref{fig:hist_prümper_all}), hat allerdings den p-Wert unter Ausschluss der Datensätze lediglich verringert und liegt weiterhin unterhalb des Signifikanzniveaus.
+
+Zusammenfassend scheinen die Testpersonen das Gefühl zu haben, dass sie das Dashboard gut nutzen können. Die eigenen Fehler oder Slips (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}) sind ihnen dabei nicht aufgefallen. Die Hypothesenbewertung auf Grundlage der subjektiven und objektiven Daten bilden ein schlüssiges Bild.
