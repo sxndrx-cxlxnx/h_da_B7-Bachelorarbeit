@@ -1,45 +1,28 @@
 \section{\textcolor{Salmon}{Abschließende Bewertung zur Eignung von moderner Dashboards}}
 % Abschließende Bewertung der Dashboard-Lösung zur Modernisierung eines Legacy-Systems
 \label{ch:Diskussion:Abschließende_Bewertung}
-= Zusammenfassung aus Ergebnissem, Diskussion + Methodenkritik (wie Aussagekräftig die Ergebnisse sind)\\\\
-Frage: Inwiefern beeinflusst die Nutzung eines modernen Dashboards das Monitoring der Ergebnisse des Legacy-Testpools?\\
-Wie gut eignen sich moderne Dashboards als benutzerfreundliche Modernisierung für das Monitoring der Ergebnisse des Legacy-Testpools?\\
 
-\noindent
-Dashboards sind eine geeignete Strategie zur Modernisierung?\\
-= Endauswertung\\
+% = Zusammenfassung aus Ergebnissem, Diskussion + Methodenkritik (wie Aussagekräftig die Ergebnisse sind)\\\\
+Zusammenfassend lässt sich sagen, dass das Dashboard eine geeignete Lösung zur Modernisierung des Legacy-Testpoolmonitoring-Prozesses darstellt. Die Ergebnisse der Usability-Auswertung stellen eine signifikante Verbesserung fest.
 
-\noindent
-Kontra / Probleme - An welchen Stellen bereiten sich Probleme mit dem neuen System?\\
-=================\\
-- ist bisher nur proof of concept\\
-%
-- Aufwand zur Vervollständigung besteht\\
-  --> aber der ist überall gegeben\\
-%
-- Umsetzung von Features und Verbesserungen am alten System\\
-  --> müssen übertragen werden\\
-  --> aber nur wenn große Strukturelle Änderungen bestehen\\
-    ----> das meiste ist automatisiert abgefangen vom Parser\\
-    ----> wie hoch ist die Chance, dass das passiert?
-  --> muss ebenso gewartet werden\\
-  --> Was unternimmt das Dashboard, um nicht selbst zur großen Wartungsaufgabe zu werden?\\
-    ----> Strukturen stehen\\
-    ----> ließt Ergebnisse automatisiert ein\\
+% Frage: Inwiefern beeinflusst die Nutzung eines modernen Dashboards das Monitoring der Ergebnisse des Legacy-Testpools?\\
+Trotz der Verminderung der Aussagekraft des Usability-Tests bestätigen die Nutzer die Verbesserung anhand der Nutzerbefragung. Es hilft, einen Überblick über alle Ergebnisse zu gewinnen. Da davon ausgegangen wird, dass weniger nicht-Fehler als Fehler angezeigt werden, verringert sich der Aufwand. Für die Detailübersicht wird im Fehlerfall jeweils nur ein Klick mehr benötigt.
 
-\noindent
-Pro / Vorteile - Wie kann das Dashboard überzeugen?\\
-==============\\
-- ja, DB sind geeignet, aber nur ein Anfang\\
-- sind low invasive, low risk\\
-  --> Dashboard als nicht tiefe Lösung - ohne Eingriff in  das bestehende System\\
-  --> als erster Schritt zur Verbesserung der Usability\\
-- können lange Übersehene Probleme (aufgeschobene Altlasten) am System aufzeigen\\
-- Aber: kam gut an, also lohnt es sich\\
-- Aktiver Input der Kollegen, für unentdeckte Use-Cases --> Interesse vorhanden\\
-- \textcolor{red}{Anforderungsanalyse aus ISO-Tabellen hier nochmal aufgreifen --> wo das DB überzeugen konnte}\\
+Ein Problem stellt dar, dass das neue Dashboard bisher nur ein Prototyp ist, um zu zeigen dass die vorgeschlagene Moderniserungsmaßnahme gut begründet ist. Zur Vervollständigung werden weitere Ressourcen benötigt, die jetzt bereits knapp sind. Allerdings sind Modernisierungsprozesse immer aufwändig, sodass dies kein Argument sein sollte.
 
-\noindent
-Empfehlungen\\
-============\\
-Empfehlungen ableiten, was beim Übergang alt-neu wichtig ist - TODO
+% Pro / Vorteile - Wie kann das Dashboard überzeugen?
+Da das alte System nicht direkt abgelöst wird, müssen potenzielle Verbesserungen und Features in beiden Systemen umgesetzt werden. Um nicht selbst zur nächsten großen Wartungsaufgabe zu werden, ist der Parser zum Erhalt der Daten so geschreiben, dass das alte System unabhängig von den Inhalten ausgelesen wird. Sollten keine großen strukturellen Veränderungen daran erfolgen, was angesichts des jahrelangen Stillstands dessen unwahrscheinlich wirkt, benötigt da Dashboard wenig Wartungsaufwand diesbezüglich.
+
+Ein weiterer Vorteil der Lösung ist, dass Personen die jahrzehnte mit dem alten System gearbeitet haben und sich nicht mehr umgewöhnen möchten, dies nicht brauchen, da dieses vollständig unberührt bleibt.
+
+Da das Dashboard nicht in das bestehende System eingreift, sondern nur darauf aufsitzt, ist es eine nicht invasive Lösung mit geringem Risiko in der Umsetzung. Es eignet sich als erster Schritt zur Verbesserung der Usability des Monitorings. Lange aufgeschobene Probleme und Altlasten die sich immer weiter verwachsen konnten aufgedeckt werden, damit sie doch noch gelöst werden.
+
+Allerdings kann es in mehreren Bereichen im Vergleich zum Altsystem mit neuen Funktionen überzeugen (s. \autoref{Add:ISO-Tabellen}). % TODO: ref auf Kapitel oder Anhang?
+Es konnten die Ergebnisse von allen vorherigen Oberflächen auf wenige vereint werden. Dabei wurde die Struktur vereinfacht und selbsterklärender, in dem die Ergebnisse in Fehlerkategorien zusammengefasst, Fachsprache simplifiziert und nicht-benötigte Funktionen entfernt wurden. Zudem überzeugt das Dashboard mit einer einheitlicheren, moderneren und intuitiveren Oberflächengestaltung, welche zusätzlich ergänzende Inforamtionen liefert.
+
+%Empfehlungen ableiten, was beim Übergang alt-neu wichtig ist -> hab ich glaub ich
+
+% Wie gut eignen sich moderne Dashboards als benutzerfreundliche Modernisierung für das Monitoring der Ergebnisse des Legacy-Testpools?\\
+Die Einführung des Dashboards ist demnach eine sehr sinnvolle Methode, um den Legacy-Testpoolmonitoring-Prozess effizienter und nutzerfreundlicher zu gestalten. Trotz der positiven Rückmeldungen der Teilnehmer stellt diese Einführung des Dashboards jedoch nur einen Anfang des Modernisierungsprozesses dar.
+
+%FF: Wie sinnvoll ist die Einführung eines modernen Dashboards im Hinblick auf das Ziel, den Legacy-Testpoolmonitoring-Prozess effizienter und nutzerfreundlicher zu gestalten?
