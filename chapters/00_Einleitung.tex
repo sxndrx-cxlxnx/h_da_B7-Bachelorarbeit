@@ -13,6 +13,7 @@
 % -> zum Schluss neu schreiben
 
 % Einleitung / Einleitungssatz
+% TODO: Hier fehlt ein catchy kurzer Satz
 Neben den zahlreichen intuitiven Neuerfindungen und Verbesserungen von Systemen und Prozessen, welche eine zunehmende Usability und User"=Experience vorweisen, stehen die Bestandssysteme oder auch Legacy-Systeme. Ausgezeichnet durch eine gewachsene Struktur wird dessen Instandhaltung durch beispielsweise Fachpersonalmangel zunehmend schwieriger und teurer.
 
 % ****************************************************************
@@ -27,15 +28,15 @@ Neben den zahlreichen intuitiven Neuerfindungen und Verbesserungen von Systemen 
 % Relevanz des Themas deutlich machen ----------------------------
 
 % Motivation / Relevanz
-In den letzten zwanzig Jahren ist die Nachfrage nach der Modernisierung von Firmen-Systemen stetig gewachsen. Die meisten Guidelines werden für gewachsene Code-Anwendungen konzipiert und raten den Aufbau von Testsystemen, um das unveränderte Codeverhalten während Modernisierungsschritten garantieren zu können.
-Allerdings können auch diese Codetesting-Systeme mit der Zeit zunehmend verwachsen, dessen Instandhaltung ist jedoch weniger erforscht. Durch die umfangreiche Struktur ist die Aufgabe, dessen Ergebnisse regelmäßig zu überwachen, monoton und zeitintensiv.
+In den letzten zwanzig Jahren ist die Nachfrage nach der Modernisierung von Firmen-Systemen stetig gewachsen. Die meisten Guidelines werden für gewachsene Code-Anwendungen konzipiert und empfehlen den Aufbau von Testsystemen, um das unveränderte Codeverhalten während des Modernisierungsprozesses garantieren zu können.
+Allerdings können auch diese Codetesting-Systeme mit der Zeit zunehmend verwachsen. Die Instandhaltung solcher Systeme ist jedoch wenig erforscht. Durch die umfangreiche Struktur dieser Testpools ist die Aufgabe, deren Ergebnisse regelmäßig zu überwachen, monoton und zeitintensiv.
 %-	Problem: altes Testsystem, gewachsen, ineffizient
 %-	Wissenschaftl. Relevanz: die meisten der Ansätze zur Modernisierung 
 % Forschungsstand
 %-	Praktische Relevanz
 
 % persönliche Motivation
-Diese Arbeit ist motiviert darin, einen Beitrag zu nachhaltigen und zukunftsfähigen Lösungen beizusteuern. Mit dem Generationenwechsel kristallisieren sich einige Probleme heraus, die die Personen, welche die Systeme mit aufgebaut haben, über die Jahre mitschliffen. Anhand dessen hat sich das Problem mit der gewachsenen Struktur im Testpool aufgezeigt. Hierfür sollte eine passende Lösung gefunden werden, dessen Qualität mit dieser Arbeit eingeordnet und bewertet wird.
+Diese Forschungsarbeit ist darin motiviert, einen Beitrag zu nachhaltigen und zukunftsfähigen Lösungen beizusteuern. Mit dem Generationenwechsel kristallisieren sich einige Probleme heraus, die die Personen, welche die Systeme mit aufgebaut haben, über die Jahre mitschliffen. Auf dieser Grundlage hat sich das Problem mit der gewachsenen Struktur im Testpool aufgezeigt. Hierfür soll eine passende Lösung gefunden werden, dessen Qualität mit dieser Arbeit eingeordnet und bewertet wird.
 % **********************************************************************************
 % Section: Ziele
 % Forschungsfrage benennen
@@ -52,10 +53,10 @@ Diese Arbeit ist motiviert darin, einen Beitrag zu nachhaltigen und zukunftsfäh
 %wurde durchgeführt bei der Firma x, die sich mit [Kategorien der Informatik] beschäftigt\\
 
 % Thema eingrenzen
-Im Rahmen dieser Forschungsarbeit wird der Frage nachgegangen, wie Dashboards erfolgreich im Modernisierungsprozess eingesetzt werden können. Dabei wird vor allem die Usability in Form von der Effektivität der Ergebnisfindung, der Effizienz der Aufgabenerfüllung sowie der Zufriedenheit der Nutzer betrachtet.
+Im Rahmen dieser Arbeit wird der Frage nachgegangen, wie moderne Dashboards erfolgreich im Modernisierungsprozess eingesetzt werden können. Dabei wird vor allem deren Usability in Form der Effektivität der Ergebnisfindung, deren Effizienz der Aufgabenerfüllung sowie der Nutzerzufriedenheit betrachtet.
 
 % Ziel der Arbeit / Forschungsfrage
-Das Ziel der Forschung ist es, herauszufinden, inwiefern die Einführung moderner Dashboards sinnvoll ist, um die Usability des Legacy"=Testpoolmonitoring"=Prozesses zu verbessern.
+Das Ziel der Forschung ist es dabei, herauszufinden, inwiefern die Einführung eines modernen Dashboards sinnvoll ist, um die Usability des Legacy"=Testpoolmonitoring"=Prozesses zu verbessern.
 
 % **********************************************************************************
 % Section: Methodik
@@ -64,14 +65,14 @@ Das Ziel der Forschung ist es, herauszufinden, inwiefern die Einführung moderne
 %\label{sec:intro:Methodik}
 
 % Methodik
-Anhand einer Nutzerstudie innerhalb der Software GmbH, die im Bereich digitale Transformation tätig sind, wird ein neues Dashboard auf dessen Usability analysiert und daran mit dem bestehenden Altsystem verglichen. Die Nutzerstudie in Form eines Usability-Tests und einer Nutzerbefragung ermöglicht eine Gegenüberstellung der Usability der Systeme.
+Dies wird anhand einer Nutzerstudie innerhalb der Software GmbH, die im Bereich digitale Transformation tätig ist, untersucht. Dafür wird ein neues Dashboard auf dessen Usability analysiert und daran mit dem bestehenden Altsystem verglichen. Die Nutzerstudie bestehend aus einer Kombination aus Usability-Tests und Nutzerbefragung ermöglicht eine Gegenüberstellung der Systeme.
 
 % Aufbau
-In dieser Arbeit wird die Qualität der Usability des neuen Dashboards mit dem alten System verglichen. In \autoref{ch:Stand der Forschung} werden für diese Arbeit relevante psychologische Grundlagen bezüglich nutzerfreundlichem Design vorgestellt, an dessen Prinzipien sich die Entwicklung des Dashboards orientiert. Außerdem wird eine Norm vorgestellt, welche die Usability-Dimensionen definiert und als Grundlage der Qualitätsbewertung dient.
-In \autoref{ch:Problemstellung} wird das Thema der Arbeit umfassender eingeordnet, um Probleme und Ansätze aufzuzeigen, die die Forschung motivieren.
-Daraufhin wird in \autoref{ch:IST-Zustand} das Altsystem vorgestellt, sowie dessen Zustand erfasst, um die Grundlage der Anforderungen an das Dashboard zu bilden. Dieses wird in \autoref{ch:Erstellung Dashboard} vom Design zur fertigen Umsetzung vorgestellt. Weiterhin werden hier Unterschiede zum Altsystem aufgezeigt.
-In \autoref{ch:Ergebnisse} wird der empirische Teil der Arbeit in Form einer Nutzerstudie zum Vergleich des Dashboards mit dem Altsystem durchgeführt. Es werden Hypothesen auf Grundlage der Usability-Kriterien aufgestellt, welche im Anschluss statistisch ausgewertet werden.
-Dessen Ergebnisse werden in \autoref{ch:Diskussion} zusammengefasst und umfassend analysiert, die Ablehnung oder Akzeptanz der Hypothesen eingeordnet in den Forschungskontext neu auszuwerten. Anhand der psychologischen Grundladen wird die Eignung des Dashboards als Modernisierungsmaßnahme herausgestellt.
+In dieser Arbeit wird die Qualität der Usability des neuen Dashboards mit dem alten System verglichen. In \autoref{ch:Stand der Forschung} werden für diese Arbeit relevante psychologische Grundlagen bezüglich der Umsetzung eines nutzerfreundlichen Designs vorgestellt, an dessen Prinzipien sich die Entwicklung des Dashboards orientiert. Außerdem wird eine Norm vorgestellt, die Definition der Usability-Dimensionen dient und die Grundlage der Qualitätsbewertung darstellt.
+In \autoref{ch:Problemstellung} wird das Thema der Arbeit umfassender eingeordnet, um gängige Probleme und Ansätze aufzuzeigen, welche die Forschung motivieren.
+Daraufhin wird in \autoref{ch:IST-Zustand} das Altsystem vorgestellt. Die Erfassung dessen Zustands, dient als Grundlage, um die Anforderungen an das neu zu entwickelnde Dashboard zu bilden. Das Dashboard sowie sein Designprozess werden in \autoref{ch:Erstellung Dashboard} vorgestellt. Dabei werden zusätzlich relevante Unterschiede zum Altsystem aufgezeigt.
+In \autoref{ch:Ergebnisse} wird der empirische Teil der Arbeit in Form einer Nutzerstudie zum Vergleich des Dashboards mit dem Altsystem durchgeführt. Hierfür werden Hypothesen auf Grundlage der Usability-Kriterien aufgestellt. Diese werden im Anschluss statistisch ausgewertet.
+Die Ergebnisse werden in \autoref{ch:Diskussion} zusätzlich zusammengefasst und umfassend analysiert, um die Ablehnung oder Akzeptanz der Hypothesen neu einzuordnen und im Forschungskontext auszuwerten. Daraufhin wird die Eignung des Dashboards als Modernisierungsmaßnahme herausgestellt.
 
 
 % https://www.scribbr.de/hausarbeit/satzanfaenge-hausarbeit/
