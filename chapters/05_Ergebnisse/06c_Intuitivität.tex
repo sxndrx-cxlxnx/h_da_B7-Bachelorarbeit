@@ -1,0 +1,27 @@
+\newpage
+%\section{Bewertung der Intuitivität des Dashboards (H$_{3}$) auf Grundlage der Effizienzbewertung}
+\subsection{Bewertung der Intuitivität des Dashboards auf Grundlage der Effizienzbewertung}
+\label{ch:Ergebnisse:Intuitivität}
+
+Das Dashboard liefert neben der Anzeige der Testergebnisse eine Zusammenfassung von Links, die zu weiteren Informationen führen, weshalb die \textit{Data-Ink-Ratio} (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}) auf der Dashboard-Oberfläche sehr niedrig ist. Allerdings liegt keine Vermischung verschiedener Daten vor. Die Ergebnisdaten, welche zentral gelegen und über alle Reihen im gleichen Bereich dargestellt sind, sind gut von den am Rand versammelten Zusatzinformationen unterscheidbar (s. \autoref{ch:Dashboard:sec:Aufbau}). Daher kann diese Data"=Ink"=Wertung 
+%Dadurch dass alle Ergebnisdaten zentral in dem gleichen Bereich der Oberfläche dargestellt und die Zusatzinformationen am Rand versammelt sind (s. \autoref{fig:aufbau_dashboard}), liegt keine Vermischung vor.
+vernachlässigt werden. Durch die Farbgestaltung der Werte kann zudem eine Einschätzung des Systemzustands ohne Fokus auf einzelne Werte erfolgen.
+
+Die Daten sind stark vereinfacht dargestellt, da dessen Details über diese Verlinkungen einsehbar sind. Dadurch sind Eigenheiten des Systems, welche Testergebnisse durch vorhandenes Hintergrundwissen potenziell übersehen werden dürfen, nicht so ersichtlich wie zuvor. Stattdessen zeigt die Erstellung des Dashboards solche Probleme auf und regt damit die langfristige Behebung dieser gewachsenen Strukturen an.
+
+Das Dashboard eignet sich durch die doppelte Funktion als Ergebnisanzeige und Dokumentation dazu, neuen Personen einen Überblick über das System zu verschaffen. Statt der Abkürzungen und Fachsprache wurden die Begriffe auf ein Minimum reduziert. Auch die Verlinkung zeigt primär an, zu welcher Art des Systems weitergeleitet wird, jedoch nicht die genauen Versionsnummern und Maschinennamen. Diese werden für die Bestätigung des Green Days nicht benötigt. Im Fehlerfall muss sowieso die Detailansicht aufgerufen werden, auf der diese Informationen schließlich zu finden sind. Alle nicht mehr genutzten Oberflächen wurden auf das neue System nicht übertragen, sodass lediglich die aktuell relevanten Inhalte angezeigt werden.
+
+%Um Schlüsse auf die Intuitivität des Dashboards zu ziehen, können die Ergebnisse der zuvor für die Hypothesenauswertung als nicht relevant erfasste Aufgaben 4.1 und 4.2 weiterhelfen.
+Um Schlüsse auf die Intuitivität des Dashboards zu ziehen, können die Ergebnisse der Aufgaben 4.1 und 4.2 weiterhelfen, welche zuvor für die Hypothesenauswertung als nicht relevant eingestuft wurden.
+Das System ist den Personen zwar bekannt, jedoch arbeiten sie kaum mit der spezifischen Oberfläche. Das Dashboard benötigt einen Bruchteil der Zeit und verursacht weniger Fehler. Obwohl der t-Test keine Signifikanz zeigt (s. \autoref{tab:Usability-Test:ttest_4.1+4.2}) ist eine klare Tendenz erkennbar, dass das Dashboard somit intuitiver nutzbar ist als das alte System.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|c|c||c|}
+    \hline
+        Aufgabe 1 + 2 & $\varnothing_{t\_alt}$ & $\varnothing_{t\_neu}$ & t-Test über $\varnothing_t$ & t-Test über Effizienzwerte \\ \hline
+        Werte & 27,08 & 13 & 0,0739 & 0,1709 \\ \hline
+    \end{tabular}
+    \caption{Usability-Test: Zeitmittelwerte und Signifikanzauswertung der Aufgaben 4.1 und 4.2 (Weiterverarbeitung der Daten aus \autoref{tab:Usability_Test:rohe_Daten}, \autoref{tab:usability_test:effizienz})}
+    \label{tab:Usability-Test:ttest_4.1+4.2}
+\end{table}

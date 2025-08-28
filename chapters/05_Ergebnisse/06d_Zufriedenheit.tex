@@ -11,7 +11,11 @@ Folgende Hypothese ist zu bestätigen:
 \end{quote}
 
 \noindent
-Das Spektrum der Antworten der Nutzerumfrage sind in \autoref{fig:pruemper_all} in Form eines Box-Plot zusammengefasst. Es ist eine Tendenz erkennbar, dass das neue System besser bewertet wurde. 
+\noindent
+Auf Grundlage der jahrezehntelangen Erfahrung mit dem alten System ist anhand der Befragung festzustellen, dass manche der Nutzer einer Modernisierung ihrer Routine teilweise sehr kritisch gegenüber stehen. Auch wenn das neue System anhand der Bewertung aus dem vorherigen Kapitel sehr intuitiv ist, folgt daraus nicht unbedingt, dass der Nutzer es mag. Das Spektrum der Antworten der Nutzerumfrage sind in \autoref{fig:pruemper_all} in Form eines Box-Plot zusammengefasst. Trotz einzelner Ausreißer ist eine klare Tendenz erkennbar, dass das neue System besser bewertet wurde.
+
+Diese grafische Tendenz bestätigt sich durch die Differenzen der Mittelwerte (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}). Das Ergebnis des alten Systems wurde von dem des neues Systems abgezogen. Da die Differenz bei jeder Frage positiv ausfällt, wurde das neue System insgesamt besser bewertet als das alte.
+ 
 
 \begin{figure}[H]
     \centering
@@ -20,11 +24,7 @@ Das Spektrum der Antworten der Nutzerumfrage sind in \autoref{fig:pruemper_all} 
     \label{fig:pruemper_all}
 \end{figure}
 
-\noindent
-Diese grafische Tendenz bestätigt sich durch die Differenzen der Mittelwerte (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}). Das Ergebnis des alten Systems wurde von dem des neues Systems abgezogen. Da die Differenz bei jeder Frage positiv ist, wurde das neue System insgesamt besser bewertet als das alte.
-
-
-\begin{table}[H]
+\begin{table}[h]
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
@@ -46,16 +46,12 @@ t-Test über alle $\varnothing$ & \multicolumn{5}{c|}{0,00000218748} \\ \hline
 \noindent
 Weiterhin weisen 80\% der Fragen anhand der t-Test-Ergebnisse (s. \autoref{fig:Nutzerbefragung:ttest+Signifikanzniveau}) sowie das Ergebnis des t-Tests über alle durchschnittlichen Werte (s. \autoref{tab:Nutzerbefragung:Differenz+ttest}) einen statistisch signifikanten Unterschied auf.
 
-\vspace{0.75cm}
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/pruemper_ttest.png}
     \caption{Nutzerbefragung - t-Test-Ergebnisse (Daten aus \autoref{tab:Nutzerbefragung:Differenz+ttest})}
     \label{fig:Nutzerbefragung:ttest+Signifikanzniveau}
 \end{figure}
-
-\vspace{0.75cm}
 
 % *******************************************************************
 %\input{chapters/06_Diskussion/ISO_Erwartungskonformität}
@@ -67,6 +63,8 @@ Weiterhin weisen 80\% der Fragen anhand der t-Test-Ergebnisse (s. \autoref{fig:N
 \noindent
 Die ISO-Prinzipien, die sich spezieller auf das Kriterium der Zufriedenheit beziehen, sind die Erwartungskonformität (s. \autoref{fig:pruemper_Erwartungskonformität}), die Steuerbarkeit (s. \autoref{fig:pruemper_Steuerbarkeit}) und die Benutzerbindung, welche nicht durch den Fragebogen repräsentiert wurde (s. \autoref{Add:Nutzerbefragung_Prümper:Begründung_Filterung}).
 
+Allgemein sind die Nutzer sehr zufrieden mit dem neuen Dashboard. 80\% der Fragen haben ein signifikant besseres Ergebnis bezüglich des Dashboards erhalten. Nach Ausfilterung der zwei Ausnahmen, welche die mit Abstand größte Expertise aufwiesen (s. \autoref{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Effektivität}), steigt dieser Wert auf 100\%.
+
 Auf Grundlage der vorliegenden Ergebnisse kann die Hypothese $H_3$ akzeptiert werden.
 
 \begin{figure}[H]
@@ -76,9 +74,29 @@ Auf Grundlage der vorliegenden Ergebnisse kann die Hypothese $H_3$ akzeptiert we
     \label{fig:pruemper_Erwartungskonformität}
 \end{figure}
 
+% ******************************************************************
+%           Subjektive Daten - Begründung Zufriedenheit
+% ******************************************************************
 \noindent
-Zusätzlich zu der detaillierten Bewertung der Systeme wurde auch abgefragt, für wie wahrscheinlich es die Teilnehmer halten, das Dashboard in Zukunft zu nutzen (s. \autoref{fig:DB_Nutzung:boxplot}). Da im Vergleich zu den anderen t-Tests nur eine Datenreihe vorliegt, wurde das Ergebnis mit Null paarweise, einseitig verglichen, also mit der neutralen Einstellung gegenüber beider Systeme. Auch dieses Ergebnis ist mit einem positiven Durchschnitt signifikant.
-Daher kann auch von diesem Ergebnis ausgehend die Hypothese $H_3$ akzeptiert werden.
+Abgeleitet von allen vorangegangenen Bewertungen gibt es keine Diskrepanz zwischen den objektiven Testergebnissen und der subjektiven Nutzererfahrung.
+
+Da die Stichprobe bis auf wenige Ausnahmen in Alter, Berufserfahrung und Expertise sehr homogen ausfällt, kann allerdings keine weitere Ableitung auf eine der moderierenden Variablen getätigt werden. 
+
+% Allgemein
+%Nutzer sind zufrieden damit\\
+%--> Es lässt sich zusammenfassend sagen, dass die Nutzer sehr zufrieden mit dem neuen Dashboard sind.\\
+%--> Prümper\\
+%--> Gibt es eine Diskrepanz zwischen Nutzen und Nutzbarkeit eines System (obj / subj)?\\
+%\textbf{Decken sich die Ergebnisse der Umfrage und des Tests?}\\
+%-	wie sich gemessene Werte und Umfrageergebnisse decken / bestätigen\\
+%-	Bewerten in jeder Nuance\\
+%  --> moderierende Variablen, Effizienz/Zeit, Effektivität/Genauigkeit, Umfrage\\
+%  --> alles in die Kategorien der ISO-Norm???\\
+
+%\noindent
+Zusätzlich zu der detaillierten Bewertung der Systeme wurde auch abgefragt, für wie wahrscheinlich es die Teilnehmer halten, das Dashboard in Zukunft zu nutzen (s. \autoref{fig:DB_Nutzung:boxplot}). Da im Vergleich zu den anderen t-Tests nur eine Datenreihe vorliegt, wurde das Ergebnis mit Null paarweise, einseitig verglichen, also mit der neutralen Einstellung gegenüber beider Systeme. Bis auf die selben zwei Personen, die ein klares 'nein' antworteten, haben alle weiteren Testpersonen mit 'eher ja' und 'ja' geantwortet. Auch der t-Test bestätigt eine statistische Signifikanz dieser Aussage. Dieses Ergebnis ist daher mit einem positiven Durchschnitt statistsich signifikant.
+
+Ausgehend von diesem Ergebnis kann auch die Hypothese $H_3$ akzeptiert werden.
 
 \begin{table}[H]
     \centering
