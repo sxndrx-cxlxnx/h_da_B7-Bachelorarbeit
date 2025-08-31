@@ -1,0 +1,244 @@
+\chapter{Mitschriften von Mitarbeiteraussagen während der Befragung und des Usability-Tests}
+\label{Add:Mitschriften_Mitarbeiteraussagen}
+
+% https://tex.stackexchange.com/a/39645
+\lstset{literate=%
+    {Ö}{{\"O}}1
+    {Ä}{{\"A}}1
+    {Ü}{{\"U}}1
+    {ß}{{\ss}}1
+    {ü}{{\"u}}1
+    {ä}{{\"a}}1
+    {ö}{{\"o}}1
+}
+
+\begin{lstlisting}[language={[LaTeX]TeX},inputencoding={utf8}]
+Zusammenfassung: Feedback / Wünsche für das Dashboard:
+- Security Error beim öffnen von Grafana
+- die letzte Spalte [test_cat_5] kann statt des Kürzels Namen [...] bekommen - ID 4
+- 2. Dashboard wurde oft nicht wahrgenommen / vergessen / nicht mehr gefunden später
+- die ignorierten Werte können aus der Ansicht rausgenommen werden
+- Layout verrutscht bei größeren Werten (Bsp.: "529", "crashed")
+- Tree-verwöhnt - "warum werden die  anderen Dashboards nicht als tree angezeigt?"
+  --> Breadcrumbs/Pfadangabe reichen nicht aus
+- DB-Benennung (dev) aus dem alten System übernommen -> aktuelle Version!
+- Darkmode - gibts Grafana im Lightmode?
+- hellgrauen Kasten um die zusammengehörigen Zahlen einer Kategorie machen
+- Datumsauswahl gibt es schon
+  --> ABER: wie sich das Ergebnis von gestern auf heute geändert hat
+      (nicht aber von gestern auf vorgestern)
+  --> allgemein Verlaufsgrafiken der letzten 14 Tage
+- Grafiken einbauen, statt nur Zahlen
+  --> erst ab Verlaufsdaten möglich
+
+=======
+
+Zusammenfassung: Green Day (Aufgabe 1) Begründungen:
+- nein
+  --> es sind nicht alle Tests grün / 0 / fehlerfrei
+- ja
+  --> bekannte Fehler - Bsp. Timingproblem in der Testumgebung
+  --> TUI Umgebung wird nicht beachtet (sehr instabile Tests)
+  ==> Wissen benötigt, was ignoriert werden darf - es sollte langfristig lieber die Testumgebung aufgeräumt werden
+
+=======
+
+Testperson 1:
+-------------
+altes System:
+- nutzt das seit 30+ Jahren
+- "ich mache mir jeden Morgen 20 [Oberflächen / Tabs] auf" - "komme in 3 Minuten durch"
+  --> muss täglich viele der Ergebnisse durchschauen
+  --> ist mit für die Wartung zuständig
+- seit 2023 haben die Kollegen was noch nicht gefixt - Verschiebung
+- "ich habe eine Vorgehensweise wie ich das alles lese"
+  --> "fotografischer Blick"
+Dashboard:
+- "ich muss wirklich lesen, ich habe den Eindruck, dass ich sonst nicht mehr lese, wenn ich die [Oberflächen des alten System] durchgucke"
+- "das ist jetzt in Spalten angeordnet, was vorher in Zeilen war"
+
+Testperson 2:
+-------------
+- macht das noch länger als [Testperson 1]
+altes System:
+- Green Day: "nach den Regeln der Kunst nein, aber mit beiden Augen zudrücken ja"
+- Anfang war nur die BUILD-Kategorie
+  --> ist immer weiter gewachsen, man übersieht auch gerne mal eine Zahl
+  --> für den groben Überblick gut geeignet
+Dashboard:
+- gut, irritiert hat: das Zeilen Spalten vertauscht sind
+- deutlich einfacher, als das andere, ob noch Tests fehlen
+- durch das simplifizieren der Ausgabe
+
+Testperson 3:
+-------------
+altes System:
+- ist ein Green Day mit Spezialwissen
+- 30 Jahre mit [altes System] und Jenkins
+- standardmäßig 5 Tabs (nächtlich laufend) - auf den ersten Blick bearbeitbar
+- "viele alte Information und vieles führt ins Leere"
+Dashboard:
+- neues Dashboard natürlich erstmal gewöhnungsbedürftig
+- Dashboard hat verwirrt, ist einiges an Information drauf
+  --> viele Information die man vorher (im [altes System]) erstmal nicht beachtet/ausblendet
+  --> man muss sich neu daran gewöhnen
+- Zahlen sind sehr groß (man sieht zu wenig auf einmal)
+
+Testperson 4:
+-------------
+altes System:
+- Green Day - kann er nicht eindeutig erkennen
+  --> nur [Testperson 3] weiß ob angezeigte Fehler in [test_cat_3] eine Relevanz haben
+  --> genauso bei einem anderen System [kein Part des untersuchten Use-Cases]
+  --> ohne das Wissen ist kein Green Day
+- Maskenwechsel: "ich mache das mit den Tabs da geht das relativ schnell"
+  --> gemeint: Tableiste ist links im Browser - Tabs untereinander aufgelistet
+  --> Anmerkung Autorin: "ja aber sind viele Tabs und alle kryptisch benannt"
+- hat für jede Version den Testpool abgespeichert
+  --> auf VM, läuft 24/7
+  --> ist alles gruppiert in Lesezeichen
+Dashboard:
+- "ist man gar nicht gewohnt so ein Comfort"
+- wenn man in einem Dashboard ist sieht man die anderen nicht
+  --> es gibt keine Tree-Funktonion, aber Breadcrumbs sind da
+- schnell erlernbar, nicht vergleichbar
+- wenn man sich 1-2 Tage einfindet, ist es super
+- Wunsch: Overview über die einzelnen Versionen und deren aktuellen Zustand
+  --> in der DB Liste: Overview OK oder nicht [wurde noch nicht geprüft ob technisch umsetzbar]
+
+Testperson 5:
+-------------
+altes System:
+- Green Day: sieht ok aus, nur die [test_cat_3] Tests - ja
+Dashboard:
+- findet gut dass man sich die Rechner nicht merken muss
+- das Dashboard zu haben findet er gut
+  --> Farbcodierung
+  --> einheitliche UI/Navigieren
+  --> filtert die unwichtigen Details aus
+  --> anders sortiert, leichter zu verstehen
+- "Darkmode mögen jüngere lieber"
+- Grafiken einbauen, statt nur Zahlen
+  --> erst ab Verlaufsdaten sinnvoll möglich - noch nicht implementiert
+
+Testperson 6:
+-------------
+altes System:
+- wenn rot ist das kein GreenDay
+  --> er arbeitet aber auch nicht damit [mit explizit diesem System, aber dem Testpool], kann das nicht einschätzen
+- eigentlich müsste man die Sachen kontinuierlich verbessern, als das es irgendwann heißt jetzt ein halbes Jahr um alles Umzukrempeln
+  --> er hätte statt einem Executable einen REST mit React irgendwie geschrieben, was das von sich aus schon anders aufbaut
+Dashboard:
+- Beschreibung der Versionen ist besser
+  --> statt Keys, oder Maschinen durchklickt
+- Wunsch: soll man direkt drauf kommen von der Startseite, nicht erst über den Reiter
+  --> Anmerkung Autorin: wird Grafana aufgerufen, muss sich (nach aktuellem Stand) zuerst angemeldet werden, dann den Reiter "Dashboards" auswählen und schließlich das richtige Dashboard aus der Liste (bestehend aus aktuell 2 DBs) anklicken
+- man erkennt dass es ein Framework ist, mit dem man einiges mehr machen kann
+  --> die Werbung ist unschön
+
+Testperson 7:
+-------------
+altes System:
+- Green Day: ja, aber ist eine Definitionsfrage
+-> kommt auf die erfahrung an -> build, Batch und wichtige Tests waren ok
+-> nur unwichtige und bekannte tests waren rot
+neues System:
+- findet gut:
+  --> Farbgebung gut - Errors rot und pending so gelb-artig (Modi gut unterscheidbar)
+  --> [altes System] muss man 2x klicken, deswegen DB besser
+  --> aufklappen / reihen, findet er gut, geht im scresult nicht (war damals vor 20 Jahren Top-aktuell)
+- Zahlen kleiner machen, dass man die 2 Modi nebeneinander / auf einen Blick sieht
+  --> Anmerkung Autorin: ist via zoom machbar, dass 2 Reihen auf einmal sichtbar sind
+
+Testperson 8:
+-------------
+- ist eher für [anderes System; kein Part des Use-Case] verantwortlich, kennt sich nur grob aus
+altes System:
+- Green Day: nein "Tests haben err"
+  --> weil es rot leuchtet
+- scresult Codes sind random, weiß man nicht
+  --> hat die Links als Shortcuts und richtig benannt, macht das Dashboard besser
+  --> Anmerkung Autorin: "Codes" = [altes System: Version, Maschine_1]
+Dashboard:
+- intuitivere Titel für Reihen, statt Codes (s. altes System)
+- untersch. DBs waren nicht direkt ersichtlich, aber mit mehr Praxis, gewöhnt man sich dran
+
+Testperson 9:
+-------------
+altes System:
+- Green Day: viele Sachen laufen immer rot
+  --> bedeutet nein, weil 4 Fehler / rote Anzeigen
+    ----> GD = wenn die Seite green ist oder muss anders definiert sein
+    ----> wenn was nicht wichtig wäre müsste es eigentlich rausgenommen werden
+  --> "ich als Laie, würde das sagen"
+- "es tendieren manche dazu, wenn ein Test länger rot ist, ihn zu ignorieren"
+- esotherische Tests, die noch nie eine Rolle gespielt haben
+  --> beim Kunden läuft es seit Jahrzehnten stabil, muss man pragmatisch sehen
+  --> unterscheiden zwischen:
+    ----> fehlerhaften Tests, die nicht einfach zu fixen sind
+    ----> und den Altlasten, die seit Jahren nicht angefasst wurden und "ignoriert" werden können
+- Umfrage: "das ist fies" [die bekannten / ignorierten Probleme so offensichtlich abzufragen]
+  --> bekannte / offensichtliche / ignorierte Probleme
+  --> neues Tool ist herausgehoben
+Dashboard:
+- DB sehr gut / übersichtlich, aber man muss sich einarbeiten
+- Abkürzungen sind gewöhnungsbedürftig, wenn man nicht regelmäßig damit arbeitet
+  --> [soll teilweise noch durch bessere Begriffe ausgetauscht werden]
+- "ignored" evtl. auf neuen Tab, nimmt zu viel Platz weg für die Übersicht
+
+Testperson 10:
+--------------
+altes System:
+- kein Green Day 
+  --> das ist rot, also muss Fehler
+
+Testperson 11:
+--------------
+- es gibt 2 Maschinen
+  --> nur das was auf der [Maschine 1] gebaut wird, wird an den Kunden ausgeliefert
+  --> [Maschine 2] ist nur für die Tests
+  --> Anmerkung Autorin: diese wurden hier als Modi bezeichnet, da zwei verschiedene Modi auf jeweils einer der Maschinen getestet wird
+altes System:
+- Green Day: unwahrscheinlich -> Fehler + CORE
+  --> "ich müsste es als GreenDay bewerten" - auch wenn es das nicht ist
+- Aufgabe 3: Kategorie gemeint - einer der Tests wurde angesehen
+  --> wenn [Test] faul ist, braucht man die anderen nicht mehr angucken
+  --> bauen auf dem ersten auf
+- macht jeden Tag 14 Tabs auf
+  --> befasst sich mehr mit den Windows-Tests, nicht so sehr mit dem Use-Case
+  --> "das gefällt mir mit den Tabs gut, dass mache ich immer so"
+- [Fehler]: ist seit 20 Jahren, kommt immer mal an einer anderen Stelle auf
+  --> kommt fast jeden Tag
+- jeder [Test-Prozess], muss seine Ergebnisse selber auf die Seite in Text schreiben
+  --> braucht etwas zu lange, können sie sich die Ergebnisse gegenseitig wegschreiben
+- altes System = results von source-control
+  --> das ist ein ganz dummes Tool, das macht nicht viel
+Dashboard:
+- Übergang zwischen Dashboards: "finde ich schwierig: ein Dashboard ist offen, [das andere] gar nicht mehr im Blick gehabt"
+- Namen brauchen viel Platz
+- [Modus-Namen] nicht so geläufig - eher verwirrend gewesen
+- kann die Hilfe nicht geben, die es bräuchte, um die Tests auszuwerten
+  --> Unterschied zum Vortag
+- 2 Fehler hast du immer
+  --> nicht direkt erkennbar, ob relevant oder nicht [Anmerkung Autorin: dann sollte die Umgebung angepasst werden]
+  --> Liste der deaktivierten Tests (Konzept funktioniert nicht, keiner geht die Liste durch um zu sehen, welche evtl. wieder funktionieren) - [wurden in "ignored" aufgelistet]
+- Wunsch: 
+  --> Datumsauswahl gibt es im alten System schon [im neuen noch nicht]
+  --> ABER: wie sich das Ergebnis von gestern auf heute geändert habe (nicht aber von gestern auf vorgestern, das wäre zu dem Zeitpunk bereits bekannt)
+
+Testperson 12:
+--------------
+- ist für einen ganz anderen Kontext zuständig (UI, Weboberfläche)
+  --> Daten wurden aus allen Auswertungen rausgenommen
+altes System:
+- Green Day: nein, weil rot in der Tabelle sichtbar
+- Aufgabe 3: "man kann nur raten - es ist nicht rot markiert"
+--> könnte alles sein, müssen keine Fehler sein, die angezeigt werden
+- es wäre was gutes, wenn man nicht voraussetzt, dass ein Fachfremder das nicht versteht
+Dashboard:
+- Dashboard ist falsch benannt
+- Aufbereitung ist super, intuitiv, ist genau wie man sich das vorstellt
+
+\end{lstlisting}
+
+% TODO: Bilder neu einfügen mit ID 11 statt 12 (UT + NB)
