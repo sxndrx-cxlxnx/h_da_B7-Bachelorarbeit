@@ -18,16 +18,20 @@ Nachfolgend wird auf die einzelnen Methoden des Usability-Tests sowie der Nutzer
 
 Die Aufgabenstellung für den Usability-Test ist zusammenfassend nicht ideal aufgestellt worden. Der begrenzte Umfang des neuen Prototypen ermöglichte eine limitierte Auswahl an möglichen Aufgaben. Es hätte zudem besser darauf geachtet werden können, dass die Ergebnisse einzelner Aufgaben relevantere Rückschlüsse für den Arbeitsalltag ermöglichen.% Zudem hat sich herausgestellt, dass zwei Drittel der Aufgaben kaum Relevanz für Rückschlüsse auf den Arbeitsalltag bieten.
 
-Da anhand der variablenreichen Umgebung viele Details in die Aufgabenstellungen aufgenommen werden mussten, war es schwierig, diese kurz und verständlich zu bilden. Dadurch wurden teilweise wichtige Informationen zur Beantwortung überlesen. Zudem konnten auf Grundlage der Systemvorgaben einzelne Aufgaben unterschiedlich interpretiert werden. Obwohl dies aufzeigt, dass die Legacy-Struktur nicht intuitiv genug ist und somit überarbeitet werden sollte, sind dies ungünstige Umstände für eine statistische Auswertung.
+Da anhand der variablenreichen Umgebung viele Details in die Aufgabenstellungen aufgenommen werden mussten, erwies es sich als schwierig, diese kurz und verständlich zu bilden. Dadurch wurden teilweise wichtige Informationen zur Lösung der Aufgaben überlesen. Zudem konnten auf Grundlage der Systemvorgaben einzelne Aufgaben unterschiedlich interpretiert werden. Da für die zweite Antwort keine Vorgabe existiert, gestaltet sich die statistische Auswertung schwierig, weil Daten zur Betrachtung der Fehlerquote fehlen. In diesem Fall wurden alle fehlerhaft abgelesenen Werte als Fehler markiert, da dies aufzeigt, dass die Legacy-Struktur nicht intuitiv genug ist und somit überarbeitet werden sollte.
 
 Dies führte auch weiterhin zu einer Einschränkung in der Auswertung der Zeitergebnisse.
 Da einige Nutzer mehrfach die Oberfläche wechseln mussten, um die Frage erneut zu lesen, wurde ausschließlich der letzte Wert ab dem Öffnen der Ergebnisanzeige bis zum Zurückwechseln zum Fragebogen aufgezeichnet. Ungenauigkeiten sind daher nicht auszuschließen.
 
 Ungünstigerweise wurden die zusammenhängenden Aufgaben von 3 und 4 jeweils auf der gleichen Seite erfragt. Möglicherweise wurden dadurch auch Daten vom Nutzer vertauscht. Auch die Zeitauswertung konnte dahergehend nicht ideal umgesetzt werden. Da jedoch beide Werte gefragt waren, wurden sie auch in umgekehrter Reihenfolge als richtig akzeptiert.
 
-Alle Unterschiede des Aufbaus wurden in die Konzeption des Usability-Tests aufgenommen (s. \autoref{Add:Usability_Test:Begündung_Filterung}). %Zwar müssen im Altsystem viele Oberflächen überblickt werden, dieser Umfang war im Test jedoch nicht gegeben.
-Im Altsystem müssen die Nutzer viele Oberflächen überblicken können. Beim Test war dieser Umfang jedoch nicht gegeben, da der Prototyp unvollständig ist und bisher zwei der Fälle darstellt (s. \autoref{ch:Dashboard:sec:Aufbau}).
-Stattdessen wurde häufiger vergessen, dass die benötigten Informationen auf zwei Dash\-boards zu finden sind. Anhand des Aufbaus von Grafana mit dessen Pfadangabe ist dies nicht ersichtlich.
+Alle Unterschiede des Aufbaus wurden in die Konzeption des Usability-Tests aufgenommen (s. \autoref{Add:Usability_Test:Begündung_Filterung}). Im Altsystem müssen die Nutzer viele Oberflächen überblicken können. Beim Test war dieser Umfang jedoch nicht gegeben, da der Prototyp unvollständig ist und bisher zwei der Fälle darstellt (s. \autoref{ch:Dashboard:sec:Aufbau}).
+Stattdessen wurde häufiger vergessen, dass die benötigten Informationen auf zwei Dash\-boards zu finden sind.
+
+% Aufgabe 4 - Fehler
+% aufgrund der Funktionalität des Dashboards (?)
+% von Elisabeth: \\ TODO
+% Ich finde keine Aufgabenbeschreibung, wenn die Aufgaben in dem Sinne unterschiedlich sind, dass sie einmal nur ablesen und einmal zusammenrechnen sind, und dein Dashboard das macht und man auch nur ablesen muss, dann ist das der Grund, warum da weniger Fehler passieren. Es liegt also nicht wirklich an der Visualisierung oder Gestaltung, sondern an der Funktionalität des Dashboards (Inhalt für Reflexion)
 
 % **********************************************************
 %           Nutzerbefragung
@@ -35,7 +39,7 @@ Stattdessen wurde häufiger vergessen, dass die benötigten Informationen auf zw
 \subsection{Reflexionen in Bezug auf die Nutzerbefragung}
 \label{ch:Diskussion:}
 
-Da mit dem Anwendungsfall des täglichen Testpoolmonitorings der Fokus auf der Usability liegt, mussten viele Fragen aus der Nutzerbefragung gestrichen werden. Sie hätten eine umfangreichere Einordnung ermöglichen können.
+Die nutzerbefragung erfolgte auf der Grundlage eines geprüften und etablierten Fragebogens \cite{Pruemper:Fragebogen-S:2006:Paper}. Da mit dem Anwendungsfall des täglichen Testpoolmonitorings der Fokus auf der Usability liegt, mussten viele Fragen aus der Nutzerbefragung gestrichen werden. Sie hätten eine umfangreichere Einordnung ermöglichen können.
 
 Es sind weiterhin vereinzelt Werte entfallen. Die Auswahl des Umfragetools Survio ist rückblickend nicht geeignet, um viele Skalenauswertungen untereinander durchzuführen. Da die Beschriftung der Skala entgegen der allgemeinen Intuition unterhalb steht (s. \autoref{fig:fragebogen_prümper}), sind einige Testpersonen in der Zeile verrutscht. Die Daten wurden über die Aufnahmen der Meetings nachträglich ermittelt. Hat der Teilnehmer die Fragen während der Beantwortung mit vorgelesen, konnten die Daten zumeist richtig zugeordnet werden. Allerdings wurden so auch Fragen übersehen. Obwohl letztendlich nur vier Werte fehlen, entfallen diese gemeinsam mit ihrem Pendant bei der Durchführung des paarweisen t-Test. Bei dieser kleinen Stichprobe können fehlende Daten ein Problem bezüglich der Aussagekraft stellen.
 
