@@ -4,38 +4,38 @@
 \subsection{Methoden zur Modernisierung anhand unterschiedlicher Eingriffstiefe in das Legacy-System}
 \label{ch:SdF:Legacy:sec:Methoden}
 
-im vorherigen Kapitel wurde dargestellt, dass Modernisierungen nicht nur als Maßnahme selbst, sondern gut begründet umgesetzt werden sollten. Ziel ist, das System zu verbessern. Ein System welches ausschließlich auf eine neue Technologie übertragen wurde, kann dabei die historisch gewachsene Struktur übernehmen und genauso unübersichtlich erscheinen wie zuvor \cite{FlorianStocker:2024}.
+im vorherigen Kapitel wurde dargestellt, dass Modernisierungen nicht nur als Maßnahme selbst, sondern gut begründet umgesetzt werden sollten. Ziel ist, das System zu verbessern. Ein System, welches ausschließlich auf eine neue Technologie übertragen wurde, kann dabei die historisch gewachsene Struktur übernehmen und genauso unübersichtlich erscheinen wie zuvor \cite{FlorianStocker:2024}.
 
-% Replattforming
-Nach einer \textcolor{red}{Umfrage / Studie} von Kannenberg setzen 72\% auf \textbf{Replattforming}, also die Umstellung des eigenen Systems auf eine neue Anwendung. Damit ist häufig die Migration in die Cloud gemeint.
+% Replatforming
+Nach einer \textcolor{red}{Umfrage / Studie} von Kannenberg setzen 72\% auf \textbf{Replatforming}, also die Umstellung des eigenen Systems auf eine neue Anwendung. Damit ist häufig die Migration in die Cloud gemeint.
 Ingesamt 72\% der Unternehmen wechseln auf On-Premise oder private Cloudlösungen, um nicht von anderen Konzernen abhängig zu sein \cite{AxelKannenberg:2025}.
 Da moderne Cloudlösungen durch den Umfang an Servern und Komponenten eher mehr Komplexität mit sich bringen als zuvor, empfiehlt Stocker, Fachkräfte mit Erfahrung im Cloudbetrieb bereitzustellen \cite{FlorianStocker:2024}. 
 
 % Modularisieren
-Knapp 80\% der Unternehmen setzen auf modulare Architekturen \cite{AxelKannenberg:2025}. Die \textbf{Modularisierung} beschreibt die Auslagerung von Codesegmenten in Helferfunktionen. Diese ist eine wichtige Methode zur Simplifizierug, große, umfangreiche Methoden zu zerteilen. Ziel ist es, die Kernelemente überschaubarer zu gestalten und vor allem Code Dopplungen in Module auszulagern, die mit der Zentralfunktion interagieren. Einen weiteren Aspekt der Zerteilung stellt die Aufteilung eines Systems in seine Komponenten dar, welche über feste Schnittstellen miteinander interagieren.
+Knapp 80\% der Unternehmen setzen auf modulare Architekturen \cite{AxelKannenberg:2025}. Die \textbf{Modularisierung} beschreibt die Auslagerung von Codesegmenten in Helferfunktionen. Diese ist eine wichtige Methode zur Simplifizierug, große und umfangreiche Methoden zu zerteilen. Ziel ist es, die Kernelemente überschaubarer zu gestalten und vor allem Code Dopplungen in Module auszulagern, die mit der Zentralfunktion interagieren. Einen weiteren Aspekt der Zerteilung stellt die Aufteilung eines Systems in seine Komponenten dar, welche über feste Schnittstellen miteinander interagieren.
 Diese Aufteilung ermöglicht es dem System, flexibel Funktionalitäten anzupassen, ohne das Verhalten anderer Komponenten zu beeinflussen.
 \cite{AxelKannenberg:2025, ElMorabea:2021, Stantchev:2010}
 
-Um eine Anwendung zu modularisieren gibt die Möglichkeit, das System neuzuschreiben (\textit{rewrite}) oder zu überarbeiten und umzustrukturieren (\textit{refactor}) \cite{ElMorabea:2021}.
+Um eine Anwendung zu modularisieren, gibt es die Möglichkeit, das System neu zu schreiben (\textit{Rewrite}) oder zu überarbeiten und umzustrukturieren (\textit{refactor}) \cite{ElMorabea:2021}.
 
 % Rewrite
-47\% der Unternehmen nutzen die Strategie \textbf{rewrite} oder auch \textbf{rebuild} genannt \cite{AxelKannenberg:2025}. Diese bauen ihr System von Grund neu auf und strukturieren es anhand der Erkenntnisse aus dem alten System. Ziel ist es, das alte System vollständig zu ersetzen.
-Allerdings ist dieser Ansatz sehr invasiv und benötigt ein hohes Investment und ist mit einem entsprechend hohen Risiko verbunden. Entweder muss die Bearbeitung des alten Systems pausiert werden, bis das neue System vollständig einsatzfähig ist, oder der Arbeitsaufwand verdoppelt sich, indem beide System parallel betrieben werden.
+47\% der Unternehmen nutzen die Strategie \textbf{Rewrite} oder auch \textbf{Rebuild} genannt \cite{AxelKannenberg:2025}. Diese bauen ihr System von Grund neu auf und strukturieren es anhand der Erkenntnisse aus dem alten System, mit dem Ziel, das alte System vollständig zu ersetzen.
+Allerdings ist dieser Ansatz sehr invasiv, benötigt ein hohes Investment und ist mit einem entsprechend hohen Risiko verbunden. Entweder muss die Bearbeitung des alten Systems pausiert werden, bis das neue System vollständig einsatzfähig ist, oder der Arbeitsaufwand verdoppelt sich, indem beide Systeme parallel betrieben werden.
 Quaisser sagt, dass große ‘Big-Bang-Projekte’ nie wirklich erfolgreich gewesen seien [zitiert nach \cite{FlorianStocker:2024}]. Dieser Ansatz hat große Nachteile, wodurch er zumeist nicht umsetzbar ist. Es werde ein Parallelbetrieb (Koexistenzphase) benötigt, bis alles migriert, modernisiert und abgelöst ist \cite{FlorianStocker:2024}.
 \cite{AxelKannenberg:2025, Feathers:2013, ElMorabea:2021, Stantchev:2010}
 
 % Refactor
-Das \textbf{Refactoring} (dt. Umgestaltung) ist ein sukzessiver Prozess zur Code-Optimierung, den 64\% der Unternhemen als Modernisierungsstrategie nutzen \cite{AxelKannenberg:2025}. 
+Das \textbf{Refactoring} (dt. Umgestaltung) ist ein sukzessiver Prozess zur Code-Optimierung, den 64\% der Unternehmen als Modernisierungsstrategie nutzen \cite{AxelKannenberg:2025}. 
 % Draw Backs
-Es ist ein langsamer Prozess und benötigt ein gewisses Fähigkeitslevel der Entwickler, einem systematischen Plan zu folgen, da dieser andernfalls zu neuen Fehlern führen kann.
+Es ist ein langsamer Prozess und benötigt ein hohes Fähigkeitslevel der Entwickler, einem systematischen Plan zu folgen, da dieser andernfalls zu neuen Fehlern führen kann.
 % erlaubt Code zu verbessern/verändern, ohne Verhalten zu ändern
-Jedoch erlaubt das Refactoring, Code zu verbessern und umzustrukturieren, ohne das Verhalten zu beeinflussen. Dadurch kann eine Modularisierung im eigenen Rhythmus gewährleistet werden, ohne die Einführung neuer Features währenddessen zu verhindern. Dabei ist es wichtig, sich beizubehalten, dass nicht immer die perfekte Lösung gesucht wird. Die subjektive Code-Qualität darf sich verschlechtern, wenn dadurch eine Verbesserung des Code-Zustand erreicht werden kann.
+Jedoch erlaubt das Refactoring, den Code zu verbessern und umzustrukturieren, ohne das Verhalten zu beeinflussen. Dadurch kann eine Modularisierung im eigenen Rhythmus gewährleistet werden, ohne die Einführung neuer Features währenddessen zu verhindern. Dabei ist es wichtig, dass nicht immer die perfekte Lösung gesucht wird. Die subjektive Code-Qualität darf sich verschlechtern, wenn dadurch eine Verbesserung des Code-Zustands erreicht werden kann.
 % low alles
-Das Refactoring ist somit eine Modernisierungsstrategie, welche wenig Investment benötigt, kaum Risiko birgt und somit einen Ansatz mit kaum Auswirkungen darstellt.
+Das Refactoring ist somit eine Modernisierungsstrategie, welche wenig Investment benötigt, kaum Risiko birgt und somit einen Ansatz mit wenig Auswirkungen darstellt.
 % needs Tests
-Um sicherzustellen, dass durch diesen Prozess kein Code-Verhalten ungewollt verändert wird, werden Tests benötigt, welche das gewünschte Verhalten durchgehend bestätigen
+Um sicherzustellen, dass sich durch diesen Prozess kein Code-Verhalten ungewollt verändert, werden Tests benötigt, welche das gewünschte Verhalten durchgehend bestätigen
 \cite{ElMorabea:2021, Feathers:2013}.
 
 % allgemein / besser machen
-Insgesamt wird empfohlen, Systeme in kleinen Schritten zu modernisieren. Dabei sollte der Fokus auf der Funktion der Komponenten und deren Interaktion liegen. In Form von Routinen, kann eine kontinuierliche und zukunftsorientierte Verbesserung stattfinden, welche den Zustand schrittweise verbessern. Ein Anfang stellt das Umstrukturieren für den Überblick sowie das Aufbrechen von Funktionen und Abhängigkeiten dar, welche langfristig dabei unterstützen, die Code-Komplexität zu verringern. Weiterhin kann dies dabei helfen, den Code umfangreich testen zu können (s. \autoref{ch:SdF:Legacy:sec:TestPyramide})
+Insgesamt wird empfohlen, Systeme in kleinen Schritten zu modernisieren. Dabei sollte der Fokus auf der Funktion der Komponenten und deren Interaktion liegen. In Form von Routinen kann eine kontinuierliche und zukunftsfähige Verbesserung erreicht werden. Ein Anfang stellt das Umstrukturieren für den Überblick sowie das Aufbrechen von Funktionen und Abhängigkeiten dar, welche langfristig dabei unterstützen, die Code-Komplexität zu verringern. Weiterhin kann dies dabei helfen, den Code umfangreich testen zu können (s. \autoref{ch:SdF:Legacy:sec:TestPyramide})
 \cite{Feathers:2013, NadineRiederer:2022}.

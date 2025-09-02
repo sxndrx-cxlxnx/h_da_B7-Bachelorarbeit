@@ -1,11 +1,11 @@
-\section{\textcolor{Plum}{Vollständiger Aufgabenkatalog des Usability-Tests}}
+\section{Vollständiger Aufgabenkatalog des Usability-Tests}
 \label{Add:Usability_Test:Aufgabenkatalog}
 
-\begin{table}[]
+\begin{table}[H]
     \centering
     \begin{tabular}{ll}
-        Aufgabe 1   & Haben wir heute einen Green Day im nicht-HA-Modus \\
-                    & der Dev-Version (qe8)?\\
+        Aufgabe 1   & Haben wir heute einen Green Day im [Modus] \\
+                    & der Dev-Version ([Maschine])?\\
                     &  Wenn nein, warum?\\
         Aufgabe 2   & Wie viele BUILD-Fehler weisen die Dev-Versionen auf?\\
         Aufgabe 3.1 & Wie viele Fehler weist die [test\_cat\_3] in der älteren\\
@@ -18,67 +18,132 @@
 \end{table}
 
 % *******************************************************
-\section{\textcolor{Salmon}{Begründung zur Auswahl und Reihenfolge der Aufgaben des Usability-Tests}}
+\section{Begründung zur Auswahl und Reihenfolge der Aufgaben des Usability-Tests}
 \label{Add:Usability_Test:Begündung_Filterung}
-\textcolor{red}{TODO: unvollständig}\\
 
+%•	alle erwarteten Daten können durch eine klare Zahl im neuen System abgelesen werden
+%•	es muss im neuen System nicht gezählt oder zusammengerechnet werden
+%•	die Farbgestaltung im neuen System ist einheitlich gewählt
+%•	es wurden verschiedene Methoden der Informationsdarstellung abgefragt
+%•	den täglich benötigten allgemeinen Status der Tests
+%•	die Abfrage verschiedener Varianten von absoluten Werten
+%o	dessen Ergebnisse jeweils unterschiedlich abzulesen sind
+%o	und von verschiedenen Systemen nicht zu verwechseln sind
+%•	sowie den Wechsel zwischen den beiden Dash\-boards.
+%\noindent
+%$\Rightarrow$ Alle oben genannten Gründe sind der angenommene Idealzustand. Ob das erfolgreich umgesetzt wurde zeigen die Ergebnisse (s. \autoref{ch:Ergebnisse})\\
+
+\textbf{Legende}: AS – altes System; DB – Dashboard\\
+\textbf{Vorgabe}: alle benötigten Links zu den abgefragten Oberflächen
 \begin{itemize}
-    \item alle erwarteten Daten können durch eine klare Zahl im neuen System abgelesen werden
-    \item es muss im neuen System nicht gezählt oder zusammengerechnet werden
-    \item die Farbgestaltung im neuen System ist einheitlich gewählt
-    \item es wurden verschiedene nicht-einheitliche Methoden der Informationsdarstellung abgefragt
+    \item im AS (tagesaktuell): 2x Develop, 2x Release
+    \item auf dem DB (äquivalenter Inhalt mit gemockten Werten): 1x Develop, 1x Release
+\end{itemize}
+\textbf{Ziel}: Abdeckung des Tagesgeschäfts sowie der Inhalte der Nutzerbefragung zur anschließenden Bewertung der Eignung
+\begin{itemize}
+    \item Frage 1, 2, 6, 7, 8, 9 und 10 - zur allgemeinen Einschätzung
+    \item Frage 4 - in Form von verschiedenen Aufgabentypen zur Darstellung der Uneinheitlichen Gestaltung des alten Systems
+    \item Die Fragen 3 und 5 - anhand der Systemwechsel zu Aufgabe 3 und 4
+\end{itemize}
+
+\newpage
+\noindent
+\textbf{Aufgabe 1}
+\begin{itemize}
+    \item Begründung: Dieser Status wird täglich abgefragt.
+    \item Aufgabe: Haben wir heute einen Green Day im [Modus] der Dev-Version ([Maschine])?\\
+            Wenn nein, warum?
+    \item erfragtes Ergebnis
+    \begin{itemize}
+        \item AS: Überblick auf zwei Oberflächen, ob rote Felder mit ‚ERR‘ oder Zahlen != Null
+        \item DB: je ein roter Wert in zwei Reihen zum Ablesen
+    \end{itemize}
+    \item Ziel:
+    \begin{itemize}
+        \item Start einer Diskussion, da die Aufgabe 2 mögliche Lösungen hat
+        \item Aufmerksamkeit auf Ungenauigkeit im alten System lenken
+    \end{itemize}
 \end{itemize}
 
 \noindent
-$\Rightarrow$ Alle oben genannten Gründe sind der angenommene Idealzustand. Ob das erfolgreich umgesetzt wurde zeigen die Ergebnisse (s. \autoref{ch:Ergebnisse})\\
-
-\textcolor{cyan}{
-- Überblick über Anforderungen an das bestehende System / das neue System\\
--> wie kann man die testen?\\
-- sind das Tests dabei, die nicht von den Fragen abgedeckt wurden?\\
-Er umfasst den täglich benötigten allgemeinen Status der Tests, die Abfrage verschiedener Varianten von absoluten Werten, dessen Ergebnisse jeweils unterschiedlich abzulesen sind und von verschiedenen Systemen nicht zu verwechseln sind, sowie den Wechsel zwischen den beiden Dashboards. 
-}
-
-\noindent
-Aufgabe 1
+\textbf{Aufgabe 2}
 \begin{itemize}
-    \item ein einfacher Wert zum Ablesen
-    \item Start einer Diskussion, da die Aufgabe mögliche 2 Lösungen hat
+    \item Begründung: das Ausbleiben von Baufehlern ist kritisch zur Ausführbarkeit weiterer Tests
+    \item Aufgabe: Wie viele BUILD-Fehler weisen die Dev-Versionen auf?
+    \item erfragtes Ergebnis
+    \begin{itemize}
+        \item AS: Ergebnis ist in mehreren Bereichen als Zahlenwert dargestellt\\
+                --> Überblick über 2 Oberflächen und verrechnen der Werte\\
+                --> abgefragte Werte sind nicht farbig hervorgehoben
+        \item DB: Ergebnis ist als jeweils ein roter Zahlenwert in zwei Zeilen dargestellt\\
+                --> Verrechnen der Werte
+    \end{itemize}
+    \item Ziel: 
+    \begin{itemize}
+        \item Abfrage eines weiteren Wertes
+        \item Überblick über 2 Systeme
+        \item im alten System ist zumeist der Wert Null dargestellt\\
+            --> Überprüfung, wie leicht Fehleranzeigen übersehen werden können
+    \end{itemize}
+    
 \end{itemize}
 
+\newpage
 \noindent
-Aufgabe 2
+\textbf{Aufgabe 3}
 \begin{itemize}
-    \item Abfrage eines weiteren Werts
-    \item Addition von klaren Zahlen im alten System
+    \item Begründung: Wechsel der Oberfläche
+    \begin{itemize}
+        \item Grundlage für die Fragen 3 und 5 der Nutzerbefragung\\ (s.\autoref{fig:fragebogen_prümper})
+        \item in Aufgabe 4 der Wechsel zurück auf die erste Oberfläche\\
+                --> es wird hier gewechselt, damit der Wechsel zweimal erfolgt, um zu testen, ob der neu erlernte Wechsel direkt erneut angewendet werden kann
+    \end{itemize}
+    \item Aufgaben:
+    \begin{itemize}
+        \item 3.1: Wie viele Fehler weist die [test\_cat\_3] in der älteren releasten Version [Nr] auf?
+        \item 3.2: ... und in der neueren [Nr]?
+    \end{itemize}
+    \item erfragtes Ergebnis
+    \begin{itemize}
+        \item AS: erfordert das Zusammenzählen / -rechnen mehrerer Zahlenwerte einer Kategorie\\
+                --> keine Zahlenangabe, wie viele Tests gut gelaufen sind\\
+                --> abgefragte Werte sind nicht farbig hervorgehoben
+        \item DB: Ablesen eines roten Zahlenwertes
+    \end{itemize}
+    \item Ziel:
+    \begin{itemize}
+        \item Wechsel der allgemeinen Oberfläche, um zu testen ob die neue Ansicht mit dem 2. Dash\-board intuitiv verstanden wird\\
+                --> Testen der Merk- und Navigationsfähigkeit (Erlernbarkeit)
+        \item Aufmerksamkeit lenken auf Erlangung der Ergebnisse auf dem anderen System
+    \end{itemize}
 \end{itemize}
 
+\newpage
 \noindent
-Aufgabe 3.1
+\textbf{Aufgabe 4}
 \begin{itemize}
-    \item Wechsel der allgemeinen Oberfläche, um zu testen ob die neue Ansicht mit dem 2. Dashboard intuitiv verstanden wird
-    \item alte Oberfläche erfordert das Zusammenzählen von 'Err' oder 'OK'\\
-    -> keine Zahlenangabe, wie viele Tests gut / nicht gut gelaufen sind
-\end{itemize}
-
-%%%
-den Wechsel zwischen den beiden Dashboards zum Testen der Merk- und Navigationsfähigkeit (Erlernbarkeit)
-%%%
-
-\noindent
-Aufgabe 3.2
-\begin{itemize}
-    \item Aufmerksam machen, wie man auf das gleiche Ergebnis für das andere System gelangt
-\end{itemize}
-
-\noindent
-Aufgabe 4.1
-\begin{itemize}
-    \item Wechsel der allgemeinen Oberfläche zurück zur ersten verwendeten Oberfläche
-\end{itemize}
-
-\noindent
-Aufgabe 3.2
-\begin{itemize}
-    \item Aufmerksam machen, wie man auf das gleiche Ergebnis für das andere System gelangt
+    \item Begründung: Auswertung einer weiteren Kategorie, wieder auf dem ersten System
+    \item Aufgaben:
+    \begin{itemize}
+        \item 4.1: Wie viele Tests (Test-Kategorien) sind in der (Dev) [test\_cat\_4] im [Modus 1] noch nicht gelaufen?
+        \item 4.2: ... und im [Modus 2]?
+    \end{itemize}
+    \item erfragtes Ergebnis
+    \begin{itemize}
+        \item AS: erfordert das Zusammenzählen von der Fehleranzeige '-' einer Kategorie\\
+                --> keine Zahlenangabe, wie viele Tests gut / nicht gut gelaufen sind, nur ob die Testsammlung insgesamt Fehler hat oder nicht\\
+                --> abgefragte Werte sind nicht farbig hervorgehoben
+        \item DB: Ablesen eines gelben Zahlenwertes
+    \end{itemize}
+    \item Ziel:
+    \begin{itemize}
+        \item Wechsel der allgemeinen Oberfläche zurück zur ersten verwendeten Oberfläche\\
+                --> Aufmerksamkeit lenken auf Erlangung der Ergebnisse auf dem ersten System
+        \item Es wird nicht der rot hervorgehobene Fehlerstatus 'Err' (AS) oder 'errors' (DB) erfragt, sondern der nicht hervorgehobene '-' (AS) bzw. gelbe Fehlerstatus 'pending' (DB)
+        \begin{itemize}
+            \item Ablenkung durch andere Werte ist gegeben
+            \item Aufmerksamkeit darauf lenken, dass Ergebnisse im AS teilweise nur umständlich erreicht werden können
+            \item Überprüfen, ob Fehler durch Unübersichtlichkeit entstehen
+        \end{itemize}
+    \end{itemize}
 \end{itemize}

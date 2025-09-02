@@ -13,12 +13,15 @@ Folgende Hypothese ist zu bestätigen:
 %           Objektive Daten / Usability-Test
 % ******************************************************************
 \noindent
+\textbf{Auswertung der objektiven Daten des Usability-Tests}\\
+
+\noindent
 % Übersichtlichkeit
-Auf dem neuen Dashboard konnten alle Ergebnisse auf einer Oberfläche dargestellt werden und durch die Farbgestaltung ist eine parallele Suche möglich, ob Fehler vorhanden sind (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design})
+Auf dem neuen Dash\-board konnten alle Ergebnisse auf einer Oberfläche dargestellt werden und durch die Farbgestaltung ist eine parallele Suche möglich, ob Fehler vorhanden sind (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design})
 
 Neben dieser Verringerung der Arbeitsschritte (s. \autoref{ch:Dashboard:sec:Anforderungen_Auswertung}) und der Fehlerquote (s. \autoref{fig:usability_test:fehlerquote}) wird zur Effizienzbewertung die Bearbeitungszeit zur Beantwortung der Fragen benötigt.
 
-Die Zeitmittelwerte beider Systeme sind vergleichend in \autoref{fig:usability_test:zeit} dargestellt. Es ist erkennbar, dass die Bearbeitung der Aufgaben mit dem Dashboard schneller erfolgte, da die Nutzer rund 64\% der Zeit des alten System benötigten. Der t-Test bestätigt einen statistisch signifikanten Unterschied (s. \autoref{tab:usability_test:zeit}).
+Die Zeitmittelwerte beider Systeme sind vergleichend in \autoref{fig:usability_test:zeit} dargestellt. Es ist erkennbar, dass die Bearbeitung der Aufgaben mit dem Dash\-board schneller erfolgte, da die Nutzer rund 64\% der Zeit des alten System benötigten. Der t-Test bestätigt einen statistisch signifikanten Unterschied (s. \autoref{tab:usability_test:zeit}).
 
 \begin{table}[H]
     \centering
@@ -39,35 +42,34 @@ Die Zeitmittelwerte beider Systeme sind vergleichend in \autoref{fig:usability_t
 \end{figure}
 
 % ******************************************************************
-%           Subjektive Daten - Begründung Zeit
+%           Objektive Daten - Begründung Zeit
 % ******************************************************************
 % Zeit
 \noindent
 Werden die Aufgaben einzeln betrachtet, liefert auch die Bewertung der Aufgaben 1 und 2 dieses Ergebnis (s. \autoref{tab:Usability_Test:rohe_Daten}).
-Da die weiteren Aufgaben 3 und 4, wie im vorherigen Kapitel bereits erwähnt, wenig Relevanz haben, werden diese auch hier aus der Betrachtung ausgenommen. In \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige} wird gezeigt, dass die Bearbeitungsdauer mit dem Dashboard in jeder Aufgabe wie erwartet ersichtlich schneller war.
-Dennoch zeigt sich anhand der Aufgaben 3 und 4, dass der Kontextwechsel zwischen mehreren Oberflächen mit dem Dashboard besser gelingt. Obwohl das Dashboard insgesamt eine höhere Fehlerquote aufweist, kann es in einem unbekannten Gebiet überzeugen.
+Da die weiteren Aufgaben 3 und 4, wie im vorherigen Kapitel bereits erwähnt, wenig Relevanz haben, werden diese auch hier aus der Betrachtung ausgenommen. In \autoref{fig:usability_test:genauigkeit-zeit_alle-richtige} wird gezeigt, dass die Bearbeitungsdauer mit dem Dash\-board bei jeder Aufgabe wie erwartet ersichtlich schneller war.
+Zusätzlich zeigt sich anhand der Aufgaben 3 und 4, dass der Kontextwechsel zwischen mehreren Oberflächen mit dem Dash\-board besser gelingt. Obwohl das Dash\-board insgesamt eine höhere Fehlerquote aufweist, kann es in einem unbekannten Gebiet überzeugen.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_alle.png}
-    \includegraphics[width=0.8\linewidth]{Diagramme/usability_genauigkeit-zeit_richtige.png}
-    \caption{Usability-Test: Zeitvergleich von allen Werten und nur richtigen Antworten - im Verhältnis zur Fehlerquote (Daten aus \autoref{tab:usability_test:mittelwerte})}
+    \caption{Usability-Test: Zeitvergleich von beiden Systemen - im Verhältnis zur Fehlerquote (Daten aus \autoref{tab:usability_test:mittelwerte})}
     \label{fig:usability_test:genauigkeit-zeit_alle-richtige}
 \end{figure}
 
 % Gesetz der Nähe
 \noindent
-Das Dashboard orientiert sich an dem \textit{proximity compatibility principle}, welches besagt, dass zusammengehörige Informationen beisammen darzustellen sind (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}). Die Anzahl der benötigten Schritte zur Erfüllung der Monitoring-Aufgabe wurde mithilfe des Dashboards minimiert, da die Anzeige von vielen Ergebnissen auf eine Oberfläche reduziert wurde (s. \autoref{ch:Dashboard:sec:Anforderungen_Auswertung}). % TODO: steht das wirklich in der Auswertung der Anforderungen drin? - wenn nein, reinschreiben!!!
-Zusätzlich zu der verteilten Struktur des alten System können dessen Oberflächen unterschiedlich aufgebaut sein. Mit der kürzeren Bearbeitungsdauer zeigt sich, dass sich das Zurechtfinden auf einer Oberfläche wie dem Dashboard leichter scheint, als auf mehreren wie beim alten System.
+Das Dash\-board orientiert sich an dem \textit{proximity compatibility principle} \cite{Wickens:2013, Wickens:1995}, welches besagt, dass zusammengehörige Informationen beisammen darzustellen sind (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}). Die Anzahl der benötigten Schritte zur Erfüllung der Monitoring-Aufgabe wurde mithilfe des Dash\-boards minimiert, da die Anzeige von vielen Ergebnissen auf eine Oberfläche reduziert wurde (s. \autoref{ch:Dashboard:sec:Anforderungen_Auswertung}). % TODO: steht das wirklich in der Auswertung der Anforderungen drin? - wenn nein, reinschreiben!!!
+Zusätzlich zu der verteilten Struktur des alten System können dessen Oberflächen unterschiedlich aufgebaut sein. Mit der kürzeren Bearbeitungsdauer zeigt sich, dass sich das Zurechtfinden auf einer Oberfläche wie dem Dash\-board leichter scheint, als auf mehreren wie beim alten System.
 % Mit der kürzeren Bearbeitungsdauer zeigt sich, dass sich das Zurechtfinden auf einer Oberfläche wie dem Dashboard leichter scheint, als auf mehreren wie beim alten System, die zudem verschieden aufgebaut sein können.
 
 % ******************************************************************
 %           Objektive Daten - Begründung Fehlerquote V2
 % ******************************************************************
 % Zusammenhang Fehler::Zeit
-In \autoref{fig:usability_test:genauigkeit-zeit_alt-neu} ist zu erkennen, dass im alten System die Personen mit Fehlern langsamer waren als die ohne. Im neuen System ist dies umgedreht. Dies lässt sich daran erklären, dass die Personen, die das alte System nicht so gut kannten, länger für die Aufgaben benötigten und tendenziell auch mehr Fehler verursachten.
+In \autoref{fig:usability_test:genauigkeit-zeit_alt-neu} ist zu erkennen, dass im alten System die Personen mit Fehlern langsamer waren als die ohne. Im neuen System ist das umgekehrt. Dies lässt sich daran erklären, dass die Personen, die das alte System nicht so gut kannten, länger für die Aufgaben benötigten und tendenziell auch mehr Fehler verursachten.
 Obwohl jahrelange Erfahrung vorliegt, ist es potenziell trotzdem schwierig, sich zu merken, welche Information wo zu finden ist, zumal das alte System aus vielen Abkürzungen besteht.
-Da jedoch niemand das neue Dashboard kannte, lässt sich reininterpretieren, dass die Anzeige etwas genauer untersucht wurde, bevor die Person zum Ergebnis gelang. Die Monotonie des Monitorings scheint noch nicht eingetreten zu sein (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}).
+Da jedoch niemand das neue Dash\-board kannte, lässt sich anhand der vorliegenden Daten schlussfolgern, dass die Anzeige etwas genauer untersucht wurde, bevor die Person zum Ergebnis gelang. Die Monotonie des Monitorings scheint noch nicht eingetreten zu sein (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}).
 
 % Genauigkeit-Zeit
 \begin{figure}[h]
@@ -136,10 +138,10 @@ Allerdings fällt auf, dass die Effizienzwerte stark schwanken. % TODO: und das 
 % ******************************************************************
 %\noindent
 Der einzige negative Wert tritt bei Aufgabe 3.1 auf. Diese hat im alten System zwar eine durchschnittliche Zeit und keine Fehler erbracht, allerdings kamen im neuen System die zweithöchsten Werte beider Maße zustande (s. \autoref{fig:usability_test:genauigkeit-zeit_alt-neu}). An zweiter Stelle steht das Ergebnis aus Aufgabe 3.2. Dieses zeigt lediglich einen leicht besseren Wert an, da die Zeitdifferenz kleiner ist als bei Aufgabe 3.1.
-Aufgabe 4.1 überzeugt mit einem stark positiven Wert. Durch die Umkehrung der Fehlerquote sowie der geringeren Bearbeitungsdauer kann das Dashboard anhand der Zählaufgabe überzeugen. Der Wert von Aufgabe 4.2 ist etwas geringer, da eine geringere Zeit- und Fehlerdifferenz vorliegt, jedoch das grobe Verhältnis zu Aufgabe 4.1 übereinstimmt.
-Die Aufgaben 1 und 2 spiegeln auch die Ergebnisse von zuvor wieder. Da das Dashboard mit starken Zeitwerten und einer leichten Fehlerquote überzeugen kann. Diese beiden relevanten der Aufgaben können darüber hinaus einen signifikanten Unterschied der Zeitmittelwerte und der Effizienz feststellen (s. \autoref{tab:Usability-Test:ttest_1+2}).
+Aufgabe 4.1 überzeugt mit einem stark positiven Wert. Durch die Umkehrung der Fehlerquote sowie der geringeren Bearbeitungsdauer kann das Dash\-board anhand der Zählaufgabe überzeugen. Der Wert von Aufgabe 4.2 ist etwas geringer, da eine geringere Zeit- und Fehlerdifferenz vorliegt, jedoch das grobe Verhältnis zu Aufgabe 4.1 übereinstimmt.
+Die Aufgaben 1 und 2 spiegeln auch die Ergebnisse von zuvor wieder. Da das Dash\-board mit starken Zeitwerten und einer leichten Fehlerquote überzeugen kann. Diese beiden relevanten der Aufgaben können darüber hinaus einen signifikanten Unterschied der Zeitmittelwerte und der Effizienz feststellen (s. \autoref{tab:Usability-Test:ttest_1+2}).
 
-Auf dessen Grundlage der objektiven Werte kann die Hypothese $H_{02}$ nun verworfen werden.
+Auf Grundlage der eingeordneten objektiven Werte kann die Hypothese $H_{02}$ nun verworfen werden.
 
 %           Effizienzdiagramm 6.8
 % **********************************************
@@ -151,7 +153,7 @@ Auf dessen Grundlage der objektiven Werte kann die Hypothese $H_{02}$ nun verwor
 %A4.1 drastischer Fehleranstieg in alt --> reduktion in neu
 %A4.2 ähnliche zeit, weiterhin niedrigere Fehlerquote
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|c|c|c||c|}
     \hline
@@ -166,6 +168,10 @@ Auf dessen Grundlage der objektiven Werte kann die Hypothese $H_{02}$ nun verwor
 % ******************************************************************
 %           Subjektive Daten / Prümper
 % ******************************************************************
+\noindent
+\textbf{Auswertung der subjektiven Daten der Nutzerbefragung}\\
+
+\noindent
 Zusätzlich zu den objektiven Daten haben die Nutzer die Effizienz der Systeme in Form der ISO-Prinzipien Erlernbarkeit, Selbstbeschreibungsfähigkeit und Aufgabenangemessenheit (s. \autoref{ch:Validierung:sec:Material:Nutzerbefragung}) durch ihre subjektive Einschätzung bewertet.
 
 % Aufgabenangemessenheit
@@ -178,7 +184,7 @@ In Bezug auf die Erlernbarkeit bewerteten die Nutzer das neue System im Schnitt 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Diagramme/pruemper_if.png}
-    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Erlernbarkeit nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all})}
+    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Erlernbarkeit nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all}) \textcolor{red}{TODO: Titel}}
     \label{fig:pruemper_Erlernbarkeit}
 \end{figure}
 
@@ -189,7 +195,7 @@ Das Prinzip der Selbstbeschreibungsfähigkeit wurde ebenfalls zu Gunsten des neu
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{Diagramme/pruemper_sb.png}
-    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Selbstbeschreibungsfähigkeit nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all})}
+    \caption{Auswertung der Fragen bzgl. Gestaltungskriterium Selbstbeschreibungsfähigkeit nach ISO 9241-110 (Ausschnitt aus \autoref{fig:pruemper_all}) \textcolor{red}{TODO: Titel}}
     \label{fig:pruemper_Selbstbeschreibungsfähigkeit}
 \end{figure}
 
@@ -200,7 +206,7 @@ Das Prinzip der Selbstbeschreibungsfähigkeit wurde ebenfalls zu Gunsten des neu
 %\subsection*{weitere: Steuerbarkeit, Erwartungskonformität, Robustheit gegen Benutzungsfehler}
 
 %\noindent
-Die Hypothese $H_{2}$ kann auf Grundlage der ISO-Kriterien Aufgabenangemessenheit, Erlernbarkeit und Selbstbeschreibungsfähigkeit aus der Nutzerumfrage ebenfalls akzeptiert werden.
+Die Hypothese $H_{2}$ kann auf Grundlage der ISO-Kriterien Aufgabenangemessenheit, Erlernbarkeit und Selbstbeschreibungsfähigkeit aus der Nutzerumfrage akzeptiert werden.
 
 %\noindent
 Da die Hypothese $H_{12}$ aus subjektiver Sicht direkt und aus objektiver Sicht nachträglich bestätigt werden konnte, können auch hier die objektiven Daten die Einschätzung und Empfindungen der Nutzer stützen.
