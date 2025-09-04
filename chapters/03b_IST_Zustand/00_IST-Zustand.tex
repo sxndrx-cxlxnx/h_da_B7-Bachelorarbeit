@@ -12,7 +12,7 @@
 %Beschreibung der Umgebung mit welcher das bestehende System interagiert
 
 %Legacy Code -> C, Umfang
-Es besteht ein über viele Dekaden gewachsenes Legacy-System, welches mehrere Millionen Zeilen C- und Java-Code umfasst. Es wird anhand dessen Testpools regelmäßig auf Funktion und Verhalten getestet.
+Die Grundlage dieser Untersuchung bildet ein über viele Dekaden gewachsenes Legacy-System, welches mehrere Millionen Zeilen C- und Java-Code umfasst. Dieses wird anhand dessen Testpools regelmäßig auf Funktion und Verhalten getestet.
 
 %Legacy-Code base -> auf Grundlagen für Definition verweisen(?)\\
 %- über 1 Mio Zeilen Code zu verwalten
@@ -27,7 +27,7 @@ Es besteht ein über viele Dekaden gewachsenes Legacy-System, welches mehrere Mi
 % ******************************************************
 Der Testpool enthält hauptsächlich große und umfangreiche Tests. Diese umfassen zum Beispiel, ob das System erfolgreich gebaut und kompiliert wurde. Es werden weiterhin die Ausgaben und Reaktionen von einfachen Terminal- beziehungsweise Character"=Oberflächen bis zu
 %mit und ohne Eingabemöglichkeiten getestet sowie Oberflächetests anhand von 
-Java-Dialogen überprüft. Das Systemverhalten kann über die Oberfläche durch diese Tests indirekt mitgetestet werden. Anhand des Verhaltens auf der Oberfläche wird überprüft, ob alle Client"=, Server"= und weiteren Produkte in Kombination funktionieren.
+Java-Dialogen überprüft. Das Systemverhalten wird über diese Oberflächentests indirekt mitgetestet. Anhand des Verhaltens auf der Oberfläche wird überprüft, ob alle Client"=, Server"= und weiteren Produkte in Kombination funktionieren.
 
 Die Tests werden täglich anhand verschiedener Versionen der Software ausgeführt und müssen auf Fehler überwacht werden, damit diese zeitnah behoben werden können.
 In diesem Anwendungsfall wird der tägliche Umgang mit der Ergebnisanzeige dieser Tests untersucht. Zur Eingrenzung des Umfangs wird sich dabei auf den Testpool für den C-Code konzentriert.
@@ -56,7 +56,7 @@ In diesem Anwendungsfall wird der tägliche Umgang mit der Ergebnisanzeige diese
 %-> prüfen Client, Server, ob alle Produkte in Kombination funktionieren
 
 % Kapitelüberblick
-Im nachfolgenden Kapitel wird das Tool der Ergebnisanzeige beschrieben, wie dieses aufgebaut ist und woher die angezeigten Daten stammen. Daraufhin wird ein Überblick über die bisherige Oberfläche sowie den damit verbundenden Workflow gegeben. Zum Schluss wird eine Zustandsanalyse durchgeführt, an welcher die Stärken und Schwächen des Systems herausgestellt werden, um im nachfolgenden \autoref{ch:Erstellung Dashboard} auf dessen Grundlage Anforderungen für ein neues, verbessertes System aufzustellen.
+Im nachfolgenden Kapitel wird das Tool der Ergebnisanzeige beschrieben, wie dieses aufgebaut ist und im Zusammenhang mit den Tests funktioniert, um deren Ergebnisse darzustellen. Daraufhin wird ein Überblick über die bisherige Oberfläche sowie den damit verbundenden Workflow (dt. Arbeitsablauf) gegeben. Zum Schluss wird eine Zustandsanalyse durchgeführt, an welcher die Stärken und Schwächen des Systems herausgestellt werden, um im nachfolgenden \autoref{ch:Erstellung Dashboard} auf dessen Grundlage, Anforderungen für ein neues, verbessertes System aufzustellen.
 
 % *********************************************************
 %           Struktur
