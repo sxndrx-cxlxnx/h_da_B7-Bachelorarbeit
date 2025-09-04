@@ -1,20 +1,8 @@
-\section{\textcolor{Turquoise}{Evaluation und Auswahl des Dashboard-Tools}}
+\section{Auswahl des Dashboard-Tools}
 \label{ch:Dashboard:sec:Tooling}
- Das Dash\-board"=Projekt startete mit der Erwartung, Sonar nutzen zu können, da es bereits im Kontext eines anderen Produktes genutzt wurde. Dementsprechend waren bereits Grundverständnis und ein Server vorhanden, der weiterverwendet werden kann. Weiterhin bietet Sonar viele nützliche Funktionalitäten an. Da das Dash\-board in der Zukunft um eine Code-Analyse-Sektion erweitert werden soll, scheint die integrierte Funktionalität von Sonar angemessen. Jedoch ist die Lizenz von Sonar auf die Anzahl der Codezeilen ausgelegt. Mit der Menge der Codezeilen im bestehenden System (s. \autoref{ch:IST-Zustand}) wurde entschieden, dass diese finanzielle Belastung nicht realistisch tragbar ist. \textcolor{red}{\cite{TODO:Sonar}}
+ Das Dash\-board"=Projekt startete mit der Erwartung, Sonar (s. \autoref{ch:SdF:Tools:sec:Sonar}) nutzen zu können, da es bereits im Kontext eines anderen Produktes genutzt wurde. Dementsprechend waren bereits Grundverständnis und ein Server vorhanden, der weiterverwendet werden kann. Weiterhin bietet Sonar viele nützliche Funktionalitäten an. Da das Dash\-board in der Zukunft um eine Code-Analyse-Sektion erweitert werden soll, scheint die integrierte Funktionalität von Sonar angemessen. Jedoch ist die Lizenz von Sonar von der Anzahl der Codezeilen abhängig. Mit der Menge der Codezeilen im bestehenden System (s. \autoref{ch:IST-Zustand}) wurde entschieden, dass diese finanzielle Belastung\footnote{Mit den angegebenen 720 Euro jährlich ab 100.000 Code"=Zeilen, entstehen bei rund 2 Mio. Zeilen Code, Kosten von 14.400 Euro jährlich. Grafana. Plans and Pricing. URL: \url{https://www.sonarsource.com/de/plans-and-pricing/sonarqube/} [Zugegriffen am 03.09.2025]} nicht realistisch tragbar ist, zumal die Gelder dafür regelmäßig neu beantragt werden müssten.
 
- Es muss ein neues Tool gefunden werden. Für die Auswahl eines Tools wurden folgende Kategorien gewählt:
-\begin{itemize}
-    \item Welche Lizenz benötigt das Tool? Ist diese im gefragten Kontext umsetzbar (z.B. bezahlbar)?
-    \item Welche Dateiformate werden unterstützt, um Daten an das Dash\-board zu übertragen? Sind diese kompatibel zur Umgebung?
-    \item Ist das Tool CI/CD-kompatibel?
-    \item Wird das Tool immer noch aktiv gewartet?
-    \item Welche Infrastruktur / Welchen Aufwand benötigt die Installation?
-    %Wie kann das Tool installiert werden? Zum Beispiel Docker/ händisch?
-    \item weitere Vor- und Nachteile
-\end{itemize}
+Das neue Dash\-board wurde schließlich mit Grafana Version 11.6.1 erstellt. Zwar hat das Tool nicht die gleichen Code-spezifischen Funktionalitäten wie Sonar, ist jedoch ein modernes viel genutztes Tool (s. \autoref{ch:SdF:Tool:sec:Grafana}).
 
-\noindent
-In \autoref{tab:Dashboard:Evaluation_Tooling} ist die Auflistung zu finden, welche Tools verglichen und wie diese ausgewertet wurden.
-Verschiedene Punkte führten zum Ausschluss der meisten Tools, darunter zum Beispiel Smashing, Dashbuilder und Tipboard (s. \autoref{ch:SdF:Legacy:sec:Dashboardtools}). Diese sind zu alt, Open Source Projekte werden nicht mehr aktiv gewartet, benötigte Software ist nicht die jeweils aktuellste Version, das Tool ist umständlich zu installieren oder es gibt versteckte Kosten, da zum Beispiel ein zusätzlicher lizenzierter Server benötigt wird.
-
-Das neue Dash\-board wurde mit Grafana Version 11.6.1 erstellt. Zwar hat das Tool nicht die gleichen Code-spezifischen Funktionalitäten wie Sonar, ist jedoch ein modernes viel genutztes Tool (s. \autoref{ch:SdF:Legacy:sec:Dashboardtools}). Zur Dash\-board"=Erstellung ermöglicht Grafana ein einfaches Drag-and-Drop, unterstützt jegliche Dateiformate über einen API-Zugriff, ist leicht zu installieren und bietet viele Einstellungsmöglichkeiten zum Individualisieren. Zudem kann Grafana kostenfrei selbst gehostet werden. \textcolor{red}{\cite{TODO:Grafana}}
+Zur Dash\-board"=Erstellung unterstützt Grafana jegliche Dateiformate über einen API-Zugriff\footnote{Michelle Tan. Grafana Labs. Celebrating Grafana 10: Top 10 Grafana features you need to know about. 2023. URL: \url{https://grafana.com/blog/2023/07/14/celebrating-grafana-10-top-10-grafana-features-you-need-to-know-about/} [Zugegriffen am 03.09.2025]}.
+Es ermöglicht zudem ein einfaches Drag"=and"=Drop (dt. ziehen und fallen lassen) der Elemente zur Dash\-board"=Erstellung und bietet viele Einstellungsmöglichkeiten zum Individualisieren\footnote{Grafana Labs. Create a Dashboard. URL: \url{https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/create-dashboard/} [Zugegriffen am 03.09.2025]}. Weiterhin existiert im Projekt"=Kontext bereits ein Server auf dem Grafana installiert ist, weshalb sich für dieses Framework entschieden wurde, um das neue Dashboard zu erstellen.

@@ -4,13 +4,30 @@
 Der Text der ISO 9241 Part 110 kombiniert die Ausprägungen der Usability mit Gestaltungsempfehlungen in Form von 7 Interaktionsprinzipien (ehem. Grundsätze der Dialoggestaltung). Indem Systeme und Schnittstellen gebrauchstauglicher, zugänglicher und konsistenter gestaltet werden, erleichtern und verbessern diese die kognitive Ergonomie der Mensch-System-Interaktion.
 
 Die 7 Interaktionsprinzipien sind die Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Erwartungskonformität, Erlernbarkeit, Steuerbarkeit, Robustheit gegen Benutzungsfehler und die Benutzerbindung. Die Gewichtung der Grundsätze kann unterschiedlich ausfallen, da diese von dem System, den Nutzern und deren Aufgaben abhängig sind. Zur Bewertung der Umsetzung der Empfehlungen ist die \glqq Tabelle zur Unterstützung der Anwendung [der ISO 9241-110]\grqq{} \cite{DIN_EN_ISO_9241-110} der ISO-Norm beigelegt. Die vollständige Version ist in \autoref{Add:ISO-Tabellen} zu finden.
-Die Interaktionsprinzipien können, wie in \autoref{tab:usability<->ISO-Prinzipien} zu sehen, den drei Usability-Dimensionen zugeordnet werden.
+Anhand der nachfolgenden Beschreibungen werden die Interaktionsprinzipien wie in \autoref{tab:usability<->ISO-Prinzipien} zu sehen, den drei Usability-Dimensionen zugeordnet.
 
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
 \begin{table}[H]
+    %\begin{adjustbox}{width=\textwidth}
     \centering
-    \includegraphics[width=1\linewidth]{chapters/06_Diskussion/Usability-ISO-Prinzipien_KI.PNG}
-    \caption{Zuordnung der ISO-Prinzipien zur den drei Dimensionen der Usability \textcolor{red}{noch austauschen(!)}} % TODO: KI-Bild
+    \begin{small}
+    \begin{tabular}{ll|ccc|}
+    \cline{3-5}
+                                                                                           &                                                                             & \multicolumn{3}{c|}{Usability}                                                                                                                \\ \cline{3-5} 
+                                                                                          &                                                                             & \multicolumn{1}{c|}{Effektivität}                    & \multicolumn{1}{c|}{Effizienz}                       & Zufriedenheit                   \\ \hline
+    \multicolumn{1}{|c|}{\multirow{7}{*}{\rotatebox{90}{\makecell[c]{Interaktionsprinzipien der \\DIN EN ISO 9241-110}}}} & \begin{tabular}[c]{@{}l@{}}Aufgaben-\\ angemessenheit\end{tabular}          & \multicolumn{1}{c|}{\cellcolor[HTML]{9AFF99}ja}      & \multicolumn{1}{c|}{\cellcolor[HTML]{9AFF99}ja}      & nein                            \\ \cline{2-5} 
+    \multicolumn{1}{|l|}{}                                                                 & Steuerbarkeit                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{9AFF99}ja}      & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFC9E}eher ja} & \cellcolor[HTML]{9AFF99}ja      \\ \cline{2-5} 
+    \multicolumn{1}{|l|}{}                                                                 & \begin{tabular}[c]{@{}l@{}}Erwartungs-\\ konformität\end{tabular}           & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFC9E}eher ja} & \multicolumn{1}{c|}{nein}                            & \cellcolor[HTML]{9AFF99}ja      \\ \cline{2-5} 
+    \multicolumn{1}{|l|}{}                                                                 & Erlernbarkeit                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFC9E}eher ja} & \multicolumn{1}{c|}{\cellcolor[HTML]{9AFF99}ja}      & \cellcolor[HTML]{FFFC9E}eher ja \\ \cline{2-5} 
+    \multicolumn{1}{|l|}{}                                                                 & \begin{tabular}[c]{@{}l@{}}Selbstbeschreibungs-\\ fähigkeit\end{tabular}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFC9E}eher ja} & \multicolumn{1}{c|}{\cellcolor[HTML]{9AFF99}ja}      & nein                            \\ \cline{2-5} 
+    \multicolumn{1}{|l|}{}                                                                 & \begin{tabular}[c]{@{}l@{}}Robustheit gegen\\ Benutzungsfehler\end{tabular} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFC9E}eher ja} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFC9E}eher ja} & nein                            \\ \cline{2-5} 
+    \multicolumn{1}{|l|}{} & Benutzerbindung                                                             & \multicolumn{1}{c|}{nein}                            & \multicolumn{1}{c|}{nein}                            & \cellcolor[HTML]{9AFF99}ja      \\ \hline
+    \end{tabular}
+    \caption{Zuordnung der Interaktionsprinzipien der DIN EN ISO 9241-110 zur den drei Dimensionen der Usability}
     \label{tab:usability<->ISO-Prinzipien}
+    \end{small}
 \end{table}
 
 \noindent
