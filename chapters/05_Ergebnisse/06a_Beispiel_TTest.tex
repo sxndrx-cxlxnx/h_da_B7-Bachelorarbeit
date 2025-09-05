@@ -1,20 +1,20 @@
 \subsection{Vorgehen zur Bestimmung der Signifikanz der Ergebnisse zur Hypothesenauswertung} % anhand von t-Tests}}
 \label{ch:Ergebnisse:sec:Hypothesen_Auswertung:sub:Bsp_TTest}
-Mithilfe der Ergebnisse aus dem Usability-Test und der Befragung kann auf verschiedenen Ebenen dargestellt werden, welches System besser ist. Dieses ist jedoch nicht ausreichend, um die Nullhypothese eindeutig zu widerlegen. Mithilfe von Signifikanztests, wie dem t-Test, lässt sich eine Aussage treffen, wie wahrscheinlich es ist, dass das Ergebnis zufällig entstanden ist. \cite{Statistik:Sedlmeier:2018}
+Mithilfe der Ergebnisse aus dem Usability-Test und der Befragung kann auf verschiedenen Ebenen dargestellt werden, welches System besser ist. Dieses ist jedoch nicht ausreichend, um die Nullhypothese eindeutig zu widerlegen. Mithilfe von Signifikanztests, wie dem t-Test, lässt sich eine Aussage treffen, wie wahrscheinlich es ist, dass das Ergebnis zufällig entstanden ist. \cite[S. 401]{Statistik:Sedlmeier:2018}
 
-Der t-Test überprüft den Mittelwertunterschied zwischen 2 Stichproben. Dabei wird zwischen dem t-Test für unabhängige Stichproben, wie beispielsweise der Vergleich von zwei Stichproben aus verschiedenen Populationen, sowie dem t-Test für abhängige Stichproben, wie beispielsweise der Vergleich der selben Nutzergruppe zu zwei verschiedenen Zeitpunkten, unterschieden \cite{Statistik:Boertz:2006}.    % S. 743
-Beim abhängigen t-Test werden die Differenzen der Wertepaare gebildet. Die eigentliche Rechnung entspricht dabei einem t-Test mit nur einer Stichprobe. \cite{Statistik:Sedlmeier:2018}
+Der t-Test überprüft den Mittelwertunterschied zwischen 2 Stichproben. Dabei wird zwischen dem t-Test für unabhängige Stichproben, wie beispielsweise der Vergleich von zwei Stichproben aus verschiedenen Populationen, sowie dem t-Test für abhängige Stichproben, wie beispielsweise der Vergleich der selben Nutzergruppe zu zwei verschiedenen Zeitpunkten, unterschieden \cite[S. 743]{Statistik:Boertz:2006}.    % S. 743
+Beim abhängigen t-Test werden die Differenzen der Wertepaare gebildet. Die eigentliche Rechnung entspricht dabei einem t-Test mit nur einer Stichprobe. \cite[S. 414]{Statistik:Sedlmeier:2018}
 
-Die erhaltenen p-Werte sind dabei keine Indikatoren für die Größe des Effekts. Auch erlauben sie keine Abschätzung der Wahrscheinlichkeit, dass die Null- bzw. Alternativhypothese zutrifft. \glqq Ein p-Wert ist die bedingte Wahrscheinlichkeit für ein Ergebnis (und alle noch extremeren Ergebnisse), unter der Bedingung, dass die Nullhypothese zutrifft.\grqq{} \cite{Statistik:Sedlmeier:2018} Das Signifikanzniveau $\alpha$ für den p-Wert ist eine vorgegebene kleine Irrtumswahrscheinlichkeit und beträgt in der Literatur gängigerweise 5\%. Liegt das Ergebnis des t-Tests darunter, so lässt sich schlussfolgern, dass die beobachtete Abweichung von der Nullhypothese kein Zufall mehr sein kann. Die Gültigkeit der Nullhypothese ist sehr unwahrscheinlich, wodurch das Ergebnis statistisch signifikant wird. Damit kann sich gegen die Nullhypothese und für die Alternativhypothese entschieden werden. \cite{Statistik:Sedlmeier:2018}
+Die erhaltenen p-Werte sind dabei keine Indikatoren für die Größe des Effekts. Auch erlauben sie keine Abschätzung der Wahrscheinlichkeit, dass die Null- bzw. Alternativhypothese zutrifft. \glqq Ein p-Wert ist die bedingte Wahrscheinlichkeit für ein Ergebnis (und alle noch extremeren Ergebnisse), unter der Bedingung, dass die Nullhypothese zutrifft.\grqq{} \cite[S. 401]{Statistik:Sedlmeier:2018} Das Signifikanzniveau $\alpha$ für den p-Wert ist eine vorgegebene kleine Irrtumswahrscheinlichkeit und beträgt in der Literatur gängigerweise 5\%. Liegt das Ergebnis des t-Tests darunter, so lässt sich schlussfolgern, dass die beobachtete Abweichung von der Nullhypothese kein Zufall mehr sein kann. Die Gültigkeit der Nullhypothese ist sehr unwahrscheinlich, wodurch das Ergebnis statistisch signifikant wird. Damit kann sich gegen die Nullhypothese und für die Alternativhypothese entschieden werden. \cite[S. 400\psqq]{Statistik:Sedlmeier:2018}
 
 Nachfolgend wird mit dem Unterschreiten des Signifikanzniveaus $\alpha$ die Ablehnung der Nullhypothese sowie die Akzeptanz der Alternativhypothese impliziert.
 
-Das Ergebnis kann dabei positiv und negativ von der Nullhypothese abweichen. Bei begründeter Annahme einer Abweichung in eine Richtung kann einseitig getestet werden. Liegt diese nicht vor, muss zweiseitig getestet werden. Bei dem zweiseitigen Vorgehen wird $\alpha$ gleichermaßen auf beide Seiten aufgeteilt. Da das Signifikanzniveau bei beiden Verfahren 5\% beträgt, halbiert es sich dadurch je Richtung (s. \autoref{fig:Signifikanzniveau_TTest}), wodurch es schwieriger ist, ein signifikantes Ergebnis zu erlangen. \cite{Statistik:Sedlmeier:2018}
+Das Ergebnis kann dabei positiv und negativ von der Nullhypothese abweichen. Bei begründeter Annahme einer Abweichung in eine Richtung kann einseitig getestet werden. Liegt diese nicht vor, muss zweiseitig getestet werden. Bei dem zweiseitigen Vorgehen wird $\alpha$ gleichermaßen auf beide Seiten aufgeteilt. Da das Signifikanzniveau bei beiden Verfahren 5\% beträgt, halbiert es sich dadurch je Richtung (s. \autoref{fig:Signifikanzniveau_TTest}), wodurch es schwieriger ist, ein signifikantes Ergebnis zu erlangen. \cite[S. 398\psq]{Statistik:Sedlmeier:2018}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Diagramme/Signifikanz_c4.PNG}
-    \caption{Signifikanzniveau beim einseitigen und zweiseitigen t-Test \cite{Statistik:Sedlmeier:2018}}
+    \caption{Signifikanzniveau beim einseitigen und zweiseitigen t-Test \cite[S. 399]{Statistik:Sedlmeier:2018}}
     \label{fig:Signifikanzniveau_TTest}
 \end{figure}
 
@@ -50,7 +50,7 @@ Da die Signifikanz der Abweichung ermittelt werden soll, werden die Datensätze 
 \end{table}
 
 \noindent
-Hierfür wird ein einseitiger, gepaarter t-Test durchgeführt. Die Voraussetzungen dafür sind zwei abhängige Stichproben in Form von Wertepaaren, metrische Daten und eine Normalverteilung der Differenzen. Diese wurde mithilfe des Online-Rechners von StatistikGuru \footnote{Wanja A. Hemmerich. StatistikGuru. Normalverteilung online prüfen. 2018. URL: \url{https://statistikguru.de/rechner/normalverteilung-rechner.html} (besucht am 14.06.2025).} überprüft.\\
+Hierfür wird ein einseitiger, gepaarter t-Test durchgeführt \cites[Zusammenfassung nach][]{MathiasJesussek:DATAtab:2025}[S. 414]{Statistik:Sedlmeier:2018} Die Voraussetzungen dafür sind zwei abhängige Stichproben in Form von Wertepaaren, metrische Daten und eine Normalverteilung der Differenzen. Diese wurde mithilfe des Online-Rechners von StatistikGuru \footnote{Wanja A. Hemmerich. StatistikGuru. Normalverteilung online prüfen. 2018. URL: \url{https://statistikguru.de/rechner/normalverteilung-rechner.html} (besucht am 14.06.2025).} überprüft.\\
 
 \noindent
 \begin{minipage}[t]{0.3\linewidth}
@@ -217,7 +217,7 @@ t  = \frac{\Bar{x} - 0}{s_e}
 $$\\
 
 \noindent
-Je größer der absolute t-Wert ist, umso kleiner ist der p-Wert und umso stärker ist der Beleg gegen die Nullhypothese. Mit einem Freiheitsgrad von 9 und dem einseitigen Signifikanzniveau $\alpha$ von 0,05, welches einem Flächenanteil von $1-\alpha = 95\%$ oder 0,95 entspricht, kann aus der Tabelle der t-Verteilung der kritische t-Wert 1,833 abgelesen werden. \cite{Statistik:Sedlmeier:2018} \cite{Statistik:Boertz:2010}    % Boertz S. 600ff.
+Je größer der absolute t-Wert ist, umso kleiner ist der p-Wert und umso stärker ist der Beleg gegen die Nullhypothese. Mit einem Freiheitsgrad von 9 und dem einseitigen Signifikanzniveau $\alpha$ von 0,05, welches einem Flächenanteil von $1-\alpha = 95\%$ oder 0,95 entspricht, kann aus der Tabelle der t-Verteilung der kritische t-Wert 1,833 abgelesen werden. \cites[S. 1042\psq]{Statistik:Sedlmeier:2018}[S. 600\psqq]{Statistik:Boertz:2010}    % Boertz S. 600\psqq
 $$t > t_{krit.}$$
 $$2,4327 > 1,833$$
 Mit dem t-Wert von 2,4327 liegt der Alpha-Wert zwischen 0,025 und 0,01.
@@ -240,11 +240,11 @@ Alle weiteren t-Test Ergebnisse wurden über diesen Weg erreicht und sind in \au
 %       Boxplots
 % *****************************************************************
 Die aufgeführten Daten, wie beispielweise in \autoref{t-Test:Beispiel-Daten}, werden nachfolgend in Box-Plots dargestellt. 
-Ein \textit{Box-Plot} ist ein Diagramm, welches Lage- und Streuungsmaße abbildet (s. \autoref{fig:Box-Plot:Beispiel}) und ist wie folgt zu interpretieren (Zusammenfassung nach \cite{Statistik:Sedlmeier:2018}). Die Daten werden von einem Querstrich innerhalb der Box halbiert, welcher den \textit{Median} darstellt, sowie einem gleichfarbigen Diamanten, welcher den \textit{Mittelwert} darstellt. Die \textit{Box} umfasst die mittleren 50\% der nach Rangfolge geordneten Daten. Das bedeutet, dass die Daten von der 25. bis 75. Perzentile oder auch vom 1. bis 3. \textit{Quartil} (Q1, Q3) dargestellt sind. Der Bereich dazwischen wird auch \textit{Interquartilsabstand} (en. interquartile range - IQR) genannt.
+Ein \textit{Box-Plot} ist ein Diagramm, welches Lage- und Streuungsmaße abbildet (s. \autoref{fig:Box-Plot:Beispiel}) und ist wie folgt zu interpretieren \cite[Zusammenfassung nach][S. 194\psqq]{Statistik:Sedlmeier:2018}). Die Daten werden von einem Querstrich innerhalb der Box halbiert, welcher den \textit{Median} darstellt, sowie einem gleichfarbigen Diamanten, welcher den \textit{Mittelwert} darstellt. Die \textit{Box} umfasst die mittleren 50\% der nach Rangfolge geordneten Daten. Das bedeutet, dass die Daten von der 25. bis 75. Perzentile oder auch vom 1. bis 3. \textit{Quartil} (Q1, Q3) dargestellt sind. Der Bereich dazwischen wird auch \textit{Interquartilsabstand} (en. interquartile range - IQR) genannt.
 
 Außerhalb der Box stehen die \textit{Whiskers} (dt. Schnurrhaare). Die Länge der Whiskers ist durch den \textit{Zaun}, den Querstrich am Ende der Whiskers, begrenzt. Dieser befindet sich maximal 1,5 Interquartilsabstände von der Box entfernt. Liegt der äußerste Wert des Bereichs innerhalb des Zauns, wird der Whisker kürzer bis zu diesem äußersten Wert dargestellt.
 
-Die Punkte außerhalb der Whiskers sind die \textit{Ausreißer} und werden hier als Punkte dargestellt. Ausreißer, die außerhalb von drei IQR von der Box liegen, werden als extreme Ausreißer bezeichnet. Liegen sie zwischen den dem Zaun und drei IQR, sind es normale Ausreißer.
+Die Punkte außerhalb der Whiskers sind die \textit{Ausreißer} und werden hier als Punkte dargestellt. Ausreißer, die außerhalb von drei IQR von der Box liegen, werden als extreme Ausreißer bezeichnet. Liegen sie zwischen dem Zaun und drei IQR, sind es normale Ausreißer.
 
 Nachfolgend ist ein Beipiel zur Erstellung von Box-Plot-Diagrammen gezeigt (s. \autoref{tab:Beispiel_Berechnung_Box-Plot}, \autoref{fig:Box-Plot:Beispiel}). \textit{Frage 1} dient als Weiterverarbeitung des Datensatzes, der zuvor für die t-Test-Berechnung genutzte wurde. \textit{Frage 4} veranschaulicht zusätzlich die Darstellung von Ausreißern.
 
