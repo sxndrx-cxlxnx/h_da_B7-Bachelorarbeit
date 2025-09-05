@@ -17,16 +17,15 @@ Grafana gibt eine Dash\-board"=Struktur in Reihen vor. Jede Reihe stellt ein Sys
 % mittlere Spalte
 \noindent
 Die jeweilige Fehlerzahl bzw. der Zustand der entsprechenden Testkategorie wird in der mittleren Spalte in verschiedenen Farben dargestellt.
-Im Falle eines Green Days, ein Tag an dem keine Fehler auftreten, steht in allen Feldern eine dunkelgraue Null. Im Fehlerfall jedoch werden die Zahlen farbig hervorgehoben. Die Fehlerkategorien sind 'System abgestürzt', 'Anzahl der Fehler', 'Anzahl der ausstehenden Tests' und 'ignorierte Tests'\footnote{Die Kategorie 'Ignorierte Tests' umfasst zum Beispiel Testfälle mit länger bekannten Fehlern, die für die Einschätzung des Green Days ignoriert werden dürfen.}.
+Im Falle eines Green Days, ein Tag an dem keine Fehler auftreten, steht in allen Feldern eine dunkelgraue Null. Um die Relevanz des Fehlerfalls darzustellen, werden diese die Zahlen farbig hervorgehoben (s. \autoref{ch:SdF:UI:sec:menschenzentriertes_Design}). Die Fehlerkategorien sind 'System abgestürzt', 'Anzahl der Fehler', 'Anzahl der ausstehenden Tests' und 'ignorierte Tests'\footnote{Die Kategorie 'Ignorierte Tests' umfasst zum Beispiel Testfälle mit länger bekannten Fehlern, die für die Einschätzung des Green Days ignoriert werden dürfen.}.
 Aufgrund der Menge an Testfällen und der Anforderung, alle zusammengehörigen Daten auf einen Blick erfassen zu können (s. \autoref{ch:Dashboard:sec:Anforderungen}), sind die Test-Kategorien in Spalten und deren Ergebnisse in den Reihen darunter dargestellt. Im Vergleich zum alten System wurden die Reihen/Spalten vertauscht (s. \autoref{fig:aufbau_altes_System}).
 
 % Informationen: linke + rechte Spalte
 Neben den System-Zustandsinformationen, die auch das alte System anzeigt, bietet das Dash\-board die Gelegenheit, weitere Informationen zu sammeln und zur Verfügung zu stellen.
 Links ist unter dem Reihentitel die Verlinkung auf die Oberfläche des alten Systems zu finden. Dieses bietet genauere Informationen im Fehlerfall (s. \autoref{ch:IST-Zustand:sec:Aufbau_altes_System}).
-Sollten noch detailliertere Informationen zu Fehlern benötigt werden, sind die Jenkins-Jobs der einzelnen Testkategorien in der Spalte auf der rechten Seite aufgelistet.
+Für detailliertere Informationen zu den Fehlern werden die Jenkins-Jobs der einzelnen Testkategorien in der Spalte auf der rechten Seite aufgelistet.
 
-\textcolor{red}{ZUTUN: Tabelle vernünftig in den Text integrieren}
-Die nachfolgende Beschreibung sowie die Unterschiede zum alten System sind zusätzlich in \autoref{tab:Funktions_Mapping:alt_auf_neu} dargestellt.
+In der nachfolgenden \autoref{tab:Funktions_Mapping:alt_auf_neu} werden die Unterschiede in Funktionen und Eigenschaften beider Systeme noch einmal gegenübergestellt.
 
 \begin{table}[H]
     \begin{adjustbox}{width=\textwidth}
@@ -45,6 +44,6 @@ Die nachfolgende Beschreibung sowie die Unterschiede zum alten System sind zusä
                                                                                                          &                                                                                                                                                                                                                                        & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}Verlinkung zu den einzelnen\\ Jenkins-Jobs\\ --> rechts einer Zeile, aufgelistet\\       nach Kategorienamen\end{tabular}}                          \\ \hline
     \end{tabular}
     \end{adjustbox}
-    \caption{Überblick und Zuordnung der alten Funktionalität und Arbeitsweise auf das neue Dash\-board \textcolor{red}{ZUTUN: aktuell im Notizstatus}}
+    \caption{Überblick und Zuordnung der alten Funktionalität und Arbeitsweise auf das neue Dash\-board \textcolor{red}{ZUTUN@YME: Tabelle aktuell im Notizstatus}}
     \label{tab:Funktions_Mapping:alt_auf_neu}
 \end{table}

@@ -14,7 +14,7 @@ El-Morabea et al. betont \glqq so wie wir schlechten Code haben können, können
 
 Software kann zur besseren Testbarkeit und somit Erreichung einer höheren Testabdeckung modularisiert werden (s. \autoref{ch:SdF:Legacy:sec:Methoden}). Beides sind Bestandteile des \textit{Test Driven Development} (TDD). Wird ein fehlschlagender Test geschrieben, dann wird dieser zum Erfolg gebracht. Schließlich wird der Code refactored, beispielsweise mit Hilfe von Modularisierungstechniken. Die neuen Module können erneut getestet werden \cite{ElMorabea:2021, Stantchev:2010}.
 
-% Testarten und Pyramide(?)
+% Testarten und Pyramide
 Tests werden in verschiedene Testphasen unterschiedlichen Umfangs unterschieden. Neben dem manuellen Testen gibt es automatisierte Tests. \textit{Unit}-Tests überprüfen eine Einheit oder ein Modul. \textit{Integration}-Tests kümmern sich um die Integration, also das Zusammenspiel zwischen einzelnen Systemen, während \textit{System}-Tests ganze Systemkomplexe auf ihr Zusammenspiel überprüfen. Ein Beispiel dafür sind UI-Tests (User-Interface, dt. Benutzeroberfläche). Weitere Tests sind confiramtion-tests (dt. Abnahme- oder auch \textit{Akzeptanz}-Tests). \cite{ElMorabea:2021, Oppel:2025, Pi:2020}.
 
 Bezüglich des Umfangs wird in der Lehre die \textit{Test-Pyramide} verwendet. Sie besagt, dass je simpler eine Art von Test ist, desto mehr dieser Tests sollten eingesetzt werden. Je komplexer und aufwändiger eine Art von Test ist, desto weniger werden davon benötigt. In dem Zusammenhang wird auch nach sogenannten \textit{Happy-Paths} (dt. glückliche Pfade, wie das System funktionieren sollte) und \textit{corner-cases} (dt. Eck-Fälle, Situationen die vermeintlich seltener erscheinen und Fehler werfen) unterschieden. \cite{ElMorabea:2021}
